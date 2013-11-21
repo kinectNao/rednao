@@ -1,0 +1,14 @@
+﻿<Window x:Class="EllenbogenWinkel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <Image Name="videoImage"></Image>
+        <Canvas Background="Transparent">
+            <Ellipse Fill="Red" Height="20" Width="20" Name="ellbowR" Stroke="White" />
+            <Ellipse Fill="Red" Height="20" Width="20" Name="wristR" Stroke="White" />
+            <Ellipse Fill="Red" Height="20" Width="20" Name="shoulderR" Stroke="White" />
+            <Label Canvas.Left="347" Canvas.Top="482" Content="Angle" Height="50" Name="ellbowAngle" Width="200" FontWeight="Bold" FontSize="25" Foreground="Red" />
+        </Canvas>
+    </Grid>
+</Window>
