@@ -1,0 +1,5 @@
+C:\Users\Michael\Desktop\NaoKinect\KinectNaoHandler\bin\Debug\KinectNaoHandler.dll
+C:\Users\Michael\Desktop\NaoKinect\KinectNaoHandler\bin\Debug\KinectNaoHandler.pdb
+C:\Users\Michael\Desktop\NaoKinect\KinectNaoHandler\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Michael\Desktop\NaoKinect\KinectNaoHandler\obj\x86\Debug\KinectNaoHandler.dll
+C:\Users\Michael\Desktop\NaoKinect\KinectNaoHandler\obj\x86\Debug\KinectNaoHandler.pdb
