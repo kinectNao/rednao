@@ -4,19 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
-
 namespace KinectNaoHandler
 {
     class SkeletonAngleCalculator
     {
 
+        //AngleView view = new AngleView();
+        
         // This method will be called when the thread is started.
         public void DoWork()
+
+           
         {
+           
+            
             while (!_shouldStop)
             {
                // Hier werden Berechnungen getätigt
                 Console.WriteLine("ERGEBNIS = DUMMY!!!");
+                
                 Thread.Sleep(50);
             }
             Console.WriteLine("Angle Calculation shutted down");

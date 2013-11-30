@@ -7,3 +7,10 @@
 
 /EllenbogenWinkel/.gitignore
 /EllenbogenWinkel/.tfignore
+
+/NaoKinect/KinectExplorer-WPF/bin/Debug/*.gitignore
+/NaoKinect/KinectExplorer-WPF/obj/Debug/*.gitignore
+/NaoKinect/KinectNaoHandler/bin/Debug/*.gitignore
+/NaoKinect/KinectNaoHandler/obj/x86/Debug/*.gitignore
+/NaoKinect/KinectWpfViewers/bin/Debug/*.gitignore
+/NaoKinect/KinectWpfViewers/obj/Debug/*.gitignore
