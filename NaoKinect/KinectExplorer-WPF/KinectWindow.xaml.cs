@@ -102,7 +102,7 @@ namespace Microsoft.Samples.Kinect.KinectExplorer
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            angleHandler.stopCalculation();
+            if(angleHandler != null ) angleHandler.stopCalculation();
             //TODO Evtl komplett alle Fenster schließen
         }
 
