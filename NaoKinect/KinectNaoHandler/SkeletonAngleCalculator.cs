@@ -15,10 +15,15 @@ namespace KinectNaoHandler
         {
             while (!_shouldStop)
             {
-                Console.WriteLine("worker thread: working...");
+               // Hier werden Berechnungen getätigt
+                Console.WriteLine("ERGEBNIS = DUMMY!!!");
+                Thread.Sleep(50);
             }
-            Console.WriteLine("worker thread: terminating gracefully.");
+            Console.WriteLine("Angle Calculation shutted down");
         }
+
+
+
         public void RequestStop()
         {
             _shouldStop = true;

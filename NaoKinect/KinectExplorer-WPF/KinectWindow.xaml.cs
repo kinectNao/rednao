@@ -6,6 +6,7 @@
 
 namespace Microsoft.Samples.Kinect.KinectExplorer
 {
+    using KinectNaoHandler;
     using System.Diagnostics.CodeAnalysis;
     using System.Windows;
     using System.Windows.Controls;
@@ -27,6 +28,7 @@ namespace Microsoft.Samples.Kinect.KinectExplorer
                 new PropertyMetadata(null));
 
         private readonly KinectWindowViewModel viewModel;
+        private SkeletonAngleHandler angleHandler;
 
         /// <summary>
         /// Initializes a new instance of the KinectWindow class, which provides access to many KinectSensor settings
@@ -85,6 +87,26 @@ namespace Microsoft.Samples.Kinect.KinectExplorer
             colorFrom.Children.Insert(0, this.DepthVis);
             depthFrom.Children.Insert(0, this.ColorVis);
         }
+
+   
+
+        private void startAngleHandler(object sender, RoutedEventArgs e)
+        {
+           
+            if(angleHandler == null){
+                System.Console.WriteLine("Aktiviere Winkelberechnung...");
+                angleHandler = new SkeletonAngleHandler();
+            }
+          
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            angleHandler.stopCalculation();
+            //TODO Evtl komplett alle Fenster schließen
+        }
+
+     
     }
 
     /// <summary>

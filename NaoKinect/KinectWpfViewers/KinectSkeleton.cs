@@ -84,6 +84,10 @@ namespace Microsoft.Samples.Kinect.WpfViewers
         private readonly Brush rightClipBrush = new LinearGradientBrush(
             Color.FromArgb(0, 255, 0, 0), Color.FromArgb(255, 255, 0, 0), new Point(0, 0), new Point(1, 0));
 
+
+
+
+
         public bool ShowClippedEdges
         {
             get { return (bool)GetValue(ShowClippedEdgesProperty); }
@@ -182,8 +186,8 @@ namespace Microsoft.Samples.Kinect.WpfViewers
                      * 
                      */
                     //Console.WriteLine("Skeleton rdy!");
-                    new SkeletonAngleHandler();
-
+                    //skeletonAngleHandler
+                    //Console.WriteLine("SKELETON");
                     break;
             }
         }
