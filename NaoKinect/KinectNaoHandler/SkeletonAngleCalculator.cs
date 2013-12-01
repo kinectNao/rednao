@@ -15,7 +15,6 @@ namespace KinectNaoHandler
             this.skeletonAngleHandler = skeletonAngleHandler;
         }
 
-        //AngleView view = new AngleView();
         
         // This method will be called when the thread is started.
         public void DoWork()   

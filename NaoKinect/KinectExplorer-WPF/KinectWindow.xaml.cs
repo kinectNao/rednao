@@ -20,6 +20,8 @@ namespace Microsoft.Samples.Kinect.KinectExplorer
     /// </summary>
     public partial class KinectWindow : Window
     {
+        private SkeletonStream skeleton;
+
         public static readonly DependencyProperty KinectSensorProperty =
             DependencyProperty.Register(
                 "KinectSensor",
@@ -49,7 +51,6 @@ namespace Microsoft.Samples.Kinect.KinectExplorer
 
             // Attempt to turn on Skeleton Tracking for each Kinect Sensor
             this.viewModel.KinectSensorManager.SkeletonStreamEnabled = true;
-
             this.DataContext = this.viewModel;
             
             InitializeComponent();
@@ -93,10 +94,10 @@ namespace Microsoft.Samples.Kinect.KinectExplorer
         private void startAngleHandler(object sender, RoutedEventArgs e)
         {
            
-            if(angleHandler == null){
-                System.Console.WriteLine("Aktiviere Winkelberechnung...");
-                angleHandler = new SkeletonAngleHandler();
-            }
+           // if(angleHandler == null){
+            //    System.Console.WriteLine("Aktiviere Winkelberechnung...");
+            //    angleHandler = new SkeletonAngleHandler(skeleton);
+           // }
           
         }
 

@@ -14,3 +14,10 @@
 /NaoKinect/KinectNaoHandler/obj/x86/Debug/*.gitignore
 /NaoKinect/KinectWpfViewers/bin/Debug/*.gitignore
 /NaoKinect/KinectWpfViewers/obj/Debug/*.gitignore
+
+*.cache
+
+*.lref
+
+/NaoKinect/KinectNaoHandler/obj/x86/Debug
+/NaoKinect/KinectWpfViewers/obj/Debug/TempPE

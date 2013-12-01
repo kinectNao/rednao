@@ -11,6 +11,7 @@ namespace Microsoft.Samples.Kinect.WpfViewers
     using System.Windows;
     using System.Windows.Data;
     using Microsoft.Kinect;
+    using KinectNaoHandler;
 
     public enum ImageType
     {
@@ -62,6 +63,7 @@ namespace Microsoft.Samples.Kinect.WpfViewers
         private readonly List<KinectSkeleton> skeletonCanvases = new List<KinectSkeleton>(SkeletonCount);
         private readonly List<Dictionary<JointType, JointMapping>> jointMappings = new List<Dictionary<JointType, JointMapping>>();
         private Skeleton[] skeletonData;
+
 
         public KinectSkeletonViewer()
         {

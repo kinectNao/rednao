@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Collections;
+using Microsoft.Kinect;
 
 namespace KinectNaoHandler
 {
@@ -61,6 +62,11 @@ namespace KinectNaoHandler
             foreach (ISkeletonAngles currentSubscriber in angleSubscribers){
                 currentSubscriber.updateAngles(shoulderPitch, shoulderRoll, ellbowRoll, ellbowYaw);
             }
+        }
+
+        public void updateSkeleton(Skeleton skeleton)
+        {
+            
         }
     }
 }

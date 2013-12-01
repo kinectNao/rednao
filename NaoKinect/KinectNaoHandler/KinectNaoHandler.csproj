@@ -53,6 +53,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AngleCalculation.cs" />
     <Compile Include="AngleView.cs">
       <SubType>Form</SubType>
     </Compile>

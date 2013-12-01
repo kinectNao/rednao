@@ -20,6 +20,8 @@ namespace Microsoft.Samples.Kinect.WpfViewers
     /// </summary>
     public class KinectSkeleton : Control
     {
+        public SkeletonAngleHandler angleHandler = new SkeletonAngleHandler();
+
         public static readonly DependencyProperty ShowClippedEdgesProperty =
             DependencyProperty.Register("ShowClippedEdges", typeof(bool), typeof(KinectSkeleton), new FrameworkPropertyMetadata(true, FrameworkPropertyMetadataOptions.AffectsRender));
 
@@ -188,6 +190,10 @@ namespace Microsoft.Samples.Kinect.WpfViewers
                     //Console.WriteLine("Skeleton rdy!");
                     //skeletonAngleHandler
                     //Console.WriteLine("SKELETON");
+                     
+                        angleHandler.updateSkeleton(currentSkeleton);
+                   
+
                     break;
             }
         }
