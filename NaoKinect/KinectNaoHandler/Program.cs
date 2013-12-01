@@ -9,6 +9,7 @@ namespace KinectNaoHandler
     {
         static void Main(string[] args)
         {
+           
         }
     }
 }

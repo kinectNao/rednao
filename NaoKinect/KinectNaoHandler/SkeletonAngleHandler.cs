@@ -2,18 +2,25 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using System.Collections;
 
 namespace KinectNaoHandler
 {
-    public class SkeletonAngleHandler
+    public class SkeletonAngleHandler : ISkeletonAngles
     {
 
         private SkeletonAngleCalculator angleCalculator;
         private Thread angleCalculatorThread;
+        private AngleView view;
+        private ArrayList angleSubscribers = new ArrayList();
+
         public SkeletonAngleHandler()
         {
-            
-            angleCalculator = new SkeletonAngleCalculator();
+            view = new AngleView(this);
+            view.Show();
+
+
+            angleCalculator = new SkeletonAngleCalculator(this);
             angleCalculatorThread = new Thread(angleCalculator.DoWork);
 
             // Start the worker thread.
@@ -38,7 +45,22 @@ namespace KinectNaoHandler
             Console.WriteLine("Angle Calculation shutdown complete...");
         }
 
+        public void addMeToAngleSubscriber(ISkeletonAngles subscriber)
+        {
+            angleSubscribers.Add(subscriber);
+        }
 
+        public void removeMeFromAngleSubscriber(ISkeletonAngles subscriber)
+        {
+            angleSubscribers.Remove(subscriber);
+        }
 
+        public void updateAngles(float shoulderPitch, float shoulderRoll, float ellbowRoll, float ellbowYaw)
+        {
+            //For all Subscribers, NAO & GUI
+            foreach (ISkeletonAngles currentSubscriber in angleSubscribers){
+                currentSubscriber.updateAngles(shoulderPitch, shoulderRoll, ellbowRoll, ellbowYaw);
+            }
+        }
     }
 }
