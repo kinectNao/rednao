@@ -27,7 +27,7 @@ namespace KinectNaoHandler
         // This method will be called when the thread is started.
         public void DoWork()   
         {
-            float shoulderPitch_Rigt = 0.0f;
+            float shoulderPitch_Right = 0.0f;
             float shoulderRoll_Right = 0.0f;
             float elbowRoll_Right = 0.0f;
             float elbowYaw_Right = 0.0f;
@@ -44,15 +44,13 @@ namespace KinectNaoHandler
                 //updateAngles
                 //Sleep
                 //Zuverlässigkeit der Joints
-                shoulderPitch_Rigt = AngleCalculation.getShoulderPitch_Right(currentSkeleton);
+                shoulderPitch_Right = AngleCalculation.getShoulderPitch_Right(currentSkeleton);
                 shoulderRoll_Right = AngleCalculation.getShoulderRoll_Right(currentSkeleton);
                 elbowRoll_Right = AngleCalculation.getElbowRoll_Right(currentSkeleton);
                 elbowYaw_Right = AngleCalculation.getElbowYaw_Right(currentSkeleton);
 
-                skeletonAngleHandler.updateAngles(shoulderPitch_Rigt, shoulderRoll_Right, elbowRoll_Right, elbowYaw_Right);
+                skeletonAngleHandler.updateAngles(shoulderPitch_Right, shoulderRoll_Right, elbowRoll_Right, elbowYaw_Right);
                 Thread.Sleep(500);
-               // skeletonAngleHandler.updateAngles(0.0f, 0.0f, 0.0f, 0.0f);
-                //Thread.Sleep(500);
                 
             }
             Console.WriteLine("Angle Calculation shutted down");

@@ -28,6 +28,7 @@ namespace KinectNaoHandler
             Joint elbow_j = skeleton.Joints[JointType.ElbowRight];
             Joint hand_j = skeleton.Joints[JointType.HandRight];
             
+            //Vector of Joints
             Vector3D shoulder = new Vector3D(shoulder_j.Position.X, shoulder_j.Position.Y, shoulder_j.Position.Z);
             Vector3D elbow = new Vector3D(elbow_j.Position.X, elbow_j.Position.Y, elbow_j.Position.Z);
             Vector3D hand = new Vector3D(hand_j.Position.X, hand_j.Position.Y, hand_j.Position.Z);
@@ -37,14 +38,37 @@ namespace KinectNaoHandler
         }
         public static float getElbowYaw_Right(Skeleton skeleton)
         {
-            return -999.0f;
+
+            // Get fitting joints
+            Joint shoulder_j = skeleton.Joints[JointType.ShoulderRight];
+            Joint hip_j = skeleton.Joints[JointType.HipRight];
+            Joint elbow_j = skeleton.Joints[JointType.ElbowRight];
+            Joint hand_j = skeleton.Joints[JointType.HandRight];
+
+            //Vector of Joints
+            Vector3D shoulder = new Vector3D(shoulder_j.Position.X, shoulder_j.Position.Y, shoulder_j.Position.Z);
+            Vector3D hip = new Vector3D(hip_j.Position.X, hip_j.Position.Y, hip_j.Position.Z);
+            Vector3D elbow = new Vector3D(elbow_j.Position.X, elbow_j.Position.Y, elbow_j.Position.Z);
+            Vector3D hand = new Vector3D(hand_j.Position.X, hand_j.Position.Y, hand_j.Position.Z);
+
+
+            // Vektorberechnung
+            return AngleCalculation.getAngle(shoulder, hip, elbow, hand);
         }
 
 
         //4 Punkte -> 2 unabhängige Knochen
         public static float getAngle(Vector3D a, Vector3D b, Vector3D x, Vector3D y)
         {
-            return -999.0f;
+            Vector3D bone1 = a - b;
+            Vector3D bone2 = x - y;
+
+            bone1.Normalize();
+            bone2.Normalize();
+
+            float dotProduct = (float)Vector3D.DotProduct(bone1, bone2);
+
+            return (float)Math.Acos(dotProduct);
         }
 
         //3 Punkte -> 2 zusammenhängende Knochen
@@ -59,7 +83,6 @@ namespace KinectNaoHandler
             float dotProduct = (float)Vector3D.DotProduct(bone1, bone2);
 
             return (float)Math.Acos(dotProduct);
-            //return -999.0f;
         }
 
 
