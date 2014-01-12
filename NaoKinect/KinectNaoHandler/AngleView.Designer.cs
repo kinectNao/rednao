@@ -164,6 +164,11 @@
 
             this.BeginInvoke((MethodInvoker)delegate {
 
+                shoulderPitch = 180 / 3.1415f * shoulderPitch;
+                shoulderRoll = 180 / 3.1415f * shoulderRoll;
+                ellbowRoll = 180 / 3.1415f * ellbowRoll;
+                ellbowYaw = 180 / 3.1415f * ellbowYaw;
+
                 shoulderPitchValue.Text = Convert.ToString(shoulderPitch);
                 shoulderRollValue.Text = Convert.ToString(shoulderRoll);
                 ellbowRollValue.Text = Convert.ToString(ellbowRoll);

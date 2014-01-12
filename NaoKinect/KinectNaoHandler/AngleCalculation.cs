@@ -24,18 +24,16 @@ namespace KinectNaoHandler
         public static float getElbowRoll_Right(Skeleton skeleton)
         {
             // Get fitting joints
-            Joint shoulder = skeleton.Joints[JointType.ShoulderRight];
-            Joint elbow = skeleton.Joints[JointType.ElbowRight];
-            Joint hand = skeleton.Joints[JointType.HandRight];
+            Joint shoulder_j = skeleton.Joints[JointType.ShoulderRight];
+            Joint elbow_j = skeleton.Joints[JointType.ElbowRight];
+            Joint hand_j = skeleton.Joints[JointType.HandRight];
             
-            // Vektorisierung
-            
+            Vector3D shoulder = new Vector3D(shoulder_j.Position.X, shoulder_j.Position.Y, shoulder_j.Position.Z);
+            Vector3D elbow = new Vector3D(elbow_j.Position.X, elbow_j.Position.Y, elbow_j.Position.Z);
+            Vector3D hand = new Vector3D(hand_j.Position.X, hand_j.Position.Y, hand_j.Position.Z);
 
             // Vektorberechnung
-
-                                    
-
-            return -999.0f;
+            return AngleCalculation.getAngle(shoulder, elbow, hand);
         }
         public static float getElbowYaw_Right(Skeleton skeleton)
         {
@@ -44,10 +42,26 @@ namespace KinectNaoHandler
 
 
         //4 Punkte -> 2 unabhängige Knochen
-        private float getAngle(Vector3D a, Vector3D b, Vector3D x, Vector3D y);
+        public static float getAngle(Vector3D a, Vector3D b, Vector3D x, Vector3D y)
+        {
+            return -999.0f;
+        }
 
         //3 Punkte -> 2 zusammenhängende Knochen
-        private float getAngle(Vector3D a, Vector3D b, Vector3D c);
+        public static float getAngle(Vector3D a, Vector3D b, Vector3D c)
+        {
+            Vector3D bone1 = a - b;
+            Vector3D bone2 = c - b;
+
+            bone1.Normalize();
+            bone2.Normalize();
+
+            float dotProduct = (float)Vector3D.DotProduct(bone1, bone2);
+
+            return (float)Math.Acos(dotProduct);
+            //return -999.0f;
+        }
+
 
 
 

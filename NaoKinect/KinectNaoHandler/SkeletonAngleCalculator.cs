@@ -34,10 +34,16 @@ namespace KinectNaoHandler
 
             while (!_shouldStop)
             {
+
+                if (currentSkeleton == null)
+                {
+                    continue;
+                }
                 //Hier werden Berechnungen mit CURRENTSKELETON (EVTL PUFFER!!!) getätigt
                 //BERECHNE WINKEL a-d
                 //updateAngles
                 //Sleep
+                //Zuverlässigkeit der Joints
                 shoulderPitch_Rigt = AngleCalculation.getShoulderPitch_Right(currentSkeleton);
                 shoulderRoll_Right = AngleCalculation.getShoulderRoll_Right(currentSkeleton);
                 elbowRoll_Right = AngleCalculation.getElbowRoll_Right(currentSkeleton);
@@ -45,8 +51,8 @@ namespace KinectNaoHandler
 
                 skeletonAngleHandler.updateAngles(shoulderPitch_Rigt, shoulderRoll_Right, elbowRoll_Right, elbowYaw_Right);
                 Thread.Sleep(500);
-                skeletonAngleHandler.updateAngles(0.0f, 0.0f, 0.0f, 0.0f);
-                Thread.Sleep(500);
+               // skeletonAngleHandler.updateAngles(0.0f, 0.0f, 0.0f, 0.0f);
+                //Thread.Sleep(500);
                 
             }
             Console.WriteLine("Angle Calculation shutted down");
