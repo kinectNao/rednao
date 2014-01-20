@@ -1,0 +1,26 @@
+\section{Kinect Software}
+Das Produkt Xbox Kinect kam bereits vor einigen Jahren auf den Markt. Somit hatten die Entwickler Zeit, um ein SDK zu entwickeln, was alle wichtigen Programmfunktionen bereits enthält. Dies macht es einem Entwickler relativ leicht eine Anwendung zu erstellen, die bestimmte Kinect-Funktionen bereitstellt. 
+Die Hardware liefert folgende Werte:
+-Audiosignal von n Microphonen
+-RGB Bildsignal der Kamera
+-Tiefensignal (wobei von Treiber errechnet) -> IR Tiefenscan... näher erläutern
+
+Für dieses Projekt sind die Audiodaten jedoch irrelevant. Wichtig sind primär die Bilddaten inklusive Tiefenwerte.
+Das Kinect SDK bietet bereits standardmäßig Zugriff auf die grundlegenden Funktionen:
+Dabei können bestimmte Proxyobjekte registriert und abgerufen werden. Die wichtigste Implementierung eines dieser Proxyobjekte ist für dieses Projekt der Skeletonstream.
+
+Dieser Stream berechnet anhand der Tiefendaten und der RGB-Daten werte für ein Menschliches Skelett:
+
+-Armwinkel
+-Positionen
+-Kinectraum...
+
+
+
+
+DELME\cite{hertzberg2009mobile}
+
+\todo{SDK Funktionen erklären: skelton, mehrere user, deep stream, color stream}
+\todo{Screenshot von Deep Stream (Kinect Studio)}
+\todo{Unterschied Microsoft SDK und Freie Implementierung OpenNI}
+\todo{Bild von Kinect-Koordinatensystem -> Bezug auf Nao}

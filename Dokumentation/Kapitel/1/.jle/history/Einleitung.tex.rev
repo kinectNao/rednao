@@ -1,0 +1,44 @@
+revision: Fri Jul 05 10:22:21 CEST 2013
+4,5c4,5
+< \input{Kapitel/1/Praxisumfeld.text}      % Einbinden der Unterkapitel
+< \input{Kapitel/1/Überblick.tex}      %
+---
+> \input{Praxisumfeld.tex}      % Einbinden der Unterkapitel
+> \input{Überblick.tex}      %
+revision: Fri Jul 05 10:23:35 CEST 2013
+4c4
+< \input{Kapitel/1/Praxisumfeld.tex}      % Einbinden der Unterkapitel
+---
+> \input{Kapitel/1/Praxisumfeld.text}      % Einbinden der Unterkapitel
+revision: Fri Jul 05 10:23:44 CEST 2013
+5c5
+< \input{Kapitel/1/Ueberblick.tex}      %
+---
+> \input{Kapitel/1/Überblick.tex}      %
+revision: Fri Jul 05 10:24:16 CEST 2013
+2d1
+< \thispagestyle{empty}
+3a3
+> 
+revision: Fri Jul 05 10:32:10 CEST 2013
+revision: Fri Jul 05 10:32:42 CEST 2013
+1a2
+> \thispagestyle{empty}
+3d3
+< 
+revision: Fri Jul 05 10:37:59 CEST 2013
+2a3
+> 
+revision: Fri Jul 05 10:52:58 CEST 2013
+1d0
+< \thispagestyle{fancy}
+revision: Fri Jul 05 10:53:59 CEST 2013
+0a1
+> \thispagestyle{fancy}
+revision: Fri Jul 05 10:56:07 CEST 2013
+6d5
+< \newpage
+revision: Fri Jul 05 11:05:31 CEST 2013
+5a6
+> \newpage
+revision: Fri Jul 05 11:05:55 CEST 2013

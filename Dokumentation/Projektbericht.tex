@@ -1,0 +1,169 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Packages/Dokumentart %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[ a4paper,  % Papierart
+ 		 %       10pt,    %
+   				 12pt,    % Schriftgröße
+ 			 %  12pt,    %
+    			%pdftex,    % PDF Umwandlung
+  %  twoside    % 2-seitig
+    ] {scrreprt}  % Dokumenttyp Bericht
+    
+\usepackage{geometry} \geometry{a4paper, top=30mm, left=35mm, right=30mm, bottom=30mm, headsep=10mm, footskip=12mm} 
+\usepackage[ngerman]{babel}  % Deutsches Sprachpaket/Silbentrennung etc.
+\usepackage[utf8]{inputenc}  % verwendeter Codec (für Umlaute)
+\usepackage{graphicx}    % für Bilder
+\usepackage{cite}    % für bestimmte Zitierfunktionen
+\usepackage{url}
+\usepackage{nameref}
+\newcommand{\myref}[1]{\ref{#1} \textit{\nameref{#1}}}
+\newcommand{\fref}[1]{Abbildung \textit{\ref{#1}}}
+%\usepackage{hyperref}
+\usepackage{acronym}  % für Abkürzungen in Fußnote
+\usepackage{caption}    % Um Bildunterschriften zu konfigurieren (mit, ohne erscheinen im Abkürzungsverzeichnis)
+\usepackage{setspace}    % für Zeilenabstand
+\usepackage{todo}
+
+\renewcommand{\todoname}{\addcontentsline{toc}{chapter}{Liste der ToDo's}Liste der ToDo's}
+
+% Verlinkung zu den Kapiteln im Inhaltsverzeichnis
+\usepackage[colorlinks,
+pdfpagelabels,
+pdfstartview = FitH,
+bookmarksopen = true,
+bookmarksnumbered = true,
+linkcolor = black,
+plainpages = false,
+hypertexnames = false,
+citecolor = black] {hyperref}
+
+
+\onehalfspacing      % ab hier Zeilenabstand 1,5
+
+\clubpenalty = 10000  
+\widowpenalty = 10000  
+\displaywidowpenalty = 10000 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Kopfzeile %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fancyhdr}      % Package für Kopfzeile  
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen
+\fancyhead[L]{\leftmark} %Kopfzeile links
+\fancyhead[C]{} %zentrierte Kopfzeile
+\fancyhead[R]{\rightmark} %Kopfzeile rechts
+\renewcommand{\chaptermark}[1]{ \markboth{\thechapter \ #1}{} }
+\renewcommand{\sectionmark}[1]{ \markright{\thesection \ #1}{} }
+
+\renewcommand{\headrulewidth}{0.4pt} %obere Trennlinie
+\fancyfoot[C]{\thepage} %Seitennummer
+\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
+%\automark[section]{chapter}       % für Anzeigen des Unterkapitels (Standard Überkapitel)
+%\clearscrheadfoot \ihead{\headmark}    % ihead links, ohead rechts, chead mitte
+%\setheadsepline{0.4pt}        % Linie unter Kopfzeile
+%\cfoot[\pagemark]{\pagemark}      % Mitte Fußzeile Seitenzahl (selbe wie mit head (il,o,c))
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Abkürzungen %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Persöhnlich
+\newcommand{\Autor}{Lukas Essig\\und\\Michael Stahlberger}
+\newcommand{\MatrikelNummer}{8898018, 1367912}
+\newcommand{\Kursbezeichnung}{TINF11B3}
+%Firma
+\newcommand{\FirmenName}{Fiducia IT AG }              
+\newcommand{\FirmenStadt}{Karlsruhe}              
+\newcommand{\FirmenLogoDeckblatt}{\includegraphics[width=6cm]{Bilder/fiducia.jpg}}  
+\newcommand{\dhLogo}{\includegraphics[width=4cm]{Bilder/dhbw-logo.png}}
+%Betreuer
+%\newcommand{\BetreuerFirma}{Kay Lützel}
+\newcommand{\BetreuerDHBW}{Herr Prof. Hans-Jörg Haubner}
+%Art der Arbeit
+%\newcommand{\Was}{Praxisbericht}
+%\newcommand{\WasErklaerung}{den vorliegenden \Was}
+\newcommand{\Was}{Studienarbeit}
+\newcommand{\WasErklaerung}{die vorliegende \Was}
+%\newcommand{\Was}{Studienarbeit}
+%\newcommand{\WasErklaerung}{die vorliegende \Was}
+%\newcommand{\Was}{Bachelorarbeit}
+%\newcommand{\WasErklaerung}{die vorliegende \Was}
+%Deckblatt Infos
+\newcommand{\Titel}{Entwicklung einer Gestiksteuerung mittels Kinect für den humanoiden Roboter Nao}
+\newcommand{\Dauer}{12 Wochen}
+\newcommand{\Abschluss}{Bachelor of Engineering}
+\newcommand{\Studiengang}{Informationstechnik}
+\newcommand{\AbgabeDatum}{12. Mai 2014}
+
+\begin{document}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Titelseite %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{singlespace}              % Zeilenabstand für Titelseite verringern
+\begin{titlepage}
+\begin{center}                % Referenzpunkt Seitenmitte
+\vspace*{-2cm}                % 2 cm nach Links Platz lassen
+\FirmenLogoDeckblatt\hfill\includegraphics[width=4cm]{Bilder/dhbw-logo}\\[2cm] % Firmenlogo platzieren
+
+{\huge\Titel}\\[2cm]              % \Huge, \Large, \large sind versch. Schriftgrößen \bfseries ist Fett gedruckt
+{\Huge\scshape \Was}\\[2cm]            % [] Inhalt ist Abstand zur nächsten Zeile
+{\large f\"ur die Pr\"ufung zum}\\[0.5cm]
+{\Large \Abschluss}\\[0.5cm]
+{\large des Studienganges \Studiengang}\\[0.5cm]
+{\large an der}\\[0.5cm]
+{\large Dualen Hochschule Baden-W\"urttemberg Karlsruhe}\\[0.5cm]
+{\large von}\\[0.5cm]
+{\large\bfseries \Autor}\\[1cm]
+{\large Abgabedatum \AbgabeDatum}
+\vfill                  % ermöglicht es unterhalb der Seitengrenze zu schreiben
+\end{center}                % Referenzpunkt Mitte beenden
+
+\begin{tabular}{l@{\hspace{2cm}}l}          % Beginn Tabelle mit einer Spalte nach der 2cm Platz gelassen wird bevor die nächste beginnt
+Bearbeitungszeitraum           & \Dauer       \\
+Matrikelnummer                   & \MatrikelNummer    \\
+Kurs               & \Kursbezeichnung    \\
+Ausbildungsfirma   & \FirmenName  \FirmenStadt      \\
+Betreuer  & \BetreuerDHBW    \\
+\end{tabular}                % Tabelle abschließen
+\end{titlepage}
+\end{singlespace}                % Titelseite abschließen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Erklärung
+\input{Anhang/erklaerung}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Kurzzusammenfassung %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{abstract}
+%\begin{onehalfspace}
+
+%Hier steht eine Kurzzusammenfassung.
+
+%\end{onehalfspace}
+%\end{abstract} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Verzeichnisse %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{Anhang/Sperrvermerk.tex}
+
+\begin{singlespace}       % Zeilenabstand für Verzeichnisse 1  
+\tableofcontents        % Inhaltsverzeichnis
+\listoffigures          % Abbildungsverzeichnis
+\listoftables         % Tabellenverzeichnis
+\end{singlespace}        % Zeilenabstand wieder ausstellen
+%\listofequations       % Formelverzeichnis
+%\listoflistings        % Listenverzeichnis
+\input{Anhang/abkuerzungsverzeichnis.tex} %Abkuerzungsverzeichnis
+\newpage %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Kapitel einbinden %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{page}{1}	%Seitenzahl wieder auf 0 Setzen, evtl anderst mit römischen Zahlen??
+\input{Kapitel/1/Einleitung.tex}
+\input{Kapitel/2/Kinect.tex}
+\input{Kapitel/3/Realisierung.tex}
+\newpage
+
+%\input{Anhang/anhang.tex}        % Anhang Einbinden
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Literaturverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+\bibliographystyle{plain}        % Zitierformat (deutsch für Großschreibung) [Häufigkeit] im Text
+\bibliography{Literaturverzeichnis}      % Pfad des Literaturverzeichnisses
+
+
+% Das muss nach dem letzten \todo des gesamten Dokuments stehen
+\todos                     % Liste der ToDo's --> Pakte: todo und Kommando \todo{..}
+
+\end{document}  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

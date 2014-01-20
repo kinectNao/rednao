@@ -1,0 +1,11 @@
+revision: Wed Jul 03 11:15:16 CEST 2013
+1c1
+< \chapter{1. Kapitel}      % Kapitelname
+---
+> %\chapter{1. Kapitel}      % Kapitelname
+revision: Wed Jul 03 11:16:03 CEST 2013
+1c1
+< \chapter{Einleitung}      % Kapitelname
+---
+> \chapter{1. Kapitel}      % Kapitelname
+revision: Fri Jul 05 10:19:38 CEST 2013
