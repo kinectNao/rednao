@@ -1,0 +1,54 @@
+Funktionsweise: Skeleton
+=========================
+
+Player Blob (Bild mit versch Farbregionen)
+
+Daraus wird mit dem Tiefenstream das Umfeld weggerechnet
+
+Übrig bleibt ein Spieler mit Joints -> Gelenke -> Skelett
+
+
+
+Kinect SDK
+==========
+
+Zunächst kein offizielles SDK von Microsoft -> Grund: Cheating verhindern
+
+Quelloffene Frameworks entstehen
+	OpenNi
+	
+
+Microsoft Zieht nach mit Kinect SDK
+	17. Juni 2011 Microsoft Kinect SDK beta wird freigegeben --> Jeder hat Zugang zu allen 		Schnittstellen, die Microsoft intern selbst benutzt
+
+	nicht kommerzielle Lizenz
+
+	Skeletterkennung ohne Initiale Pose! (im vgl. zu anderen FrameWrks)
+
+
+
+Hardware
+========
+
+Bild offenes Kinect
+
+Kippbarer Kopf
+
+Infrarot Projektor
+
+Zwei Kameras
+
+4 Mikrofone
+
+Auflösung der Kameras
+
+	color camer 	= max resolution of 1280 x 960 
+	depth camera 	= max resolution of 640 x 480.
+
+
+
+
+
+
+
+
