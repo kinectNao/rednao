@@ -19,13 +19,42 @@ Quelloffene Frameworks entstehen
 	
 
 Microsoft Zieht nach mit Kinect SDK
-	17. Juni 2011 Microsoft Kinect SDK beta wird freigegeben --> Jeder hat Zugang zu allen 		Schnittstellen, die Microsoft intern selbst benutzt
+	17. Juni 2011 Microsoft Kinect SDK beta wird freigegeben --> Jeder hat Zugang zu allen 
+	Schnittstellen, die Microsoft intern selbst benutzt
 
 	nicht kommerzielle Lizenz
 
 	Skeletterkennung ohne Initiale Pose! (im vgl. zu anderen FrameWrks)
+	
+	Problem: Nur für Windows, aber hier: Betriebssystem egal, Visual Studio vorhanden
+	-> Choreograph und Webots läuft auch unter Windows ....? (Grund)
 
-
+	Microsoft SDK bietet kein RAW Access auf Tiefenstream
+	
+	SDK Einsatz
+	-----------
+		
+		Sensor Array!, deshalb KinectSensor[0]
+		
+		Jeder Stream wird separat angesprochen (Streams), um Performanceengpässe zu vermeiden
+		
+		EventHandler für "DepthFrameReady" Event
+		
+		Gatekeeper -> Programm wartet, bis ein Kinect angeschlossen wird		
+		
+		Reichweite von Kinect (Bild mit Wohnraum)
+		-> Für Steuerungsbereich... Mittelposition bereiche für Steuermodi
+		
+		
+	Skeleton Tracking
+	-----------------
+		
+		XYZ Koordinaten
+		
+		TODO: Einfacher Skeleton Stream Code austesten -> Listing 4.1
+		
+		
+	
 
 Hardware
 ========
@@ -38,17 +67,9 @@ Infrarot Projektor
 
 Zwei Kameras
 
-4 Mikrofone
+4 Mikrofone -> Für dieses Projekt irrelevant (evtl. Sprachkommandos? Kinect Lib unterstützt Grammatik!!)
 
 Auflösung der Kameras
 
 	color camer 	= max resolution of 1280 x 960 
 	depth camera 	= max resolution of 640 x 480.
-
-
-
-
-
-
-
-
