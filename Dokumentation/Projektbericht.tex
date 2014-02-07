@@ -14,6 +14,7 @@
 \usepackage{cite}    % für bestimmte Zitierfunktionen
 \usepackage{url}
 \usepackage{nameref}
+\usepackage{float}
 \newcommand{\myref}[1]{\ref{#1} \textit{\nameref{#1}}}
 \newcommand{\fref}[1]{Abbildung \textit{\ref{#1}}}
 %\usepackage{hyperref}
@@ -22,7 +23,6 @@
 \usepackage{setspace}    % für Zeilenabstand
 \usepackage{todo}
 
-\renewcommand{\todoname}{\addcontentsline{toc}{chapter}{Liste der ToDo's}Liste der ToDo's}
 
 % Verlinkung zu den Kapiteln im Inhaltsverzeichnis
 \usepackage[colorlinks,
@@ -84,7 +84,7 @@ citecolor = black] {hyperref}
 %\newcommand{\WasErklaerung}{die vorliegende \Was}
 %Deckblatt Infos
 \newcommand{\Titel}{Entwicklung einer Gestiksteuerung mittels Kinect für den humanoiden Roboter Nao}
-\newcommand{\Dauer}{12 Wochen}
+\newcommand{\Dauer}{24 Wochen}
 \newcommand{\Abschluss}{Bachelor of Engineering}
 \newcommand{\Studiengang}{Informationstechnik}
 \newcommand{\AbgabeDatum}{12. Mai 2014}
@@ -153,6 +153,7 @@ Betreuer  & \BetreuerDHBW    \\
 \setcounter{page}{1}	%Seitenzahl wieder auf 0 Setzen, evtl anderst mit römischen Zahlen??
 \input{Kapitel/1/Einleitung.tex}
 \input{Kapitel/2/Kinect.tex}
+\input{Kapitel/4/Nao.tex}
 \input{Kapitel/3/Realisierung.tex}
 \newpage
 
