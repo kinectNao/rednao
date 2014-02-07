@@ -14,15 +14,11 @@ namespace ConsoleApplication1
         const String ip = "127.0.0.1";
         const int port = 9559;
 
-        public static float ConvertToRadians(double angle)
-        {
-            var rad = (Math.PI / 180) * angle;
-            return (float)rad;
-        }
+ 
 
         static void Main(string[] args)
         {
-
+            Console.ReadLine();
             //make sure nao is ready to move
             try
             {
@@ -57,8 +53,8 @@ namespace ConsoleApplication1
             Arms RArm = new Arms();
             Arms LArm = new Arms();
 
+            NaoTestDev.Arms.controlLArm(mp, -2.0f, 0, 0, -2.0f, 0);
             
-
             
 
             //cartesian control
