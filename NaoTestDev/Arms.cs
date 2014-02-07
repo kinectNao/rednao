@@ -4,11 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Aldebaran.Proxies;
+using ConsoleApplication1;
 
 namespace NaoTestDev
 {
     public class Arms
     {
+
+
 
         //Ranges of the single joints in radians
         public static Range<float> ShoulderPitch = new Range<float>() {Minimum=-2.0857f, Maximum=2.0857f };
@@ -32,12 +35,12 @@ namespace NaoTestDev
         //Control LArm with all Joints
         public static void controlLArm(MotionProxy mp, float LSP, float LSR, float LER, float LEY, float LWY)
         {
-
             //Joint Controll
             //Pitch=Rot(y), Roll=Rot(z), Yaw=Rot(x) 
             String[] names = { "LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw" };
             float[] newangles = { LSP, LSR, LER, LEY, LWY};
             float fractionMaxSpeed = 0.1f;
+           
             mp.setAngles(names, newangles, fractionMaxSpeed);
         }
 
@@ -52,6 +55,9 @@ namespace NaoTestDev
             float fractionMaxSpeed = 0.1f;
             mp.setAngles(names, newangles, fractionMaxSpeed);
         }
+
+
+       
 
     }
 }

@@ -5,40 +5,40 @@ using System.Text;
 using System.Threading.Tasks;
 using Aldebaran.Proxies;
 using NaoTestDev;
+using System.Windows.Forms;
 
 namespace ConsoleApplication1
 {
-    class Program
+    public class Program
     {
         //Local or Remote
         const String ip = "127.0.0.1";
         const int port = 9559;
 
- 
+        private MotionProxy mp;
+        private RobotPostureProxy rp;
 
-        static void Main(string[] args)
+        public Program()
+        {
+            init();
+        }
+
+        private void init()
         {
             Console.ReadLine();
             //make sure nao is ready to move
             try
             {
-                RobotPostureProxy rp = new RobotPostureProxy("127.0.0.1", 9559);
+
+                rp = new RobotPostureProxy("127.0.0.1", 9559);
                 rp.goToPosture("StandZero", 1);
             }
-            catch (Exception )
+            catch (Exception)
             {
-                
+
                 throw new Exception("Cannot connect to Proxy");
             }
-           
-            
 
-
-            //NavigationProxy np = new NavigationProxy(ip, port);
-            //if (np.moveTo(10, 0, 0)) Console.WriteLine("no obstacle");
-            //else Console.WriteLine("obstacle!!!");
-
-            MotionProxy mp;
             try
             {
                 mp = new MotionProxy(ip, port);
@@ -51,18 +51,23 @@ namespace ConsoleApplication1
 
 
             Arms RArm = new Arms();
+            
+         
+        }
+
+        public void controlLArm(float LSP, float LSR, float LER, float LEY, float LWY)
+        {
             Arms LArm = new Arms();
 
-            NaoTestDev.Arms.controlLArm(mp, -2.0f, 0, 0, -2.0f, 0);
-            
-            
+            NaoTestDev.Arms.controlLArm(mp,  LSP,  LSR,  LER,  LEY,  LWY);
+        }
 
-            //cartesian control
-            //List: x,y,z,dx,dy,dz
-            //List<float> change = new List<float> { -0.19855f, 0.19855f, 0, 0, 0, 0 };
-            //mp.setPosition("LArm", 2, change, 0.3f, 63);
-
-            //Console.ReadLine();
+        static void Main(string[] args)
+        {
+            Program main = new Program();
+            Form1 f = new Form1(main);
+            f.Show();
+            Application.Run();
             
         }
 
