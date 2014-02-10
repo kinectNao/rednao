@@ -13,18 +13,23 @@ Kinect SDK
 ==========
 
 Zunächst kein offizielles SDK von Microsoft -> Grund: Cheating verhindern
+-> done
 
 Quelloffene Frameworks entstehen
 	OpenNi
-	
+-> done
+
 
 Microsoft Zieht nach mit Kinect SDK
 	17. Juni 2011 Microsoft Kinect SDK beta wird freigegeben --> Jeder hat Zugang zu allen 
 	Schnittstellen, die Microsoft intern selbst benutzt
-
+	-> done
+	
 	nicht kommerzielle Lizenz
-
+	-> done
+	
 	Skeletterkennung ohne Initiale Pose! (im vgl. zu anderen FrameWrks)
+	-> done
 	
 	Problem: Nur für Windows, aber hier: Betriebssystem egal, Visual Studio vorhanden
 	-> Choreograph und Webots läuft auch unter Windows ....? (Grund)
