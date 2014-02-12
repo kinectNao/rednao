@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading;
 using System.Collections;
 using Microsoft.Kinect;
+using NaoControl;
 
 namespace KinectNaoHandler
 {
@@ -11,6 +12,8 @@ namespace KinectNaoHandler
     {
 
         private SkeletonAngleCalculator angleCalculator;
+        private NaoHandler naoHandler;
+
         private Thread angleCalculatorThread;
         private AngleView view;
         private ArrayList angleSubscribers = new ArrayList();
@@ -20,6 +23,7 @@ namespace KinectNaoHandler
             view = new AngleView(this);
             view.Show();
 
+            naoHandler = new NaoHandler();
 
             angleCalculator = new SkeletonAngleCalculator(this);
             angleCalculatorThread = new Thread(angleCalculator.DoWork);
