@@ -69,7 +69,6 @@
             this.t4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.t4.Size = new System.Drawing.Size(100, 20);
             this.t4.TabIndex = 3;
-            
             // 
             // t5
             // 
@@ -137,7 +136,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(365, 261);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
