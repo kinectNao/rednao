@@ -1,16 +1,17 @@
-\BOOKMARK [0][]{chapter.5}{1 Einleitung}{}
-\BOOKMARK [1][]{section.6}{1.1 Umfeld}{chapter.5}
-\BOOKMARK [1][]{section.7}{1.2 Thema}{chapter.5}
-\BOOKMARK [1][]{section.8}{1.3 Inhalt}{chapter.5}
-\BOOKMARK [0][]{chapter.10}{2 Kinect}{}
-\BOOKMARK [1][]{section.12}{2.1 Kinect Hardware}{chapter.10}
-\BOOKMARK [1][]{section.16}{2.2 Kinect Software}{chapter.10}
-\BOOKMARK [1][]{section.21}{2.3 Kinect SDK}{chapter.10}
-\BOOKMARK [0][]{chapter.22}{3 Nao}{}
-\BOOKMARK [1][]{section.23}{3.1 Nao Hardware}{chapter.22}
-\BOOKMARK [1][]{section.26}{3.2 Nao Software}{chapter.22}
-\BOOKMARK [1][]{section.27}{3.3 Nao SDK}{chapter.22}
-\BOOKMARK [0][]{chapter.28}{4 Realisierung}{}
-\BOOKMARK [1][]{section.34}{4.1 Architektur}{chapter.28}
-\BOOKMARK [1][]{section.38}{4.2 Prototyp}{chapter.28}
-\BOOKMARK [0][]{todo.40}{Literaturverzeichnis}{}
+\BOOKMARK [0][]{chapter.5}{1 Einleitung}{}% 1
+\BOOKMARK [1][]{section.6}{1.1 Umfeld}{chapter.5}% 2
+\BOOKMARK [1][]{section.7}{1.2 Thema}{chapter.5}% 3
+\BOOKMARK [1][]{section.8}{1.3 Inhalt}{chapter.5}% 4
+\BOOKMARK [0][]{chapter.10}{2 Kinect}{}% 5
+\BOOKMARK [1][]{section.12}{2.1 Kinect Hardware}{chapter.10}% 6
+\BOOKMARK [1][]{section.16}{2.2 Kinect Software}{chapter.10}% 7
+\BOOKMARK [1][]{section.21}{2.3 Kinect SDK}{chapter.10}% 8
+\BOOKMARK [2][]{subsection.22}{2.3.1 Richtiger Umgang mit dem SDK}{section.21}% 9
+\BOOKMARK [0][]{chapter.24}{3 Nao}{}% 10
+\BOOKMARK [1][]{section.25}{3.1 Nao Hardware}{chapter.24}% 11
+\BOOKMARK [1][]{section.28}{3.2 Nao Software}{chapter.24}% 12
+\BOOKMARK [1][]{section.29}{3.3 Nao SDK}{chapter.24}% 13
+\BOOKMARK [0][]{chapter.30}{4 Realisierung}{}% 14
+\BOOKMARK [1][]{section.36}{4.1 Architektur}{chapter.30}% 15
+\BOOKMARK [1][]{section.40}{4.2 Prototyp}{chapter.30}% 16
+\BOOKMARK [0][]{todo.42}{Literaturverzeichnis}{}% 17
