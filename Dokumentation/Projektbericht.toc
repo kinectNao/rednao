@@ -7,11 +7,12 @@
 \contentsline {section}{\numberline {2.1}Kinect Hardware}{3}{section.12}
 \contentsline {section}{\numberline {2.2}Kinect Software}{3}{section.16}
 \contentsline {section}{\numberline {2.3}Kinect SDK}{4}{section.21}
-\contentsline {chapter}{\numberline {3}Nao}{5}{chapter.22}
-\contentsline {section}{\numberline {3.1}Nao Hardware}{5}{section.23}
-\contentsline {section}{\numberline {3.2}Nao Software}{7}{section.26}
-\contentsline {section}{\numberline {3.3}Nao SDK}{7}{section.27}
-\contentsline {chapter}{\numberline {4}Realisierung}{8}{chapter.28}
-\contentsline {section}{\numberline {4.1}Architektur}{8}{section.34}
-\contentsline {section}{\numberline {4.2}Prototyp}{8}{section.38}
-\contentsline {chapter}{Literaturverzeichnis}{9}{todo.40}
+\contentsline {subsection}{\numberline {2.3.1}Richtiger Umgang mit dem SDK}{4}{subsection.22}
+\contentsline {chapter}{\numberline {3}Nao}{5}{chapter.24}
+\contentsline {section}{\numberline {3.1}Nao Hardware}{5}{section.25}
+\contentsline {section}{\numberline {3.2}Nao Software}{7}{section.28}
+\contentsline {section}{\numberline {3.3}Nao SDK}{7}{section.29}
+\contentsline {chapter}{\numberline {4}Realisierung}{8}{chapter.30}
+\contentsline {section}{\numberline {4.1}Architektur}{8}{section.36}
+\contentsline {section}{\numberline {4.2}Prototyp}{8}{section.40}
+\contentsline {chapter}{Literaturverzeichnis}{9}{todo.42}
