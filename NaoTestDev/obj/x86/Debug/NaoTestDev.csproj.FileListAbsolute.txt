@@ -1,0 +1,10 @@
+C:\Users\tuxpad\Documents\Studienarbeit\rednao\NaoTestDev\bin\x86\Debug\NaoTestDev.exe.config
+C:\Users\tuxpad\Documents\Studienarbeit\rednao\NaoTestDev\bin\x86\Debug\NaoTestDev.exe
+C:\Users\tuxpad\Documents\Studienarbeit\rednao\NaoTestDev\bin\x86\Debug\NaoTestDev.pdb
+C:\Users\tuxpad\Documents\Studienarbeit\rednao\NaoTestDev\obj\x86\Debug\NaoTestDev.exe
+C:\Users\tuxpad\Documents\Studienarbeit\rednao\NaoTestDev\obj\x86\Debug\NaoTestDev.pdb
+C:\Users\tuxpad\Documents\Studienarbeit\rednao\NaoTestDev\bin\x86\Debug\naoqi-dotnet4.dll
+C:\Users\tuxpad\Documents\Studienarbeit\rednao\NaoTestDev\bin\x86\Debug\naoqi-dotnet4.xml
+C:\Users\tuxpad\Documents\Studienarbeit\rednao\NaoTestDev\obj\x86\Debug\NaoTestDev.Form1.resources
+C:\Users\tuxpad\Documents\Studienarbeit\rednao\NaoTestDev\obj\x86\Debug\NaoTestDev.csproj.GenerateResource.Cache
+C:\Users\tuxpad\Documents\Studienarbeit\rednao\NaoTestDev\obj\x86\Debug\NaoTestDev.csprojResolveAssemblyReference.cache
