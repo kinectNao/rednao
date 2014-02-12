@@ -16,7 +16,11 @@ namespace NaoTestDev
 
         public Form1(ConsoleApplication1.Program p)
         {
+          
             InitializeComponent();
+            
+           
+            
             main = p;
            
         }
@@ -28,6 +32,7 @@ namespace NaoTestDev
 
         private void button1_Click(object sender, EventArgs e)
         {
+           
             
             main.controlLArm(float.Parse(t1.Text),float.Parse(t2.Text),float.Parse(t3.Text),float.Parse(t4.Text),float.Parse(t5.Text));
 

@@ -12,7 +12,7 @@ namespace KinectNaoHandler
     {
 
         private SkeletonAngleCalculator angleCalculator;
-        private NaoHandler naoHandler;
+        //private NaoHandler naoHandler;
 
         private Thread angleCalculatorThread;
         private AngleView view;
@@ -23,7 +23,7 @@ namespace KinectNaoHandler
             view = new AngleView(this);
             view.Show();
 
-            naoHandler = new NaoHandler();
+            //naoHandler = new NaoHandler();
 
             angleCalculator = new SkeletonAngleCalculator(this);
             angleCalculatorThread = new Thread(angleCalculator.DoWork);
