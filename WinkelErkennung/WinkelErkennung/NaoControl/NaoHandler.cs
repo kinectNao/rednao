@@ -4,29 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Aldebaran.Proxies;
-using NaoTestDev;
-using System.Windows.Forms;
 
-namespace ConsoleApplication1
+
+namespace NaoControl
 {
-    public class Program
+    public class NaoHandler : ISkeletonAngles
     {
-        //Local or Remote
+
+         //Local or Remote
         const String ip = "127.0.0.1";
         const int port = 9559;
 
         private MotionProxy mp;
         private RobotPostureProxy rp;
+        private Arms RArm;
+        private Arms LArm;
 
-        public Program()
+
+        public NaoHandler()
         {
             init();
         }
 
         private void init()
         {
-            Console.ReadLine();
-            //make sure nao is ready to move
             try
             {
 
@@ -50,29 +51,23 @@ namespace ConsoleApplication1
             }
 
 
-            Arms RArm = new Arms();
-            
+            RArm = new Arms(); 
+            LArm = new Arms();
          
         }
 
         public void controlLArm(float LSP, float LSR, float LER, float LEY, float LWY)
         {
-            Arms LArm = new Arms();
 
-            NaoTestDev.Arms.controlLArm(mp,  LSP,  LSR,  LER,  LEY,  LWY);
+            NaoControl.Arms.controlLArm(mp,  LSP,  LSR,  LER,  LEY,  LWY);
         }
 
-        static void Main(string[] args)
+
+
+
+        public void updateAngles(float shoulderPitch, float shoulderRoll, float ellbowRoll, float ellbowYaw)
         {
-            Program main = new Program();
-            Form1 f = new Form1(main);
-            f.Show();
-            Application.Run();
-            
+            NaoControl.Arms.controlLArm(mp, shoulderPitch, shoulderRoll, ellbowRoll, ellbowYaw, 0.0f);
         }
-
-
-
-        
     }
 }

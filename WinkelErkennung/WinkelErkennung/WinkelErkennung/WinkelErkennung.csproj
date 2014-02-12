@@ -101,6 +101,10 @@
       <Project>{8FA1A75A-2118-4A22-B19A-58F9920D38DB}</Project>
       <Name>KinectNaoHandler</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NaoControl\NaoControl.csproj">
+      <Project>{b9f5ffc6-d056-432e-b0a4-b81e05f27801}</Project>
+      <Name>NaoControl</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -71,6 +71,15 @@
       <DependentUpon>AngleView.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\WinkelErkennung\WinkelErkennung\NaoControl\NaoControl.csproj">
+      <Project>{b9f5ffc6-d056-432e-b0a4-b81e05f27801}</Project>
+      <Name>NaoControl</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
