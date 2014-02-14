@@ -1,0 +1,31 @@
+\chapter{Einleitung}      % Kapitelname
+
+In dieser Einleitung wird das zentrale Thema dieser Arbeit beleuchtet, beschrieben in welchem Umfeld die Arbeit entworfen wurde und strukturell erläutert, wie die Zusammenarbeit im Projekt stattgefunden hat. Zudem wird aufgezählt, wie sich diese Arbeit inhaltlich aufbaut.
+
+\section{Ziel der Arbeit}
+Zentrales Thema der Arbeit ist die Interaktion zwischen Mensch und Roboter. Dabei soll ein Modell des humanoiden Roboters Nao durch eine Gestik seines Benutzers gesteuert werden. Dabei ahmt der Roboter die Bewegungen nach, die der Benutzer zeitgleich bzw. etwas zuvor ausgeführt hat. Zudem sollen bestimmte Steuergesten implementiert werden, die den Roboter in verschiedene Modi versetzen, in denen er gleiche Gesten auf verschiedene Wege interpretiert. Die Gestik-Erkennung soll dabei mit Hilfe eines Xbox - Kinect Moduls erfolgen. Von dieser Stereokamera werden bestimmte Gesten erkannt und über eine selbst implementierte Software verarbeitet und an den Nao-Roboter weitergeleitet, der diese dann nachahmt. Dabei ist natürlich darauf zu achten, dass keine Bewegungen von Nao ausgeführt werden, die ihm mechanisch oder elektronisch Schaden zufügen können.
+
+Das Vorgehen ist folgendermaßen strukturiert: Nach der Einarbeitung in die Materie Nao - Roboter und Kinect - Kamera soll die Wahl einer geeigneten Programmiersprache getroffen werden. Daraufhin müssen zwei verschiedene Anwendungen konzeptioniert und implementiert werden. Erstens die Erkennung der Gesten mittels Kinect und zweitens das Empfangen der Gesten und die kinematische Umsetzung durch den Roboter. Zwischen diesen beiden Anwendungen muss eine geeignete Kommunikationsschicht entworfen und implementiert werden.
+
+Der erste große Meilenstein ist die Übertragung der Armbewegung des Menschen auf den Roboter. Darauf folgend soll versucht werden auch Kopf- und Torsobewegungen zu übertragen. Je nach dem wie der zeitliche Fortschritt nach diesen beiden Meilensteinen ist, kann auch die Steuerung der Füße und somit das Laufen implementiert werden.
+
+\section{Inhalt}
+Grundlagen (Roboter, DOF, ) -> Kinect -> Nao -> Realisierung (Prototypen, Architektur, Umsetzung) -> Fazit(was hat geklappt, was fehlt,)
+
+\todo{
+Inhalt der Studienarbeit
+}
+
+
+\section{Umfeld \& Strukturelles}
+Diese Studienarbeit mit dem Thema \textit{\Titel} wurde während zwei Theoriephasen an der \ac{DHBW} am Standort Karlsruhe von Michael Stahlberger und Lukas Essig durchgeführt. Betreut wurde die Arbeit durch Herrn Prof. Hans-Jörg Haubner, sowie Herrn Michael Schneider. 
+
+Dieses Dokument wurde von den beiden Autoren in \LaTeX\ verfasst. Dies hat den Vorteil, dass sehr leicht gleichzeitig am Dokument geschrieben werden kann, ohne dass Konflikte dabei auftreten. 
+
+Als Programmiersprache wurde C\# gewählt, da sowohl das Kinect - Modul als auch der Nao - Roboter über eine Schnittstelle verfügen, die diese objektorientierte Sprache entgegennimmt. Das macht es einfacher, die beiden Programme später zu verknüpfen.
+
+Sowohl die \LaTeX\ Dokumentation, als auch der Source - Code sind mit Hilfe von Git\footnote{Software zur Versionsverwaltung von Dateien und Verzeichnissen}  in einem Repository versioniert worden. Damit lässt sich genau verfolgen, wer wann was geändert hat und auch vorherige Versionen wiederherstellen.
+Das Repository wurde auf der Internetplattform \textit{GitHub}  gespeichert. Damit ist es möglich, von jedem Rechner auf das Repository und somit die Dateien und Dokumente zuzugreifen. \textit{GitHub} bietet den Vorteil, dass die Zusammenarbeit an Projekten noch zusätzlich durch Management - Funktionen unterstützt werden. In diesem Fall wurden davon hauptsächlich zwei Funktionen benutzt. Einmal die \textit{Issue}- Funktion, mit der Anforderungen, Aufgaben, Bugs etc. eingetragen und einem Bearbeiter zugeordnet werden können. Zusätzlich wurde noch die \textit{Milestone}-Funktion genutzt, mit der Projekt - Meilensteine erstellt werden können. Diese geben an, welche Funktion bzw. Anforderung bis wann erledigt sein sollten. Die Issues sind dann einem Meilenstein zugeordnet und wenn ein Issue geschlossen wird, ist sehr einfach dargestellt, zu wie viel Prozent der Meilenstein erreicht ist.
+
+
+

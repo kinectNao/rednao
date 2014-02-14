@@ -50,7 +50,7 @@ namespace KinectNaoHandler
                 elbowYaw_Right = AngleCalculation.getElbowYaw_Right(currentSkeleton);
 
                 skeletonAngleHandler.updateAngles(shoulderPitch_Right, shoulderRoll_Right, elbowRoll_Right, elbowYaw_Right);
-                Thread.Sleep(500);
+                Thread.Sleep(50);
                 
             }
             Console.WriteLine("Angle Calculation shutted down");

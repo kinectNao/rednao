@@ -8,3 +8,13 @@ C:\Users\tuxpad\Documents\Studienarbeit\rednao\NaoTestDev\bin\x86\Debug\naoqi-do
 C:\Users\tuxpad\Documents\Studienarbeit\rednao\NaoTestDev\obj\x86\Debug\NaoTestDev.Form1.resources
 C:\Users\tuxpad\Documents\Studienarbeit\rednao\NaoTestDev\obj\x86\Debug\NaoTestDev.csproj.GenerateResource.Cache
 C:\Users\tuxpad\Documents\Studienarbeit\rednao\NaoTestDev\obj\x86\Debug\NaoTestDev.csprojResolveAssemblyReference.cache
+C:\Users\nao\Desktop\rednao\NaoTestDev\bin\x86\Debug\NaoTestDev.exe.config
+C:\Users\nao\Desktop\rednao\NaoTestDev\obj\x86\Debug\NaoTestDev.exe
+C:\Users\nao\Desktop\rednao\NaoTestDev\obj\x86\Debug\NaoTestDev.pdb
+C:\Users\nao\Desktop\rednao\NaoTestDev\bin\x86\Debug\NaoTestDev.exe
+C:\Users\nao\Desktop\rednao\NaoTestDev\bin\x86\Debug\NaoTestDev.pdb
+C:\Users\nao\Desktop\rednao\NaoTestDev\bin\x86\Debug\naoqi-dotnet4.dll
+C:\Users\nao\Desktop\rednao\NaoTestDev\bin\x86\Debug\naoqi-dotnet4.xml
+C:\Users\nao\Desktop\rednao\NaoTestDev\obj\x86\Debug\NaoTestDev.csprojResolveAssemblyReference.cache
+C:\Users\nao\Desktop\rednao\NaoTestDev\obj\x86\Debug\NaoTestDev.Form1.resources
+C:\Users\nao\Desktop\rednao\NaoTestDev\obj\x86\Debug\NaoTestDev.csproj.GenerateResource.Cache

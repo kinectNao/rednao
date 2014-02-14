@@ -39,7 +39,7 @@ namespace NaoTestDev
             //Pitch=Rot(y), Roll=Rot(z), Yaw=Rot(x) 
             String[] names = { "LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw" };
             float[] newangles = { LSP, LSR, LER, LEY, LWY};
-            float fractionMaxSpeed = 0.1f;
+            float fractionMaxSpeed = 0.2f;
            
             mp.setAngles(names, newangles, fractionMaxSpeed);
         }
