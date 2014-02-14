@@ -12,7 +12,7 @@ namespace ConsoleApplication1
     public class Program
     {
         //Local or Remote
-        const String ip = "127.0.0.1";
+        public String ip { get; set; }
         const int port = 9559;
 
         private MotionProxy mp;
@@ -20,18 +20,21 @@ namespace ConsoleApplication1
 
         public Program()
         {
-            init();
+            
         }
 
-        private void init()
+        public void init()
         {
-            Console.ReadLine();
+          
             //make sure nao is ready to move
             try
             {
 
                 rp = new RobotPostureProxy(ip, 9559);
                 rp.goToPosture("StandZero", 1);
+
+                Console.WriteLine("Connected to Nao with IP: " + ip);
+
             }
             catch (Exception)
             {
@@ -68,7 +71,6 @@ namespace ConsoleApplication1
             Form1 f = new Form1(main);
             f.Show();
             Application.Run();
-            
         }
 
 

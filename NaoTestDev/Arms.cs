@@ -23,8 +23,8 @@ namespace NaoTestDev
         public static Range<float> RElbowRoll = new Range<float>() { Minimum = -0.0087f, Maximum = 1.5621f };
 
 
-        public static Range<float> ElbowYaw = new Range<float>() { Minimum = -2.0857f, Maximum = -2.0857f };
-        public static Range<float> WristYaw = new Range<float>() { Minimum = -1.8238f, Maximum = -1.8238f };
+        public static Range<float> ElbowYaw = new Range<float>() { Minimum = -2.0857f, Maximum = 2.0857f };
+        public static Range<float> WristYaw = new Range<float>() { Minimum = -1.8238f, Maximum = 1.8238f };
 
         public static float ConvertToRadians(double angle)
         {
@@ -35,13 +35,22 @@ namespace NaoTestDev
         //Control LArm with all Joints
         public static void controlLArm(MotionProxy mp, float LSP, float LSR, float LER, float LEY, float LWY)
         {
+
+
             //Joint Controll
             //Pitch=Rot(y), Roll=Rot(z), Yaw=Rot(x) 
             String[] names = { "LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw" };
             float[] newangles = { LSP, LSR, LER, LEY, LWY};
-            float fractionMaxSpeed = 0.2f;
-           
-            mp.setAngles(names, newangles, fractionMaxSpeed);
+
+            //Make sure floats are in range
+            if (ShoulderPitch.ContainsValue(LSP) && LShoulderRoll.ContainsValue(LSR) && LElbowRoll.ContainsValue(LER) && ElbowYaw.ContainsValue(LEY))
+            {
+                float fractionMaxSpeed = 0.2f;
+
+                mp.setAngles(names, newangles, fractionMaxSpeed);
+            }
+            else return;
+            
         }
 
         //Control RArm with all Joints

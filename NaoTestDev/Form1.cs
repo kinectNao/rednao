@@ -38,6 +38,13 @@ namespace NaoTestDev
 
         }
 
+        private void btnConnect_Click(object sender, EventArgs e)
+        {
+            main.ip = txtIp.Text;
+            main.init();
+            button1.Enabled = true;
+        }
+
       
     }
 }
