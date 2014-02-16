@@ -17,6 +17,9 @@ Da das Produkt Xbox Kinect bereits vor einigen Jahren auf den Markt kam, hatten 
 Für dieses Projekt sind die Audiodaten jedoch irrelevant. Wichtig sind primär die Bilddaten inklusive Tiefenwerte.
 Das Kinect SDK bietet bereits standardmäßig Zugriff auf diese Werte. Dabei können im Programm bestimmte Proxyobjekte registriert und abgefragt werden. Für dieses Projekt ist das Skeletonobjekt von großer Bedeutung. Anhand von Vergleichsmustern erzeugt die Software -nicht Kinect!- einen sog. Skeletonstream, der versucht die Position eines menschlichen Skeletts im Kinect Koordinatenraum abzubilden.\cite{SWB-376536934}
 
+\subsection{Der Skeletonstream}
+Damit die Bewegungen eines Benutzers mittels Kinect erkannt und im Programm verarbeitet werden können, werden im Tiefenstream bestimmte Bereiche definiert und mit bestehenden Mustern verglichen. Somit können die einzelnen Gelenke des menschlichen Skeletts (Joints) erkannt und in Zusammenhang gebracht werden. Als Entwickler können diese dann in einem Skelettobjekt mit der erkannten Genauigkeit ausgelesen und verwendet werden. Für die Erkennung der Armbewegungen werden Schulter-, Ellenbogen-, Hand- und Hüftjoints benötigt (Siehe Realisierung).
+
 \begin{figure}[H]						
 	\centering							
 	\includegraphics[scale=1.0]{Bilder/kinect_joints.png}			
@@ -24,12 +27,10 @@ Das Kinect SDK bietet bereits standardmäßig Zugriff auf diese Werte. Dabei kö
 	\label{f:kinect_joints}						
 \end{figure}
 
-\subsection{Der Skeletonstream}
-Damit die Bewegungen eines Benutzers mittels Kinect erkannt und im Programm verarbeitet werden können, werden im Tiefenstream bestimmte Bereiche definiert und mit bestehenden Mustern verglichen. Somit können die einzelnen Gelenke des menschlichen Skeletts (Joints) erkannt und in Zusammenhang gebracht werden. Als Entwickler können diese dann in einem Skelettobjekt mit der erkannten Genauigkeit ausgelesen und verwendet werden. Für die Erkennung der Armbewegungen werden Schulter-, Ellenbogen-, Hand- und Hüftjoints benötigt (Siehe Realisierung).
 
 
 (Technischer Hintergrund der Berechnung -> Bild mit verschiedenen Farben für SKelettbereiche, aber nicht öffentlich, da Microsoft Geheimnis)
-(Bild Menschliche Joints)
+
 (Bild Kinect Koordinatenraum)
 (Bild mehrere User im Kinectraum)
 
