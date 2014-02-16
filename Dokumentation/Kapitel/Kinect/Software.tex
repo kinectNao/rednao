@@ -1,5 +1,10 @@
 \section{Kinect Software}\label{Software}
-Das Produkt Xbox Kinect kam bereits vor einigen Jahren auf den Markt. Somit hatten die Entwickler Zeit, um ein SDK zu entwickeln, was alle wichtigen Programmfunktionen bereits enthält. Dies macht es einem Entwickler relativ leicht eine Anwendung zu erstellen, die bestimmte Kinect-Funktionen bereitstellt. 
+
+(Essenz auf dem, was Kinect für mich erledigt theorie, mathematische Berechnung tiefenstream usw)
+
+Da das Produkt Xbox Kinect bereits vor einigen Jahren auf den Markt kam, hatten die Entwickler Zeit, um ein SDK zu entwickeln, was alle wichtigen Programmfunktionen bereits enthält. Dies macht es einem Entwickler relativ leicht eine Anwendung zu erstellen, die bestimmte Kinect-Funktionen bereitstellt. 
+
+
 Die Hardware liefert folgende Werte:
 -Audiosignal von n Microphonen
 -RGB Bildsignal der Kamera
@@ -7,7 +12,19 @@ Die Hardware liefert folgende Werte:
 
 Für dieses Projekt sind die Audiodaten jedoch irrelevant. Wichtig sind primär die Bilddaten inklusive Tiefenwerte.
 Das Kinect SDK bietet bereits standardmäßig Zugriff auf die grundlegenden Funktionen:
-Dabei können bestimmte Proxyobjekte registriert und abgerufen werden. Die wichtigste Implementierung eines dieser Proxyobjekte ist für dieses Projekt der Skeletonstream.
+Dabei können bestimmte Proxyobjekte registriert und abgerufen werden. Für dieses Projekt ist das Skeleton-Proxyobjekt von großer Bedeutung. Anhand von Vergleichsmustern erzeugt die Software -nicht Kinect!- einen sog. Skeletonstream, der versucht die Position eines menschlichen Skeletts im Kinect Koordinatenraum abzubilden. (Kinect Buch KIT)
+
+
+(Technischer Hintergrund der Berechnung -> Bild mit verschiedenen Farben für SKelettbereiche, aber nicht öffentlich, da Microsoft Geheimnis)
+(Bild Menschliche Joints)
+(Bild Kinect Koordinatenraum)
+(Bild mehrere User im Kinectraum)
+
+\todo{SDK Funktionen erklären: skelton, mehrere user, deep stream, color stream}
+\todo{Screenshot von Deep Stream (Kinect Studio)}
+\todo{Unterschied Microsoft SDK und Freie Implementierung OpenNI}
+\todo{Bild von Kinect-Koordinatensystem -> Bezug auf Nao}
+
 
 Dieser Stream berechnet anhand der Tiefendaten und der RGB-Daten werte für ein Menschliches Skelett:
 
@@ -16,11 +33,4 @@ Dieser Stream berechnet anhand der Tiefendaten und der RGB-Daten werte für ein 
 -Kinectraum...
 
 
-
-
 DELME\cite{hertzberg2009mobile}
-
-\todo{SDK Funktionen erklären: skelton, mehrere user, deep stream, color stream}
-\todo{Screenshot von Deep Stream (Kinect Studio)}
-\todo{Unterschied Microsoft SDK und Freie Implementierung OpenNI}
-\todo{Bild von Kinect-Koordinatensystem -> Bezug auf Nao}
