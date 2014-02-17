@@ -33,6 +33,7 @@ namespace NaoControl
 
                 rp = new RobotPostureProxy(ip, 9559);
                 rp.goToPosture("StandZero", 1);
+                
             }
             catch (Exception)
             {
