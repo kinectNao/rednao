@@ -3,11 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainView" Height="600" Width="800">
     <Grid>
-        <Image Name="videoImage" Height="480" Width="640"></Image>
-        <Canvas Background="Transparent">
-            <Ellipse Fill="Red" Height="15" Width="15" Name="leftHand" Stroke="White" />
-            <Ellipse Fill="Red" Height="15" Width="15" Name="rightHand" Stroke="White" />
-            <Ellipse Fill="Red" Height="15" Width="15" Name="head" Stroke="White" />
-        </Canvas>
+        <Image Name="videoImage" ></Image>
+        
     </Grid>
 </Window>
