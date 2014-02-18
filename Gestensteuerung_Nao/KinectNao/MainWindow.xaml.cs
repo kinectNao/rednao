@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Kinect;
 using System.IO;
+using KinectNao.Kinect;
+using KinectNao.Nao;
 
 namespace KinectNao
 {
@@ -26,11 +28,17 @@ namespace KinectNao
         public delegate void PixelData();
         public delegate void SkeletonData();
 
+        Skeleton[] skeletons;
         KinectSensor mySensor;
         WriteableBitmap myBitmap;
         byte[] myPixelData;
-    
-        Skeleton[] skeletons;
+        
+
+
+        //Control-Aufgaben
+        SkeletonAngleHandler anglehandler = new SkeletonAngleHandler();
+
+
 
         public MainWindow()
         {
@@ -139,7 +147,8 @@ namespace KinectNao
                 if (currentSkeleton != null)
                 {
                     //Berechnungen einfügen
-                    //anglehandler.updateSkeleton(currentSkeleton);
+                    anglehandler.updateSkeleton(currentSkeleton);
+                    
                     if (null != Application.Current)
                     {
                         Application.Current.Dispatcher.BeginInvoke((PixelData)delegate
@@ -203,6 +212,9 @@ namespace KinectNao
             Console.WriteLine("###############################################################");
             Console.WriteLine("######### Starte Teleworking-Applikation: Nao-Kinect ##########");
             Console.WriteLine("###############################################################");
+
+
+
 
             new Application().Run(new MainWindow());
         }
