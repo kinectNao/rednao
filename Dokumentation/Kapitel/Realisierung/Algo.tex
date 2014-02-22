@@ -1,5 +1,4 @@
-\chapter{Algorithmen}
-\section{Kinect-Armerkennung}
+\section{Kinect Armerkennungs-Algorithmus}
 Ein wesentlicher Teil des Programmes besteht darin, die Gesten einer Person, die sich vor dem Kinect-Sensor befindet, zu erkennen und in die passenden Winkelwerte für den Roboter umzurechnen.
 Hierfür wird mathematisch gesehen das Kreuzprodukt der passenden Knochen errechnet, um die passenden Winkel zur Steuerung des Nao-bots zu erhalten.
 
@@ -13,7 +12,37 @@ Hierfür wird mathematisch gesehen das Kreuzprodukt der passenden Knochen errech
 	\end{itemize}
 \end{description}
 
-\section{Shoulder Pitch}
-\section{Shoulder Roll}
-\section{Elbow Roll}
-\section{Elbow Yaw}
+\subsection{Shoulder Pitch}
+Der Shoulder Pitch des menschlichen Skelettes kann durch die Joints \textbf{Hip, Shoulder und Elbow} errechnet werden. Dabei werden zwei Vektoren aufgespannt. Ein Vektor verbindet den Punkt \textit{Hip} mit dem \textit{Shoulder} Punkt, der andere Vektor stellt den Oberarm dar und verbindet den Punkt \textit{Shoulder} mit dem Punkt \textit{Elbow}. Dabei alle Joints nur von einer Seite des Körpers, also z.B. \textit{HipRight, ShoulderRight, ElbowRight} extrahiert.
+
+
+\subsection{Shoulder Roll}
+Der Shoulder Roll Winkel kann nicht mit drei aneinander liegenden Gelenken ermittelt werden. Deshalb benutzt man jeweils zwei Hilfs-Vektoren, die im Skelett nicht anatomisch verbunden sind. Der erste Vektor wird durch die Hüfte aufgespannt, dies betrifft die Joints \textit{HipRight} und \textit{HipLeft}. Der andere Vektor wird analog zum Oberarm aufgespannt, dies betrifft die Joints \textit{Shoulder} und \textit{Elbow}.
+
+\subsection{Elbow Roll}
+Dieser Winkel entspricht der Beugung des Ellenbogens. Dafür notwendig sind die Joints \textit{Shoulder}, \textit{Elbow} und \textit{Hand}. Dabei entsprechen die Vektoren dem Oberarm (Shoulder-Elbow) und dem Unterarm (Elbow-Hand) des menschlichen Skelettes.
+
+\subsection{Elbow Yaw}
+asd
+
+
+
+Nach der Erstellung dieser Vektoren wird eine Methode aufgerufen, die das Kreuzprodukt der Vektoren errechnet und somit den jeweiligen Winkel zurück liefert. \\
+
+\lstinputlisting
+    [caption={Ermittlung des Winkels mithilfe von drei Punkten}
+       \label{lst:3joints},
+       captionpos=b]
+ {Listings/getAngle3.cs}
+
+
+
+\noindent Da die Methode auch mit vier Gelenken (Shoulder Roll, Elbow Yaw) durchgeführt werden kann, existiert auch folgende Methode: \\
+
+\lstinputlisting
+    [caption={Ermittlung des Winkels mithilfe von vier Punkten}
+       \label{lst:4joints},
+       captionpos=b]
+ {Listings/getAngle4.cs}
+
+\todo{Methode beschreiben}
