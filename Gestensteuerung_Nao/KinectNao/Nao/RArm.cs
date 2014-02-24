@@ -18,31 +18,32 @@ namespace KinectNao.Nao
         public static Range<float> WristYaw = new Range<float>() { Minimum = -1.8238f, Maximum = 1.8238f };
 
 
-        public void controlArm(Aldebaran.Proxies.MotionProxy mp, float SP, float SR, float ER, float EY, float WY)
+        public override void controlArm(Aldebaran.Proxies.MotionProxy mp, float SP, float SR, float ER, float EY, float WY)
         {
 
-            SP = getSP(SP);
+            SP = getSPAngle(SP);
+            SR = getAngleForArm(SR);
+            ER = getAngleForArm(ER);
+            EY = getEYAngle(EY);
+
 
             //Joint Controll
             //Pitch=Rot(y), Roll=Rot(z), Yaw=Rot(x) 
             String[] names = { "RShoulderPitch", "RShoulderRoll", "RElbowRoll", "RElbowYaw", "RWristYaw" };
             float[] newangles = { SP, SR, ER, EY, WY };
+
             //be careful, too fast, too dangerous ;)
             float fractionMaxSpeed = 0.5f;
             mp.setAngles(names, newangles, fractionMaxSpeed);
         }
 
-        public float getSP(float RSP)
-        {
-            if (RSP < ConvertToRadians(90)) return RSP = ConvertToRadians(90) - RSP;
-            else if (RSP > ConvertToRadians(90)) return RSP = (-1) * (RSP - ConvertToRadians(90));
-            return 0; //RSP = 90°
-        }
 
-        public float ConvertToRadians(double angle)
+
+
+        public override float getAngleForArm(float angle)
         {
-            var rad = (Math.PI / 180) * angle;
-            return (float)rad;
+            //SP Angle is same function
+            return getSPAngle(angle);
         }
     }
 }

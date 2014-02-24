@@ -20,7 +20,7 @@ namespace KinectNao.Nao
 
 
 
-        public void controlArm(Aldebaran.Proxies.MotionProxy mp, float SP, float SR, float ER, float EY, float WY)
+        public override void controlArm(Aldebaran.Proxies.MotionProxy mp, float SP, float SR, float ER, float EY, float WY)
         {
             //Joint Controll
             //Pitch=Rot(y), Roll=Rot(z), Yaw=Rot(x) 
@@ -33,10 +33,13 @@ namespace KinectNao.Nao
 
         }
 
-        public float ConvertToRadians(double angle)
+
+
+        public override float getAngleForArm(float angle)
         {
-            var rad = (Math.PI / 180) * angle;
-            return (float)rad;
+            if (angle > inRadian(90)) return angle = inRadian(90) - angle;
+            else if (angle < inRadian(90)) return angle = (-1) * (angle - inRadian(90));
+            return 0; //angle is 90°
         }
     }
 }

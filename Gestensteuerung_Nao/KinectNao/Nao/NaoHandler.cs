@@ -12,7 +12,7 @@ namespace KinectNao.Nao
     {
 
         //Local or Remote
-        const String ip = "192.168.100.3";
+        const String ip = "127.0.0.1";
         const int port = 9559;
 
         private MotionProxy mp;
@@ -37,6 +37,8 @@ namespace KinectNao.Nao
                 rp = new RobotPostureProxy(ip, 9559);
                 rp.goToPosture("StandZero", 1);
 
+               
+
             }
             catch (Exception)
             {
@@ -47,6 +49,8 @@ namespace KinectNao.Nao
             try
             {
                 mp = new MotionProxy(ip, port);
+                //List<float> angles = mp.getAngles(new String[] { "RShoulderPitch", "RShoulderRoll", "RElbowRoll", "RElbowYaw", "RWristYaw" } ,true);
+                
             }
             catch (Exception)
             {
@@ -65,7 +69,7 @@ namespace KinectNao.Nao
         public void updateAngles(float r_shoulderPitch, float r_shoulderRoll, float r_ellbowRoll, float r_ellbowYaw, float l_shoulderPitch, float l_shoulderRoll, float l_ellbowRoll, float l_ellbowYaw)
         {
             //RArm.controlRArm(mp, shoulderPitch, shoulderRoll, ellbowRoll, ellbowYaw, 1.0f);
-            RArm.controlArm(mp, r_shoulderPitch, 0, 0, 0, 0);
+            RArm.controlArm(mp, r_shoulderPitch, r_shoulderRoll, r_ellbowRoll, r_ellbowYaw, 0);
         }
     }
 }
