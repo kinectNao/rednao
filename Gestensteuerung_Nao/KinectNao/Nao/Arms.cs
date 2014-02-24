@@ -30,7 +30,7 @@ namespace KinectNao.Nao
         }
 
         //Control LArm with all Joints
-        public static void controlLArm(MotionProxy mp, float LSP, float LSR, float LER, float LEY, float LWY)
+        public  void controlLArm(MotionProxy mp, float LSP, float LSR, float LER, float LEY, float LWY)
         {
             //Joint Controll
             //Pitch=Rot(y), Roll=Rot(z), Yaw=Rot(x) 
@@ -42,8 +42,13 @@ namespace KinectNao.Nao
         }
 
         //Control RArm with all Joints
-        public static void controlRArm(MotionProxy mp, float RSP, float RSR, float RER, float REY, float RWY)
+        public  void controlRArm(MotionProxy mp, float RSP, float RSR, float RER, float REY, float RWY)
         {
+
+            //TEST
+            if (RSP < ConvertToRadians(90)) RSP = ConvertToRadians(90) - RSP;
+            else if (RSP > ConvertToRadians(90)) RSP = (-1) * (RSP - ConvertToRadians(90));
+
 
             //Joint Controll
             //Pitch=Rot(y), Roll=Rot(z), Yaw=Rot(x) 
@@ -53,6 +58,22 @@ namespace KinectNao.Nao
             mp.setAngles(names, newangles, fractionMaxSpeed);
         }
 
+
+        public void TESTcontrolRArm(MotionProxy mp, float RSP, float RSR, float RER, float REY, float RWY)
+        {
+
+            //TEST
+            if (RSP < ConvertToRadians(90)) RSP = ConvertToRadians(90) - RSP;
+            else if (RSP > ConvertToRadians(90)) RSP = (-1) * (RSP - ConvertToRadians(90));
+
+
+            //Joint Controll
+            //Pitch=Rot(y), Roll=Rot(z), Yaw=Rot(x) 
+            String[] names = { "RShoulderPitch", "RShoulderRoll", "RElbowRoll", "RElbowYaw", "RWristYaw" };
+            float[] newangles = { RSP, RSR, RER, REY, RWY };
+            float fractionMaxSpeed = 1f;
+            mp.setAngles(names, newangles, fractionMaxSpeed);
+        }
 
     }
 }

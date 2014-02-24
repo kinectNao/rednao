@@ -60,18 +60,15 @@ namespace KinectNao.Nao
 
         }
 
-        public void controlLArm(float LSP, float LSR, float LER, float LEY, float LWY)
-        {
-
-            Arms.controlLArm(mp, LSP, LSR, LER, LEY, LWY);
-        }
+  
 
 
 
 
         public void updateAngles(float shoulderPitch, float shoulderRoll, float ellbowRoll, float ellbowYaw)
         {
-            Arms.controlLArm(mp, shoulderPitch, shoulderRoll, ellbowRoll, ellbowYaw, 1.0f);
+            //RArm.controlRArm(mp, shoulderPitch, shoulderRoll, ellbowRoll, ellbowYaw, 1.0f);
+            RArm.TESTcontrolRArm(mp, shoulderPitch, 0, 0, 0, 0);
         }
     }
 }
