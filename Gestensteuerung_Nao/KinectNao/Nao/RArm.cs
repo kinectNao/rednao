@@ -28,15 +28,21 @@ namespace KinectNao.Nao
             String[] names = { "RShoulderPitch", "RShoulderRoll", "RElbowRoll", "RElbowYaw", "RWristYaw" };
             float[] newangles = { SP, SR, ER, EY, WY };
             //be careful, too fast, too dangerous ;)
-            float fractionMaxSpeed = 0.1f;
+            float fractionMaxSpeed = 0.5f;
             mp.setAngles(names, newangles, fractionMaxSpeed);
         }
 
         public float getSP(float RSP)
         {
-            if (RSP < Arm.ConvertToRadians(90)) return RSP = Arm.ConvertToRadians(90) - RSP;
-            else if (RSP > Arm.ConvertToRadians(90)) return RSP = (-1) * (RSP - Arm.ConvertToRadians(90));
+            if (RSP < ConvertToRadians(90)) return RSP = ConvertToRadians(90) - RSP;
+            else if (RSP > ConvertToRadians(90)) return RSP = (-1) * (RSP - ConvertToRadians(90));
             return 0; //RSP = 90°
+        }
+
+        public float ConvertToRadians(double angle)
+        {
+            var rad = (Math.PI / 180) * angle;
+            return (float)rad;
         }
     }
 }

@@ -12,7 +12,7 @@ namespace KinectNao.Nao
     {
 
         //Local or Remote
-        const String ip = "127.0.0.1";
+        const String ip = "192.168.100.3";
         const int port = 9559;
 
         private MotionProxy mp;
@@ -62,13 +62,10 @@ namespace KinectNao.Nao
 
   
 
-
-
-
-        public void updateAngles(float shoulderPitch, float shoulderRoll, float ellbowRoll, float ellbowYaw)
+        public void updateAngles(float r_shoulderPitch, float r_shoulderRoll, float r_ellbowRoll, float r_ellbowYaw, float l_shoulderPitch, float l_shoulderRoll, float l_ellbowRoll, float l_ellbowYaw)
         {
             //RArm.controlRArm(mp, shoulderPitch, shoulderRoll, ellbowRoll, ellbowYaw, 1.0f);
-            RArm.controlArm(mp, shoulderPitch, 0, 0, 0, 0);
+            RArm.controlArm(mp, r_shoulderPitch, 0, 0, 0, 0);
         }
     }
 }

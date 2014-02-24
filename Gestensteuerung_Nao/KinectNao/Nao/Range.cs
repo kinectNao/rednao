@@ -63,7 +63,7 @@ namespace KinectNao.Nao
 
         public float getRightAngle(float angle)
         {
-            return NotImplementedException();
+           throw new NotImplementedException();
         }
     }
 }

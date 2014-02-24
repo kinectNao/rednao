@@ -32,5 +32,11 @@ namespace KinectNao.Nao
 
 
         }
+
+        public float ConvertToRadians(double angle)
+        {
+            var rad = (Math.PI / 180) * angle;
+            return (float)rad;
+        }
     }
 }

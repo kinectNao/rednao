@@ -10,14 +10,10 @@ namespace KinectNao.Nao
     public interface Arm
     {
 
-        public static float ConvertToRadians(double angle)
-        {
-            var rad = (Math.PI / 180) * angle;
-            return (float)rad;
-        }
+        float ConvertToRadians(double angle);
 
         //Control LArm with all Joints
-        public void controlArm(MotionProxy mp, float LSP, float LSR, float LER, float LEY, float LWY);
+        void controlArm(MotionProxy mp, float LSP, float LSR, float LER, float LEY, float LWY);
         
 
 

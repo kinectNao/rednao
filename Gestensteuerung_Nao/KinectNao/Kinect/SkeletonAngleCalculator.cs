@@ -62,7 +62,7 @@ namespace KinectNao.Kinect
                 elbowRoll_Left = AngleCalculation.getElbowRoll_Left(currentSkeleton);
                 elbowYaw_Left = AngleCalculation.getElbowYaw_Left(currentSkeleton);
 
-                skeletonAngleHandler.updateRightArmAngles(shoulderPitch_Right, shoulderRoll_Right, elbowRoll_Right, elbowYaw_Right, shoulderPitch_Left, shoulderRoll_Left, elbowRoll_Left, elbowYaw_Left);
+                skeletonAngleHandler.updateAngles(shoulderPitch_Right, shoulderRoll_Right, elbowRoll_Right, elbowYaw_Right, shoulderPitch_Left, shoulderRoll_Left, elbowRoll_Left, elbowYaw_Left);
                 Thread.Sleep(50);
 
             }

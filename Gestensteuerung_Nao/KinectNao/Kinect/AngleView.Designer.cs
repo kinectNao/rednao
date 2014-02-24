@@ -163,25 +163,27 @@
             InitializeComponent();
         }
 
-        public void updateAngles(float shoulderPitch, float shoulderRoll, float ellbowRoll, float ellbowYaw)
+
+
+        public void updateAngles(float r_shoulderPitch, float r_shoulderRoll, float r_ellbowRoll, float r_ellbowYaw, float l_shoulderPitch, float l_shoulderRoll, float l_ellbowRoll, float l_ellbowYaw)
         {
 
+            //Only for RArm
             this.BeginInvoke((MethodInvoker)delegate
             {
 
-                shoulderPitch = 180 / 3.1415f * shoulderPitch;
-                shoulderRoll = 180 / 3.1415f * shoulderRoll;
-                ellbowRoll = 180 / 3.1415f * ellbowRoll;
-                ellbowYaw = 180 / 3.1415f * ellbowYaw;
+                r_shoulderPitch = 180 / 3.1415f * r_shoulderPitch;
+                r_shoulderRoll = 180 / 3.1415f * r_shoulderRoll;
+                r_ellbowRoll = 180 / 3.1415f * r_ellbowRoll;
+                r_ellbowYaw = 180 / 3.1415f * r_ellbowYaw;
 
-                shoulderPitchValue.Text = Convert.ToString(shoulderPitch);
-                shoulderRollValue.Text = Convert.ToString(shoulderRoll);
-                ellbowRollValue.Text = Convert.ToString(ellbowRoll);
-                ellbowYawValue.Text = Convert.ToString(ellbowYaw);
+                shoulderPitchValue.Text = Convert.ToString(r_shoulderPitch);
+                shoulderRollValue.Text = Convert.ToString(r_shoulderRoll);
+                ellbowRollValue.Text = Convert.ToString(r_ellbowRoll);
+                ellbowYawValue.Text = Convert.ToString(r_ellbowYaw);
 
 
             });
-
         }
     }
 

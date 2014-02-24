@@ -62,17 +62,19 @@ namespace KinectNao.Kinect
             angleSubscribers.Remove(subscriber);
         }
 
-        public void updateAngles(float shoulderPitch, float shoulderRoll, float elbowRoll, float elbowYaw)
-        {
-            //For all Subscribers, NAO & GUI
-            foreach (ISkeletonAngles currentSubscriber in angleSubscribers){
-                currentSubscriber.updateAngles(shoulderPitch, shoulderRoll, elbowRoll, elbowYaw);
-            }
-        }
-
         public void updateSkeleton(Skeleton skeleton)
         {
             angleCalculator.updateSkeletonData(skeleton);
+        }
+
+        public void updateAngles(float r_shoulderPitch, float r_shoulderRoll, float r_ellbowRoll, float r_ellbowYaw, float l_shoulderPitch, float l_shoulderRoll, float l_ellbowRoll, float l_ellbowYaw)
+        {
+
+            //For all Subscribers, NAO & GUI
+            foreach (ISkeletonAngles currentSubscriber in angleSubscribers)
+            {
+                currentSubscriber.updateAngles(r_shoulderPitch, r_shoulderRoll, r_ellbowRoll, r_ellbowYaw, l_shoulderPitch, l_shoulderRoll, l_ellbowRoll, l_ellbowYaw);
+            }
         }
     }
 }
