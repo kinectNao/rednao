@@ -17,8 +17,8 @@ namespace KinectNao.Nao
 
         private MotionProxy mp;
         private RobotPostureProxy rp;
-        private Arms RArm;
-        private Arms LArm;
+        private RArm RArm;
+        private LArm LArm;
         private SkeletonAngleHandler handler;
 
         public NaoHandler(SkeletonAngleHandler _handler)
@@ -55,8 +55,8 @@ namespace KinectNao.Nao
             }
 
 
-            RArm = new Arms();
-            LArm = new Arms();
+            RArm = new RArm();
+            LArm = new LArm();
 
         }
 
@@ -68,7 +68,7 @@ namespace KinectNao.Nao
         public void updateAngles(float shoulderPitch, float shoulderRoll, float ellbowRoll, float ellbowYaw)
         {
             //RArm.controlRArm(mp, shoulderPitch, shoulderRoll, ellbowRoll, ellbowYaw, 1.0f);
-            RArm.TESTcontrolRArm(mp, shoulderPitch, 0, 0, 0, 0);
+            RArm.controlArm(mp, shoulderPitch, 0, 0, 0, 0);
         }
     }
 }

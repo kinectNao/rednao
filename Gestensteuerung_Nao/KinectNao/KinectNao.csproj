@@ -87,9 +87,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Nao\Arms.cs" />
+    <Compile Include="Nao\Arm.cs" />
+    <Compile Include="Nao\LArm.cs" />
     <Compile Include="Nao\NaoHandler.cs" />
     <Compile Include="Nao\Range.cs" />
+    <Compile Include="Nao\RArm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

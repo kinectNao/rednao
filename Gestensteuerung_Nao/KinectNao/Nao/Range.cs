@@ -60,5 +60,10 @@ namespace KinectNao.Nao
         {
             return this.IsValid() && Range.IsValid() && this.ContainsValue(Range.Minimum) && this.ContainsValue(Range.Maximum);
         }
+
+        public float getRightAngle(float angle)
+        {
+            return NotImplementedException();
+        }
     }
 }

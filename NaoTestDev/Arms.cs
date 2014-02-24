@@ -66,6 +66,12 @@ namespace NaoTestDev
         }
 
 
+        public float getSP(float RSP)
+        {
+            if (RSP < ConvertToRadians(90)) return RSP = ConvertToRadians(90) - RSP;
+            else if (RSP > ConvertToRadians(90)) return RSP = (-1) * (RSP - ConvertToRadians(90));
+            return 0; //RSP = 90°
+        }
        
 
     }
