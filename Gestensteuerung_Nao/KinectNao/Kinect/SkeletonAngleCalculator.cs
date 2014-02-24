@@ -31,6 +31,11 @@ namespace KinectNao.Kinect
             float shoulderRoll_Right = 0.0f;
             float elbowRoll_Right = 0.0f;
             float elbowYaw_Right = 0.0f;
+			
+			float shoulderPitch_Left = 0.0f;
+            float shoulderRoll_Left = 0.0f;
+            float elbowRoll_Left = 0.0f;
+            float elbowYaw_Left = 0.0f;
 
             while (!_shouldStop)
             {
@@ -44,12 +49,20 @@ namespace KinectNao.Kinect
                 //updateAngles
                 //Sleep
                 //Zuverlässigkeit der Joints
-                shoulderPitch_Right = AngleCalculation.getShoulderPitch_Right(currentSkeleton);
+                
+				//Right
+				shoulderPitch_Right = AngleCalculation.getShoulderPitch_Right(currentSkeleton);
                 shoulderRoll_Right = AngleCalculation.getShoulderRoll_Right(currentSkeleton);
                 elbowRoll_Right = AngleCalculation.getElbowRoll_Right(currentSkeleton);
                 elbowYaw_Right = AngleCalculation.getElbowYaw_Right(currentSkeleton);
+				
+				//Left
+				shoulderPitch_Left = AngleCalculation.getShoulderPitch_Left(currentSkeleton);
+                shoulderRoll_Left = AngleCalculation.getShoulderRoll_Left(currentSkeleton);
+                elbowRoll_Left = AngleCalculation.getElbowRoll_Left(currentSkeleton);
+                elbowYaw_Left = AngleCalculation.getElbowYaw_Left(currentSkeleton);
 
-                skeletonAngleHandler.updateAngles(shoulderPitch_Right, shoulderRoll_Right, elbowRoll_Right, elbowYaw_Right);
+                skeletonAngleHandler.updateRightArmAngles(shoulderPitch_Right, shoulderRoll_Right, elbowRoll_Right, elbowYaw_Right, shoulderPitch_Left, shoulderRoll_Left, elbowRoll_Left, elbowYaw_Left);
                 Thread.Sleep(50);
 
             }

@@ -29,6 +29,28 @@ namespace KinectNao.Kinect
             return AngleCalculation.getAngle(hip, shoulder, elbow);
         }
 
+		
+		public static float getShoulderPitch_Left(Skeleton skeleton)
+        {
+            // Get fitting joints
+            Joint hip_j = skeleton.Joints[JointType.HipLeft];
+            Joint shoulder_j = skeleton.Joints[JointType.ShoulderLeft];
+            Joint elbow_j = skeleton.Joints[JointType.ElbowLeft];
+
+
+            //Vector of Joints
+            Vector3D hip = new Vector3D(hip_j.Position.X, hip_j.Position.Y, hip_j.Position.Z);
+            Vector3D shoulder = new Vector3D(shoulder_j.Position.X, shoulder_j.Position.Y, shoulder_j.Position.Z);
+            Vector3D elbow = new Vector3D(elbow_j.Position.X, elbow_j.Position.Y, elbow_j.Position.Z);
+
+
+            // Vektorberechnung
+            return AngleCalculation.getAngle(hip, shoulder, elbow);
+        }
+		
+		
+		
+		
         public static float getShoulderRoll_Right(Skeleton skeleton)
         {
             // Get fitting joints
@@ -47,6 +69,27 @@ namespace KinectNao.Kinect
             return AngleCalculation.getAngle(hip_right, hip_left, shoulder, elbow);
         }
 
+		public static float getShoulderRoll_Left(Skeleton skeleton)
+        {
+            // Get fitting joints
+            Joint hip_left_j = skeleton.Joints[JointType.HipLeft];
+            Joint hip_right_j = skeleton.Joints[JointType.HipRight];
+            Joint shoulder_j = skeleton.Joints[JointType.ShoulderLeft];
+            Joint elbow_j = skeleton.Joints[JointType.ElbowLeft];
+
+            //Vector of Joints
+            Vector3D hip_left = new Vector3D(hip_left_j.Position.X, hip_left_j.Position.Y, hip_left_j.Position.Z);
+            Vector3D hip_right = new Vector3D(hip_right_j.Position.X, hip_right_j.Position.Y, hip_right_j.Position.Z);
+            Vector3D shoulder = new Vector3D(shoulder_j.Position.X, shoulder_j.Position.Y, shoulder_j.Position.Z);
+            Vector3D elbow = new Vector3D(elbow_j.Position.X, elbow_j.Position.Y, elbow_j.Position.Z);
+
+            // Vektorberechnung
+            return AngleCalculation.getAngle(hip_left, hip_right, shoulder, elbow);
+        }
+		
+		
+		
+		
         public static float getElbowRoll_Right(Skeleton skeleton)
         {
             // Get fitting joints
@@ -62,6 +105,24 @@ namespace KinectNao.Kinect
             // Vektorberechnung
             return AngleCalculation.getAngle(shoulder, elbow, hand);
         }
+		
+		public static float getElbowRoll_Left(Skeleton skeleton)
+        {
+            // Get fitting joints
+            Joint shoulder_j = skeleton.Joints[JointType.ShoulderLeft];
+            Joint elbow_j = skeleton.Joints[JointType.ElbowLeft];
+            Joint hand_j = skeleton.Joints[JointType.HandLeft];
+
+            //Vector of Joints
+            Vector3D shoulder = new Vector3D(shoulder_j.Position.X, shoulder_j.Position.Y, shoulder_j.Position.Z);
+            Vector3D elbow = new Vector3D(elbow_j.Position.X, elbow_j.Position.Y, elbow_j.Position.Z);
+            Vector3D hand = new Vector3D(hand_j.Position.X, hand_j.Position.Y, hand_j.Position.Z);
+
+            // Vektorberechnung
+            return AngleCalculation.getAngle(shoulder, elbow, hand);
+        }
+		
+		
         public static float getElbowYaw_Right(Skeleton skeleton)
         {
 
@@ -81,6 +142,28 @@ namespace KinectNao.Kinect
             // Vektorberechnung
             return AngleCalculation.getAngle(shoulder, hip, elbow, hand);
         }
+		
+		
+		 public static float getElbowYaw_Left(Skeleton skeleton)
+        {
+
+            // Get fitting joints
+            Joint shoulder_j = skeleton.Joints[JointType.ShoulderLeft];
+            Joint hip_j = skeleton.Joints[JointType.HipLeft];
+            Joint elbow_j = skeleton.Joints[JointType.ElbowLeft];
+            Joint hand_j = skeleton.Joints[JointType.HandLeft];
+
+            //Vector of Joints
+            Vector3D shoulder = new Vector3D(shoulder_j.Position.X, shoulder_j.Position.Y, shoulder_j.Position.Z);
+            Vector3D hip = new Vector3D(hip_j.Position.X, hip_j.Position.Y, hip_j.Position.Z);
+            Vector3D elbow = new Vector3D(elbow_j.Position.X, elbow_j.Position.Y, elbow_j.Position.Z);
+            Vector3D hand = new Vector3D(hand_j.Position.X, hand_j.Position.Y, hand_j.Position.Z);
+
+
+            // Vektorberechnung
+            return AngleCalculation.getAngle(shoulder, hip, elbow, hand);
+        }
+		
 
 
         //4 Punkte -> 2 unabhängige Knochen
