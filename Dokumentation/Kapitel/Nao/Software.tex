@@ -1,5 +1,62 @@
 \section{Nao Software}
-Choreographe
+Um Nao auf einfache Weise zu programmieren, simulieren oder ihm neue Funktionen beizubringen gibt es im wesentlichen zwei Programme. Diese werden im folgenden jeweils kurz vorgestellt:
 
-Webots
+\begin{itemize}
+\item Choreographe
+\item Webots for Nao
+\end{itemize}
+\textbf{Choreographe} 
+\\
+Choreographe ist eine multi - Plattform Desktopanwendung. Mit ihrer Hilfe ist es möglich:
+\begin{itemize}
+\item Neue Animationen und Verhalten zu erstellen,
+\item diese entweder auf einem simulierten  oder direkt auf einem realen Roboter zu testen und
+\item den Roboter dabei zu überwachen und zu steuern.
+\end{itemize}
+Dabei steht die Einfachheit der Anwendung im Vordergrund und so ist es auch möglich sehr komplexe Verhalten (z.B. Interaktion mit Menschen, Tanzen oder E-Mails verschicken) zu implementieren ohne eine einzige Zeile Quellcode selbst zu schreiben. Zusätzlich ist die Möglichkeit gegeben, vorhandenen Code mit eigenem Python - Code zu erweitern.
+
+\begin{figure}[H]						
+	\centering							
+	\includegraphics[scale=1.0]{Bilder/choreographe.png}			
+	\caption{Überblick Choreographe}						
+	\label{f:nao_choreographe}						
+\end{figure}
+
+Abbildung \myref{f:nao_choreographe} zeigt einen Überblick über alle Subfenster und Panels innerhalb Choreographe. Wie zu sehen ist Choreographe zentral in drei Bereiche unterteilt: Links, Mitte und Rechts.
+Auf der linken Seite ist die sogenannte Box - Bibliothek zu finden. Dort sind alle gespeicherten Bewegungen und Verhalten abrufbar. Diese können per Drag\&Drop in die Mitte gezogen werden. Die Mitte stellt sozusagen ein Fluss - Diagramm der einzelnen Boxen dar. So ist es möglich \textit{graphisch} zu programmieren (Verknüpfen der Boxen). Auf der rechten Seite ist das Abbild eines Nao - Roboters zu sehen. Dies zeigt je nach dem einen simulierten Roboter oder die Spiegelung eines realen Naos. 
+Durch diese graphisch einfache Programmierung können auch Unerfahrene mit Nao arbeiten. So ist Nao nicht nur für die Forschung oder für Entwickler gedacht, sondern auch für den Unterricht in Schulen.
+
+Die Programmierung des Roboters geschieht durch Verbinden von einzelnen Boxen. Es ist auch möglich ein Programm mit verschiedenen Wegen zu entwerfen oder Konditionalstrukturen einzubauen.
+\todo{Bild Choreographe Programmierung}
+
+Neue Bewegungen oder Verhalten können entweder durch eigenen Python - Code oder durch vormachen integriert werden. Dazu kann über eine \textit{Timeline} aufgenommen werden, zu welchem Zeitpunkt der Bewegung sich die einzelnen Gelenke/Körperteile befinden sollen.
+\\
+\\
+Die Möglichkeit neue Programme erst an einer Simulation zu testen, spart erstens Akku eines realen Nao und zweitens schützt es einen realen Nao vor \textit{schlechten} Programmen, bei denen er Schaden nehmen könnte. Ein weiterer Vorteil ist, dass zu jeder Box der Quellcode in Python sichtbar ist.
+\\
+\\
+Choreographe wurde in dieser Arbeit hauptsächlich dazu genutzt, sich in die Marterie Nao einzuarbeiten, seine Funktionsweise zu verstehen und zu erlernen wie er programmiert wird.
+\\
+\\
+\textbf{Webots for Nao}
+\\
+Webots für Nao erlaubt es, einen simulierten Roboter in einer virtuellen Welt zu bewegen. Es bietet einen sicheren Platz um neue Verhalten zu testen, bevor sie in die reale Welt übertragen werden. Webots for Nao ist eine spezifische Auskopplung von Webots 7, einer professionellen Software zum simulieren diverser Roboter, beispielsweise KUKA - Robotern oder Lego Mindstorms. Mit Webots for Nao können aber keine anderen Roboter genutzt oder neue erstellt werden.
+
+\begin{figure}[H]						
+	\centering							
+	\includegraphics[scale=1.0]{Bilder/webots.png}			
+	\caption{Überblick Webots}						
+	\label{f:nao_webots}						
+\end{figure}
+\noindent
+Bild \myref{f:nao_webots} zeigt einen simulierten Nao in der virtuellen Welt. Auf der linken Seite befinden sich Reiter, die ausgeklappt werden können. Dort können Objekte in die Welt gelegt werden. Auf der rechten Seite sieht man Nao von Vorne und jeweils ein Ausschnitt der beiden Kameras an seinem Kopf. Unterhalb davon ist eine Konsole, die verschiedene Angaben ausgibt, z.B. die IP - Adresse und der Port, unter dem der simulierte Nao angesprochen werden kann.
+
+Der Unterschied zu der Simulation in Choreographe liegt darin, dass in Webots auch Elemente wie Tische, Stühle oder andere Hindernisse in die Welt gelegt werden können. So kann beispielsweise getestet werden, ob Nao Hindernissen ausweicht, wenn er auf sie zu läuft.
+\\
+\\
+Webots wurde im Allgemeinen dafür genutzt, zu Testen, ob die Übertragung der Armwinkel korrekt ist und ob diese der Bewegung durch dem Menschen entsprechen. Würden die Tests an einem realen Nao durchgeführt werden, würden seine Aktoren sehr schnell warm werden und eventuell Schaden davon nehmen.
+
+
+
+
 
