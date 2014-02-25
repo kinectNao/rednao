@@ -4,6 +4,7 @@ using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.Windows;
 using Microsoft.Kinect;
 using KinectNao.Nao;
 
@@ -17,13 +18,24 @@ namespace KinectNao.Kinect
         private NaoHandler naoHandler;
 
         private Thread angleCalculatorThread;
-        private AngleView view;
+        private AngleView view_left;
+        private AngleView view_right;
         private ArrayList angleSubscribers = new ArrayList();
 
         public SkeletonAngleHandler()
         {
-            view = new AngleView(this);
-            view.Show();
+           
+            view_left = new AngleView(this, 'l');
+            view_left.Text = "LEFT";
+           
+
+            view_right = new AngleView(this, 'r');
+            view_right.Text = "RIGHT";
+
+
+            view_left.Show();
+            view_right.Show();
+
 
             naoHandler = new NaoHandler(this);
 

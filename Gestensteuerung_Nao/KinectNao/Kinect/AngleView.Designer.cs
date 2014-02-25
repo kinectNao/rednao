@@ -40,6 +40,7 @@
             this.ellbowRollValue = new System.Windows.Forms.Label();
             this.ellbowYawValue = new System.Windows.Forms.Label();
             this.ellbowYawLabel = new System.Windows.Forms.Label();
+            this.arm_direction = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // shoulderPitchLabel
@@ -122,11 +123,22 @@
             this.ellbowYawLabel.TabIndex = 7;
             this.ellbowYawLabel.Text = "Ellbow Yaw";
             // 
+            // arm_direction
+            // 
+            this.arm_direction.AutoSize = true;
+            this.arm_direction.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.arm_direction.Location = new System.Drawing.Point(160, 385);
+            this.arm_direction.Name = "arm_direction";
+            this.arm_direction.Size = new System.Drawing.Size(182, 55);
+            this.arm_direction.TabIndex = 8;
+            this.arm_direction.Text = "VALUE";
+            // 
             // AngleView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(481, 380);
+            this.ClientSize = new System.Drawing.Size(481, 449);
+            this.Controls.Add(this.arm_direction);
             this.Controls.Add(this.ellbowYawLabel);
             this.Controls.Add(this.ellbowYawValue);
             this.Controls.Add(this.ellbowRollValue);
@@ -155,15 +167,31 @@
 
 
         private SkeletonAngleHandler handler;
+        private Char armPos;
 
-        public AngleView(SkeletonAngleHandler _handler)
+  
+
+        public AngleView(SkeletonAngleHandler _handler, Char armPos)
         {
             handler = _handler;
+            this.armPos = armPos;
+
+
+          
+
             _handler.addMeToAngleSubscriber(this);
             InitializeComponent();
+
+            if (armPos == 'l')
+            {
+                this.arm_direction.Text = "LEFT-ARM";
+            }
+            else if (armPos == 'r')
+            {
+                this.arm_direction.Text = "RIGHT-ARM";
+            }
+            
         }
-
-
 
         public void updateAngles(float r_shoulderPitch, float r_shoulderRoll, float r_ellbowRoll, float r_ellbowYaw, float l_shoulderPitch, float l_shoulderRoll, float l_ellbowRoll, float l_ellbowYaw)
         {
@@ -171,20 +199,43 @@
             //Only for RArm
             this.BeginInvoke((MethodInvoker)delegate
             {
+                if (armPos == 'l')
+                {
+                    l_shoulderPitch = 180 / 3.1415f * l_shoulderPitch;
+                    l_shoulderRoll = 180 / 3.1415f * l_shoulderRoll;
+                    l_ellbowRoll = 180 / 3.1415f * l_ellbowRoll;
+                    l_ellbowYaw = 180 / 3.1415f * l_ellbowYaw;
 
-                r_shoulderPitch = 180 / 3.1415f * r_shoulderPitch;
-                r_shoulderRoll = 180 / 3.1415f * r_shoulderRoll;
-                r_ellbowRoll = 180 / 3.1415f * r_ellbowRoll;
-                r_ellbowYaw = 180 / 3.1415f * r_ellbowYaw;
+                    shoulderPitchValue.Text = Convert.ToString(l_shoulderPitch);
+                    shoulderRollValue.Text = Convert.ToString(l_shoulderRoll);
+                    ellbowRollValue.Text = Convert.ToString(l_ellbowRoll);
+                    ellbowYawValue.Text = Convert.ToString(l_ellbowYaw);
+                }
+                else if(armPos == 'r')
+                {
+                    r_shoulderPitch = 180 / 3.1415f * r_shoulderPitch;
+                    r_shoulderRoll = 180 / 3.1415f * r_shoulderRoll;
+                    r_ellbowRoll = 180 / 3.1415f * r_ellbowRoll;
+                    r_ellbowYaw = 180 / 3.1415f * r_ellbowYaw;
 
-                shoulderPitchValue.Text = Convert.ToString(r_shoulderPitch);
-                shoulderRollValue.Text = Convert.ToString(r_shoulderRoll);
-                ellbowRollValue.Text = Convert.ToString(r_ellbowRoll);
-                ellbowYawValue.Text = Convert.ToString(r_ellbowYaw);
+                    shoulderPitchValue.Text = Convert.ToString(r_shoulderPitch);
+                    shoulderRollValue.Text = Convert.ToString(r_shoulderRoll);
+                    ellbowRollValue.Text = Convert.ToString(r_ellbowRoll);
+                    ellbowYawValue.Text = Convert.ToString(r_ellbowYaw);
+                }
+                else
+                {
+
+                }
+
+
+              
 
 
             });
         }
+
+        private Label arm_direction;
     }
 
 
