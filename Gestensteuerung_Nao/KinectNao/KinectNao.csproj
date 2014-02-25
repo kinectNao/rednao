@@ -79,6 +79,7 @@
       <DependentUpon>AngleView.cs</DependentUpon>
     </Compile>
     <Compile Include="Kinect\ISkeletonAngles.cs" />
+    <Compile Include="Kinect\KinectShutdown.cs" />
     <Compile Include="Kinect\SkeletonAngleCalculator.cs" />
     <Compile Include="Kinect\SkeletonAngleHandler.cs" />
     <Compile Include="MainWindow.xaml.cs">
