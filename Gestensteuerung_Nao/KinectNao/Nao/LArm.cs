@@ -22,11 +22,17 @@ namespace KinectNao.Nao
 
         public override void controlArm(Aldebaran.Proxies.MotionProxy mp, float SP, float SR, float ER, float EY, float WY)
         {
+            SP = invertGreaterThan90(SP);
+            SR = invertLowerThan90(SR);
+            ER = invertLowerThan90(ER);
+            EY = invertGreaterThan90(EY);
+
+
             //Joint Controll
             //Pitch=Rot(y), Roll=Rot(z), Yaw=Rot(x) 
             String[] names = { "LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw" };
             float[] newangles = { SP, SR, ER,EY, WY };
-            float fractionMaxSpeed = 0.1f;
+            float fractionMaxSpeed = 0.5f;
 
             mp.setAngles(names, newangles, fractionMaxSpeed);
 
@@ -35,11 +41,5 @@ namespace KinectNao.Nao
 
 
 
-        public override float getAngleForArm(float angle)
-        {
-            if (angle > inRadian(90)) return angle = inRadian(90) - angle;
-            else if (angle < inRadian(90)) return angle = (-1) * (angle - inRadian(90));
-            return 0; //angle is 90°
-        }
     }
 }

@@ -68,8 +68,9 @@ namespace KinectNao.Nao
 
         public void updateAngles(float r_shoulderPitch, float r_shoulderRoll, float r_ellbowRoll, float r_ellbowYaw, float l_shoulderPitch, float l_shoulderRoll, float l_ellbowRoll, float l_ellbowYaw)
         {
-            //RArm.controlRArm(mp, shoulderPitch, shoulderRoll, ellbowRoll, ellbowYaw, 1.0f);
             RArm.controlArm(mp, r_shoulderPitch, r_shoulderRoll, r_ellbowRoll, r_ellbowYaw, 0);
+            LArm.controlArm(mp, l_shoulderPitch, l_shoulderRoll, l_ellbowRoll ,l_ellbowYaw, 0);
+
         }
     }
 }

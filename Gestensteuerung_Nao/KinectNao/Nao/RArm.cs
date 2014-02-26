@@ -21,10 +21,10 @@ namespace KinectNao.Nao
         public override void controlArm(Aldebaran.Proxies.MotionProxy mp, float SP, float SR, float ER, float EY, float WY)
         {
 
-            SP = getSPAngle(SP);
-            SR = getAngleForArm(SR);
-            ER = getAngleForArm(ER);
-            EY = getEYAngle(EY);
+            SP = invertGreaterThan90(SP);
+            SR = invertGreaterThan90(SR);
+            ER = invertGreaterThan90(ER);
+            EY = invertLowerThan90(EY);
 
 
             //Joint Controll
@@ -37,13 +37,5 @@ namespace KinectNao.Nao
             mp.setAngles(names, newangles, fractionMaxSpeed);
         }
 
-
-
-
-        public override float getAngleForArm(float angle)
-        {
-            //SP Angle is same function
-            return getSPAngle(angle);
-        }
     }
 }

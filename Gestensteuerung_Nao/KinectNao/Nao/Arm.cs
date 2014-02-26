@@ -20,24 +20,24 @@ namespace KinectNao.Nao
         public abstract void controlArm(MotionProxy mp, float LSP, float LSR, float LER, float LEY, float LWY);
 
 
-        //SP Winkel sind für beide Arme gleich
-        public float getSPAngle(float sp)
+        //Kinect Winkel > 90° --> invertieren
+        public float invertGreaterThan90(float angle)
         {
-            if (sp < inRadian(90)) return sp = inRadian(90) - sp;
-            else if (sp > inRadian(90)) return sp = (-1) * (sp - inRadian(90));
+            if (angle < inRadian(90)) return angle = inRadian(90) - angle;
+            else if (angle > inRadian(90)) return angle = (-1) * (angle - inRadian(90));
             return 0; //RSP = 90°
         }
 
-        //EY Winkel sind für beide Arme gleich
-        public float getEYAngle(float ey)
+        //Kinect Winkel < 90° --> invertieren
+        public float invertLowerThan90(float angle)
         {
-            if (ey < inRadian(90)) return ey = (inRadian(90) - ey) *(-1);
-            else if (ey > inRadian(90)) return ey = (ey - inRadian(90));
+            if (angle < inRadian(90)) return angle = (inRadian(90) - angle) *(-1);
+            else if (angle > inRadian(90)) return angle = (angle - inRadian(90));
             return 0; //RSP = 90°
         }
 
-        //Winkel hier sind je Arm untersch.
-        public abstract float getAngleForArm(float angle);
+       
+       
 
      
 
