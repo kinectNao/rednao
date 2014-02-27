@@ -263,7 +263,7 @@ namespace KinectNao
         {
             Console.WriteLine("Unloading Programm...");
 
-            //anglehandler.stopCalculation();
+            anglehandler.stopCalculation();
 
             if (null != mySensor)
             {

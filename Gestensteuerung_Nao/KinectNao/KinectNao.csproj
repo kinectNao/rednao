@@ -106,6 +106,8 @@
     <Compile Include="Kinect\AngleView.Designer.cs">
       <DependentUpon>AngleView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kinect\ArmAngles.cs" />
+    <Compile Include="Kinect\Filter.cs" />
     <Compile Include="Kinect\ISkeletonAngles.cs" />
     <Compile Include="Kinect\KinectShutdown.cs" />
     <Compile Include="Kinect\SkeletonAngleCalculator.cs" />

@@ -11,6 +11,8 @@ namespace KinectNao.Kinect
     {
         private SkeletonAngleHandler skeletonAngleHandler;
         private Skeleton currentSkeleton;
+        private Filter filter = new Filter();
+
 
         public SkeletonAngleCalculator(SkeletonAngleHandler skeletonAngleHandler)
         {
@@ -63,7 +65,7 @@ namespace KinectNao.Kinect
                 elbowYaw_Left = AngleCalculation.getElbowYaw_Left(currentSkeleton);
 
                 skeletonAngleHandler.updateAngles(shoulderPitch_Right, shoulderRoll_Right, elbowRoll_Right, elbowYaw_Right, shoulderPitch_Left, shoulderRoll_Left, elbowRoll_Left, elbowYaw_Left);
-                Thread.Sleep(50);
+                Thread.Sleep(30);
 
             }
             Console.WriteLine("Angle Calculation shutted down");
