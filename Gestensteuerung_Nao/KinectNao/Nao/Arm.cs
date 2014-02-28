@@ -10,7 +10,7 @@ namespace KinectNao.Nao
     public abstract class Arm
     {
 
-        public float inRadian(double angle)
+        public static float inRadian(double angle)
         {
             var rad = (Math.PI / 180) * angle;
             return (float)rad;
