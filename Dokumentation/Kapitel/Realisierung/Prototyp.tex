@@ -1,10 +1,24 @@
 \section{Prototyp}
+\subsection{Erster Kinect-Prototyp}
 Anhand der obigen Überlegungen wurde der erdachte Algorithmus zunächst anhand eines Prototyps implementiert. Dieser sollte zunächst dazu dienen, das Microsoft Kinect SDK näher kennen zu lernen\todo{getrennt zusammen?}. Der erste Prototyp erfüllte folgende Funktionen:\\
 -Kinect SDK Library
 -(Connect-Disconnect von Kinect)
 -Winkelerkennung des Benutzers mit Anzeige in Grad
 -Anzeige des Kamerabildes mit Gelenkkennzeichnung von Kopf und Armen
+\todo{Bild}
 
+\subsection{Erster Nao-Prototyp}
+Zur Einarbeitung in das Nao-SDK wurde eine Anwendung erstellt, die verschiedene Armwinkel an den Roboter übermitteln können.
+\todo{Bild}
+
+
+\subsection{Zweiter Prototyp}
+Anhand der ersten Prototypen wurde das nun erworbene Wissen in eine gemeinsame Architektur eingebettet (Siehe Kapitel Architektur). Als Verbesserungen wurden alle benötigten Winkel auf zwei separaten Fenstern angezeigt, eines für jeden Arm. Auf der GUI wird nun das komplette Skelett über das RGB-Bild gelegt.
+\todo{Screenshot}
+
+
+\subsection{Endprogramm}
+Um den effektiven Algorithmus der Winkelerkennung noch effizienter zu gestalten wurde noch ein Mittelwertsfilter implementiert, um die Ausreißer in den erkannten Winkeln zu eliminieren und somit die Messungenauigkeit der Gelenkpositionen zu verringern.
 
 
 \todo{Screenshot von Prototypprogramm}
