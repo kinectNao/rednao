@@ -84,16 +84,16 @@ namespace KinectNao.Kinect
                 );
 
 
-               // ArmAngles filtered_values = filter.getArmValue();
+                ArmAngles filtered_values = filter.getArmValue();
 
-                skeletonAngleHandler.updateAngles(shoulderPitch_Right, shoulderRoll_Right, elbowRoll_Right, elbowYaw_Right, shoulderPitch_Left, shoulderRoll_Left, elbowRoll_Left, elbowYaw_Left);
+                //skeletonAngleHandler.updateAngles(shoulderPitch_Right, shoulderRoll_Right, elbowRoll_Right, elbowYaw_Right, shoulderPitch_Left, shoulderRoll_Left, elbowRoll_Left, elbowYaw_Left);
 
-                /*skeletonAngleHandler.updateAngles(
+                skeletonAngleHandler.updateAngles(
                     filtered_values.shoulderPitch_Right, filtered_values.shoulderRoll_Right, filtered_values.elbowRoll_Right, filtered_values.elbowYaw_Right,
                     filtered_values.shoulderPitch_Left, filtered_values.shoulderRoll_Left, filtered_values.elbowRoll_Left, filtered_values.elbowYaw_Left);
-                */
                 
-                Thread.Sleep(30);
+                
+                Thread.Sleep(100);
 
             }
             Console.WriteLine("Angle Calculation shutted down");

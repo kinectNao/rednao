@@ -12,7 +12,7 @@ namespace KinectNao.Nao
         public static Range<float> ShoulderPitch = new Range<float>() { Minimum = -2.0857f, Maximum = 2.0857f };
 
         public static Range<float> RShoulderRoll = new Range<float>() { Minimum = -1.6494f, Maximum = -0.0087f };
-        public static Range<float> RElbowRoll = new Range<float>() { Minimum = -0.0087f, Maximum = 1.5621f };
+        public static Range<float> RElbowRoll = new Range<float>() { Minimum = 0.0087f, Maximum = 1.5621f };
 
         public static Range<float> ElbowYaw = new Range<float>() { Minimum = -2.0857f, Maximum = 2.0857f };
         public static Range<float> WristYaw = new Range<float>() { Minimum = -1.8238f, Maximum = 1.8238f };
@@ -39,7 +39,7 @@ namespace KinectNao.Nao
             float[] newangles = { SP, SR, ER, EY, WY };
             
             //be careful, too fast, too dangerous ;)
-            float fractionMaxSpeed = 0.5f;
+            float fractionMaxSpeed = 0.3f;
             mp.setAngles(names, newangles, fractionMaxSpeed);
         }
 

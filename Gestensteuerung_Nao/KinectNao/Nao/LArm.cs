@@ -40,7 +40,7 @@ namespace KinectNao.Nao
             String[] names = { "LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw" };
             float[] newangles = { SP, SR, ER, EY, WY };
             //float[] newangles = { 0, 0, ER, 0, 0 };
-            float fractionMaxSpeed = 0.5f;
+            float fractionMaxSpeed = 0.3f;
 
             mp.setAngles(names, newangles, fractionMaxSpeed);
 

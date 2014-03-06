@@ -7,16 +7,7 @@ namespace KinectNao.Kinect
 {
     public class ArmAngles
     {
-        private float[] shoulderPitch_Right1;
-        private float[] shoulderRoll_Right1;
-        private float[] elbowRoll_Right1;
-        private float[] elbowYaw_Right1;
-        private float[] shoulderPitch_Left1;
-        private float[] shoulderRoll_Left1;
-        private float[] elbowRoll_Left1;
-        private float[] elbowYaw_Left1;
-
-
+  
         public float shoulderPitch_Right { get; set; }
         public float shoulderRoll_Right { get; set; }
         public float elbowRoll_Right { get; set; }
@@ -32,7 +23,7 @@ namespace KinectNao.Kinect
             float elbowRoll_Left, float elbowYaw_Left)
         {
             this.shoulderPitch_Right = shoulderPitch_Right;
-            this.shoulderPitch_Left = shoulderPitch_Left;
+            this.shoulderRoll_Right = shoulderRoll_Right;
             this.elbowRoll_Right = elbowRoll_Right;
             this.elbowYaw_Right = elbowYaw_Right;
 
