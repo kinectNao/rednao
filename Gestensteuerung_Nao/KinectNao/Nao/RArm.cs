@@ -18,6 +18,8 @@ namespace KinectNao.Nao
         public static Range<float> WristYaw = new Range<float>() { Minimum = -1.8238f, Maximum = 1.8238f };
 
 
+        int threadId;
+
         public override void controlArm(Aldebaran.Proxies.MotionProxy mp, float SP, float SR, float ER, float EY, float WY)
         {
 
@@ -38,9 +40,20 @@ namespace KinectNao.Nao
             String[] names = { "RShoulderPitch", "RShoulderRoll", "RElbowRoll", "RElbowYaw", "RWristYaw" };
             float[] newangles = { SP, SR, ER, EY, WY };
             
-            //be careful, too fast, too dangerous ;)
-            float fractionMaxSpeed = 0.3f;
+            //set angles is non-blacking call!
             mp.setAngles(names, newangles, fractionMaxSpeed);
+
+            //if (!mp.isRunning(threadId))
+            //{
+            //    threadId = mp.post.setAngles(names, newangles, fractionMaxSpeed);
+            //}
+            //else
+            //{
+            //    mp.wait(threadId, 0);
+            //    threadId = mp.post.setAngles(names, newangles, fractionMaxSpeed);
+            //}
+
+
         }
 
     }
