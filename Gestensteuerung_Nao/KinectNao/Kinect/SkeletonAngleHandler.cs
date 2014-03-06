@@ -62,6 +62,8 @@ namespace KinectNao.Kinect
             // until the object's thread terminates.
             angleCalculatorThread.Join();
             Console.WriteLine("Angle Calculation shutdown complete...");
+
+            //naoHandler.endNao();
         }
 
         public void addMeToAngleSubscriber(ISkeletonAngles subscriber)

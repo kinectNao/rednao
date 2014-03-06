@@ -39,11 +39,9 @@ namespace KinectNao.Nao
             //Pitch=Rot(y), Roll=Rot(z), Yaw=Rot(x) 
             String[] names = { "LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw" };
             float[] newangles = { SP, SR, ER, EY, WY };
-            //float[] newangles = { 0, 0, ER, 0, 0 };
-            float fractionMaxSpeed = 0.3f;
 
+            //set angles is non-blacking call!
             mp.setAngles(names, newangles, fractionMaxSpeed);
-
 
         }
 
