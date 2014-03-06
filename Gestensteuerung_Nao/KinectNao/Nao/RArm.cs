@@ -23,15 +23,21 @@ namespace KinectNao.Nao
 
             SP = invertGreaterThan90(SP);
             SR = invertGreaterThan90(SR);
-            ER = invertGreaterThan90(ER);
+            //ER = invertGreaterThan90(ER);
             EY = invertLowerThan90(EY);
 
 
+            //Formel
+            float m = -0.7457f;
+            float b = 2.1563f;
+
+            ER = m * ER + b;
+             
             //Joint Controll
             //Pitch=Rot(y), Roll=Rot(z), Yaw=Rot(x) 
             String[] names = { "RShoulderPitch", "RShoulderRoll", "RElbowRoll", "RElbowYaw", "RWristYaw" };
             float[] newangles = { SP, SR, ER, EY, WY };
-
+            
             //be careful, too fast, too dangerous ;)
             float fractionMaxSpeed = 0.5f;
             mp.setAngles(names, newangles, fractionMaxSpeed);

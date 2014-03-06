@@ -24,14 +24,22 @@ namespace KinectNao.Nao
         {
             SP = invertGreaterThan90(SP);
             SR = invertLowerThan90(SR);
-            ER = invertLowerThan90(ER);
+            //ER = invertLowerThan90(ER);
             EY = invertGreaterThan90(EY);
 
+
+            //Formel
+            float m = -0.7457f;
+            float b = 2.1563f;
+
+            ER = m * ER + b;
+            ER *= -1f;
 
             //Joint Controll
             //Pitch=Rot(y), Roll=Rot(z), Yaw=Rot(x) 
             String[] names = { "LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw" };
-            float[] newangles = { SP, SR, ER,EY, WY };
+            float[] newangles = { SP, SR, ER, EY, WY };
+            //float[] newangles = { 0, 0, ER, 0, 0 };
             float fractionMaxSpeed = 0.5f;
 
             mp.setAngles(names, newangles, fractionMaxSpeed);

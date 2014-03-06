@@ -51,7 +51,13 @@ namespace KinectNao.Kinect
                 //updateAngles
                 //Sleep
                 //Zuverlässigkeit der Joints
-                
+   
+
+                //filter.addCurrentArmPos()
+
+
+
+
 				//Right
 				shoulderPitch_Right = AngleCalculation.getShoulderPitch_Right(currentSkeleton);
                 shoulderRoll_Right = AngleCalculation.getShoulderRoll_Right(currentSkeleton);
@@ -64,7 +70,29 @@ namespace KinectNao.Kinect
                 elbowRoll_Left = AngleCalculation.getElbowRoll_Left(currentSkeleton);
                 elbowYaw_Left = AngleCalculation.getElbowYaw_Left(currentSkeleton);
 
+
+                filter.addCurrentArmPos(
+                    new ArmAngles(
+                        shoulderPitch_Right, 
+                        shoulderRoll_Right, 
+                        elbowRoll_Right, 
+                        elbowYaw_Right, 
+                        shoulderPitch_Left, 
+                        shoulderRoll_Left, 
+                        elbowRoll_Left, 
+                        elbowYaw_Left)
+                );
+
+
+               // ArmAngles filtered_values = filter.getArmValue();
+
                 skeletonAngleHandler.updateAngles(shoulderPitch_Right, shoulderRoll_Right, elbowRoll_Right, elbowYaw_Right, shoulderPitch_Left, shoulderRoll_Left, elbowRoll_Left, elbowYaw_Left);
+
+                /*skeletonAngleHandler.updateAngles(
+                    filtered_values.shoulderPitch_Right, filtered_values.shoulderRoll_Right, filtered_values.elbowRoll_Right, filtered_values.elbowYaw_Right,
+                    filtered_values.shoulderPitch_Left, filtered_values.shoulderRoll_Left, filtered_values.elbowRoll_Left, filtered_values.elbowYaw_Left);
+                */
+                
                 Thread.Sleep(30);
 
             }
