@@ -85,18 +85,18 @@ Ein Modul kann, wie oben bereits erwähnt, entweder "`remote"' oder "`lokal"' se
 \\
 Die Kommunikation zwischen remote Modulen kann über zwei Wege erfolgen. Erstens \textbf{Broker to Broker} und zweitens \textbf{Proxy to Broker}.
  
-Der Unterschied liegt darin, dass Broker to Broker eine wechselseitige, Proxy to Broker nur eine einseitige Kommunikation eröffnet. Bei zwei Modulen B und C kann bei Broker to Broker B Methoden von C und C Methoden von B aufrufen. Bei Proxy to Broker ist dies nur in die Richtung von B nach C möglich, nicht umgekehrt.
-	
+Der Unterschied liegt darin, dass Broker to Broker eine wechselseitige, Proxy to Broker nur eine einseitige Kommunikation eröffnet. Bei zwei Modulen B und C kann bei Broker to Broker B Methoden von C und C Methoden von B aufrufen. Bei Proxy to Broker ist dies nur in die Richtung von B nach C möglich, nicht umgekehrt. Folgendes Listing zeigt die Implementierung beider Kommunikationsarten.
+
+\lstinputlisting
+    [caption={Kommunikationsarten Module}
+       \label{test},
+       captionpos=b]	
+ {Listings/module_comm.cs}
+\noindent	
+\textbf{Blocking und non - Blocking Aufrufe}
+\\
+
+
 
 \subsection{.NET SDK}
-
-Naoqi (architektur, modell)
-	embedded
-	
-choreographe \& naoqi	
-
-
-verfügbare sprachen
-
-
-vorstellung c\#
+vorstellung c\# SDK, HelloWorld
