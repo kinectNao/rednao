@@ -9,8 +9,7 @@ namespace KinectNao.Nao
 {
     public abstract class Arm
     {
-        protected static float fractionMaxSpeed = 0.2f;
-
+protected static float fractionMaxSpeed = 0.6f;
         
 
         public static float inRadian(double angle)
