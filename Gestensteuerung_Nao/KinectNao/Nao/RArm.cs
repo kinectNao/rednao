@@ -5,7 +5,7 @@ using System.Text;
 
 namespace KinectNao.Nao
 {
-    class RArm : Arm
+    public class RArm : Arm
     {
 
         //Ranges of the single joints in radians
@@ -17,31 +17,27 @@ namespace KinectNao.Nao
         public static Range<float> ElbowYaw = new Range<float>() { Minimum = -2.0857f, Maximum = 2.0857f };
         public static Range<float> WristYaw = new Range<float>() { Minimum = -1.8238f, Maximum = 1.8238f };
 
+        enum r {
+            ShoulderPitch , ShoulderRoll, EllbowRoll, EllbowYaw
+        }
 
         int threadId;
 
         public override void controlArm(Aldebaran.Proxies.MotionProxy mp, float SP, float SR, float ER, float EY, float WY)
         {
+            float[] newangles = { SP, SR, ER, EY, WY };
+            newangles = convertAngles(newangles);
 
-            SP = invertGreaterThan90(SP);
-            SR = invertGreaterThan90(SR);
-            //ER = invertGreaterThan90(ER);
-            EY = invertLowerThan90(EY);
-
-
-            //Formel
-            float m = -0.7457f;
-            float b = 2.1563f;
-
-            ER = m * ER + b;
              
             //Joint Controll
             //Pitch=Rot(y), Roll=Rot(z), Yaw=Rot(x) 
             String[] names = { "RShoulderPitch", "RShoulderRoll", "RElbowRoll", "RElbowYaw", "RWristYaw" };
-            float[] newangles = { SP, SR, ER, EY, WY };
             
             //set angles is non-blacking call!
-            mp.setAngles(names, newangles, fractionMaxSpeed);
+            //mp.setAngles(names, newangles, fractionMaxSpeed);
+
+            //angleInterpolation is a blocking call; post is used to create each a thread for the arms
+            mp.post.angleInterpolationWithSpeed(names, newangles, fractionMaxSpeed);
 
             //if (!mp.isRunning(threadId))
             //{
@@ -56,5 +52,27 @@ namespace KinectNao.Nao
 
         }
 
+        // TODO: verify that angles are in naos space, else return current angle
+        public override float[] verifyAngles(float[] angles)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override float[] convertAngles(float[] angles)
+        {
+            angles[(int)r.ShoulderPitch] = invertGreaterThan90(angles[(int)r.ShoulderPitch]); //SP
+            angles[(int)r.ShoulderRoll] = invertGreaterThan90(angles[(int)r.ShoulderRoll]); //SR
+            //ER = invertGreaterThan90(ER);
+            angles[(int)r.EllbowYaw] = invertLowerThan90(angles[(int)r.EllbowYaw]); //EY
+
+
+            //Formel ER
+            float m = -0.7457f;
+            float b = 2.1563f;
+
+            angles[(int)r.EllbowRoll] = m * angles[(int)r.EllbowRoll] + b; //ER
+
+            return angles;
+        }
     }
 }

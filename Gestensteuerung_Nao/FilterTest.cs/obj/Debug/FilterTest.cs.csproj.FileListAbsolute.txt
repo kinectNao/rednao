@@ -1,0 +1,9 @@
+C:\Users\nao\Desktop\rednao\Gestensteuerung_Nao\FilterTest.cs\bin\Debug\FilterTest.cs.dll
+C:\Users\nao\Desktop\rednao\Gestensteuerung_Nao\FilterTest.cs\bin\Debug\FilterTest.cs.pdb
+C:\Users\nao\Desktop\rednao\Gestensteuerung_Nao\FilterTest.cs\bin\Debug\KinectNao.exe
+C:\Users\nao\Desktop\rednao\Gestensteuerung_Nao\FilterTest.cs\bin\Debug\naoqi-dotnet4.dll
+C:\Users\nao\Desktop\rednao\Gestensteuerung_Nao\FilterTest.cs\bin\Debug\KinectNao.pdb
+C:\Users\nao\Desktop\rednao\Gestensteuerung_Nao\FilterTest.cs\bin\Debug\naoqi-dotnet4.xml
+C:\Users\nao\Desktop\rednao\Gestensteuerung_Nao\FilterTest.cs\obj\Debug\FilterTest.cs.csprojResolveAssemblyReference.cache
+C:\Users\nao\Desktop\rednao\Gestensteuerung_Nao\FilterTest.cs\obj\Debug\FilterTest.cs.dll
+C:\Users\nao\Desktop\rednao\Gestensteuerung_Nao\FilterTest.cs\obj\Debug\FilterTest.cs.pdb

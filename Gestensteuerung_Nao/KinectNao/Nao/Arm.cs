@@ -9,7 +9,7 @@ namespace KinectNao.Nao
 {
     public abstract class Arm
     {
-protected static float fractionMaxSpeed = 0.6f;
+        protected static float fractionMaxSpeed = 0.3f;
         
 
         public static float inRadian(double angle)
@@ -20,6 +20,10 @@ protected static float fractionMaxSpeed = 0.6f;
 
         //Control LArm with all Joints
         public abstract void controlArm(MotionProxy mp, float LSP, float LSR, float LER, float LEY, float LWY);
+
+        public abstract float[] verifyAngles(float[] angles);
+
+        public abstract float[] convertAngles(float[] angles);
 
 
         //Kinect Winkel > 90° --> invertieren
