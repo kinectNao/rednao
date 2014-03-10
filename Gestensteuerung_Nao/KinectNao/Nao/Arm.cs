@@ -19,7 +19,7 @@ namespace KinectNao.Nao
         }
 
         //Control LArm with all Joints
-        public abstract void controlArm(MotionProxy mp, float LSP, float LSR, float LER, float LEY, float LWY);
+        public abstract void controlArm( float LSP, float LSR, float LER, float LEY, float LWY);
 
         public abstract float[] verifyAngles(float[] angles);
 
