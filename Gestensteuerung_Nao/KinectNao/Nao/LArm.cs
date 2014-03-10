@@ -5,7 +5,7 @@ using System.Text;
 
 namespace KinectNao.Nao
 {
-    class LArm : Arm
+    public class LArm : Arm
     {
         //Ranges of the single joints in radians
         public static Range<float> ShoulderPitch = new Range<float>() { Minimum = -2.0857f, Maximum = 2.0857f };
@@ -16,36 +16,55 @@ namespace KinectNao.Nao
         public static Range<float> ElbowYaw = new Range<float>() { Minimum = -2.0857f, Maximum = 2.0857f };
         public static Range<float> WristYaw = new Range<float>() { Minimum = -1.8238f, Maximum = 1.8238f };
 
-
+        enum l  {
+            ShoulderPitch , ShoulderRoll, EllbowRoll, EllbowYaw
+        }
 
 
 
         public override void controlArm(Aldebaran.Proxies.MotionProxy mp, float SP, float SR, float ER, float EY, float WY)
         {
-            SP = invertGreaterThan90(SP);
-            SR = invertLowerThan90(SR);
-            //ER = invertLowerThan90(ER);
-            EY = invertGreaterThan90(EY);
+            float[] newangles = { SP, SR, ER, EY, WY };
 
+            newangles = convertAngles(newangles); //Convert in Nao-Kinematic
 
-            //Formel
-            float m = -0.7457f;
-            float b = 2.1563f;
-
-            ER = m * ER + b;
-            ER *= -1f;
 
             //Joint Controll
             //Pitch=Rot(y), Roll=Rot(z), Yaw=Rot(x) 
             String[] names = { "LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw" };
-            float[] newangles = { SP, SR, ER, EY, WY };
 
             //set angles is non-blacking call!
-            mp.setAngles(names, newangles, fractionMaxSpeed);
+            //mp.setAngles(names, newangles, fractionMaxSpeed);
+
+            //angleInterpolation is a blocking call!
+            mp.post.angleInterpolationWithSpeed(names, newangles, fractionMaxSpeed);
+
+            
 
         }
 
 
 
+
+        public override float[] verifyAngles(float[] angles)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override float[] convertAngles(float[] angles)
+        {
+            angles[(int)l.ShoulderPitch] = invertGreaterThan90(angles[(int)l.ShoulderPitch]); //SP
+            angles[(int)l.ShoulderRoll] = invertLowerThan90(angles[(int)l.ShoulderRoll]); //SR
+            //ER = invertLowerThan90(ER);
+            angles[(int)l.EllbowYaw] = invertGreaterThan90(angles[(int)l.EllbowYaw]); //EY
+
+            //Formel für Ellbow Roll
+            float m = -0.7457f;
+            float b = 2.1563f;
+            angles[(int)l.EllbowRoll] = m * angles[(int)l.EllbowRoll] + b; //ER
+            angles[(int)l.EllbowRoll] *= -1f;
+
+            return angles;
+        }
     }
 }
