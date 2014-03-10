@@ -15,29 +15,34 @@ namespace KinectNao.Nao
 
         public static Range<float> ElbowYaw = new Range<float>() { Minimum = -2.0857f, Maximum = 2.0857f };
         public static Range<float> WristYaw = new Range<float>() { Minimum = -1.8238f, Maximum = 1.8238f };
+        private Aldebaran.Proxies.MotionProxy mp;
 
-        enum l  {
-            ShoulderPitch , ShoulderRoll, EllbowRoll, EllbowYaw
+        const String[] joints = { "LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw" };
+        enum l
+        {
+            ShoulderPitch, ShoulderRoll, EllbowRoll, EllbowYaw
         }
 
 
 
-        public override void controlArm(Aldebaran.Proxies.MotionProxy mp, float SP, float SR, float ER, float EY, float WY)
+
+        public LArm(Aldebaran.Proxies.MotionProxy mp)
+        {
+            this.mp = mp;
+        }
+
+      
+        public override void controlArm( float SP, float SR, float ER, float EY, float WY)
         {
             float[] newangles = { SP, SR, ER, EY, WY };
 
             newangles = convertAngles(newangles); //Convert in Nao-Kinematic
 
-
-            //Joint Controll
-            //Pitch=Rot(y), Roll=Rot(z), Yaw=Rot(x) 
-            String[] names = { "LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw" };
-
             //set angles is non-blacking call!
             //mp.setAngles(names, newangles, fractionMaxSpeed);
 
             //angleInterpolation is a blocking call!
-            mp.post.angleInterpolationWithSpeed(names, newangles, fractionMaxSpeed);
+            mp.post.angleInterpolationWithSpeed(joints, newangles, fractionMaxSpeed);
 
             
 

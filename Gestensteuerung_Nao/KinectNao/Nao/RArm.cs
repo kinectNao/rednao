@@ -21,40 +21,37 @@ namespace KinectNao.Nao
             ShoulderPitch , ShoulderRoll, EllbowRoll, EllbowYaw
         }
 
-        int threadId;
+        const String[] joints = { "RShoulderPitch", "RShoulderRoll", "RElbowRoll", "RElbowYaw", "RWristYaw" };
 
-        public override void controlArm(Aldebaran.Proxies.MotionProxy mp, float SP, float SR, float ER, float EY, float WY)
+        int threadId;
+        private Aldebaran.Proxies.MotionProxy mp;
+
+        public RArm(Aldebaran.Proxies.MotionProxy mp)
+        {
+            this.mp = mp;
+        }
+
+        public override void controlArm( float SP, float SR, float ER, float EY, float WY)
         {
             float[] newangles = { SP, SR, ER, EY, WY };
             newangles = convertAngles(newangles);
-
-             
-            //Joint Controll
-            //Pitch=Rot(y), Roll=Rot(z), Yaw=Rot(x) 
-            String[] names = { "RShoulderPitch", "RShoulderRoll", "RElbowRoll", "RElbowYaw", "RWristYaw" };
-            
+           
             //set angles is non-blacking call!
             //mp.setAngles(names, newangles, fractionMaxSpeed);
 
             //angleInterpolation is a blocking call; post is used to create each a thread for the arms
-            mp.post.angleInterpolationWithSpeed(names, newangles, fractionMaxSpeed);
+            mp.post.angleInterpolationWithSpeed(joints, newangles, fractionMaxSpeed);
 
-            //if (!mp.isRunning(threadId))
-            //{
-            //    threadId = mp.post.setAngles(names, newangles, fractionMaxSpeed);
-            //}
-            //else
-            //{
-            //    mp.wait(threadId, 0);
-            //    threadId = mp.post.setAngles(names, newangles, fractionMaxSpeed);
-            //}
 
 
         }
 
         // TODO: verify that angles are in naos space, else return current angle
-        public override float[] verifyAngles(float[] angles)
+        public override float[] verifyAngles(float[] newAngles)
         {
+            List<float> currentAngles = mp.getAngles(joints, true);
+
+
             throw new NotImplementedException();
         }
 

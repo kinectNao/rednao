@@ -7,3 +7,6 @@ C:\Users\nao\Desktop\rednao\Gestensteuerung_Nao\FilterTest.cs\bin\Debug\naoqi-do
 C:\Users\nao\Desktop\rednao\Gestensteuerung_Nao\FilterTest.cs\obj\Debug\FilterTest.cs.csprojResolveAssemblyReference.cache
 C:\Users\nao\Desktop\rednao\Gestensteuerung_Nao\FilterTest.cs\obj\Debug\FilterTest.cs.dll
 C:\Users\nao\Desktop\rednao\Gestensteuerung_Nao\FilterTest.cs\obj\Debug\FilterTest.cs.pdb
+C:\Users\tuxpad\Documents\Studienarbeit\rednao\Gestensteuerung_Nao\FilterTest.cs\obj\Debug\FilterTest.cs.csprojResolveAssemblyReference.cache
+C:\Users\tuxpad\Documents\Studienarbeit\rednao\Gestensteuerung_Nao\FilterTest.cs\obj\Debug\FilterTest.cs.dll
+C:\Users\tuxpad\Documents\Studienarbeit\rednao\Gestensteuerung_Nao\FilterTest.cs\obj\Debug\FilterTest.cs.pdb
