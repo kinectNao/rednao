@@ -13,7 +13,7 @@ namespace KinectNao.Nao
 
         //Local or Remote
         //const String ip = "127.0.0.1";
-        const String ip = "192.168.100.3";
+        const String ip = "192.168.100.7";
         const int port = 9559;
 
         private MotionProxy mp;

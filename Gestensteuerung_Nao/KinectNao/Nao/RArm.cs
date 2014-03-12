@@ -37,7 +37,7 @@ namespace KinectNao.Nao
             newangles = convertAngles(newangles);
            
             //set angles is non-blacking call!
-            //mp.setAngles(names, newangles, fractionMaxSpeed);
+            //mp.setAngles(joints, newangles, fractionMaxSpeed);
 
             //angleInterpolation is a blocking call; post is used to create each a thread for the arms
             mp.post.angleInterpolationWithSpeed(joints, newangles, fractionMaxSpeed);
