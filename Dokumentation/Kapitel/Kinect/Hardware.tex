@@ -11,39 +11,43 @@ Im Folgenden wird auf die Hardware des Sensors näher eingegangen:
 \end{figure}
 
 
+Das Kinectmodul besteht technisch gesehen aus mehreren Komponenten, die es ermöglichen, die
+im folgenden erläuterten abstrahierten Funktionen (Skelettverfolgung, Winkelextraktion, RGB-Bild)
+zu realisieren. \cite{webb2012beginning}
 
-Das Kinectmodul besteht technisch gesehen aus einer RGB Kamera, die maximal eine Auflösung von 1280 x 960 Pixeln unterstützt. 
-\cite{webb2012beginning}
+\subsection{RGB-Kamera}
+
+	Ein Teil der Kinect ist die RGB Kamera, die maximal eine Auflösung von 1280 x 960 Pixeln 	
+	unterstützt. 
+	
+	Auflösung
+	30 FPS bei 640x480
+	12 FPS bei 1280x960
+	
+	Sichtfeld:
+	43 Grad vertikal
+	57 Grad horizontal	
+
+\subsection{Tiefenerkennung}
+	Infrarot Projektor
+	CMOS Chip: depth camera 	= max resolution of 640 x 480.
+	
+	\todo{Triangulation}	
+	\todo{PrimeSense}
+	\todo{Bild Triangulation}
+	
+\subsection{Motor}
+	Kippbarer Kopf
+	
+	
+\subsection{Microphon Array}
+	4 Mikrofone -> Für dieses Projekt irrelevant 
+	(evtl. Sprachkommandos? Kinect Lib unterstützt Grammatik!!)
+	Richtung d. Geräusch
+	
+\cite{jana2012kinect}
 
 
-\subsection{Funktion}
 
-	\cite{jana2012kinect}
-
-
-\todo{Hardware Bilder}
-\todo{erklärungen zu Bilder}
-\todo{PrimeSense}
-\todo{Triangulation}
-
-Hardware
-========
-
-Kippbarer Kopf
-
-Infrarot Projektor
-
-Zwei Kameras
-
-4 Mikrofone -> Für dieses Projekt irrelevant (evtl. Sprachkommandos? Kinect Lib unterstützt Grammatik!!)
-
-Auflösung der Kameras
-
-	color camer 	= max resolution of 1280 x 960 
-	depth camera 	= max resolution of 640 x 480.
-
--Aufbau: 	-Microphonarray zweck=richtung d. Geräusch
-			-IR Sensor = Deep Stream
-			-RGB Kamera = Bild
--Rauminformationen für Software
--Vorteil: Günstig, leicht zu entwickeln, da SDK vorhanden
+Rauminformationen für Software
+Vorteil: Günstig, leicht zu entwickeln, da SDK vorhanden
