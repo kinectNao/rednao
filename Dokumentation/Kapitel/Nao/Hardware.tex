@@ -18,6 +18,40 @@ Die Beine bestehen aus drei Gelenken: Einem Hüft-, einem Knie- und einem Fußge
 Die Bestimmung der Gelenkpositionen erfolgt über einen magnetischen Drehwinkelgeber	mit einer Auflösung von 12 Bit. Das macht beispielsweise bei einem Wert von 4096 pro Umdrehung eine Präzision von 0.1 Grad.
 \\
 \\
+\textbf{Gelenkraum Nao}
+\\
+Da primär die Arme durch Nao nachgeahmt werden sollen, wird hier kurz auf den Gelenkraum dieser eingegangen. Jedes einzelne Gelenk der beiden Arme besitzt einen Winkelbereich in dem diese bewegt werden können. Tabellen \ref{tab:Lgelenkraum} und \ref{tab:Rgelenkraum} zeigen den Gelenkraum für den linken bzw. den rechten Arm.
+
+\begin{table}[H]
+    \begin{tabular}{|l|l|l|}
+    \hline
+    \textbf{Gelenk}         & \textbf{Bereich (Grad) } & \textbf{Bereich (Radian)}   \\
+    \hline
+    LShoulderPitch & -119.5 to 119.5 & -2.0857 to 2.0857  \\
+    LShoulderRoll  & -18 to 76       & -0.3142 to 1.3265  \\
+    LElbowYaw      & -119.5 to 119.5 & -2.0857 to 2.0857  \\
+    LElbowRoll     & -88.5 to -2     & -1.5446 to -0.0349 \\
+    LWristYaw      & -104.5 to 104.5 & -1.8238 to 1.8238  \\ \hline
+    \end{tabular}
+    \caption {Gelenkraum linker Arm}
+    \label{tab:Lgelenkraum}
+\end{table}
+\begin{table}[H]
+    \begin{tabular}{|l|l|l|}
+    \hline
+    \textbf{Gelenk}         & \textbf{Bereich (Grad) } & \textbf{Bereich (Radian)}   \\
+    \hline
+    RShoulderPitch & -119.5 to 119.5 & -2.0857 to 2.0857 \\
+    RShoulderRoll  & -76 to 18       & -1.3265 to 0.3142 \\
+    RElbowYaw      & -119.5 to 119.5 & -2.0857 to 2.0857 \\
+    RElbowRoll     & 2 to 88.5       & 0.0349 to 1.5446  \\
+    RWristYaw      & -104.5 to 104.5 & -1.8238 to 1.8238 \\ \hline
+    \end{tabular}
+    \caption {Gelenkraum rechter Arm}
+    \label{tab:Rgelenkraum}
+\end{table}
+Bilder der einzelnen Gelenke und Winkelbereiche sind im Anhang zu finden.
+\noindent
 \textbf{Aktoren}
 \\
 In Nao sind vier verschiedene Typen von Motoren verbaut. Diese unterscheiden sich im wesentlichen in ihrer maximalen Anzahl an Drehungen pro Minute, dem Drehmoment und der Drehzahlrückstellung. Dies ist wichtig, da nicht jedes Gelenk und der zugehörige Aktor mit der gleichen Masse belastet wird.

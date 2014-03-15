@@ -15,7 +15,9 @@ namespace KinectNao.Nao
 
         public static Range<float> ElbowYaw = new Range<float>() { Minimum = -2.0857f, Maximum = 2.0857f };
         public static Range<float> WristYaw = new Range<float>() { Minimum = -1.8238f, Maximum = 1.8238f };
+        
         private Aldebaran.Proxies.MotionProxy mp;
+        private Angles angles;
 
         private static String[] joints = { "LShoulderPitch", "LShoulderRoll", "LElbowRoll", "LElbowYaw", "LWristYaw" };
         enum l
@@ -29,6 +31,7 @@ namespace KinectNao.Nao
         public LArm(Aldebaran.Proxies.MotionProxy mp)
         {
             this.mp = mp;
+            angles = new Angles(mp, joints);
         }
 
       
@@ -37,39 +40,54 @@ namespace KinectNao.Nao
             float[] newangles = { SP, SR, ER, EY, WY };
 
             newangles = convertAngles(newangles); //Convert in Nao-Kinematic
+            //verify
+            //newangles = angles.filter(newangles);
 
             //set angles is non-blacking call!
             //mp.setAngles(joints, newangles, fractionMaxSpeed);
 
             //angleInterpolation is a blocking call!
-            mp.post.angleInterpolationWithSpeed(joints, newangles, fractionMaxSpeed);
+            mp.post.angleInterpolationWithSpeed(joints, newangles, Arm.fractionMaxSpeed);
 
             
 
         }
+      
 
-
-
-
-        public override float[] verifyAngles(float[] angles)
+        public override float[] convertAngles(float[] kinectAngles)
         {
-            throw new NotImplementedException();
-        }
-
-        public override float[] convertAngles(float[] angles)
-        {
-            angles[(int)l.ShoulderPitch] = invertGreaterThan90(angles[(int)l.ShoulderPitch]); //SP
-            angles[(int)l.ShoulderRoll] = invertLowerThan90(angles[(int)l.ShoulderRoll]); //SR
+            kinectAngles[(int)l.ShoulderPitch] = angles.invertGreaterThan90(kinectAngles[(int)l.ShoulderPitch]); //SP
+            kinectAngles[(int)l.ShoulderRoll] = angles.invertLowerThan90(kinectAngles[(int)l.ShoulderRoll]); //SR
             //ER = invertLowerThan90(ER);
-            angles[(int)l.EllbowYaw] = invertGreaterThan90(angles[(int)l.EllbowYaw]); //EY
+            kinectAngles[(int)l.EllbowYaw] = angles.invertGreaterThan90(kinectAngles[(int)l.EllbowYaw]); //EY
 
             //Formel für Ellbow Roll
             float m = -0.7457f;
             float b = 2.1563f;
-            angles[(int)l.EllbowRoll] = m * angles[(int)l.EllbowRoll] + b; //ER
-            angles[(int)l.EllbowRoll] *= -1f;
+            kinectAngles[(int)l.EllbowRoll] = m * kinectAngles[(int)l.EllbowRoll] + b; //ER
+            kinectAngles[(int)l.EllbowRoll] *= -1f;
 
-            return angles;
+            return kinectAngles;
+        }
+
+
+        public float[] verifyAngles(float[] convertedAngles)
+        {
+            
+            //if convertedAngle is outside range, take old angle
+            if (!ShoulderPitch.ContainsValue(convertedAngles[(int)l.ShoulderPitch]))
+                convertedAngles[(int)l.ShoulderPitch] = angles.currentAngles[(int)l.ShoulderPitch];
+
+            if (!LShoulderRoll.ContainsValue(convertedAngles[(int)l.ShoulderRoll]))
+                convertedAngles[(int)l.ShoulderRoll] = angles.currentAngles[(int)l.ShoulderRoll];
+
+            if (!LElbowRoll.ContainsValue(convertedAngles[(int)l.EllbowRoll]))
+                convertedAngles[(int)l.EllbowRoll] = angles.currentAngles[(int)l.EllbowRoll];
+
+            if (!ElbowYaw.ContainsValue(convertedAngles[(int)l.EllbowYaw]))
+                convertedAngles[(int)l.EllbowYaw] = angles.currentAngles[(int)l.EllbowYaw];
+
+            return convertedAngles;
         }
     }
 }

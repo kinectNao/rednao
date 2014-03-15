@@ -1,3 +1,4 @@
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Packages/Dokumentart %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[ a4paper,  % Papierart
  		 %       10pt,    %
@@ -39,7 +40,8 @@
   commentstyle=\color{greencomments},
   keywordstyle=\color{bluekeywords},
   stringstyle=\color{redstrings},
-  basicstyle=\ttfamily
+  basicstyle=\ttfamily,
+  numbers=left
 }
 
 
@@ -178,7 +180,8 @@ Betreuer  & \BetreuerDHBW    \\
 \input{Kapitel/Schluss/Schluss.tex}
 \newpage
 
-%\input{Anhang/anhang.tex}        % Anhang Einbinden
+\appendix
+\input{Anhang/anhang.tex}        % Anhang Einbinden
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Literaturverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \addcontentsline{toc}{chapter}{Literaturverzeichnis}
 \bibliographystyle{plain}        % Zitierformat (deutsch für Großschreibung) [Häufigkeit] im Text

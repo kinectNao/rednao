@@ -85,18 +85,45 @@ Ein Modul kann, wie oben bereits erwähnt, entweder "`remote"' oder "`lokal"' se
 \\
 Die Kommunikation zwischen remote Modulen kann über zwei Wege erfolgen. Erstens \textbf{Broker to Broker} und zweitens \textbf{Proxy to Broker}.
  
-Der Unterschied liegt darin, dass Broker to Broker eine wechselseitige, Proxy to Broker nur eine einseitige Kommunikation eröffnet. Bei zwei Modulen B und C kann bei Broker to Broker B Methoden von C und C Methoden von B aufrufen. Bei Proxy to Broker ist dies nur in die Richtung von B nach C möglich, nicht umgekehrt. Folgendes Listing zeigt die Implementierung beider Kommunikationsarten.
+Der Unterschied liegt darin, dass Broker to Broker eine wechselseitige, Proxy to Broker nur eine einseitige Kommunikation eröffnet. Bei zwei Modulen B und C kann bei Broker to Broker B Methoden von C und C Methoden von B aufrufen. Bei Proxy to Broker ist dies nur in die Richtung von B nach C möglich, nicht umgekehrt. Listing \ref{lst:module_comm} zeigt die Implementierung beider Kommunikationsarten.
 
 \lstinputlisting
-    [caption={Kommunikationsarten Module}
-       \label{test},
+    [caption={Kommunikationsarten Module},
+       label=lst:module_comm,
        captionpos=b]	
  {Listings/module_comm.cs}
 \noindent	
 \textbf{Blocking und non - Blocking Aufrufe}
 \\
-
+Das NAOqi - Framework bietet zwei Möglichkeiten an, Methoden aufzurufen. 
+\\
+\\
+Abbildung \ref{f:naoqi_blockingcall} zeigt das Schema eines \textbf{Blocking calls}. Diese sind wie normale Methoden - Aufrufen. Die nächste Anweisung wird erst nach dem Ende der vorherigen ausgeführt und währenddessen ist keine Ausführung von anderem Code möglich. Alle Aufrufe können eine Exception auslösen und sollten in einen try-catch - Block gepackt werden. Ebenso können die Aufrufe Rückgabewerte besitzen.
+\begin{figure}[H]						
+	\centering							
+	\includegraphics[scale=0.8]{Bilder/blockingcall.PNG}
+	\caption{Blocking Call}						
+	\label{f:naoqi_blockingcall}						
+\end{figure}
+\textbf{Non - blocking calls} benutzen das \textit{post-}Objekt einer Proxy. Der Vergleich zu Bild \ref{f:naoqi_nonblockingcall} zeigt, dass die Ausführung der Methode in einen parallelen Thread gepackt wird. Dadurch ist es möglich andere Anweisungen zur gleichen Zeit auszuführen, z.B. Sprechen während des Laufens. Jedes post - Objekt erzeugt eine \textit{taskID}. Mit dieser ID kann entweder geprüft werden ob der Thread noch läuft, ob auf ihn gewartet oder ob er gestoppt werden soll. 
+\begin{figure}[H]						
+	\centering							
+	\includegraphics[scale=0.8]{Bilder/nonblockingcall.PNG}
+	\caption{Blocking Call}						
+	\label{f:naoqi_nonblockingcall}						
+\end{figure}
 
 
 \subsection{.NET SDK}
-vorstellung c\# SDK, HelloWorld
+Wie bereits in Kapitel \myref{Einleitung} erwähnt, wurde als Programmiersprache C\# gewählt. 
+\\
+Das Benutzen des .NET SDK ist sehr einfach gestaltet. Dazu muss dieses je nach .NET - Version (2/4) installiert werden. In unserem Fall ist das .NET Version 4, da mit \textit{Microsoft Visual Studio 2013} entwickelt wurde. Das SDK beinhaltet Auto - Vervollständigung und nahezu jede NAOqi - Methode kann damit aufgerufen werden.
+\\
+ Listing \ref{lst:net_helloWorld} zeigt ein einfaches Beispiel zur Benutzung von NAOqi innerhalb C\#. In Zeile eins wird angegeben, dass der Namespace von NAOqi benutzt wird. Damit dies möglich ist, muss davor die \textsf{naoqi.dll} als Verweis dem Projekt hinzugefügt werden. Zeile sieben zeigt die Erzeugung eines Proxy - Objekts vom Typ \textit{TextToSpeech}. Da im Konstruktor eine IP - Adresse und ein Port angegeben wird, handelt es sich hier um eine Proxy to Broker Kommunikation. Auf dem Proxy - Objekt wird in Zeile acht eine Methode mit dem Parameter \textsf{"Hello World"} als blocking call aufgerufen. Das Ergebnis der Methode ist die sprachliche Ausgabe des Strings \textsf{Hello World} durch den Roboter.
+
+\lstinputlisting
+    [caption={Beispiel .NET SDK},captionpos=b,
+       label=lst:net_helloWorld,
+       ]	
+ {Listings/helloWorld.cs}
+
