@@ -25,51 +25,67 @@ namespace KinectNao.Nao
 
         int threadId;
         private Aldebaran.Proxies.MotionProxy mp;
+        public Angles angles;
 
         public RArm(Aldebaran.Proxies.MotionProxy mp)
         {
             this.mp = mp;
+            angles = new Angles(mp, joints);
         }
+
 
         public override void controlArm( float SP, float SR, float ER, float EY, float WY)
         {
             float[] newangles = { SP, SR, ER, EY, WY };
             newangles = convertAngles(newangles);
+            //verify
+            //newangles = angles.filter(newangles);
            
             //set angles is non-blacking call!
             //mp.setAngles(joints, newangles, fractionMaxSpeed);
 
             //angleInterpolation is a blocking call; post is used to create each a thread for the arms
-            mp.post.angleInterpolationWithSpeed(joints, newangles, fractionMaxSpeed);
+            mp.post.angleInterpolationWithSpeed(joints, newangles, Arm.fractionMaxSpeed);
 
 
 
         }
+ 
 
-        // TODO: verify that angles are in naos space, else return current angle
-        public override float[] verifyAngles(float[] newAngles)
+        public override float[] convertAngles(float[] kinectAngles)
         {
-            List<float> currentAngles = mp.getAngles(joints, true);
-
-
-            throw new NotImplementedException();
-        }
-
-        public override float[] convertAngles(float[] angles)
-        {
-            angles[(int)r.ShoulderPitch] = invertGreaterThan90(angles[(int)r.ShoulderPitch]); //SP
-            angles[(int)r.ShoulderRoll] = invertGreaterThan90(angles[(int)r.ShoulderRoll]); //SR
+            kinectAngles[(int)r.ShoulderPitch] = angles.invertGreaterThan90(kinectAngles[(int)r.ShoulderPitch]); //SP
+            kinectAngles[(int)r.ShoulderRoll] = angles.invertGreaterThan90(kinectAngles[(int)r.ShoulderRoll]); //SR
             //ER = invertGreaterThan90(ER);
-            angles[(int)r.EllbowYaw] = invertLowerThan90(angles[(int)r.EllbowYaw]); //EY
+            kinectAngles[(int)r.EllbowYaw] = angles.invertLowerThan90(kinectAngles[(int)r.EllbowYaw]); //EY
 
 
             //Formel ER
             float m = -0.7457f;
             float b = 2.1563f;
 
-            angles[(int)r.EllbowRoll] = m * angles[(int)r.EllbowRoll] + b; //ER
+            kinectAngles[(int)r.EllbowRoll] = m * kinectAngles[(int)r.EllbowRoll] + b; //ER
 
-            return angles;
+            return kinectAngles;
+        }
+
+
+        public float[] verifyAngles(float[] convertedAngles)
+        {
+            //if convertedAngle is outside range, take old angle
+            if (!ShoulderPitch.ContainsValue(convertedAngles[(int)r.ShoulderPitch]))
+                convertedAngles[(int)r.ShoulderPitch] = angles.currentAngles[(int)r.ShoulderPitch];
+
+            if(!RShoulderRoll.ContainsValue(convertedAngles[(int)r.ShoulderRoll]))
+                convertedAngles[(int)r.ShoulderRoll] = angles.currentAngles[(int)r.ShoulderRoll];
+
+            if (!RElbowRoll.ContainsValue(convertedAngles[(int)r.EllbowRoll]))
+                convertedAngles[(int)r.EllbowRoll] = angles.currentAngles[(int)r.EllbowRoll];
+
+            if (!ElbowYaw.ContainsValue(convertedAngles[(int)r.EllbowYaw]))
+                convertedAngles[(int)r.EllbowYaw] = angles.currentAngles[(int)r.EllbowYaw];
+
+            return convertedAngles;
         }
     }
 }
