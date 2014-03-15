@@ -1,7 +1,7 @@
 \section{Kinect Hardware}
 Microsoft brachte im November 2010 mit dem Produkt Xbox Kinect eine neues Produkt auf den Markt. Mit diesem war es möglich, ihr eigenes Produkt Xbox 360 über eine 3D-Kamera zu steuern und Spiele zu spielen. 
 Mit diesem Produkt konnte erstmals ein preiswerter Sensor verwendet werden, um 3D-Bilddaten auszuwerten.
-Im Folgenden wird auf die Hardware des Sensors näher eingegangen:
+Im Folgenden wird auf die Hardware des Sensors näher eingegangen:\\[0.2cm]
 
 \begin{figure}[H]						
 	\centering							
@@ -10,31 +10,64 @@ Im Folgenden wird auf die Hardware des Sensors näher eingegangen:
 	\label{f:kinect_hardware}						
 \end{figure}
 
-
+\noindent
 Das Kinectmodul besteht technisch gesehen aus mehreren Komponenten, die es ermöglichen, die
-im folgenden erläuterten abstrahierten Funktionen (Skelettverfolgung, Winkelextraktion, RGB-Bild)
+für diese Projektarbeit relevanten, abstrahierten Funktionen (Skelettverfolgung, Winkelextraktion, RGB-Bild)
 zu realisieren. \cite{webb2012beginning}
 
 \subsection{RGB-Kamera}
 
-	Ein Teil der Kinect ist die RGB Kamera, die maximal eine Auflösung von 1280 x 960 Pixeln 	
-	unterstützt. 
-	
-	Auflösung
-	30 FPS bei 640x480
-	12 FPS bei 1280x960
-	
-	Sichtfeld:
-	43 Grad vertikal
-	57 Grad horizontal	
+	Ein wesentlicher Teil der Kinect ist die RGB Kamera. Diese liefert ein Bild, das alleine
+	oder auch in Kombinationen weiterer Funktionen verwendet werden kann.
+	Das Sichtfeld der Kamera beträgt 43 Grad in der Vertikalen, sowie 57 Grad in der Horizontalen.
+	Bei einer Auflösung von 640 x 480 Pixel werden 30 FPS und bei 1280 x 960 Pixel noch 12 FPS unterstützt.
+	Wobei standardmäßig die geringere Auflösung genügt und deshalb auch verwendet wird.
+	\cite{jana2012kinect}	
 
 \subsection{Tiefenerkennung}
-	Infrarot Projektor
-	CMOS Chip: depth camera 	= max resolution of 640 x 480.
 	
-	\todo{Triangulation}	
-	\todo{PrimeSense}
-	\todo{Bild Triangulation}
+	Der andere wesentliche Teil der Hardware besteht aus den Komponenten, die für die Tiefenerkennung
+	zuständig sind. Diese Komponenten sind der \acf{IR-Emitter} und der IR-Tiefensensor (siehe	 Abb. 	 
+	\ref{f:kinect_hardware}).\\
+	\noindent
+	Zur Abtastung der Tiefenwerte wendet die Kinect das \textit{Light-Coding} Prinzip an. Hierbei wird
+	eine Szene mit einem Muster überlagert und daraus die Tiefeninformation berechnet.
+	Der \acs{IR-Emitter} sendet dabei ein spezielles Punktmuster aus (Siehe Abb. \ref{f:kinect_dots}),
+	das vom Tiefensensor abgetastet werden kann.	
+	
+	\begin{figure}[H]						
+		\centering							
+		\includegraphics[scale=0.5]{Bilder/kinect_dots.jpg}			
+		\caption{Kinect Punktemuster}						
+		\label{f:kinect_dots}						
+	\end{figure}
+	
+	\noindent	
+	Der IR-Empfänger ist ein \acf{CMOS}-Chip und unterstützt eine maximale Auflösung
+	von 640 x 480 Pixel.
+	\\
+	Die Einheit von Kinect, die für die Verarbeitung der Tiefen und RGB-Daten verantwortlich ist, ist
+	der PrimeSense-Chip. Dieser wertet das Light-Coding mittels \textit{Depth from Focus} und 
+	\textit{Depth from Stereo} aus.\cite{pdf:maccormick}
+	\\
+	Befindet sich nun ein Objekt im Sichtbereich der Kinect, wird das Muster auf das Objekt projiziert und
+	die Form des Objektes verzerrt das Muster (Siehe Abb. \ref{f:kinect_dots_with_Object}). Daraus kann der 
+	Chip die Tiefeninformationen errechnen.	
+	
+	\begin{figure}[H]						
+		\centering							
+		\includegraphics[scale=0.5]{Bilder/kinect_dots_green.jpg}			
+		\caption{Kinect Objekte im Sichtraum}						
+		\label{f:kinect_dots_with_Object}						
+	\end{figure}
+	
+	\noindent
+Die \textit{Depth from Focus} Methode beruht darauf, dass ein Gegenstand immer verschwommener wird, je weiter weg er sich von der Kinect befindet. Um diesen Effekt optimal zu nutzen, befindet sich vor dem Tiefensensor eine spezielle astigmatische Linse, die diesen Effekt zusätzlich verstärkt und einen Punkt zu einer Ellipse werden lässt, je weiter er von der Linse entfernt ist.\cite{pdf:maccormick}	\\
+Die \textit{Depth from Stereo} Methode beruht auf der Parallaxe. Verändert ein Beobachter seine eigene Position, so beobachtet dieser eine scheinbare Änderung der Position des beobachteten Objektes \cite{ws:wikiparallaxe}. Hierbei erscheinen nahe liegende Objekte größer verschoben als weiter entfernte Objekte. Das \glqq Verschieben\grqq entsteht durch die Position der zwei Kameras. Anhand dieser Methoden kann der PrimeSense-Chip also die Tiefeninformationen aus der Szene extrahieren.	
+	
+Der Vorteil dieser Auswertung ist, dass zu einem Zeitpunkt nicht nur ein Punkt, sondern gleich eine komplette Punktewolke ausgerechnet werden kann und somit auch mehrere Bewegungen gleichzeitig. Zum Beispiel eine Arm und eine Beinbewegung gleichzeitig.
+	
+	
 	
 \subsection{Motor}
 	Kippbarer Kopf
@@ -46,7 +79,6 @@ zu realisieren. \cite{webb2012beginning}
 	Richtung d. Geräusch
 	
 \cite{jana2012kinect}
-
 
 
 Rauminformationen für Software
