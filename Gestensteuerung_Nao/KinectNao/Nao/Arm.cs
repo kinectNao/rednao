@@ -7,17 +7,17 @@ using Aldebaran.Proxies;
 
 namespace KinectNao.Nao
 {
-    public interface  Arm
+    public abstract class  Arm
     {
         protected static float fractionMaxSpeed = 0.3f;
 
         //Control LArm with all Joints
-        
-        public void controlArm( float LSP, float LSR, float LER, float LEY, float LWY);
-        
-        public float[] convertAngles(float[] angles);
 
-        public float[] verifyAngles(float[] convertedAngles);
+        public abstract void controlArm(float LSP, float LSR, float LER, float LEY, float LWY);
+
+        public abstract float[] convertAngles(float[] angles);
+
+        public abstract float[] verifyAngles(float[] convertedAngles);
 
 
 

@@ -33,21 +33,28 @@ namespace KinectNao.Nao
             angles = new Angles(mp, joints);
         }
 
+        public RArm()
+        {
+            // TODO: Complete member initialization
+        }
+
 
         public override void controlArm( float SP, float SR, float ER, float EY, float WY)
         {
             float[] newangles = { SP, SR, ER, EY, WY };
-            newangles = convertAngles(newangles);
-            //verify
-            //newangles = angles.filter(newangles);
-           
+
+            newangles = convertAngles(newangles);   //convert into nao-kinematic
+            newangles = verifyAngles(newangles);    //verify angles are in range
+            newangles = angles.checkDifference(newangles);     //check difference between old & new angle
+
+            //set new current angles
+            angles.currAngles = newangles.OfType<float>().ToList<float>();
+
             //set angles is non-blacking call!
             //mp.setAngles(joints, newangles, fractionMaxSpeed);
 
             //angleInterpolation is a blocking call; post is used to create each a thread for the arms
             mp.post.angleInterpolationWithSpeed(joints, newangles, Arm.fractionMaxSpeed);
-
-
 
         }
  
@@ -70,20 +77,20 @@ namespace KinectNao.Nao
         }
 
 
-        public float[] verifyAngles(float[] convertedAngles)
+        public override float[] verifyAngles(float[] convertedAngles)
         {
             //if convertedAngle is outside range, take old angle
             if (!ShoulderPitch.ContainsValue(convertedAngles[(int)r.ShoulderPitch]))
-                convertedAngles[(int)r.ShoulderPitch] = angles.currentAngles[(int)r.ShoulderPitch];
+                convertedAngles[(int)r.ShoulderPitch] = angles.currAngles[(int)r.ShoulderPitch];
 
             if(!RShoulderRoll.ContainsValue(convertedAngles[(int)r.ShoulderRoll]))
-                convertedAngles[(int)r.ShoulderRoll] = angles.currentAngles[(int)r.ShoulderRoll];
+                convertedAngles[(int)r.ShoulderRoll] = angles.currAngles[(int)r.ShoulderRoll];
 
             if (!RElbowRoll.ContainsValue(convertedAngles[(int)r.EllbowRoll]))
-                convertedAngles[(int)r.EllbowRoll] = angles.currentAngles[(int)r.EllbowRoll];
+                convertedAngles[(int)r.EllbowRoll] = angles.currAngles[(int)r.EllbowRoll];
 
             if (!ElbowYaw.ContainsValue(convertedAngles[(int)r.EllbowYaw]))
-                convertedAngles[(int)r.EllbowYaw] = angles.currentAngles[(int)r.EllbowYaw];
+                convertedAngles[(int)r.EllbowYaw] = angles.currAngles[(int)r.EllbowYaw];
 
             return convertedAngles;
         }

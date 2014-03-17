@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using KinectNao.Nao;
 
 namespace KinectNao.Kinect
 {
@@ -9,25 +10,33 @@ namespace KinectNao.Kinect
     {
         // Queue fuer Mittelwertfilter
         private static int filtersize = 3;
-        public  ArmAngles[] armAngle = new ArmAngles[filtersize];
+        public ArmAngles[] armAngle = new ArmAngles[filtersize];
 
 
         public Filter()
         {
             for (int i = 0; i < filtersize; i++)
             {
-                armAngle[i] = new ArmAngles(0f, 0f, 0f, 0f, 0f, 0f, 0f, 0f);
+                armAngle[i] = new ArmAngles(Angles.inRadian(90), 
+                                            Angles.inRadian(90), 
+                                            Angles.inRadian(180), 
+                                            Angles.inRadian(90), 
+                                            Angles.inRadian(90), 
+                                            Angles.inRadian(90), 
+                                            Angles.inRadian(180), 
+                                            Angles.inRadian(90));
             }
         }
 
 
 
         //Neue Armposition hinzufuegen, alte verwerfen
-        public void addCurrentArmPos(ArmAngles currentAnglePos){
+        public void addCurrentArmPos(ArmAngles currentAnglePos)
+        {
 
             this.armAngle = shiftAngleArray();
             armAngle[filtersize - 1] = currentAnglePos;
-           
+
         }
 
 
@@ -74,38 +83,39 @@ namespace KinectNao.Kinect
             float[] shoulderPitch_Left = new float[filtersize];
             float[] shoulderPitch_Right = new float[filtersize];
             float[] shoulderRoll_Left = new float[filtersize];
-            float[] shoulderRoll_Right = new float[filtersize]; 
+            float[] shoulderRoll_Right = new float[filtersize];
 
             // Initialisiere Werte
-            for(int i = 0; i<filtersize;i++){
-                  elbowRoll_Left[i] = armAngle[i].elbowRoll_Left;
-                  elbowRoll_Right[i] = armAngle[i].elbowRoll_Right;
-                  elbowYaw_Left[i] = armAngle[i].elbowYaw_Left;
-                  elbowYaw_Right[i] = armAngle[i].elbowYaw_Right;
+            for (int i = 0; i < filtersize; i++)
+            {
+                elbowRoll_Left[i] = armAngle[i].elbowRoll_Left;
+                elbowRoll_Right[i] = armAngle[i].elbowRoll_Right;
+                elbowYaw_Left[i] = armAngle[i].elbowYaw_Left;
+                elbowYaw_Right[i] = armAngle[i].elbowYaw_Right;
 
-                  shoulderPitch_Left[i] = armAngle[i].shoulderPitch_Left;
-                  shoulderPitch_Right[i] = armAngle[i].shoulderPitch_Right;
-                  shoulderRoll_Left[i] = armAngle[i].shoulderRoll_Left;
-                  shoulderRoll_Right[i] = armAngle[i].shoulderRoll_Right;
+                shoulderPitch_Left[i] = armAngle[i].shoulderPitch_Left;
+                shoulderPitch_Right[i] = armAngle[i].shoulderPitch_Right;
+                shoulderRoll_Left[i] = armAngle[i].shoulderRoll_Left;
+                shoulderRoll_Right[i] = armAngle[i].shoulderRoll_Right;
             }
 
-            
+
             return new ArmAngles(
-                Filter.GetMedian(shoulderPitch_Right), 
-                Filter.GetMedian(shoulderRoll_Right), 
-                Filter.GetMedian(elbowRoll_Right), 
-                Filter.GetMedian(elbowYaw_Right), 
-                Filter.GetMedian(shoulderPitch_Left), 
-                Filter.GetMedian(shoulderRoll_Left), 
+                Filter.GetMedian(shoulderPitch_Right),
+                Filter.GetMedian(shoulderRoll_Right),
+                Filter.GetMedian(elbowRoll_Right),
+                Filter.GetMedian(elbowYaw_Right),
+                Filter.GetMedian(shoulderPitch_Left),
+                Filter.GetMedian(shoulderRoll_Left),
                 Filter.GetMedian(elbowRoll_Left),
                 Filter.GetMedian(elbowYaw_Left));
 
 
         }
 
-       
 
-        
+
+
 
     }
 }

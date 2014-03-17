@@ -39,9 +39,13 @@ namespace KinectNao.Nao
         {
             float[] newangles = { SP, SR, ER, EY, WY };
 
-            newangles = convertAngles(newangles); //Convert in Nao-Kinematic
-            //verify
-            //newangles = angles.filter(newangles);
+            newangles = convertAngles(newangles);   //convert into nao-kinematic
+            newangles = verifyAngles(newangles);    //verify angles are in range
+            newangles = angles.checkDifference(newangles);     //check difference between old & new angle
+
+
+            //set new current angles
+            angles.currAngles = newangles.OfType<float>().ToList<float>();
 
             //set angles is non-blacking call!
             //mp.setAngles(joints, newangles, fractionMaxSpeed);
@@ -71,21 +75,21 @@ namespace KinectNao.Nao
         }
 
 
-        public float[] verifyAngles(float[] convertedAngles)
+        public override float[] verifyAngles(float[] convertedAngles)
         {
             
             //if convertedAngle is outside range, take old angle
             if (!ShoulderPitch.ContainsValue(convertedAngles[(int)l.ShoulderPitch]))
-                convertedAngles[(int)l.ShoulderPitch] = angles.currentAngles[(int)l.ShoulderPitch];
+                convertedAngles[(int)l.ShoulderPitch] = angles.currAngles[(int)l.ShoulderPitch];
 
             if (!LShoulderRoll.ContainsValue(convertedAngles[(int)l.ShoulderRoll]))
-                convertedAngles[(int)l.ShoulderRoll] = angles.currentAngles[(int)l.ShoulderRoll];
+                convertedAngles[(int)l.ShoulderRoll] = angles.currAngles[(int)l.ShoulderRoll];
 
             if (!LElbowRoll.ContainsValue(convertedAngles[(int)l.EllbowRoll]))
-                convertedAngles[(int)l.EllbowRoll] = angles.currentAngles[(int)l.EllbowRoll];
+                convertedAngles[(int)l.EllbowRoll] = angles.currAngles[(int)l.EllbowRoll];
 
             if (!ElbowYaw.ContainsValue(convertedAngles[(int)l.EllbowYaw]))
-                convertedAngles[(int)l.EllbowYaw] = angles.currentAngles[(int)l.EllbowYaw];
+                convertedAngles[(int)l.EllbowYaw] = angles.currAngles[(int)l.EllbowYaw];
 
             return convertedAngles;
         }
