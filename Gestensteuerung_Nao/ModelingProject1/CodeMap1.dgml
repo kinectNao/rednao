@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph DataVirtualized="True" Layout="Sugiyama" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="(@1 Namespace=KinectNao Type=App)" Category="CodeSchema_Class" Bounds="-264.144479870597,-324.595773075915,82.8466666666667,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="App" />
+    <Node Id="(@1 Namespace=KinectNao.Properties Type=Resources)" Category="CodeSchema_Class" Bounds="98.85701408,-9.1875,114.453333333333,25" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsGeneratedCode="True" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Resources" UseManualLocation="True" />
+    <Node Id="(@1 Namespace=KinectNao.Properties Type=Settings)" Category="CodeSchema_Class" Bounds="98.85701408,-64.1875,103.64,25" CodeSchemaProperty_IsCompilerGenerated="True" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsGeneratedCode="True" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Settings" UseManualLocation="True" />
+    <Node Id="@10" Category="CodeSchema_Class" Bounds="-293.832138225361,-53.0713745718256,150.363333333333,25" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="AngleCalculation" UseManualLocation="True" />
+    <Node Id="@11" Category="CodeSchema_Class" Bounds="-334.582393870727,343.600115887844,96.8733333333333,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Angles" UseManualLocation="True" />
+    <Node Id="@12" Category="CodeSchema_Class" Bounds="-113.468804892028,-54.7865714828577,117.09,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="AngleView" UseManualLocation="True" />
+    <Node Id="@13" Category="CodeSchema_Class" Bounds="-259.619639113089,429.299057989377,83.25,25" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Arm" UseManualLocation="True" />
+    <Node Id="@14" Category="CodeSchema_Class" Bounds="-376.924060896847,1.92920396132598,119.123333333333,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="ArmAngles" UseManualLocation="True" />
+    <Node Id="@15" Category="CodeSchema_Class" Bounds="-411.022138225361,-53.0713745718256,87.1900000000001,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Filter" UseManualLocation="True" />
+    <Node Id="@16" Category="CodeSchema_Interface" Bounds="-182.698337188413,1.9287254281744,145.754042834705,25" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="ISkeletonAngles" UseManualLocation="True" />
+    <Node Id="@17" Category="CodeSchema_Class" Bounds="-347.547970436064,88.5153703996787,147.115366383573,25.0000000000001" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="KinectShutdown" UseManualLocation="True" />
+    <Node Id="@18" Category="CodeSchema_Class" Bounds="-86.2434960925755,463.765418480177,88.9,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="LArm" UseManualLocation="True" />
+    <Node Id="@19" Category="CodeSchema_Class" Bounds="-264.144479870597,-269.595673075915,131.256666666667,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="MainWindow" />
+    <Node Id="@2" Category="CodeSchema_Assembly" Bounds="-460.06403925312,-404.595973075915,1066.34581863539,988.361691556093" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="4" Group="Expanded" Label="KinectNao.exe" UseManualLocation="True" />
+    <Node Id="@20" Category="CodeSchema_Class" Bounds="-84.4973233554787,335.082289599502,124.959178390542,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="NaoHandler" UseManualLocation="True" />
+    <Node Id="@21" Category="CodeSchema_Class" Bounds="-331.684334802161,514.971529196899,90.4266666666665,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="RArm" UseManualLocation="True" />
+    <Node Id="@23" Category="CodeSchema_Class" Bounds="-420.06403925312,-108.075216716656,190.537189317253,25.00374214483" CodeSchemaProperty_IsInternal="True" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="8" Group="Collapsed" Label="SkeletonAngleCalculator" UseManualLocation="True" />
+    <Node Id="@25" Category="CodeSchema_Class" Bounds="-189.925131921743,-109.786671482858,179.303333333333,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="Incomplete" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="SkeletonAngleHandler" UseManualLocation="True" />
+    <Node Id="@27" Category="CodeSchema_Method" Bounds="229.211679382267,-136.510808951192,119.043333333333,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="updateSkeleton" UseManualLocation="True" />
+    <Node Id="@28" Category="CodeSchema_Method" Bounds="-511.695331249851,-130.829663367433,143.736666666667,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="updateSkeletonData" UseManualLocation="True" />
+    <Node Id="@29" Category="CodeSchema_Method" Bounds="-227.51232024645,-130.849551551534,165.578802374933,25.9578699888026" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="SkeletonAngleCalculator" UseManualLocation="True" />
+    <Node Id="@3" Category="CodeSchema_Namespace" Bounds="-284.144479870597,-364.595873075915,171.256666666667,140.0003" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="2" Group="Expanded" Label="KinectNao" UseManualLocation="True" />
+    <Node Id="@30" Category="CodeSchema_Method" Bounds="-104.418320617733,-136.510808951192,154.303333333333,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="SkeletonAngleHandler" UseManualLocation="True" />
+    <Node Id="@31" Category="CodeSchema_Field" Bounds="-596.916997916518,-74.8696633474328,102.18,25.96" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="_shouldStop" UseManualLocation="True" />
+    <Node Id="@32" Category="CodeSchema_Field" Bounds="80.1300127156004,-80.5508089511918,119.206666666667,25.96" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="angleCalculator" UseManualLocation="True" />
+    <Node Id="@33" Category="CodeSchema_Field" Bounds="-464.075331249851,-74.8696633474328,120.496666666667,25.96" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="currentSkeleton" UseManualLocation="True" />
+    <Node Id="@34" Category="CodeSchema_Method" Bounds="-337.736997916517,-130.829663367433,79.8199999999999,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="DoWork" UseManualLocation="True" />
+    <Node Id="@35" Category="CodeSchema_Field" Bounds="-313.370331249851,-74.8696633474328,61.0866666666666,25.96" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="filter" UseManualLocation="True" />
+    <Node Id="@36" Category="CodeSchema_Method" Bounds="-645.46198504267,-130.829663367433,103.27,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="RequestStop" UseManualLocation="True" />
+    <Node Id="@37" Category="CodeSchema_Field" Bounds="-221.778797674441,-74.9186061511988,154.100419408469,25.9579725306266" CodeSchemaProperty_IsPrivate="True" DelayedCrossGroupLinksState="Fetched" Label="skeletonAngleHandler" UseManualLocation="True" />
+    <Node Id="@38" Category="CodeSchema_Method" Bounds="80.8200127156005,-136.510808951192,117.826666666667,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="stopCalculation" UseManualLocation="True" />
+    <Node Id="@5" Category="CodeSchema_Namespace" Bounds="-440.06403925312,-149.786771482858,463.685234361093,283.302241882536" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="8" Group="Expanded" Label="KinectNao‎.Kinect" UseManualLocation="True" />
+    <Node Id="@7" Category="CodeSchema_Namespace" Bounds="-354.582393870727,295.082189599502,415.04424890579,268.683428880676" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="6" Group="Expanded" Label="KinectNao‎.Nao" UseManualLocation="True" />
+    <Node Id="@8" Category="CodeSchema_Namespace" Bounds="418.2551127156,-71.7545100701443,168.026666666667,25" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="2" Group="Collapsed" Label="KinectNao‎.Properties" UseManualLocation="True" />
+    <Node Id="@9" Category="CodeSchema_Class" Bounds="-114.133934405371,518.765518480177,117.133187350542,25" CodeSchemaProperty_IsGeneric="True" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Range‎&lt;T‎&gt;" UseManualLocation="True" />
+  </Nodes>
+  <Links>
+    <Link Source="@12" Target="@16" Category="Implements" Bounds="-91.1147210145674,-29.7865714828577,24.0915545153113,24.8892826925248" Weight="1" />
+    <Link Source="@12" Target="@25" Category="References" Bounds="-89.0814819335938,-77.8823013305664,19.0261154174805,23.0957298278809" IsSourceVirtualized="True" Weight="2" />
+    <Link Source="@15" Target="@11" Category="CodeSchema_Calls" Bounds="-327.448879163432,-12.6020876722646,34.9989586929936,349.510793239757" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="8" />
+    <Link Source="@15" Target="@14" Category="References" Bounds="-356.048907002529,-28.0713745718256,21.2499729322822,23.3449871470797" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="14">
+      <Category Ref="CodeSchema_Calls" />
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@18" Target="@11" Category="References" Bounds="-252.651130679354,372.571781844367,185.439291496046,91.1936366358106" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="11">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@18" Target="@13" Category="InheritsFrom" Bounds="-167.086726056109,451.757055157715,80.9815013019936,15.8406328648832" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="5">
+      <Category Ref="CodeSchema_Calls" />
+      <Category Ref="CodeSchema_FieldRead" />
+    </Link>
+    <Link Source="@18" Target="@9" Category="References" Bounds="-50.2505481639951,488.765418480177,5.32663852727961,21.2697078683535" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="24">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@19" Target="@17" Category="CodeSchema_Calls" Bounds="-191.504205486696,-251.461658420765,32.8993890085641,335.781201753524" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+      <Category Ref="CodeSchema_FunctionPointer" />
+    </Link>
+    <Link Source="@19" Target="@25" Category="References" Bounds="-174.350386968007,-270.266943635078,160.76948535076,89.3827825611484" IsSourceVirtualized="True" Weight="1" />
+    <Link Source="@19" Target="@27" Category="CodeSchema_Calls" IsSourceVirtualized="True" Weight="2" />
+    <Link Source="@19" Target="@30" Category="CodeSchema_Calls" IsSourceVirtualized="True" Weight="1" />
+    <Link Source="@19" Target="@38" Category="CodeSchema_Calls" IsSourceVirtualized="True" Weight="2" />
+    <Link Source="@2" Target="@3" Category="Contains" FetchingParent="@2" />
+    <Link Source="@2" Target="@5" Category="Contains" FetchingParent="@2" />
+    <Link Source="@2" Target="@7" Category="Contains" FetchingParent="@2" />
+    <Link Source="@2" Target="@8" Category="Contains" FetchingParent="@2" />
+    <Link Source="@20" Target="@13" Category="CodeSchema_Calls" Bounds="-183.882520882784,360.082289599502,135.863987143313,65.3172158846177" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2" />
+    <Link Source="@20" Target="@16" Category="Implements" Bounds="-29.5187407797312,82.9952019080831,3.20205058932205,253.692627361802" Weight="1" />
+    <Link Source="@20" Target="@18" Category="References" Bounds="-38.5054683416044,360.082289599502,14.566759564873,94.7875588749034" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@20" Target="@21" Category="References" Bounds="-259.690673828125,360.082275390625,220.515132904053,149.984924316406" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@20" Target="@25" Category="References" Bounds="-22.1834016161615,-26.041346037257,117.953901529348,358.671877109406" IsSourceVirtualized="True" Weight="2" />
+    <Link Source="@21" Target="@11" Category="References" Bounds="-286.447275642968,377.600099675941,0.26074004919883,137.371429520958" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="11">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@21" Target="@13" Category="InheritsFrom" Bounds="-276.479991318398,461.719914375343,42.5629939367142,53.2516148215557" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="6">
+      <Category Ref="CodeSchema_Calls" />
+      <Category Ref="CodeSchema_FieldRead" />
+    </Link>
+    <Link Source="@21" Target="@9" Category="References" Bounds="-241.257668135495,528.21443167657,118.124948391298,1.94091677390725" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="24">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@23" Target="@28" Category="Contains" FetchingParent="@23" />
+    <Link Source="@23" Target="@29" Category="Contains" FetchingParent="@23" />
+    <Link Source="@23" Target="@31" Category="Contains" FetchingParent="@23" />
+    <Link Source="@23" Target="@33" Category="Contains" FetchingParent="@23" />
+    <Link Source="@23" Target="@34" Category="Contains" FetchingParent="@23" />
+    <Link Source="@23" Target="@35" Category="Contains" FetchingParent="@23" />
+    <Link Source="@23" Target="@36" Category="Contains" FetchingParent="@23" />
+    <Link Source="@23" Target="@37" Category="Contains" FetchingParent="@23" />
+    <Link Source="@25" Target="@16" Category="Implements" Bounds="-124.132904052734,-84.7866744995117,19.6076049804688,77.6513519287109" Weight="1" />
+    <Link Source="@25" Target="@27" Category="Contains" />
+    <Link Source="@25" Target="@30" Category="Contains" />
+    <Link Source="@25" Target="@32" Category="Contains" />
+    <Link Source="@25" Target="@38" Category="Contains" />
+    <Link Source="@27" Target="@28" Category="CodeSchema_Calls" Bounds="-471.311843715605,-126.925493880343,700.523523097872,3.12875905467182" Weight="1" />
+    <Link Source="@27" Target="@32" Category="CodeSchema_FieldRead" Bounds="182.719482421875,-110.550811767578,71.4531097412109,26.8356781005859" Weight="1" />
+    <Link Source="@28" Target="@33" Category="CodeSchema_FieldWrite" Bounds="-431.471113434315,-104.867825613829,14.4302565683752,22.431072238665" Weight="1" />
+    <Link Source="@29" Target="@15" Category="CodeSchema_Calls" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@29" Target="@25" Category="References" Bounds="-174.418420617729,-122.541392908504,41.0147565537541,2.35158630438372" Weight="1" />
+    <Link Source="@29" Target="@35" Category="CodeSchema_FieldWrite" Bounds="-244.763047253605,-104.891681562731,68.0237297767387,27.5757302656464" Weight="1" />
+    <Link Source="@29" Target="@37" Category="CodeSchema_FieldWrite" Bounds="-144.722919058983,-104.891681562731,0,21.0001" Weight="1" />
+    <Link Source="@3" Target="(@1 Namespace=KinectNao Type=App)" Category="Contains" FetchingParent="@3" />
+    <Link Source="@3" Target="@19" Category="Contains" FetchingParent="@3" />
+    <Link Source="@30" Target="@12" Category="CodeSchema_Calls" IsTargetVirtualized="True" Weight="2" />
+    <Link Source="@30" Target="@20" Category="CodeSchema_Calls" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@30" Target="@29" Category="CodeSchema_Calls" Bounds="-165.41962121758,-125.787710387586,61.0013005998469,0.996495712177349" Weight="1" />
+    <Link Source="@30" Target="@32" Category="CodeSchema_FieldRead" Bounds="11.4692287445068,-110.550811767578,80.994592666626,27.1404647827148" Weight="2">
+      <Category Ref="CodeSchema_FieldWrite" />
+    </Link>
+    <Link Source="@30" Target="@34" Category="CodeSchema_FunctionPointer" Bounds="-361.27052017818,-126.806950254589,256.852199560447,2.51932022527382" Weight="1" />
+    <Link Source="@32" Target="@23" Category="References" Bounds="-145.439699805056,-87.2158419156838,225.569712520656,15.5390058955935" Weight="1" />
+    <Link Source="@34" Target="@10" Category="CodeSchema_Calls" IsTargetVirtualized="True" Weight="8" />
+    <Link Source="@34" Target="@14" Category="CodeSchema_Calls" IsTargetVirtualized="True" Weight="9" />
+    <Link Source="@34" Target="@15" Category="CodeSchema_Calls" IsTargetVirtualized="True" Weight="2" />
+    <Link Source="@34" Target="@31" Category="CodeSchema_FieldRead" Bounds="-486.33263008437,-108.84231113399,148.601281393149,33.5312200277773" Weight="1" />
+    <Link Source="@34" Target="@33" Category="CodeSchema_FieldRead" Bounds="-371.275567393226,-104.867825613829,48.8674148900027,25.7983530564721" Weight="9" />
+    <Link Source="@34" Target="@35" Category="CodeSchema_FieldRead" Bounds="-294.342084000843,-104.867825613829,5.71129678464013,21.3069826132093" Weight="2" />
+    <Link Source="@34" Target="@37" Category="CodeSchema_FieldRead" Bounds="-262.294229103346,-104.867825613829,73.5934992767286,26.8877306039174" Weight="1" />
+    <Link Source="@35" Target="@15" Category="References" Weight="1" />
+    <Link Source="@36" Target="@31" Category="CodeSchema_FieldWrite" Bounds="-582.687701682012,-104.867825613829,19.8731772685101,23.1688539013242" Weight="1" />
+    <Link Source="@37" Target="@25" Category="References" Bounds="-180.168420617732,-82.5027586625125,46.7864533003878,4.2238132634028" Weight="1" />
+    <Link Source="@38" Target="@32" Category="CodeSchema_FieldRead" Bounds="139.733352661133,-110.550811767578,0,21" Weight="1" />
+    <Link Source="@38" Target="@36" Category="CodeSchema_Calls" Bounds="-645.545175990935,-127.017463048626,726.365188706535,3.22500050612196" Weight="1" />
+    <Link Source="@5" Target="@10" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@12" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@14" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@15" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@16" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@17" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@23" Category="Contains" FetchingParent="@5" />
+    <Link Source="@5" Target="@25" Category="Contains" FetchingParent="@5" />
+    <Link Source="@7" Target="@11" Category="Contains" FetchingParent="@7" />
+    <Link Source="@7" Target="@13" Category="Contains" FetchingParent="@7" />
+    <Link Source="@7" Target="@18" Category="Contains" FetchingParent="@7" />
+    <Link Source="@7" Target="@20" Category="Contains" FetchingParent="@7" />
+    <Link Source="@7" Target="@21" Category="Contains" FetchingParent="@7" />
+    <Link Source="@7" Target="@9" Category="Contains" FetchingParent="@7" />
+    <Link Source="@8" Target="(@1 Namespace=KinectNao.Properties Type=Resources)" Category="Contains" FetchingParent="@8" />
+    <Link Source="@8" Target="(@1 Namespace=KinectNao.Properties Type=Settings)" Category="Contains" FetchingParent="@8" />
+  </Links>
+  <Categories>
+    <Category Id="CodeSchema_Assembly" Label="Assembly" BasedOn="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Assembly" NavigationActionLabel="Assemblys" />
+    <Category Id="CodeSchema_Calls" Label="Aufrufe" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Aufgerufen von" OutgoingActionLabel="Aufrufe" />
+    <Category Id="CodeSchema_Class" Label="Klasse" BasedOn="CodeSchema_Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="Klassen" />
+    <Category Id="CodeSchema_Field" Label="Feld" BasedOn="CodeSchema_Member" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Field" NavigationActionLabel="Felder" />
+    <Category Id="CodeSchema_FieldRead" Label="Feld zum Lesen" BasedOn="CodeSchema_FieldReference" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Gelesen von" OutgoingActionLabel="Liest Felder" />
+    <Category Id="CodeSchema_FieldReference" Label="Feldverweis" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Verweis durch" OutgoingActionLabel="Verweist auf Felder." />
+    <Category Id="CodeSchema_FieldWrite" Label="Feld zum Schreiben" BasedOn="CodeSchema_FieldReference" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Geschrieben von" OutgoingActionLabel="Schreibt Felder" />
+    <Category Id="CodeSchema_FunctionPointer" Label="Funktionszeiger" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Funktionszeiger" OutgoingActionLabel="Funktionszeiger" />
+    <Category Id="CodeSchema_Interface" Label="Schnittstelle" BasedOn="CodeSchema_Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Interface" NavigationActionLabel="Schnittstellen" />
+    <Category Id="CodeSchema_Member" Label="Member" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Field" NavigationActionLabel="Member" />
+    <Category Id="CodeSchema_Method" Label="Methode" BasedOn="CodeSchema_Member" CanBeDataDriven="True" DefaultAction="Link:Forward:CodeSchema_Calls" Icon="CodeSchema_Method" NavigationActionLabel="Methoden" />
+    <Category Id="CodeSchema_Namespace" Label="Namespace" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Type" Icon="CodeSchema_Namespace" NavigationActionLabel="Namespaces" />
+    <Category Id="CodeSchema_ReturnTypeLink" Label="Rückgabe" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Rückgabetypen" OutgoingActionLabel="Rückgabetypen" />
+    <Category Id="CodeSchema_Type" Label="Typ" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="Typen" />
+    <Category Id="Contains" Label="Enthält" Description="Gibt an, ob die Quelle der Verknüpfung das Zielobjekt enthält" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Enthalten in" IsContainment="True" OutgoingActionLabel="Enthält" />
+    <Category Id="File" Label="Datei" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="File" NavigationActionLabel="Dateien" />
+    <Category Id="Implements" Label="Implementiert" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Implementiert von" OutgoingActionLabel="Implementiert" />
+    <Category Id="InheritsFrom" Label="Erbt von" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Geerbt durch" OutgoingActionLabel="Erbt von" />
+    <Category Id="References" Label="Verweise" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Verweis durch" OutgoingActionLabel="Verweise" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsAbstract" Label="Ist abstrakt" Description="Das Flag zum Angeben, dass ein Member den Status &quot;Abstrakt&quot; besitzt, bietet keine vollständige Implementierung" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsCompilerGenerated" Label="Ist vom Compiler erstellt" Description="Flag, das angibt, ob der Code, der diesen Knoten repräsentiert, vom Compiler erstellt ist" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsConstructor" Label="Ist Konstruktor" Description="Flag zum Angeben, dass es sich bei der Methode um einen Konstruktor handelt" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsFinal" Label="Ist Final" Description="Flag zum Angeben, dass der Member den Status &quot;Final&quot; besitzt und keine Ableitung von diesem Member möglich ist" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsGeneratedCode" Label="Ist erstellter Code" Description="Flag, das angibt, ob der Code, der diesen Knoten repräsentiert, erstellt wurde" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsGeneric" Label="Ist generisch" Description="Flag zum Angeben, dass der Member den Status &quot;Generisch&quot; besitzt" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsInternal" Label="Ist intern" Description="Flag zum Angeben, dass die Methode den Status &quot;Intern&quot; besitzt" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsPrivate" Label="Ist privat" Description="Flag zum Angeben, dass der Bereich den Status &quot;Privat&quot; besitzt" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsPublic" Label="Ist Öffentlich" Description="Flag zum Angeben, dass der Bereich den Status &quot;Öffentlich&quot; besitzt" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsSpecialName" Label="Ist Sondername" Description="Flag zum Angeben, dass diese Methode durch einige Compiler auf besondere Art behandelt wird" DataType="System.Boolean" />
+    <Property Id="DataVirtualized" Label="Daten virtualisiert" Description="Bei &quot;True&quot; kann das Diagramm Knoten und Links enthalten, die Daten für virtualisierte (d. h. nicht tatsächlich im Diagramm erstellte) Knoten/Links darstellen." DataType="System.Boolean" />
+    <Property Id="DefaultAction" Label="DefaultAction" Description="DefaultAction" DataType="System.String" />
+    <Property Id="DelayedChildNodesState" Label="Status der verzögerten untergeordneten Knoten" Description="Nicht angegeben, wenn der Status der verzögerten untergeordneten Knoten nicht angegeben wurde. NotFetched, wenn die Gruppe untergeordnete Knoten enthält, die noch nicht in das Diagramm abgerufen wurden. Fetched, wenn alle verzögerten untergeordneten Knoten der Gruppe bereits abgerufen wurden." DataType="Microsoft.VisualStudio.GraphModel.DelayedDataState" />
+    <Property Id="DelayedCrossGroupLinksState" Label="Status der verzögerten gruppenübergreifenden Links" Description="Nicht angegeben, wenn der Status der verzögerten gruppenübergreifenden Links nicht angegeben wurde. NotFetched, wenn verzögerten gruppenübergreifenden Links des Knotens noch nicht in das Diagramm abgerufen wurden. Fetched, wenn alle verzögerten gruppenübergreifenden Links bereits abgerufen wurden." DataType="Microsoft.VisualStudio.GraphModel.DelayedDataState" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="FetchedChildrenCount" DataType="System.Int32" />
+    <Property Id="FetchingParent" DataType="Microsoft.VisualStudio.GraphModel.GraphNodeId" />
+    <Property Id="Group" Label="Gruppe" Description="Knoten als Gruppe anzeigen" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="Icon" Label="Symbol" Description="Symbol" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsSourceVirtualized" Label="Linkquelle virtualisiert" Description="Bei &quot;True&quot; enthält das Linkquellenende Daten für virtualisierte (d. h. nicht tatsächlich im Diagramm erstellte) Knoten/Links." DataType="System.Boolean" />
+    <Property Id="IsTargetVirtualized" Label="Linkziel virtualisiert" Description="Bei &quot;True&quot; enthält das Linkzielende Daten für virtualisierte (d. h. nicht tatsächlich im Diagramm erstellte) Knoten/Links." DataType="System.Boolean" />
+    <Property Id="Label" Label="Bezeichnung" Description="Anzeigbare Bezeichnung eines Objekts, das Anmerkungen einblenden werden kann" DataType="System.String" />
+    <Property Id="Layout" DataType="System.String" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+    <Property Id="Visibility" Label="Visibility" Description="Defines whether a node in the graph is visible or not" DataType="System.Windows.Visibility" />
+    <Property Id="Weight" Label="Stärke" Description="Stärke" DataType="System.Double" />
+  </Properties>
+  <QualifiedNames>
+    <Name Id="Assembly" Label="Assembly" ValueType="Uri" />
+    <Name Id="GenericParameterCount" Label="Anzahl generischer Parameter" ValueType="System.String" />
+    <Name Id="Member" Label="Member" ValueType="System.Object" />
+    <Name Id="Name" Label="Name" ValueType="System.String" />
+    <Name Id="Namespace" Label="Namespace" ValueType="System.String" />
+    <Name Id="OverloadingParameters" Label="Parameter" ValueType="Microsoft.VisualStudio.GraphModel.GraphNodeIdCollection" Formatter="NameValueNoEscape" />
+    <Name Id="Type" Label="Typ" ValueType="System.Object" />
+  </QualifiedNames>
+  <IdentifierAliases>
+    <Alias n="1" Uri="Assembly=$(8fd4f031-f7e7-47ba-8c4d-a2f603e2e272.OutputPathUri)" />
+    <Alias n="2" Id="(@1)" />
+    <Alias n="3" Id="(@1 Namespace=KinectNao)" />
+    <Alias n="4" Id="Namespace=KinectNao.Kinect" />
+    <Alias n="5" Id="(@1 @4)" />
+    <Alias n="6" Id="Namespace=KinectNao.Nao" />
+    <Alias n="7" Id="(@1 @6)" />
+    <Alias n="8" Id="(@1 Namespace=KinectNao.Properties)" />
+    <Alias n="9" Id="(@1 @6 Type=(Name=Range GenericParameterCount=1))" />
+    <Alias n="10" Id="(@1 @4 Type=AngleCalculation)" />
+    <Alias n="11" Id="(@1 @6 Type=Angles)" />
+    <Alias n="12" Id="(@1 @4 Type=AngleView)" />
+    <Alias n="13" Id="(@1 @6 Type=Arm)" />
+    <Alias n="14" Id="(@1 @4 Type=ArmAngles)" />
+    <Alias n="15" Id="(@1 @4 Type=Filter)" />
+    <Alias n="16" Id="(@1 @4 Type=ISkeletonAngles)" />
+    <Alias n="17" Id="(@1 @4 Type=KinectShutdown)" />
+    <Alias n="18" Id="(@1 @6 Type=LArm)" />
+    <Alias n="19" Id="(@1 Namespace=KinectNao Type=MainWindow)" />
+    <Alias n="20" Id="(@1 @6 Type=NaoHandler)" />
+    <Alias n="21" Id="(@1 @6 Type=RArm)" />
+    <Alias n="22" Id="Type=SkeletonAngleCalculator" />
+    <Alias n="23" Id="(@1 @4 @22)" />
+    <Alias n="24" Id="Type=SkeletonAngleHandler" />
+    <Alias n="25" Id="(@1 @4 @24)" />
+    <Alias n="26" Uri="Assembly=file:///C:/Program Files/Microsoft SDKs/Kinect/v1.8/Assemblies/Microsoft.Kinect.dll" />
+    <Alias n="27" Id="(@1 @4 @24 Member=(Name=updateSkeleton OverloadingParameters=[(@26 Namespace=Microsoft.Kinect Type=Skeleton)]))" />
+    <Alias n="28" Id="(@1 @4 @22 Member=(Name=updateSkeletonData OverloadingParameters=[(@26 Namespace=Microsoft.Kinect Type=Skeleton)]))" />
+    <Alias n="29" Id="(@1 @4 @22 Member=(Name=.ctor OverloadingParameters=[@25]))" />
+    <Alias n="30" Id="(@1 @4 @24 Member=.ctor)" />
+    <Alias n="31" Id="(@1 @4 @22 Member=_shouldStop)" />
+    <Alias n="32" Id="(@1 @4 @24 Member=angleCalculator)" />
+    <Alias n="33" Id="(@1 @4 @22 Member=currentSkeleton)" />
+    <Alias n="34" Id="(@1 @4 @22 Member=DoWork)" />
+    <Alias n="35" Id="(@1 @4 @22 Member=filter)" />
+    <Alias n="36" Id="(@1 @4 @22 Member=RequestStop)" />
+    <Alias n="37" Id="(@1 @4 @22 Member=skeletonAngleHandler)" />
+    <Alias n="38" Id="(@1 @4 @24 Member=stopCalculation)" />
+  </IdentifierAliases>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Ergebnisse" ValueLabel="Wahr">
+      <Condition Expression="HasCategory('QueryResult')" />
+      <Setter Property="Background" Value="#FFBCFFBE" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Assembly" ValueLabel="Weist Kategorie auf">
+      <Condition Expression="HasCategory('CodeSchema_Assembly')" />
+      <Setter Property="Background" Value="#FF094167" />
+      <Setter Property="Stroke" Value="#FF094167" />
+      <Setter Property="Icon" Value="CodeSchema_Assembly" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Namespace" ValueLabel="Weist Kategorie auf">
+      <Condition Expression="HasCategory('CodeSchema_Namespace')" />
+      <Setter Property="Background" Value="#FF0E619A" />
+      <Setter Property="Stroke" Value="#FF0E619A" />
+      <Setter Property="Icon" Value="CodeSchema_Namespace" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Schnittstelle" ValueLabel="Weist Kategorie auf">
+      <Condition Expression="HasCategory('CodeSchema_Interface')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Interface" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Struktur" ValueLabel="Weist Kategorie auf">
+      <Condition Expression="HasCategory('CodeSchema_Struct')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Struct" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Enumeration" ValueLabel="Weist Kategorie auf">
+      <Condition Expression="HasCategory('CodeSchema_Enum')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Enum" />
+      <Setter Property="LayoutSettings" Value="List" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Delegat" ValueLabel="Weist Kategorie auf">
+      <Condition Expression="HasCategory('CodeSchema_Delegate')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Delegate" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Klasse" ValueLabel="Weist Kategorie auf">
+      <Condition Expression="HasCategory('CodeSchema_Type')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Class" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Eigenschaft" ValueLabel="Weist Kategorie auf">
+      <Condition Expression="HasCategory('CodeSchema_Property')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Property" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Methode" ValueLabel="Weist Kategorie auf">
+      <Condition Expression="HasCategory('CodeSchema_Method') Or HasCategory('CodeSchema_CallStackUnresolvedMethod')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Method" />
+      <Setter Property="LayoutSettings" Value="List" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Ereignis" ValueLabel="Weist Kategorie auf">
+      <Condition Expression="HasCategory('CodeSchema_Event')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Event" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Feld" ValueLabel="Weist Kategorie auf">
+      <Condition Expression="HasCategory('CodeSchema_Field')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Field" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Out Parameter" ValueLabel="True">
+      <Condition Expression="CodeSchemaProperty_IsOut = 'True'" />
+      <Setter Property="Icon" Value="CodeSchema_OutParameter" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Parameter" ValueLabel="True">
+      <Condition Expression="HasCategory('CodeSchema_Parameter')" />
+      <Setter Property="Icon" Value="CodeSchema_Parameter" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Local Variable" ValueLabel="True">
+      <Condition Expression="HasCategory('CodeSchema_LocalExpression')" />
+      <Setter Property="Icon" Value="CodeSchema_LocalExpression" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Extern" ValueLabel="Weist Kategorie auf">
+      <Condition Expression="HasCategory('Externals')" />
+      <Setter Property="Background" Value="#FF424242" />
+      <Setter Property="Stroke" Value="#FF424242" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Inherits From" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('InheritsFrom') And Target.HasCategory('CodeSchema_Class')" />
+      <Setter Property="TargetDecorator" Value="OpenArrow" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Implements" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('Implements') And Target.HasCategory('CodeSchema_Interface')" />
+      <Setter Property="TargetDecorator" Value="OpenArrow" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Field Read" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="Target.HasCategory('CodeSchema_Field') And HasCategory('CodeSchema_FieldRead')" />
+      <Setter Property="StrokeDashArray" Value="2 2" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Comment Link" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="Source.HasCategory('Comment')" />
+      <Setter Property="Stroke" Value="#FFE5C365" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Cursor Location Changed" ValueLabel="Wahr" Visibility="Hidden">
+      <Condition Expression="IsCursorLocation" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Disabled Breakpoint Location Changed" ValueLabel="Wahr" Visibility="Hidden">
+      <Condition Expression="DisabledBreakpointCount" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Enabled Breakpoint Location Changed" ValueLabel="Wahr" Visibility="Hidden">
+      <Condition Expression="EnabledBreakpointCount" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Instruction Pointer Location Changed" ValueLabel="Wahr" Visibility="Hidden">
+      <Condition Expression="IsInstructionPointerLocation" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Current Callstack Changed" ValueLabel="Wahr" Visibility="Hidden">
+      <Condition Expression="IsCurrentCallstackFrame" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+  </Styles>
+  <Paths>
+    <Path Id="8fd4f031-f7e7-47ba-8c4d-a2f603e2e272.OutputPathUri" Value="file:///C:/Users/nao/Desktop/rednao/Gestensteuerung_Nao/KinectNao/bin/Debug/KinectNao.exe" />
+  </Paths>
+</DirectedGraph>

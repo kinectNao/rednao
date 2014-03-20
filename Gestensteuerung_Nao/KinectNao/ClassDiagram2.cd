@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="KinectNao.MainWindow" Collapsed="true">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="KinectNao.MainWindow.PixelData" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>MainWindow.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="KinectNao.MainWindow.SkeletonData" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>MainWindow.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>BAAAAIVAAAAAgAAAABAAAAAAAAAAAQAAAAAABARAAEE=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KinectNao.Kinect.AngleCalculation" Collapsed="true">
+    <Position X="10.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAUAAAAABEAAAAgAAgAAAAAAABAAAAAIAAAAAAEA=</HashCode>
+      <FileName>Kinect\AngleCalculation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KinectNao.Kinect.AngleView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAhAACAAgAQEAACAABACAAAECBAAAAAAAAAAAII=</HashCode>
+      <FileName>Kinect\AngleView.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.502" />
+  </Class>
+  <Class Name="KinectNao.Kinect.ArmAngles" Collapsed="true">
+    <Position X="12.5" Y="4" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAECAAAAAAAAAgAAAAAAAABAAQAAAEAAQAAAAA=</HashCode>
+      <FileName>Kinect\ArmAngles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KinectNao.Kinect.Filter" Collapsed="true">
+    <Position X="8.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAACAAAAAAAAgAAAAABACAAAAAAAAAAABAA=</HashCode>
+      <FileName>Kinect\Filter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KinectNao.Kinect.KinectShutdown" Collapsed="true">
+    <Position X="12.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Kinect\KinectShutdown.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KinectNao.Kinect.SkeletonAngleCalculator" Collapsed="true">
+    <Position X="7.25" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAQEAgAAAAAAEAAAAAAAAgAAAAAAAAAEAAA=</HashCode>
+      <FileName>Kinect\SkeletonAngleCalculator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KinectNao.Kinect.SkeletonAngleHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AABAgABBAAAAAAgAAAAABAAAAAAEBAAAAAAAAAgIAAA=</HashCode>
+      <FileName>Kinect\SkeletonAngleHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KinectNao.Nao.Angles" Collapsed="true">
+    <Position X="5.75" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAgAAAEIAAAAAAAAAAAQAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Nao\Angles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KinectNao.Nao.Arm" Collapsed="true">
+    <Position X="3.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAAAAAAAAQAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Nao\Arm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KinectNao.Nao.LArm" Collapsed="true">
+    <Position X="4.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAIAAAAAEAAQAAAAAACAAAAAQAAIACCEABAAAA=</HashCode>
+      <FileName>Nao\LArm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KinectNao.Nao.NaoHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAhAAAABAAQAAAAAAAAAAAAAAQoAAAAiAAEAAAA=</HashCode>
+      <FileName>Nao\NaoHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KinectNao.Nao.Range&lt;T&gt;" Collapsed="true">
+    <Position X="8.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAACAAAAAAAAEAAgAAAAAAAAAAAAAQAAAAAAAABE=</HashCode>
+      <FileName>Nao\Range.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KinectNao.Nao.RArm" Collapsed="true">
+    <Position X="2" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAEAAQAAgAAACAAAAAQAAIAACECBAAgA=</HashCode>
+      <FileName>Nao\RArm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="KinectNao.Kinect.ISkeletonAngles" Collapsed="true">
+    <Position X="12.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Kinect\ISkeletonAngles.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
