@@ -69,17 +69,22 @@ Der Vorteil dieser Auswertung ist, dass zu einem Zeitpunkt nicht nur ein Punkt, 
 	
 	
 	
-\subsection{Motor}
-	Kippbarer Kopf
+\subsection{Tilt-Motor}
+	Die Kinect besitzt einen Motor, um das Gehäuse in eine passende vertikale Position zu bringen.
+	Der Kopf ist in vertikaler Richtung positiv, sowie negativ um 27 Grad verstellbar. Somit kann
+	man den Sensor optimal an die aktuelle Position anpassen, sodass das Skelett einer Person im
+	Kinectraum noch korrekt erkannt werden kann und sich innerhalb des Sichtfeldes befindet.
+	\cite{jana2012kinect}
+	\todo{Programm um Tilt erweitern}
 	
 	
 \subsection{Microphon Array}
-	4 Mikrofone -> Für dieses Projekt irrelevant 
-	(evtl. Sprachkommandos? Kinect Lib unterstützt Grammatik!!)
-	Richtung d. Geräusch
-	
-\cite{jana2012kinect}
-
-
-Rauminformationen für Software
-Vorteil: Günstig, leicht zu entwickeln, da SDK vorhanden
+	Die Hardware des Sensors enthält zusätzlich noch ein Mikrofonarray, das aus vier Mikrofonen besteht.
+	Diese sind an der Vorderseite linear angeordnet. Drei befinden sich auf der rechten Seite und eines
+	auf der linken Seite. Somit lässt sich die Richtung eines Geräusches identifizieren. Zusätzlich bietet
+	diese Anordnung eine Möglichkeit Störgeräusche (Rauschen) aus einer Aufnahme zu entfernen und entstehende
+	Echos zu Unterdrücken. \\
+	Damit kann eine Kinect die Richtung eines Geräusches ermitteln und besser auswerten. Es gibt auch eine
+	Möglichkeit Sprachbefehle mit einer Grammatik aus der Kinect-Library zu erkennen. Diese sind jedoch für 
+	dieses Projekt irrelevant und so wird das Mikrofonarray nicht verwendet.
+	\cite{jana2012kinect}
