@@ -24,8 +24,14 @@ Abbildung \myref{f:nao_choreographe} zeigt einen Überblick über alle Subfenste
 Auf der linken Seite ist die sogenannte Box - Bibliothek zu finden. Dort sind alle von Haus aus gespeicherten Bewegungen und Verhalten abrufbar. Diese können per Drag\&Drop in die Mitte gezogen werden. Die Mitte stellt sozusagen ein Fluss - Diagramm der einzelnen Boxen dar. So ist es möglich \textit{graphisch} zu programmieren (Verknüpfen der Boxen). Auf der rechten Seite ist das Abbild eines Nao - Roboters zu sehen. Dies zeigt, je nach dem, einen simulierten Roboter oder die Spiegelung eines realen Naos. 
 Durch diese graphisch einfache Programmierung können auch unerfahrene Anwender mit Nao arbeiten. So ist Nao nicht nur für die Forschung oder für Entwickler gedacht, sondern auch für den Unterricht an Schulen.
 
-Die Programmierung des Roboters geschieht durch Verbinden von einzelnen Boxen. Es ist auch möglich ein Programm mit verschiedenen Wegen zu entwerfen oder Konditionalstrukturen (\textit{if-else-elseif}) einzubauen.
-\todo{Bild Choreographe Programmierung}
+Die Programmierung des Roboters geschieht durch Verbinden von einzelnen Boxen. Es ist auch möglich ein Programm mit verschiedenen Wegen zu entwerfen oder Konditionalstrukturen (\textit{if-else-elseif}) einzubauen. Abbildung \ref{f:nao_choreographeProg} zeigt ein Programm, in welchem der Roboter zu einer gewissen Position laufen soll. Währenddessen überprüft er mittels des Ultraschallsensors, ob ein Hindernis im Weg ist. Bei positivem Ergebnis soll sich der Roboter hinsetzen.
+
+\begin{figure}[H]						
+	\centering							
+	\includegraphics[scale=.7]{Bilder/choreographe_prog.jpg}			
+	\caption{Choreographe Programmierung}						
+	\label{f:nao_choreographeProg}						
+\end{figure}
 
 Neue Bewegungen oder Verhalten können entweder durch eigenen Python - Code oder durch vormachen integriert werden. Dazu kann über eine \textit{Timeline} aufgenommen werden, zu welchem Zeitpunkt der Bewegung sich die einzelnen Gelenke/Körperteile befinden sollen. Anschließend kann diese aufgenommene Timeline als Verhalten in einer Box gespeichert werden.
 \\
