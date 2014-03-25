@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="5651fa53-7d2a-4461-bcbb-04108d86fe5c"
+  name="Proxies"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="ddd6b030-b1f5-4806-9f55-99f7acb59232"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DAldebaran.Proxies"
+      tag="ViewCode" />
+  </referencesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="14531e3a-f2ba-4593-bc04-6de52c01037a">
+      <profileInstance
+        Id="d5355ced-872c-484e-a945-d55004827072"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="309aa2b3-790d-4d4b-aa01-f7e0d16db485"
+        name="MotionProxy"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="c1a67b4a-08a6-4e57-97ac-b14fb0593ead"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FAldebaran%2FNAOqi.Net 1.14.1.16%2Fnaoqi-dotnet4.dll&quot; Namespace%3DAldebaran.Proxies Type%3DMotionProxy"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a9d4ddbb-bd24-4575-a366-3f742e0f9e09"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0c24b76a-e446-45a8-b9bf-9a4ed278bfcb">
+                <propertyInstance
+                  Id="d9cb3ea8-9ace-4b4e-97a5-622efd22813f"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3b687aa4-384f-41c5-a6ae-5230ecf5af65">
+                <propertyInstance
+                  Id="b0d0c083-70f2-4dd0-89d3-b4a49fbe3870"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3ad28699-8c9b-485b-9f16-66fc053946a1">
+                <propertyInstance
+                  Id="9123d737-9ea4-4abf-9b2c-02362170d210"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ca1441d9-cb50-47a6-8450-0f3cf4d0fb27">
+                <propertyInstance
+                  Id="21a9f1f4-b20e-4277-a5eb-dfbe80a5317b"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e3285ce9-a15a-436c-a9ed-b2c02e3f7c22">
+                <propertyInstance
+                  Id="a093db3f-1768-411e-bb27-87f6623599f2"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2620eedc-9226-49eb-aec3-b93dfbbedf19"
+        name="RobotPostureProxy"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="4a95eda3-f0b1-4327-9dd2-38b0e8061ffd"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FAldebaran%2FNAOqi.Net 1.14.1.16%2Fnaoqi-dotnet4.dll&quot; Namespace%3DAldebaran.Proxies Type%3DRobotPostureProxy"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="87ffd040-9c0e-434c-953e-a2fc63e09f0f"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="35b81a17-c644-4cf9-87b6-3716ffd17aeb">
+                <propertyInstance
+                  Id="0e250056-2564-4b6e-97c9-5bf36af71632"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8232c0c4-1df2-48f9-a515-87206f86f881">
+                <propertyInstance
+                  Id="d76c7b63-b63c-4237-9fbb-061ee311b5c1"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6f7de5ee-e05f-48ac-b9a7-db14cbae7964">
+                <propertyInstance
+                  Id="fdf8299b-1924-433b-ac9c-057c21fe30ac"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="885b5c70-d1d7-4480-b6f3-e860a4c7b558">
+                <propertyInstance
+                  Id="0e640464-97cf-4d29-ac9d-97b57cdcfb24"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8649bd39-283c-4e72-9b9d-fbdc7444e14d">
+                <propertyInstance
+                  Id="9b0e22a2-b883-470f-9985-c15b33d04f29"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

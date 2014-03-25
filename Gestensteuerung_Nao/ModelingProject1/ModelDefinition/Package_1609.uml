@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="33e86cde-1658-4a80-bf5f-6441789b6928"
+  name="KinectNao"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="cd80b2ef-17df-47dd-9383-a322f64b09c7"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DKinectNao"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="2797f991-17ae-4c52-bcad-f9de2e5f9382"
+        LastKnownName="Nao"
+        LastKnownLocation="Package1_1609.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="dfc68e1d-f053-4823-91d8-9b5dfd38fe48"
+        LastKnownName="Kinect"
+        LastKnownLocation="Package7_1609.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

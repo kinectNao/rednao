@@ -5,20 +5,8 @@
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
-    <NestedTypes>
-      <Delegate Name="KinectNao.MainWindow.PixelData" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>MainWindow.xaml.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Delegate>
-      <Delegate Name="KinectNao.MainWindow.SkeletonData" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>MainWindow.xaml.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Delegate>
-    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>BAAAAIVAAAAAgAAAABAAAAAAAAAAAQAAAAAABARAAEE=</HashCode>
+      <HashCode>BAAAAIUAAAAAgAAAABAAAAAAAAAAAQAAAAAABARAAEE=</HashCode>
       <FileName>MainWindow.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>

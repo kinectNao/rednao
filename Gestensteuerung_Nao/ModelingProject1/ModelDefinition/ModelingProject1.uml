@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
-  Id="b4de8e7a-22a2-4d01-a2dd-a78d0ac48531"
+  Id="e14108ca-fe49-444f-91f4-b8d3a1f23c05"
   name="ModelingProject1" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
   <profileInstances>
     <packageHasProfileInstances
@@ -16,15 +16,37 @@
         Id="532ea607-fb19-44b8-8502-3351b05452be"
         name="StandardProfileL3" />
     </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="adf64043-4679-4d5c-be39-315959422932">
+      <profileInstance
+        Id="bdd0bfb2-83f6-4042-9f96-10f6b8d09e05"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
   </profileInstances>
   <packagedElements>
     <packageHasNamedElement>
-      <class
-        Id="17da8520-3736-4651-8b84-874d13b82964"
-        name="Class1"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false" />
+      <packageMoniker
+        Id="33e86cde-1658-4a80-bf5f-6441789b6928"
+        LastKnownName="KinectNao"
+        LastKnownLocation="Package_1609.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="dd6216d7-c509-4df6-96da-b57b5758a87f"
+        LastKnownName="Aldebaran"
+        LastKnownLocation="Package2_1609.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="1f8a3a39-6fc1-4e73-bede-8e37515d8705"
+        LastKnownName="System"
+        LastKnownLocation="Package4_1609.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="dd066020-22e6-4d7e-ad71-f78453f0d791"
+        LastKnownName="Microsoft"
+        LastKnownLocation="Package_1611.uml" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

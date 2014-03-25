@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="5b30de3a-220e-4c1b-ab29-366c4d317a8a"
+  name="Kinect"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="da801d92-93a0-469e-8f28-d91d36d7c1ba"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DMicrosoft.Kinect"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="4e4ed5c2-c5f8-4cc9-b091-80030dc4be26"
+        name="KinectSensor"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="81e1086d-f971-4df5-a9ec-a1a3e0a51fd2"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FMicrosoft SDKs%2FKinect%2Fv1.8%2FAssemblies%2FMicrosoft.Kinect.dll&quot; Namespace%3DMicrosoft.Kinect Type%3DKinectSensor"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="7c1ba105-e49e-4886-9f58-afcdc96bbd31"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2f950e50-4350-41c5-975f-c9f4cab86add">
+                <propertyInstance
+                  Id="97126d26-fff6-4451-b8c0-30bb01f203de"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9eeb9e2f-10e3-4676-8114-ead318809924">
+                <propertyInstance
+                  Id="c085b20e-9231-497f-98c7-827a6b058716"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8e5e4288-487c-4d55-8a47-9c212c4583c8">
+                <propertyInstance
+                  Id="59a80481-f7fb-4d49-9d65-1d01e4ee3afd"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a3fa1aff-16da-4b8e-9aed-f71d66224238">
+                <propertyInstance
+                  Id="b9f54b3c-a8c0-42ea-b8db-7346126289a2"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3dfe3593-e92c-463a-aafa-0be6210c2351">
+                <propertyInstance
+                  Id="efe0a5f1-a525-4c51-9f7b-915e9cefa9e7"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9e055d25-85aa-47c7-b548-409ae5e53050"
+        name="Skeleton"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="6835813a-e353-4ee3-aec1-2e2b5f8695b0"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FMicrosoft SDKs%2FKinect%2Fv1.8%2FAssemblies%2FMicrosoft.Kinect.dll&quot; Namespace%3DMicrosoft.Kinect Type%3DSkeleton"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="d35fd53d-64cf-4b7d-a7c4-105012d340ce"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="04059f79-f176-4d17-a2c2-f13e51d289d1">
+                <propertyInstance
+                  Id="5c9bd68b-13f5-426a-99f0-73e9b04e3277"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f6aa5e8e-2396-4ad1-be84-048411be1cd5">
+                <propertyInstance
+                  Id="365c0fa7-a1f1-4f62-9ae2-35264a64828c"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="41460290-de3b-4b97-a37c-500440b8b6fa">
+                <propertyInstance
+                  Id="44466771-d2d9-4736-8110-789d04cd220f"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2d93c6eb-dd5e-4ae3-8637-940ab16440b5">
+                <propertyInstance
+                  Id="9836a918-4478-4896-ae7f-e80328744bca"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="63ab4cbc-87db-47aa-bbe4-ebb88048140e">
+                <propertyInstance
+                  Id="df5a4b7c-68fe-4d45-9e97-c9a06f55080b"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

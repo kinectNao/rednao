@@ -52,7 +52,7 @@ namespace KinectNao.Nao
 
             //angleInterpolation is a blocking call!
             mp.post.angleInterpolationWithSpeed(joints, newangles, Arm.fractionMaxSpeed);
-
+            
             
 
         }
