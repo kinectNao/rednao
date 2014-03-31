@@ -6,28 +6,23 @@
 %Vorteil: Günstig, leicht zu entwickeln, da SDK vorhanden
 
 %Da das Produkt Xbox Kinect bereits vor einigen Jahren auf den Markt kam, hatten die Entwickler Zeit, um ein SDK zu entwickeln, was alle wichtigen Programmfunktionen bereits enthält. Dies macht es einem Entwickler relativ leicht eine Anwendung zu erstellen, die bestimmte Kinect-Funktionen bereitstellt. 
+	
 
-%	
-%	Depth Stream
-%		RAW Data Array (KINECT FOR WINDOWS SDK PROG GUIDE)
-%		Im Grunde Grundlage für Skeleton Stream
-%		Depth-Range (u.a. auch Near Mode)
-%		Mehrere Spieler (Playerindex)
+
 %
-%
-%	Skeleton Stream
-%		+ Bild 
-%		Benutzt Tiefenstream
-%		Kinect Raum (Koord.)
-%		+ Bild
-%		Algorithmus mit Farben
-%		Color Regions (PDF HOW DOES KINECT WORK)
 %		Joints
+%			20 pro Skelett
 %		Bone Sequence
+%
+%		Kinect Raum (Koord.)
+%			+ Bild
+%		
 %		Skeleton Smoothing, Jitter
 %
-%
 %	Fazit: Habe Skelett. Extrahiere Winkel, Gebe Nao
+
+
+
 
 Die im vorigen Kapitel aufgezeigte Hardware liefert die entsprechenden Sensorinformationen, die nun
 softwaretechnisch zu einer abstrakteren Ebene zusammengefasst werden müssen. Die Funktion dieser
@@ -48,19 +43,81 @@ Das Kinect SDK bietet bereits standardmäßig Zugriff auf diese Werte. Dabei kö
 wird im folgenden Kapitel \ref{SDK} \nameref{SDK} näher erläutert. Dieses Kapitel beschäftigt sich
 damit, wie diese Funktionen im Inneren funktionieren.
 
+%	Depth Stream
+%		43 Grad vertikal, 57 horizonzal
+%		RAW Data Array (KINECT FOR WINDOWS SDK PROG GUIDE)
+%			16 Bit Graustufenarray
+%				Wert beschreibt Abstand zu Kinect in mm
+%				Untere 3 Bits = Player Index
+%				Oberen 13 Bits = Distance in mm
+%
+%		Depth-Range (u.a. auch Near Mode)			
+%			Bild mit Werten kinect_range.png (http://msdn.microsoft.com/en-us/library/hh973078.aspx)		
+%
+%		Grundlage für Skeleton Stream
+%			Überleitung
+%
 \subsection{Der Tiefenstream}
-Der Tiefenstream (Depth-Stream) liefert zu jedem Pixel einen Tiefenwert. Dieser Wert representiert
-die Entfernung zu dem jeweiligen Objekt. Damit ist das am nächsten befindliche Objekt gemeint,
-da verdeckte Objekte nicht vom Sensor erkannt werden.
-Aus diesem Stream kann man beispielsweise ein Tiefenbild mit verschiedenen Grauwerten generieren, die representativ für die Entfernung zur Kinect stehen. Die Depth-Stream Daten werden in einem 16 Bit Array transportiert. Dabei sind 3 untersten Bits jedoch für die Erkennung von mehreren Spielern reserviert
+Der Tiefenstream (Depth-Stream) liefert zu jedem Pixel im Sichtfeld (43 Grad vertikal, 57 Grad horizontal) einen Tiefenwert. Dieser Wert enthält die Entfernung in Millimetern zu dem jeweiligen Objekt.
+Damit ist das am nächsten befindliche Objekt gemeint, da verdeckte Objekte nicht vom Sensor erkannt werden.
+Aus diesem Stream kann man beispielsweise ein Tiefenbild mit verschiedenen Grauwerten generieren, die repräsentativ für die Entfernung zur Kinect stehen. Die Depth-Stream Daten werden in einem 16 Bit Array transportiert. Dabei sind 3 untersten Bits jedoch für die Erkennung von mehreren Spielern reserviert
 (Siehe Kapitel \ref{skeleton} \nameref{skeleton}). Die oberen 13 Bit enthalten die eigentlichen Tiefendaten. Ein solcher Tiefenstream kann wie folgt aussehen:
 
+\todo{TiefenstreamBild}
 %Einfuegen: Bild mit Tiefenstream
 
-Für dieses Projekt ist das Skeletonobjekt von großer Bedeutung. Anhand von Vergleichsmustern erzeugt die Software -nicht Kinect!- einen sog. Skeletonstream, der versucht die Position eines menschlichen Skeletts im Kinect Koordinatenraum abzubilden.\cite{SWB-376536934}
 
+Zur Erfassung eines Objektes, muss sich dieses im Sichtfeld der Kinect befinden. 
+\begin{figure}[H]						
+	\centering							
+	\includegraphics[scale=0.7]{Bilder/kinect_range.png}			
+	\caption{Depth Space Range \cite{ws:kinect_depthspace}}						
+	\label{f:kinect_range}						
+\end{figure}
+
+Somit liegt der Arbeitsraum der Kinect im normalen Modus zwischen 0.8m und 4m. Der Near-Modus hat einen Arbeitsbereich von 0.4m - 3m. Im Laufe unseren Projektes beschränken wir uns auf den normalen Modus.
+
+Anhand dieses Tiefenstreams ist es nun möglich Spieler (Menschen) zu extrahieren und deren Bewegungen
+in Echtzeit zu erfassen. Kinect bietet durch dessen SDK bereits eine Möglichkeit, diese Daten zu
+erfassen und auszuwerten. Da das fertige Objekt durch ein Skelett dargestellt wird, wird dies auch Skeleton-Objekt oder einfach nur als Skeleton bezeichnet. Für dieses Projekt ist dieses Skeleton-Objekt von großer Bedeutung. Anhand von Vergleichsmustern erzeugt die Software -nicht Kinect!- einen sog. Skeletonstream, der versucht die Position eines menschlichen Skeletts im Kinect Koordinatenraum abzubilden.\cite{SWB-376536934}
+Wie genau dies funktioniert wird im folgenden Kapitel erläutert.
+
+
+
+%	Skeleton Stream
+%		+ Bild
+% 		Benutzt Tiefenstream
+%		2 Player mit allen Joints
+%		Anforderung an Erkennung
+%			Verschiedene Menschen, größen
+%			Kleider und Farben
+%			Echtzeit!
+%		Erkennungsalgorithmus
+%			Tiefendaten in die Rendering Pipeline
+%			Labeling der Körperteile durch Segmentierung mit Farben (PDF HOW DOES KINECT WORK)
+%				Spieler segmentieren (Körper >ja</nein)
+%				Decition Tree Struktur = Decition Forest (Maschinell trainiert)
+%					Motion Capture (MCAP) Daten Beispiele (echt)
+%					Parameter
+%						Größe, Breite
+%						Kleidung
+%						Perspektive
+%					Syntetisierte Daten (Zufaellige Parameter)
+%				Körpersegmente extrahieren
+%			Platzierung der Joints		
+%			Sensor berechnet 3D View für Gelenkkoordinaten
+%				Vorne
+%				Seite	
+%				Oben
+%
+%		Mehrere Spieler (Playerindex)
+%			Bis zu 6 Spieler erkennbar (Index aus Tiefenarray extrahierbar)
+%			Funktioniert nur mit Skeleton Stream
+%			Irrelevant für Projekt
+%
 \subsection{Der Skeletonstream}\label{skeleton}
-Damit die Bewegungen eines Benutzers mittels Kinect erkannt und im Programm verarbeitet werden können, werden im Tiefenstream bestimmte Bereiche definiert und mit bestehenden Mustern verglichen. Somit können die einzelnen Gelenke des menschlichen Skeletts (Joints) erkannt und in Zusammenhang gebracht werden. Als Entwickler können diese dann in einem Skelettobjekt mit der erkannten Genauigkeit ausgelesen und verwendet werden. Für die Erkennung der Armbewegungen werden Schulter-, Ellenbogen-, Hand- und Hüftjoints benötigt (Siehe Realisierung).
+Damit ein Benutzer und dessen Bewegung mittels Kinect erkannt und im Programm verarbeitet werden können, wird der Tiefenstream entsprechend ausgewertet. Als Ergebnis erhält man ein menschliches Skelett, das aus
+20 Gelenken (Joints) besteht. 
 
 \begin{figure}[H]						
 	\centering							
@@ -69,25 +126,32 @@ Damit die Bewegungen eines Benutzers mittels Kinect erkannt und im Programm vera
 	\label{f:kinect_joints}						
 \end{figure}
 
+Ein Kinectsystem kann bis zu 6 Spieler gleichzeitig erkennen, wobei nur von zwei Spielern die exakte Position aller Gelenkwinkel erkannt wird. Von den anderen vier Spielern nur die Position im Raum, nicht jedoch die exakten Koordinaten der einzelnen Gelenke. Wie schon im vorigen Kapitel erwähnt, wird einem Spieler nach dessen Erkennung ein Index zugeordnet. Dieser befindet sich dann im Tiefenarray, falls die Skeletonfunktion aktiviert wurde. Innerhalb dieses Projektes ist dieser jedoch irrelevant, da angenommen wird, dass immer nur ein Spieler
+den Roboter steuern wird.\\
+\textbf{Skelettextraktion}\\
+Hinter der Extraktion des Skeletts steckt ein Algorithmus, der bereits im Microsoft Kinect SDK vorhanden ist. 
+Die Anforderungen an diesen Algorithmus sind hoch, denn er soll verschiedene Menschen mit verschiedenen Größen,
+Breiten und Kleidern in Echtzeit erkennen.
+Damit dies überhaupt möglich ist, wird maschinelles Lernen verwendet. Zunächst werden die aufgenommenen Tiefendaten in eine sog. Rendering Pipeline gegeben. Diese vergleicht die aufgenommenen Daten mit bereits
+vorhandenen Beispielen, die mit verschiedenen Menschen aufgenommen wurden. Anhand eines Decition Trees, der durch maschinelles Lernen erzeugt wurde, wird ein Pixel mit einer gewissen Wahrscheinlichkeit zu einem Körpersegment zugeordnet. Der Algorithmus arbeitet zu Erhöhung der Genauigkeit mit mehreren Bäumen gleichzeitig. Somit können die Körpersegmente zugeordnet werden, was in der folgenden Grafik farbig dargestellt wird.
+
+\begin{figure}[H]						
+	\centering							
+	\includegraphics[scale=0.5]{Bilder/kinect_body_parts.png}			
+	\caption{Skelett-Erkennung \cite{pdf:realtime_human_pose}}						
+	\label{f:kinect_skeleton}						
+\end{figure}
+
+Nach der Segmentierung werden die Gelenke innerhalb den entsprechenden Bereichen platziert. Dies wird anhand einer Häufigkeitsanalyse von Beispieldaten errechnet.
+Im Anschluss daran wird ein 3D-Modell des Skeletts erstellt, das aus der Frontansicht, der Seitenansicht und der Draufsicht besteht (Siehe Abb. \ref{f:kinect_skeleton} rechts: 3D joint proposals).
+Dieser komplexe Prozess ermöglicht es eine Skeletterkennung in Echtzeit durchzuführen. Als Entwickler einer
+Kinect Applikation muss man sich nicht mehr um diese Erkennung kümmern, denn sie ist bereits implementiert.
+Die Koordinaten der Skeleton-Joints befinden sich in einem Skelettobjekt und können mit der erkannten Genauigkeit ausgelesen und verwendet werden. Für die Erkennung der Armbewegungen in diesem Projekt werden Schulter-, Ellenbogen-, Hand- und Hüftjoints benötigt (Siehe Realisierung).
 
 
-(Technischer Hintergrund der Berechnung -> Bild mit verschiedenen Farben für SKelettbereiche, aber nicht öffentlich, da Microsoft Geheimnis)
+%(Bild Kinect Koordinatenraum)
+%(Bild mehrere User im Kinectraum)
 
-(Bild Kinect Koordinatenraum)
-(Bild mehrere User im Kinectraum)
-
-\todo{SDK Funktionen erklären: skelton, mehrere user, deep stream, color stream}
 \todo{Screenshot von Deep Stream (Kinect Studio)}
 \todo{Unterschied Microsoft SDK und Freie Implementierung OpenNI}
 \todo{Bild von Kinect-Koordinatensystem -> Bezug auf Nao}
-
-
-
-Dieser Stream berechnet anhand der Tiefendaten und der RGB-Daten werte für ein Menschliches Skelett:
-
--Armwinkel
--Positionen
--Kinectraum...
-
-
-DELME\cite{hertzberg2009mobile}
