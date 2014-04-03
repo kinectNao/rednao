@@ -2,12 +2,6 @@
 
 %(Essenz auf dem, was Kinect für mich erledigt theorie, mathematische Berechnung tiefe und skeletonstream usw)
 
-%Rauminformationen für Software
-%Vorteil: Günstig, leicht zu entwickeln, da SDK vorhanden
-
-%Da das Produkt Xbox Kinect bereits vor einigen Jahren auf den Markt kam, hatten die Entwickler Zeit, um ein SDK zu entwickeln, was alle wichtigen Programmfunktionen bereits enthält. Dies macht es einem Entwickler relativ leicht eine Anwendung zu erstellen, die bestimmte Kinect-Funktionen bereitstellt. 
-	
-
 
 %
 %		Joints
@@ -116,8 +110,8 @@ Wie genau dies funktioniert wird im folgenden Kapitel erläutert.
 %			Irrelevant für Projekt
 %
 \subsection{Der Skeletonstream}\label{skeleton}
-Damit ein Benutzer und dessen Bewegung mittels Kinect erkannt und im Programm verarbeitet werden können, wird der Tiefenstream entsprechend ausgewertet. Als Ergebnis erhält man ein menschliches Skelett, das aus
-20 Gelenken (Joints) besteht. 
+Damit ein Benutzer und dessen Bewegungen mittels Kinect erkannt und im Programm verarbeitet werden können, wird der Tiefenstream entsprechend ausgewertet. Als Ergebnis erhält man ein menschliches Skelett, das aus
+20 Gelenken (Joints) besteht. Diese Joints sind im Skeletonobjekt hierarchisch von der Hüfte aus miteinander verbunden und bilden somit das Skelett eines Spielers. Die folgende Grafik illustriert alle erkannten Gelenke und deren Positionen. Für dieses Projekt sind insbesondere die Joints textit{Shoulder}, \textit{Elbow}, \textit{Wrist} und \textit{Hip} von hoher Bedeutung, da mit ihnen die Winkel der Gliedmaßen errechnet werden können (Siehe Kapitel \ref{algo_angle} \nameref{algo_angle}).
 
 \begin{figure}[H]						
 	\centering							
@@ -126,14 +120,14 @@ Damit ein Benutzer und dessen Bewegung mittels Kinect erkannt und im Programm ve
 	\label{f:kinect_joints}						
 \end{figure}
 
-Ein Kinectsystem kann bis zu 6 Spieler gleichzeitig erkennen, wobei nur von zwei Spielern die exakte Position aller Gelenkwinkel erkannt wird. Von den anderen vier Spielern nur die Position im Raum, nicht jedoch die exakten Koordinaten der einzelnen Gelenke. Wie schon im vorigen Kapitel erwähnt, wird einem Spieler nach dessen Erkennung ein Index zugeordnet. Dieser befindet sich dann im Tiefenarray, falls die Skeletonfunktion aktiviert wurde. Innerhalb dieses Projektes ist dieser jedoch irrelevant, da angenommen wird, dass immer nur ein Spieler
-den Roboter steuern wird.\\
+Ein Kinectsystem kann bis zu 6 Spieler gleichzeitig erkennen, wobei nur von zwei Spielern die exakte Position aller Gelenkwinkel erkannt werden kann. Von den anderen vier Spielern wird nur die Position im Raum ermittelt, nicht jedoch die exakten Koordinaten aller 20 Joints. Wie schon im vorigen Kapitel erwähnt, wird einem Spieler nach dessen Erkennung ein Index zugeordnet. Dieser befindet sich im Tiefenarray, falls die Skeletonfunktion aktiviert wurde. Innerhalb dieses Projektes ist dieser jedoch irrelevant, da angenommen wird, dass immer nur ein Spieler
+den Roboter steuern wird.\\ \\
 \textbf{Skelettextraktion}\\
-Hinter der Extraktion des Skeletts steckt ein Algorithmus, der bereits im Microsoft Kinect SDK vorhanden ist. 
-Die Anforderungen an diesen Algorithmus sind hoch, denn er soll verschiedene Menschen mit verschiedenen Größen,
+Hinter der Extraktion des Skeletts steckt ein Algorithmus, der bereits im \textit{Microsoft Kinect SDK} vorhanden ist. 
+Die Anforderungen an diesen Algorithmus sind hoch, denn er soll Menschen mit verschiedenen Größen,
 Breiten und Kleidern in Echtzeit erkennen.
-Damit dies überhaupt möglich ist, wird maschinelles Lernen verwendet. Zunächst werden die aufgenommenen Tiefendaten in eine sog. Rendering Pipeline gegeben. Diese vergleicht die aufgenommenen Daten mit bereits
-vorhandenen Beispielen, die mit verschiedenen Menschen aufgenommen wurden. Anhand eines Decition Trees, der durch maschinelles Lernen erzeugt wurde, wird ein Pixel mit einer gewissen Wahrscheinlichkeit zu einem Körpersegment zugeordnet. Der Algorithmus arbeitet zu Erhöhung der Genauigkeit mit mehreren Bäumen gleichzeitig. Somit können die Körpersegmente zugeordnet werden, was in der folgenden Grafik farbig dargestellt wird.
+Damit dies überhaupt möglich ist, wird maschinelles Lernen verwendet. Zunächst werden die aufgenommenen Tiefendaten in eine sog. \textit{Rendering Pipeline}\cite{pdf:realtime_human_pose} gegeben. Diese vergleicht die aufgenommenen Daten mit bereits
+vorhandenen Beispielen, die mit verschiedenen Menschen aufgenommen wurden. Anhand eines Decition Trees, der durch maschinelles Lernen erzeugt wurde, wird ein Pixel mit einer gewissen Wahrscheinlichkeit zu einem Körpersegment zugeordnet. Der Algorithmus arbeitet zur Erhöhung der Genauigkeit mit mehreren Bäumen gleichzeitig. Somit können die Körpersegmente zugeordnet werden, was in der folgenden Grafik farbig dargestellt wird.
 
 \begin{figure}[H]						
 	\centering							
@@ -141,13 +135,11 @@ vorhandenen Beispielen, die mit verschiedenen Menschen aufgenommen wurden. Anhan
 	\caption{Skelett-Erkennung \cite{pdf:realtime_human_pose}}						
 	\label{f:kinect_skeleton}						
 \end{figure}
-
+\noindent
 Nach der Segmentierung werden die Gelenke innerhalb den entsprechenden Bereichen platziert. Dies wird anhand einer Häufigkeitsanalyse von Beispieldaten errechnet.
-Im Anschluss daran wird ein 3D-Modell des Skeletts erstellt, das aus der Frontansicht, der Seitenansicht und der Draufsicht besteht (Siehe Abb. \ref{f:kinect_skeleton} rechts: 3D joint proposals).
-Dieser komplexe Prozess ermöglicht es eine Skeletterkennung in Echtzeit durchzuführen. Als Entwickler einer
-Kinect Applikation muss man sich nicht mehr um diese Erkennung kümmern, denn sie ist bereits implementiert.
-Die Koordinaten der Skeleton-Joints befinden sich in einem Skelettobjekt und können mit der erkannten Genauigkeit ausgelesen und verwendet werden. Für die Erkennung der Armbewegungen in diesem Projekt werden Schulter-, Ellenbogen-, Hand- und Hüftjoints benötigt (Siehe Realisierung).
-
+Im Anschluss daran wird ein 3D-Modell des Skeletts erstellt, das aus der \textit{Frontansicht}, der \textit{Seitenansicht} und der \textit{Draufsicht} besteht (Siehe Abb. \ref{f:kinect_skeleton} rechts: 3D joint proposals).
+Dieser komplexe Prozess ermöglicht es eine Skelett-Erkennung in Echtzeit durchzuführen. Als Entwickler einer Kinect Applikation muss man sich nicht mehr um diese Erkennung kümmern, denn diese  ist bereits implementiert.
+Die Koordinaten der Skeleton-Joints befinden sich im Skeletonobjekt und können mit der erkannten Genauigkeit ausgelesen und verwendet werden.
 
 %(Bild Kinect Koordinatenraum)
 %(Bild mehrere User im Kinectraum)
