@@ -23,7 +23,7 @@
 %Da das Produkt Xbox Kinect bereits vor einigen Jahren auf den Markt kam, hatten die Entwickler Zeit, um ein SDK zu entwickeln, was alle wichtigen Programmfunktionen bereits enthält. Dies macht es einem Entwickler relativ leicht eine Anwendung zu erstellen, die bestimmte Kinect-Funktionen bereitstellt. 
 	
 \subsection{Timeline}
-Nach dem Erscheinen der Kinect-Hardware war diese auch schnell in Entwicklerkreisen gefragt. Doch Microsoft selbst gefiel dies zunächst nicht, denn der Konzern befürchtete, dass Cheater sich an ihren Spielen zu schaffen machen würden und somit den Spielspaß mindern würden. So veröffentlichte Microsoft selbst zunächst kein SDK. Die Open Source Gemeinde jedoch erkannte das Potential des Produktes schnell und entwickelte eine Schnittstelle zu \textit{OpenNI}, einem Framework, das die Auswertung von 3D-Sensordaten verschiedenster Hersteller unterstützt. Dieses Framework bietet somit durch seine Plattformunabhängigkeit die Möglichkeit unterschiedliche Betriebssysteme mit unterschiedlichen 3D-Sensoren zu kombinieren.\cite{webb2012beginning}
+Nach dem Erscheinen der Kinect-Hardware war diese auch schnell in Entwicklerkreisen gefragt. Microsoft selbst gefiel dies zunächst nicht, denn der Konzern befürchtete, dass Cheater sich an ihren Spielen zu schaffen machen würden und somit den Spielspaß mindern würden. So veröffentlichte Microsoft selbst zunächst kein SDK. Die Open Source Gemeinde jedoch erkannte das Potential des Produktes schnell und entwickelte eine Schnittstelle zu \textit{OpenNI}, einem Framework, das die Auswertung von 3D-Sensordaten verschiedenster Hersteller unterstützt. Dieses Framework bietet somit durch seine Plattformunabhängigkeit die Möglichkeit unterschiedliche Betriebssysteme mit unterschiedlichen 3D-Sensoren zu kombinieren.\cite{webb2012beginning}
 Microsoft zog nach und veröffentlichte am 17. Juni 2011 die freie Beta Version des Microsoft SDKs. Somit hatte nun jeder Entwickler freien Zugang zu allen Kinectfunktionen, die auch von Microsoft selbst bisher genutzt wurden. Einer der Vorteile des Kinect SDKs besteht darin, dass die Skelett-Erkennung (Siehe Kapitel \ref{Software} \nameref{Software}) ohne initiale Pose möglich ist, was im Gegensatz zum OpenNI-Framework steht. \cite{webb2012beginning} Da für dieses Projekt die Plattformunabhängigkeit nicht relevant ist, sowohl aber die Skeletterkennung, fiel die Entscheidung auf das Microsoft Kinect SDK.
 
 \subsection{Grundfunktionen}
@@ -34,8 +34,17 @@ Anhand des folgenden Listings sollen die grundlegenden Funktion der vorhandenen 
        \label{lst:kinect_sdk},
        captionpos=b]
  {Listings/Kinect_Sample.cs}
-
-Zunächst muss die Kinect-Bibliothek in C\# eingebunden werden (Zeile 1). Danach kann ein Sensorobjekt instanziiert werden. Dieses erreicht man über ein Array, da mehrere Kinect-Systeme an einem PC angeschlossen sein können (Zeile 7). Für dieses Projekt wird jedoch nur ein Kinect benötigt und somit handelt es sich immer um das Element mit dem Index 0. Im Anschluss daran wird der Tiefenstream des Sensors aktiviert (Zeile 10) und ein \textit{DepthFrameReady} Event registriert und mit der Methode sensor\_DepthFrameReady (Ab Zeile 21) verknüpft. Diese Methode wird somit bei jeder Aktualisierung der Tiefenwerte aufgerufen und liefert die aktuellen Werte, die in einem Short-Array gespeichert werden.
+\noindent
+Zuerst muss die Kinect-Bibliothek in C\# eingebunden werden (Zeile 1). Danach kann ein Sensorobjekt instanziiert werden. Dieses erreicht man über ein Array, da gleichzeitig mehrere Kinect-Systeme per USB angeschlossen und verwendet werden könnten (Zeile 7). Für dieses Projekt wird jedoch nur eine Hardware benötigt und somit handelt es sich immer um das Element mit dem Index 0. Im Anschluss daran wird der Tiefenstream des Sensors aktiviert (Zeile 10) und ein \textit{DepthFrameReady} Event registriert und mit der Methode sensor\_DepthFrameReady (Ab Zeile 21) verknüpft. Diese Methode wird somit bei jeder Aktualisierung der Tiefenwerte aufgerufen und liefert die aktuellen Werte, die in einem Short-Array gespeichert werden.
 
 \subsection{Skelettfunktionen}
 abc
+
+\subsection{Kinect Studio}
+Das Kinect-SDK stellt einem Entwickler nach der Installation nützliche Dinge, wie einige Templates bereit, die den
+
+%Stand von Microsoft Sicht vertreten, best practice der entwicklung
+%&& studio
+
+
+. Eine dieser Funktionen ist das Kinect Studio. Diese Anwendung stellt einem Entwickler  
