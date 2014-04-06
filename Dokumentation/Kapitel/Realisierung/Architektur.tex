@@ -1,3 +1,36 @@
+%%
+%
+%	Erklärung der einzelnen Module + was ist der Knackpunkt?
+%		MainWindow -> starten & initialisieren
+%			!Annotation! := Erläutern Thread Konzept C# .xaml + .xaml.cs
+%							bzw. Dispatcher (security != Java)
+%		Interfaces 		-> 	austauschbar & fokus auf relevante Daten => Winkel
+%							Wiederverwendbar für Nao UND gui
+%		KinectHandler	-> 	Input der Anwendung
+%		Calculation 	-> 	Threading, Berechnungen CPU-Intensiv
+%						-> 	Errechnet aus Skelett Winkel
+%						-> 	Versorgt GUI, Nao mit Winkelwerten
+%						-> 	Werte vorfiltern (Filter erklären)
+%		NaoHandler 		-> 	Output der Anwendung
+%							Mapping Kinect-Nao-Raum, Ruckeln vermeiden
+%
+%	Workflow darstellen (evtl. Flussdiagram + Erläuterung)
+%		Programm starten über MainWindow
+%		Erzeugt Frame und startet/initialisiere alle Submodule
+%			Init KinectHandler
+%			Init NaoHandler
+%			Init Berechnungen
+%		Warte auf Skelett...
+%		Skelett erkannt -> starte Berechnungen
+%		Zeige Skelett im Hauptframe an
+%		Für jedes aktualisierte Skelett
+%			Errechne Winkel
+%			Winkel filtern
+%			Aktuellen Status aktualisieren -> Observer Pattern
+%				GUI
+%				NaoHandler
+%		
+%%
 \section{Architektur}
 Die Architektur der Anwendung kann grob in zwei Teilbereiche gegliedert werden, den Sensorik- und den Aktorik-Bereich.
 Der Sensorteil ist dafür zuständig, die entsprechenden Gesten des Benutzers zu ermitteln und zu verarbeiten. Der Aktorteil der Anwendung ist dafür zuständig die Werte entsprechend auf die Wertebereiche des Nao-Koordinatensystems zu transformieren und diese dem Roboter zu übermitteln.
@@ -8,10 +41,6 @@ Als Schnittstelle zwischen der Erkennung und der Ausführung der Armpositionen w
 
 \subsection{Klassendiagramm}
 
-
-
-\subsection{Sequenzdiagramm: Winkelerkennung}
-
-
+\subsection{Flussdiagramm: Winkelerkennung}
 
 \todo{Architekturidee: Input, Verarbeitung(evtl. Filter->Probleme Ruckeln?), Output, }
