@@ -65,7 +65,7 @@ Zur Erfassung eines Objektes, muss sich dieses im Sichtfeld der Kinect befinden.
 \begin{figure}[H]						
 	\centering							
 	\includegraphics[scale=0.7]{Bilder/kinect_range.png}			
-	\caption{Depth Space Range \cite{ws:kinect_depthspace}}						
+	\caption{Depth Space Range \cite{ws:microsoft_coordinateSpaces}}						
 	\label{f:kinect_range}						
 \end{figure}
 
@@ -135,15 +135,27 @@ vorhandenen Beispielen, die mit verschiedenen Menschen aufgenommen wurden. Anhan
 	\caption{Skelett-Erkennung \cite{pdf:realtime_human_pose}}						
 	\label{f:kinect_skeleton}						
 \end{figure}
+
 \noindent
 Nach der Segmentierung werden die Gelenke innerhalb den entsprechenden Bereichen platziert. Dies wird anhand einer Häufigkeitsanalyse von Beispieldaten errechnet.
 Im Anschluss daran wird ein 3D-Modell des Skeletts erstellt, das aus der \textit{Frontansicht}, der \textit{Seitenansicht} und der \textit{Draufsicht} besteht (Siehe Abb. \ref{f:kinect_skeleton} rechts: 3D joint proposals).
 Dieser komplexe Prozess ermöglicht es eine Skelett-Erkennung in Echtzeit durchzuführen. Als Entwickler einer Kinect Applikation muss man sich nicht mehr um diese Erkennung kümmern, denn diese  ist bereits implementiert.
 Die Koordinaten der Skeleton-Joints befinden sich im Skeletonobjekt und können mit der erkannten Genauigkeit ausgelesen und verwendet werden.
+\\ \\
+\textbf{Skelett-Koordinatenraum}\\
+Der Koordinatenraum der Kinect ist wie folgt definiert:
 
-%(Bild Kinect Koordinatenraum)
-%(Bild mehrere User im Kinectraum)
+\begin{figure}[H]						
+	\centering							
+	\includegraphics[scale=0.8]{Bilder/kinect_skeleton_space.png}			
+	\caption{Skelett-Koordinatenraum\cite{ws:microsoft_coordinateSpaces}}						
+	\label{f:kinect_skeleton_space}						
+\end{figure}
 
+\noindent
+Das Kinect-Koordinatensystem ist ein rechtshändiges Koordinatensystem. Die positive Z-Richtung entspricht der Blickrichtung der Kinect. Die positive X-Richtung zeigt nach links und entsprechend die positive Y-Richtung nach oben. \cite{ws:microsoft_coordinateSpaces}
+
+% (Bild mehrere User im Kinectraum)
 \todo{Screenshot von Deep Stream (Kinect Studio)}
-\todo{Unterschied Microsoft SDK und Freie Implementierung OpenNI}
-\todo{Bild von Kinect-Koordinatensystem -> Bezug auf Nao}
+%\todo{Unterschied Microsoft SDK und Freie Implementierung OpenNI}
+%\todo{Bild von Kinect-Koordinatensystem -> Bezug auf Nao}
