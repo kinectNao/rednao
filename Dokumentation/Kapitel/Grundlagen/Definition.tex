@@ -1,0 +1,22 @@
+\section{Definition}
+Derzeit gibt es keine passende Definition, die den Begriff Robotik bzw. mobile Roboter so präzise formuliert, dass sie auf genau die Objekte passt, die nach gemeingültig einen Roboter definieren \cite{hertzberg2009mobile}. In \cite{hertzberg2009mobile} erklärt der Autor, dass es nicht unüblich ist, dass diese Unschärfe in der Definition großartig stört. Eine allgemeine Definition für Robotik ist in der \ac{VDI} Richtlinie 2860 von 1990 zu finden:
+\\
+\\
+\textit{"Ein Roboter ist ein frei und wiederprogrammierbarer, multifunktionaler Manipulator mit mindestens drei unabhängigen Achsen, um Materialien, Teile, Werkzeuge oder spezielle Geräte auf programmierten,
+variablen Bahnen zu bewegen zur Erfüllung der verschiedensten Aufgaben."}
+\\
+\\
+Allerdings passt diese Definition nicht gut auf mobile Roboter. Diese Sprachregelung der \ac{VDI} zielt eher auf Handhabungsroboter aus der Automatisierungstechnik oder Kommissionierroboter aus dem Logistik - Bereich. Gemeint sind damit sogenannte \textit{stationäre Robotersysteme} \cite{Haun2007}. Diese sind starr mit der Umgebung verbunden und besitzen einen festgelegten Arbeitsraum. Damit sind die oben genannten "programmierten, variablen Bahnen" möglich, da der Arbeitsprozess in dem sich der Roboter befindet vorher bekannt und programmierbar ist. 
+
+Mobile Robotersysteme unterscheiden sich zu stationären grundlegend, indem sie ihre Position durch Lokomotion (aus eigener Kraft) verändern \cite{Haun2007}. Somit hängen alle ihre Aktionen direkt von ihrer aktuellen Umgebung ab, die detailliert immer erst zum Zeitpunkt der Ausführung bekannt wird \cite{hertzberg2009mobile}. Sowohl \cite{hertzberg2009mobile} als auch \cite{Haun2007} heben die Eigenschaft hervor, dass mobile Roboter ihre Umgebung mittels Sensoren erfassen und auswerten müssen. Aus dem Ergebnis der Auswertung wählen sie schließlich ihre nächste Aktion. Ferner werden in \cite{Haun2007} folgende, weitere Eingeschaften genannt:
+\begin{itemize}
+\item aufgabenorientierte und implizierte Programmierung
+\item Anpassung an Veränderungen an die Umgebung
+\item Lernen aus Erfahrungen und entsprechende Verhaltensmodifikation
+\item Entwicklung eines internen Weltbildes
+\item Manipulation physikalischer Objekte in der realen Welt
+\end{itemize}
+Das bedeutet im Allgemeinen, dass ein mobiler Roboter in einer zuvor nicht bekannten und nicht kontrollierbaren Umgebung zu jeder Situation umgebungsabhängig operieren muss. Im Vergleich zu stationären Robotern bedeutet dass nicht, dass die mobilen Roboter Regellos oder zufällig arbeiten, die entsprechenden Anweisungen sind "`weicher"', wie zum Beispiel eine Bahnplanung eines Industrieroboters.
+
+Mit welchen internen und externen Sensoren ein Roboter seine Umgebung verarbeitet, wird in Kapitel \myref{Komponenten} erklärt.
+
