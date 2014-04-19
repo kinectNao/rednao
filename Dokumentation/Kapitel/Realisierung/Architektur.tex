@@ -33,9 +33,11 @@ Die C\# Applikation wird als WPF-Anwendung gestartet. Dies geschieht in der Klas
 
 %
 %	Problem/Besonderheit
-%		Es musste eine eigene Klasse zur Beendigung implementiert werden, da sonst Speicherverletzungen
+%		Es musste eine eigene Klasse zur Beendigung implementiert werden, da sonst 
+%		Speicherverletzungen
 %		beim Beenden entstehen -> Known Issue bei Microsoft
 %
+
 
 \subsection{Interfaces}
 Als Schnittstelle zwischen der Erkennung und der Ausführung der Armpositionen wird essenziell die Methode \textit{updateAngles} vom Interface \textit{ISkeletonAngles} verwendet. Diese stellt alle benötigten Winkel wie Shoulder Pitch, Shoulder Roll, Ellbow Roll, Elbow Yaw bereit. Somit kann dieses Interface von allen Klassen implementiert werden, die immer die aktuellen Werte benötigen, wie der NaoHandler und die GUI.
