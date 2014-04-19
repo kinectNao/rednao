@@ -1,6 +1,17 @@
 %%
 %
-%	Erklärung der einzelnen Module + was ist der Knackpunkt?
+%	Architektur		
+%
+%%
+\section{Architektur}\label{k:Architektur}
+Die Architektur der Anwendung kann grob in zwei Teilbereiche gegliedert werden, den Sensorik- und den Aktorik-Bereich.
+Der Sensorteil ist dafür zuständig, die entsprechenden Gesten des Benutzers zu ermitteln und zu verarbeiten. Bei der Digitalisierung der Gesten werden diese mit einem Medianfilter vorgefiltert, sodass extreme Ausreiser verschwinden, die ungewollte Bewegungen des Roboters zur Folge hätten.
+Der Aktorteil der Anwendung transformiert die Posen der Armgelenke in den Nao-Wertebereich und sendet diese an den Roboter.
+
+%
+% Programm statisch erklaeren, einzelne Module
+%
+% Erklärung der einzelnen Module + was ist der Knackpunkt?
 %		MainWindow -> starten & initialisieren
 %			!Annotation! := Erläutern Thread Konzept C# .xaml + .xaml.cs
 %							bzw. Dispatcher (security != Java)
@@ -13,6 +24,25 @@
 %						-> 	Werte vorfiltern (Filter erklären)
 %		NaoHandler 		-> 	Output der Anwendung
 %							Mapping Kinect-Nao-Raum, Ruckeln vermeiden
+%
+
+Klassendiagramm\todo{Klassendiagramm einfuegen}
+
+\subsection{MainWindow}
+Die C\# Applikation wird als WPF-Anwendung gestartet. Dies geschieht in der Klasse \textbf{MainWindow}. Hierbei werden alle Parameter initialisiert und alle nötigen Objekte erzeugt, wie der KinectSensor, der KinectHandler und der NaoHandler. Es wird wie in Kapitel ...SDK... beschrieben, der Tiefenstream und der Skeletonstream der Kinect aktiviert und anschließend ein "AllFramesReady"-Event registriert, das benutzt wird, sobald ein Skelett vor der Kamera vollständig erkannt wurde. Im Eventhandler wird der Berechnungs-Handler mit der aktuellen Position des gefilterten Skelettes versorgt. Zudem wird die GUI mit dem aktuellen RGB-Bild aktualisiert und erhält noch ein Skelett-Overlay, sodass man auch im Fenster sehen kann, dass ein Skelett erkannt wurde und kann dieses betrachten. Eine weitere Funktion dieser Klasse ist, das kontrollierte Beenden der Applikation. Nach schließen des Programmes, werden alle Berechnungen gestoppt, die Handler heruntergefahren und Kinect ausgeschaltet.
+
+%
+%	Problem/Besonderheit
+%		Es musste eine eigene Klasse zur Beendigung implementiert werden, da sonst Speicherverletzungen
+%		beim Beenden entstehen -> Known Issue bei Microsoft
+%
+
+\subsection{Interfaces}
+Als Schnittstelle zwischen der Erkennung und der Ausführung der Armpositionen wird essenziell die Methode \textit{updateAngles} vom Interface \textit{ISkeletonAngles} verwendet. Diese stellt alle benötigten Winkel wie Shoulder Pitch, Shoulder Roll, Ellbow Roll, Elbow Yaw bereit. Somit kann dieses Interface von allen Klassen implementiert werden, die immer die aktuellen Werte benötigen, wie der NaoHandler und die GUI.
+
+
+%
+% Dynamische Erklaerung des Programmes -> Workflow
 %
 %	Workflow darstellen (evtl. Flussdiagram + Erläuterung)
 %		Programm starten über MainWindow
@@ -29,18 +59,8 @@
 %			Aktuellen Status aktualisieren -> Observer Pattern
 %				GUI
 %				NaoHandler
-%		
-%%
-\section{Architektur}\label{k:Architektur}
-Die Architektur der Anwendung kann grob in zwei Teilbereiche gegliedert werden, den Sensorik- und den Aktorik-Bereich.
-Der Sensorteil ist dafür zuständig, die entsprechenden Gesten des Benutzers zu ermitteln und zu verarbeiten. Der Aktorteil der Anwendung ist dafür zuständig die Werte entsprechend auf die Wertebereiche des Nao-Koordinatensystems zu transformieren und diese dem Roboter zu übermitteln.
-
-
-\subsection{Interfaces}
-Als Schnittstelle zwischen der Erkennung und der Ausführung der Armpositionen wird essenziell die Methode \textit{updateAngles} vom Interface \textit{ISkeletonAngles} verwendet. Diese stellt alle benötigten Winkel wie Shoulder Pitch, Shoulder Roll, Ellbow Roll, Elbow Yaw bereit. Somit kann dieses Interface von allen Klassen implementiert werden, die immer die aktuellen Werte benötigen, wie der NaoHandler und die GUI.
-
-\subsection{Klassendiagramm}
-
 \subsection{Flussdiagramm: Winkelerkennung}
+
+
 
 \todo{Architekturidee: Input, Verarbeitung(evtl. Filter->Probleme Ruckeln?), Output, }
