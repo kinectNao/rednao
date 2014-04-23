@@ -26,7 +26,13 @@ Der Aktorteil der Anwendung transformiert die Posen der Armgelenke in den Nao-We
 %							Mapping Kinect-Nao-Raum, Ruckeln vermeiden
 %
 
-Klassendiagramm\todo{Klassendiagramm einfuegen}
+
+\begin{figure}[H]						
+	\centering							
+	\includegraphics[scale=0.8]{Bilder/classdiagramm.PNG}
+	\caption{UML - Klassendiagramm}						
+	\label{f:classdiagramm}						
+\end{figure}
 
 \subsection{MainWindow}
 Die C\# Applikation wird als WPF-Anwendung gestartet. Dies geschieht in der Klasse \textbf{MainWindow}. Hierbei werden alle Parameter initialisiert und alle nötigen Objekte erzeugt, wie der KinectSensor und der KinectHandler. Es wird wie in Kapitel ...SDK... beschrieben, der Tiefenstream und der Skeletonstream der Kinect aktiviert und anschließend ein "AllFramesReady"-Event registriert, das benutzt wird, sobald ein Skelett vor der Kamera vollständig erkannt wurde. Im Eventhandler wird der Berechnungs-Handler mit der aktuellen Position des gefilterten Skelettes versorgt. Zudem wird die GUI mit dem aktuellen RGB-Bild aktualisiert und erhält noch ein Skelett-Overlay, sodass man auch im Fenster sehen kann, dass ein Skelett erkannt wurde und kann dieses betrachten. Eine weitere Funktion dieser Klasse ist, das kontrollierte Beenden der Applikation. Nach schließen des Programmes, werden alle Berechnungen gestoppt, die Handler heruntergefahren und Kinect ausgeschaltet.
