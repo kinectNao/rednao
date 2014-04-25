@@ -1,6 +1,6 @@
 \section{Kinect Hardware}
-Microsoft brachte im November 2010 mit dem Produkt Xbox Kinect eine neues Produkt auf den Markt. Mit diesem war es möglich, ihr eigenes Produkt Xbox 360 über eine 3D-Kamera zu steuern und Spiele zu spielen. 
-Mit diesem Produkt konnte erstmals ein preiswerter Sensor verwendet werden, um 3D-Bilddaten auszuwerten.
+Microsoft brachte im November 2010 mit dem Produkt Xbox Kinect eine neues Produkt auf den Markt. Mit diesem war es möglich, ihr eigene Spielkonsole Xbox 360 über eine 3D-Kamera zu steuern und Spiele zu spielen. 
+Mit dieser Kamera konnte erstmals ein preiswerter Sensor verwendet werden, um 3D-Bilddaten auszuwerten.
 Im Folgenden wird auf die Hardware des Sensors näher eingegangen:\\[0.2cm]
 
 \begin{figure}[H]						
@@ -20,7 +20,7 @@ zu realisieren. \cite{webb2012beginning}
 	Ein wesentlicher Teil der Kinect ist die RGB Kamera. Diese liefert ein Bild, das alleine
 	oder auch in Kombinationen weiterer Funktionen verwendet werden kann.
 	Das Sichtfeld der Kamera beträgt 43 Grad in der Vertikalen, sowie 57 Grad in der Horizontalen.
-	Bei einer Auflösung von 640 x 480 Pixel werden 30 FPS und bei 1280 x 960 Pixel noch 12 FPS unterstützt.
+	Bei einer Auflösung von 640 x 480 Pixel werden 30 \ac{FPS} und bei 1280 x 960 Pixel noch 12 \ac{FPS} unterstützt.
 	Wobei standardmäßig die geringere Auflösung genügt und deshalb auch verwendet wird.
 	\cite{jana2012kinect}	
 
@@ -65,7 +65,7 @@ zu realisieren. \cite{webb2012beginning}
 Die \textit{Depth from Focus} Methode beruht darauf, dass ein Gegenstand immer verschwommener wird, je weiter weg er sich von der Kinect befindet. Um diesen Effekt optimal zu nutzen, befindet sich vor dem Tiefensensor eine spezielle astigmatische Linse, die diesen Effekt zusätzlich verstärkt und einen Punkt zu einer Ellipse werden lässt, je weiter er von der Linse entfernt ist.\cite{pdf:maccormick}	\\
 Die \textit{Depth from Stereo} Methode beruht auf der Parallaxe. Verändert ein Beobachter seine eigene Position, so beobachtet dieser eine scheinbare Änderung der Position des beobachteten Objektes \cite{ws:wikiparallaxe}. Hierbei erscheinen nahe liegende Objekte größer verschoben als weiter entfernte Objekte. Das \glqq Verschieben\grqq entsteht durch die Position der zwei Kameras. Anhand dieser Methoden kann der PrimeSense-Chip also die Tiefeninformationen aus der Szene extrahieren.	
 	
-Der Vorteil dieser Auswertung ist, dass zu einem Zeitpunkt nicht nur ein Punkt, sondern gleich eine komplette Punktewolke ausgerechnet werden kann und somit auch mehrere Bewegungen gleichzeitig. Zum Beispiel eine Arm und eine Beinbewegung gleichzeitig.
+Der Vorteil dieser Auswertung ist, dass zu einem Zeitpunkt nicht nur ein Punkt, sondern gleich eine komplette Punktewolke ausgerechnet und somit auch mehrere Bewegungen gleichzeitig erfasst werden können. Zum Beispiel eine Arm und eine Beinbewegung gleichzeitig.
 	
 	
 	

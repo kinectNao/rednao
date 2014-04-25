@@ -18,7 +18,7 @@
 
 
 
-Die im vorigen Kapitel aufgezeigte Hardware liefert die entsprechenden Sensorinformationen, die nun
+Die im vorherigen Kapitel aufgezeigte Hardware liefert die entsprechenden Sensorinformationen, die nun
 softwaretechnisch zu einer abstrakteren Ebene zusammengefasst werden müssen. Die Funktion dieser
 Verarbeitungen speziell für das Microsoft Kinect SDK soll in diesem Kapitel erläutert werden.
 
@@ -32,9 +32,9 @@ Verarbeitungen speziell für das Microsoft Kinect SDK soll in diesem Kapitel erl
 \end{description}
 
 \noindent
-Wie bereits erwähnt sind die Audiodaten für dieses Projekt jedoch irrelevant. Wichtig sind primär die Bilddaten inklusive Tiefenwerte.
-Das Kinect SDK bietet bereits standardmäßig Zugriff auf diese Werte. Dabei können im Programm bestimmte Proxyobjekte registriert und abgefragt werden. Wie diese im Programm letztendlich verwendet werden,
-wird im folgenden Kapitel \ref{SDK} \nameref{SDK} näher erläutert. Dieses Kapitel beschäftigt sich
+Wie bereits erwähnt sind die Audiodaten für dieses Projekt jedoch irrelevant. Wichtig sind primär die Bilddaten inklusive der Tiefenwerte.
+Das Kinect SDK bietet bereits standardmäßig Zugriff auf diese Zahlen. Dabei können im Programm bestimmte Proxyobjekte registriert und abgefragt werden. Wie diese im Programm letztendlich verwendet werden,
+wird im folgenden Kapitel \myref{SDK} näher erläutert. Dieses Kapitel beschäftigt sich
 damit, wie diese Funktionen im Inneren funktionieren.
 
 %	Depth Stream
@@ -55,7 +55,7 @@ damit, wie diese Funktionen im Inneren funktionieren.
 Der Tiefenstream (Depth-Stream) liefert zu jedem Pixel im Sichtfeld (43 Grad vertikal, 57 Grad horizontal) einen Tiefenwert. Dieser Wert enthält die Entfernung in Millimetern zu dem jeweiligen Objekt.
 Damit ist das am nächsten befindliche Objekt gemeint, da verdeckte Objekte nicht vom Sensor erkannt werden.
 Aus diesem Stream kann man beispielsweise ein Tiefenbild mit verschiedenen Grauwerten generieren, die repräsentativ für die Entfernung zur Kinect stehen. Die Depth-Stream Daten werden in einem 16 Bit Array transportiert. Dabei sind 3 untersten Bits jedoch für die Erkennung von mehreren Spielern reserviert
-(Siehe Kapitel \ref{skeleton} \nameref{skeleton}). Die oberen 13 Bit enthalten die eigentlichen Tiefendaten. Ein solcher Tiefenstream kann wie folgt aussehen:
+(Siehe Kapitel \myref{skeleton}). Die oberen 13 Bit enthalten die eigentlichen Tiefendaten. Ein solcher Tiefenstream kann wie folgt aussehen:
 
 \todo{TiefenstreamBild}
 %Einfuegen: Bild mit Tiefenstream
@@ -73,7 +73,7 @@ Somit liegt der Arbeitsraum der Kinect im normalen Modus zwischen 0.8m und 4m. D
 
 Anhand dieses Tiefenstreams ist es nun möglich Spieler (Menschen) zu extrahieren und deren Bewegungen
 in Echtzeit zu erfassen. Kinect bietet durch dessen SDK bereits eine Möglichkeit, diese Daten zu
-erfassen und auszuwerten. Da das fertige Objekt durch ein Skelett dargestellt wird, wird dies auch Skeleton-Objekt oder einfach nur als Skeleton bezeichnet. Für dieses Projekt ist dieses Skeleton-Objekt von großer Bedeutung. Anhand von Vergleichsmustern erzeugt die Software -nicht Kinect!- einen sog. Skeletonstream, der versucht die Position eines menschlichen Skeletts im Kinect Koordinatenraum abzubilden.\cite{SWB-376536934}
+aufzuzeichnen und auszuwerten. Da das fertige Objekt durch ein Skelett dargestellt wird, ist dies auch als Skeleton-Objekt oder einfach nur als Skeleton bezeichnet. Für dieses Projekt ist dieses Skeleton-Objekt von großer Bedeutung. Anhand von Vergleichsmustern erzeugt die Software -nicht Kinect!- einen sog. Skeletonstream, der versucht die Position eines menschlichen Skeletts im Kinect Koordinatenraum abzubilden.\cite{SWB-376536934}
 Wie genau dies funktioniert wird im folgenden Kapitel erläutert.
 
 
@@ -111,7 +111,7 @@ Wie genau dies funktioniert wird im folgenden Kapitel erläutert.
 %
 \subsection{Der Skeletonstream}\label{skeleton}
 Damit ein Benutzer und dessen Bewegungen mittels Kinect erkannt und im Programm verarbeitet werden können, wird der Tiefenstream entsprechend ausgewertet. Als Ergebnis erhält man ein menschliches Skelett, das aus
-20 Gelenken (Joints) besteht. Diese Joints sind im Skeletonobjekt hierarchisch von der Hüfte aus miteinander verbunden und bilden somit das Skelett eines Spielers. Die folgende Grafik illustriert alle erkannten Gelenke und deren Positionen. Für dieses Projekt sind insbesondere die Joints textit{Shoulder}, \textit{Elbow}, \textit{Wrist} und \textit{Hip} von hoher Bedeutung, da mit ihnen die Winkel der Gliedmaßen errechnet werden können (Siehe Kapitel \ref{algo_angle} \nameref{algo_angle}).
+20 Gelenken (Joints) besteht. Diese Joints sind im Skeletonobjekt hierarchisch von der Hüfte aus miteinander verbunden und bilden somit das Skelett eines Spielers. Die folgende Grafik illustriert alle erkannten Gelenke und deren Positionen. Für dieses Projekt sind insbesondere die Joints \textit{Shoulder}, \textit{Elbow}, \textit{Wrist} und \textit{Hip} von hoher Bedeutung, da mit ihnen die Winkel der Gliedmaßen errechnet werden können (Siehe Kapitel \myref{algo_angle}).
 
 \begin{figure}[H]						
 	\centering							
@@ -122,12 +122,13 @@ Damit ein Benutzer und dessen Bewegungen mittels Kinect erkannt und im Programm 
 
 Ein Kinectsystem kann bis zu 6 Spieler gleichzeitig erkennen, wobei nur von zwei Spielern die exakte Position aller Gelenkwinkel erkannt werden kann. Von den anderen vier Spielern wird nur die Position im Raum ermittelt, nicht jedoch die exakten Koordinaten aller 20 Joints. Wie schon im vorigen Kapitel erwähnt, wird einem Spieler nach dessen Erkennung ein Index zugeordnet. Dieser befindet sich im Tiefenarray, falls die Skeletonfunktion aktiviert wurde. Innerhalb dieses Projektes ist dieser jedoch irrelevant, da angenommen wird, dass immer nur ein Spieler
 den Roboter steuern wird.\\ \\
+
 \textbf{Skelettextraktion}\\
 Hinter der Extraktion des Skeletts steckt ein Algorithmus, der bereits im \textit{Microsoft Kinect SDK} vorhanden ist. 
 Die Anforderungen an diesen Algorithmus sind hoch, denn er soll Menschen mit verschiedenen Größen,
 Breiten und Kleidern in Echtzeit erkennen.
 Damit dies überhaupt möglich ist, wird maschinelles Lernen verwendet. Zunächst werden die aufgenommenen Tiefendaten in eine sog. \textit{Rendering Pipeline}\cite{pdf:realtime_human_pose} gegeben. Diese vergleicht die aufgenommenen Daten mit bereits
-vorhandenen Beispielen, die mit verschiedenen Menschen aufgenommen wurden. Anhand eines Decition Trees, der durch maschinelles Lernen erzeugt wurde, wird ein Pixel mit einer gewissen Wahrscheinlichkeit zu einem Körpersegment zugeordnet. Der Algorithmus arbeitet zur Erhöhung der Genauigkeit mit mehreren Bäumen gleichzeitig. Somit können die Körpersegmente zugeordnet werden, was in der folgenden Grafik farbig dargestellt wird.
+vorhandenen Beispielen, die mit verschiedenen Menschen aufgenommen wurden. Anhand eines Decision Trees, der durch maschinelles Lernen erzeugt wurde, wird ein Pixel mit einer gewissen Wahrscheinlichkeit zu einem Körpersegment zugeordnet. Der Algorithmus arbeitet zur Erhöhung der Genauigkeit mit mehreren Bäumen gleichzeitig. Somit können die Körpersegmente zugeordnet werden, was in der folgenden Grafik farbig dargestellt wird.
 
 \begin{figure}[H]						
 	\centering							
