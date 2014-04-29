@@ -84,6 +84,138 @@
               LastKnownLocation="Package7_1609.uml" />
           </interfaceRealization>
         </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="629c0e86-b629-499c-8b05-3eda2c83deb8"
+            isDerived="false"
+            sourceEndRoleName="SkeletonAngleHandler"
+            targetEndRoleName="SkeletonAngleCalculator"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e9d96a32-8ed4-4b09-a335-abcce9df0743"
+              LastKnownName="SkeletonAngleCalculator"
+              LastKnownLocation="Package7_1609.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="46671ba6-8912-4da4-960b-70a91107cdd2"
+                  name="SkeletonAngleHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="efc1b6df-0eb3-4ddc-9144-7983944ead26"
+                  name="SkeletonAngleCalculator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7ebd1274-2c17-4245-9d04-7c8c4e963871"
+            isDerived="false"
+            sourceEndRoleName="SkeletonAngleHandler"
+            targetEndRoleName="NaoHandler"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="4e853da4-ea89-4386-afb3-1d3678f85c4e"
+              LastKnownName="NaoHandler"
+              LastKnownLocation="Package1_1609.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3cf2d029-3f87-4652-a9a4-d1280c36a8f3"
+                  name="SkeletonAngleHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5e8643dc-165b-43b7-ab60-a49dab92b741"
+                  name="NaoHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e5260f64-e780-4f76-a833-bc72f3fbbb3e"
+            isDerived="false"
+            sourceEndRoleName="SkeletonAngleHandler"
+            targetEndRoleName="AngleView"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="1f5ec02c-e405-4b8f-9550-97a2ec13d50c"
+              LastKnownName="AngleView"
+              LastKnownLocation="Package7_1609.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a9d6d06d-fcd8-4b73-ac5e-ca97a106596a"
+                  name="SkeletonAngleHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0c184d69-c0e7-4dfa-af86-300ad72b45bf"
+                  name="AngleView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="32508b53-7c8c-49db-9419-b7ae9990c670"
+                      name="Lower"
+                      value="2" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="256cb815-3179-4a50-a740-04f0e613efd3"
+                      name="Upper"
+                      value="2" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="e54cbaac-260d-419e-a1fa-b898570742ce"
@@ -1426,6 +1558,47 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="faa356c8-2285-4676-8f95-6941a4601da5"
+            isDerived="false"
+            sourceEndRoleName="Filter"
+            targetEndRoleName="ArmAngles"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="3f1a8227-b188-4f19-ab48-aa53e0a6ff45"
+              LastKnownName="ArmAngles"
+              LastKnownLocation="Package7_1609.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4135c970-b5e5-41df-aaa5-58e36354a14d"
+                  name="Filter"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="414a14ef-afd3-4b1a-a6d0-4f750ecfb0e7"
+                  name="ArmAngles"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="7727b0b6-e306-406b-bced-965701c4f133"
@@ -3801,6 +3974,86 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="c9d77199-dcf6-448e-a7fb-70000aa75861"
+            isDerived="false"
+            sourceEndRoleName="SkeletonAngleCalculator"
+            targetEndRoleName="Filter"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="7dc4ead3-3702-444c-b01f-03f41c71b514"
+              LastKnownName="Filter"
+              LastKnownLocation="Package7_1609.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5d44e2ba-fbf3-47aa-9987-712de0396a84"
+                  name="SkeletonAngleCalculator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="58598f38-8840-432a-871a-b17bf855a56a"
+                  name="Filter"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="fc0f9edf-b400-4e9c-9726-ec70dd1c4999"
+            isDerived="false"
+            sourceEndRoleName="SkeletonAngleCalculator"
+            targetEndRoleName="AngleCalculation"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="552cdad4-9d18-4e53-9f78-bc51628b5611"
+              LastKnownName="AngleCalculation"
+              LastKnownLocation="Package7_1609.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b47f857e-afc7-4320-a931-8551320d8675"
+                  name="SkeletonAngleCalculator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ac862b85-16db-429b-a78b-26ef3bfc2bda"
+                  name="AngleCalculation"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="3b9d559f-07fb-4edd-9974-610cb72c3afb"

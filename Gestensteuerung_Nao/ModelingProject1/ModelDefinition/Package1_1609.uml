@@ -2635,7 +2635,7 @@
         </generalsInternal>
         <targetEnds>
           <association
-            Id="41123bc2-cd7e-4315-a888-17ffd83a93b3"
+            Id="4dd9ffd5-54a0-4e33-a6ff-186716a2d8dd"
             isDerived="false"
             sourceEndRoleName="LArm"
             targetEndRoleName="Angles"
@@ -2648,20 +2648,20 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="23c571da-f790-4935-8ac5-5680113b5999"
+                  Id="e658bd13-441a-4511-aecd-c1d86f8cc02e"
                   name="LArm"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
                   isDerived="false"
                   isDerivedUnion="false"
-                  aggregation="None"
+                  aggregation="Shared"
                   isComposite="false"
                   isNavigableOwned="false" />
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="5c79c2d1-60e7-427f-88a6-5128f94ff9ea"
+                  Id="70654ce1-9a68-4ceb-a3f5-817841cba4e7"
                   name="Angles"
                   isLeaf="false"
                   isStatic="false"
@@ -3865,7 +3865,7 @@
         </suppliersInternal>
         <targetEnds>
           <association
-            Id="563ef0b0-5672-4fee-9b6d-b6f5f236150a"
+            Id="ae66a4fa-379a-4463-89fc-c9862d94e225"
             isDerived="false"
             sourceEndRoleName="NaoHandler"
             targetEndRoleName="LArm"
@@ -3878,20 +3878,20 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="73de1a5e-3690-4daf-916a-5c498d3ea845"
+                  Id="9ed93e35-6203-4868-a30b-7ea985e63974"
                   name="NaoHandler"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
                   isDerived="false"
                   isDerivedUnion="false"
-                  aggregation="None"
+                  aggregation="Shared"
                   isComposite="false"
                   isNavigableOwned="false" />
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="c3e327ba-b75a-4625-a41d-d6efc19526b1"
+                  Id="e6c7186b-bf58-4cef-9184-a3184158a821"
                   name="LArm"
                   isLeaf="false"
                   isStatic="false"
@@ -3904,7 +3904,7 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="482971dd-2f55-4d9f-85d5-e8cbd1717386"
+            Id="2a053ac1-20a0-409d-b9aa-e264be68a93b"
             isDerived="false"
             sourceEndRoleName="NaoHandler"
             targetEndRoleName="RArm"
@@ -3917,20 +3917,20 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="6a3d3bc2-1e85-4ec9-9258-c9fa0ef596b2"
+                  Id="d13a46c3-9a98-4a68-b33c-2774d70cd38a"
                   name="NaoHandler"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
                   isDerived="false"
                   isDerivedUnion="false"
-                  aggregation="None"
+                  aggregation="Shared"
                   isComposite="false"
                   isNavigableOwned="false" />
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="e719761e-0e3c-4f85-b98f-176e5eef4b8c"
+                  Id="1a71cbb3-2b37-4a5a-81fd-3189e8516353"
                   name="RArm"
                   isLeaf="false"
                   isStatic="false"
@@ -4977,7 +4977,7 @@
         </generalsInternal>
         <targetEnds>
           <association
-            Id="1c73f5d7-f85a-41d5-8847-0b14b0d64c62"
+            Id="f422bd3f-8ee3-40d9-b1a5-931cbf6a0774"
             isDerived="false"
             sourceEndRoleName="RArm"
             targetEndRoleName="Angles"
@@ -4990,20 +4990,20 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="218b8e0a-b529-4805-9752-fd6882d52575"
+                  Id="a96ca3b5-badd-4605-9921-cff6cfe9d021"
                   name="RArm"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
                   isDerived="false"
                   isDerivedUnion="false"
-                  aggregation="None"
+                  aggregation="Shared"
                   isComposite="false"
                   isNavigableOwned="false" />
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="7a138225-788d-487a-ad93-37bfc74d85e6"
+                  Id="c30893ce-94aa-4dab-a4d8-fd97365b439e"
                   name="Angles"
                   isLeaf="false"
                   isStatic="false"
