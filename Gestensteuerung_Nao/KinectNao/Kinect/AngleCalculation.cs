@@ -14,7 +14,7 @@ namespace KinectNao.Kinect
         public static float getShoulderPitch_Right(Skeleton skeleton)
         {
             // Get fitting joints
-            Joint hip_j = skeleton.Joints[JointType.HipRight];
+            Joint hip_j = skeleton.Joints[JointType.HipRight]; 
             Joint shoulder_j = skeleton.Joints[JointType.ShoulderRight];
             Joint elbow_j = skeleton.Joints[JointType.ElbowRight];
 

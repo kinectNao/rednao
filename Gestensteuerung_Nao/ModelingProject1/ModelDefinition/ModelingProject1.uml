@@ -48,6 +48,14 @@
         LastKnownName="Microsoft"
         LastKnownLocation="Package_1611.uml" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="cb13f47c-73ca-4dd6-9872-27df83e03af1"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"

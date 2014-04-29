@@ -1,25 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="ab16c85f-2da6-42ff-b7c0-4673084a8f4a" name="UMLClassDiagram1" linkedPackageId="5357fe1d-9b5a-4b17-851c-e4327d6f83a4" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="02b7f02e-9435-4322-80cc-5a2a7a403f22">
-      <profileInstance Id="dc298ed7-f6a7-4406-ae8e-8d21f485d76a" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="fb28834b-21d0-468f-9ce2-6236b5ba261b">
-      <profileInstance Id="28afb4a8-8d76-4a1e-b920-4e5d8086cfcf" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="017c1923-56e1-41d5-9f15-f5d93a506be6">
-      <profileInstance Id="7045b38b-ede9-474e-8b31-ea84c9fc6801" name="CSharpProfile">
-        <elementDefinition Id="bdd0bfb2-83f6-4042-9f96-10f6b8d09e05" />
-      </profileInstance>
-      <elementDefinition Id="adf64043-4679-4d5c-be39-315959422932" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="91bb5d45-c4db-4fbf-8279-618d8b9104d3" name="Angles" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -1208,21 +1188,21 @@
           </generalization>
         </generalsInternal>
         <targetEnds>
-          <association Id="932ea8e7-d623-4e32-b15c-690e5c64ec5e" isDerived="false" sourceEndRoleName="LArm" targetEndRoleName="Angles" isLeaf="false" isAbstract="false">
+          <association Id="47dde000-bd5a-4661-884b-592e7daac2f0" isDerived="false" sourceEndRoleName="LArm" targetEndRoleName="Angles" isLeaf="false" isAbstract="false">
             <classMoniker Id="91bb5d45-c4db-4fbf-8279-618d8b9104d3" LastKnownName="Angles" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="68282e11-5732-4911-8987-940394e03311" name="LArm" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="23c571da-f790-4935-8ac5-5680113b5999" />
+                <memberEnd Id="71f45064-1698-4d07-b0e7-4b067b7d2283" name="LArm" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e658bd13-441a-4511-aecd-c1d86f8cc02e" />
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="98886b53-7a5c-409d-9e68-721351466933" name="Angles" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="5c79c2d1-60e7-427f-88a6-5128f94ff9ea" />
+                <memberEnd Id="001d1e34-65c1-4681-8a3f-939015f6af3f" name="Angles" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="70654ce1-9a68-4ceb-a3f5-817841cba4e7" />
                 </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
-            <elementDefinition Id="41123bc2-cd7e-4315-a888-17ffd83a93b3" />
+            <elementDefinition Id="4dd9ffd5-54a0-4e33-a6ff-186716a2d8dd" />
           </association>
         </targetEnds>
         <ownedAttributesInternal>
@@ -2059,37 +2039,37 @@
           </interfaceRealization>
         </suppliersInternal>
         <targetEnds>
-          <association Id="6225d425-f7aa-4e31-9008-85b5f992e9bb" isDerived="false" sourceEndRoleName="NaoHandler" targetEndRoleName="LArm" isLeaf="false" isAbstract="false">
+          <association Id="0df8a749-439b-4d34-9855-dd7772e316fa" isDerived="false" sourceEndRoleName="NaoHandler" targetEndRoleName="LArm" isLeaf="false" isAbstract="false">
             <classMoniker Id="04aa3c48-e0ff-491a-b075-44bdbf0e0b41" LastKnownName="LArm" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="b485ed48-f9ed-4628-8c44-ae2e06660960" name="NaoHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="73de1a5e-3690-4daf-916a-5c498d3ea845" />
+                <memberEnd Id="46c3eac4-95c6-4255-81af-6f304bcbca18" name="NaoHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9ed93e35-6203-4868-a30b-7ea985e63974" />
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="94de3315-2e9f-451a-9d35-7f29399e9068" name="LArm" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="c3e327ba-b75a-4625-a41d-d6efc19526b1" />
+                <memberEnd Id="aab6922c-13b6-4cb3-9c29-a3eeff75c232" name="LArm" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e6c7186b-bf58-4cef-9184-a3184158a821" />
                 </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
-            <elementDefinition Id="563ef0b0-5672-4fee-9b6d-b6f5f236150a" />
+            <elementDefinition Id="ae66a4fa-379a-4463-89fc-c9862d94e225" />
           </association>
-          <association Id="27a16e6f-12ba-4f82-bd23-65d6f6c0109c" isDerived="false" sourceEndRoleName="NaoHandler" targetEndRoleName="RArm" isLeaf="false" isAbstract="false">
+          <association Id="fa8f3f2a-07bb-4aa4-bac5-27c0ac645dd0" isDerived="false" sourceEndRoleName="NaoHandler" targetEndRoleName="RArm" isLeaf="false" isAbstract="false">
             <classMoniker Id="eb78034e-11de-40f2-9653-73a85e6a0b31" LastKnownName="RArm" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="56957803-d4b0-4b7e-9e1c-052679d98598" name="NaoHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="6a3d3bc2-1e85-4ec9-9258-c9fa0ef596b2" />
+                <memberEnd Id="6d86777a-7bda-4a77-add5-b12307cbbe54" name="NaoHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d13a46c3-9a98-4a68-b33c-2774d70cd38a" />
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="d74c3eda-302c-46f1-93d1-24e9d6164a42" name="RArm" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="e719761e-0e3c-4f85-b98f-176e5eef4b8c" />
+                <memberEnd Id="60a15d59-08c4-453b-bce5-b651ad69c81d" name="RArm" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1a71cbb3-2b37-4a5a-81fd-3189e8516353" />
                 </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
-            <elementDefinition Id="482971dd-2f55-4d9f-85d5-e8cbd1717386" />
+            <elementDefinition Id="2a053ac1-20a0-409d-b9aa-e264be68a93b" />
           </association>
         </targetEnds>
         <ownedAttributesInternal>
@@ -2873,21 +2853,21 @@
           </generalization>
         </generalsInternal>
         <targetEnds>
-          <association Id="4f757f33-0970-4dba-8bd1-20154e8fa37a" isDerived="false" sourceEndRoleName="RArm" targetEndRoleName="Angles" isLeaf="false" isAbstract="false">
+          <association Id="1c9569a3-b397-4a9f-9067-b594086fec6e" isDerived="false" sourceEndRoleName="RArm" targetEndRoleName="Angles" isLeaf="false" isAbstract="false">
             <classMoniker Id="91bb5d45-c4db-4fbf-8279-618d8b9104d3" LastKnownName="Angles" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
-                <memberEnd Id="9a93b190-2820-4629-88ae-ac549a278de9" name="RArm" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="218b8e0a-b529-4805-9752-fd6882d52575" />
+                <memberEnd Id="2eecfb7c-153b-42b2-a40d-f3b578a91c64" name="RArm" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a96ca3b5-badd-4605-9921-cff6cfe9d021" />
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="e6b18827-8365-4cbd-9985-a997e653d908" name="Angles" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="7a138225-788d-487a-ad93-37bfc74d85e6" />
+                <memberEnd Id="9891fc2d-688a-4c1f-92c8-2020a240d3ac" name="Angles" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c30893ce-94aa-4dab-a4d8-fd97365b439e" />
                 </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
-            <elementDefinition Id="1c73f5d7-f85a-41d5-8847-0b14b0d64c62" />
+            <elementDefinition Id="f422bd3f-8ee3-40d9-b1a5-931cbf6a0774" />
           </association>
         </targetEnds>
         <ownedAttributesInternal>
@@ -3811,6 +3791,24 @@
           </stereotypeInstance>
         </appliedStereotypesInternal>
         <elementDefinition Id="7dc4ead3-3702-444c-b01f-03f41c71b514" />
+        <targetEnds>
+          <association Id="96343f43-024a-4753-9531-5a566f7e97bd" isDerived="false" sourceEndRoleName="Filter" targetEndRoleName="ArmAngles" isLeaf="false" isAbstract="false">
+            <classMoniker Id="296566be-6f84-4ae0-9455-beef4daa7315" LastKnownName="ArmAngles" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1d12d8fb-0eef-49cf-a286-2b0f3b868079" name="Filter" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4135c970-b5e5-41df-aaa5-58e36354a14d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1c3e016d-da23-4e5f-a05d-0278573c4126" name="ArmAngles" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="414a14ef-afd3-4b1a-a6d0-4f750ecfb0e7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="faa356c8-2285-4676-8f95-6941a4601da5" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="ad2c7fbc-1c4d-4a20-aa65-34dcb8651cb5" name="armAngle" isLeaf="false" isStatic="false" isReadOnly="false" isOrdered="true" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <referencesInternal>
@@ -4462,227 +4460,6 @@
       </Interface>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="2a1485d3-1d8b-4152-b313-c462899d5d6e" name="KinectShutdown" visibility="Package" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <referencesInternal>
-          <reference Id="a56ff989-7ddd-417b-b5ad-491c61a22c67" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao.Kinect Type%3DKinectShutdown" tag="ViewCode">
-            <elementDefinition Id="35418c37-68cd-4721-85e7-12dc9677a2b4" />
-          </reference>
-        </referencesInternal>
-        <appliedStereotypesInternal>
-          <stereotypeInstance Id="286fc071-c382-4e18-afec-8a257b06e204" name="class" profile="CSharpProfile">
-            <elementDefinition Id="3b4a01ff-a82e-4c85-8009-27e1bf377e77" />
-            <propertyInstances>
-              <stereotypeInstanceHasPropertyInstances Id="566ba68f-37ea-41f2-a9ce-940d8f553986">
-                <propertyInstance Id="36e8a0aa-257d-40b0-96ef-26c115d8c9c9" name="ClrAttributes">
-                  <elementDefinition Id="3d0765d0-e820-4ed5-8f40-00ed8b51edd6" />
-                </propertyInstance>
-                <elementDefinition Id="16955b25-3854-4a77-8733-7c9846609c30" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances Id="fd01cdbb-f46d-45be-ab96-674657ed44aa">
-                <propertyInstance Id="eb02a2de-e67e-45bf-9a19-2297c8a6ef85" name="IsPartial" value="false">
-                  <elementDefinition Id="a9384820-af0d-4997-87c7-11b650fc1c51" />
-                </propertyInstance>
-                <elementDefinition Id="26513786-2fee-41af-9fbb-405236343a3e" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances Id="d6ad041e-dd04-437a-9050-86de302e6797">
-                <propertyInstance Id="ded3952a-c577-42f8-8f71-367598b868bb" name="IsStatic" value="False">
-                  <elementDefinition Id="798b47fb-4bd6-4fac-9682-4cd1efabb1ba" />
-                </propertyInstance>
-                <elementDefinition Id="d9fc395b-1803-4c14-9e75-d768f1572372" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances Id="814c4e0b-c591-460c-b30a-e7b3bb35db71">
-                <propertyInstance Id="b67143d5-42f2-4daf-b1cb-45657f444c16" name="IsUnsafe" value="false">
-                  <elementDefinition Id="43a76fb9-c4fb-40bd-8758-2a6674699c0a" />
-                </propertyInstance>
-                <elementDefinition Id="f2ab79d3-d51b-4140-9032-9b44a62aa27e" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances Id="c94ad234-797b-4671-b572-4927f861c13f">
-                <propertyInstance Id="6dd680c6-5b85-42ed-8549-3ca81760b02f" name="PackageVisibility" value="internal">
-                  <elementDefinition Id="e0570bab-b083-4d1c-a7fe-9c8f13f0ff81" />
-                </propertyInstance>
-                <elementDefinition Id="1c12a968-0920-4f18-8401-96bf57a8b4ab" />
-              </stereotypeInstanceHasPropertyInstances>
-            </propertyInstances>
-          </stereotypeInstance>
-        </appliedStereotypesInternal>
-        <elementDefinition Id="8721c791-e4c6-4f20-b153-4dabc6b7a184" />
-        <ownedAttributesInternal>
-          <property Id="33287448-f90a-4f3a-840b-5cbc4969ccf1" name="sensor" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <referencesInternal>
-              <reference Id="af64825b-62af-4d7c-9c18-93732c29a7db" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao.Kinect Type%3DKinectShutdown Member%3Dsensor" tag="ViewCode">
-                <elementDefinition Id="3af6c602-e545-43c7-bdba-aa0e5602b78a" />
-              </reference>
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance Id="d6354b67-b6c5-4181-b583-0eef808b8b58" name="field" profile="CSharpProfile">
-                <elementDefinition Id="c82ef6f7-1372-4f72-b93d-1fe4ffb4ed3a" />
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="3cf28d11-1d18-4458-bf87-55ddfc1d724d">
-                    <propertyInstance Id="3f5f17f1-4d16-4054-b943-5a788399d57b" name="ClrAttributes">
-                      <elementDefinition Id="cde8eacc-4b54-48a1-9b50-fbb06824e23b" />
-                    </propertyInstance>
-                    <elementDefinition Id="72bc5909-501e-470a-9350-9e6f5022fd5f" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="788e4cba-5b45-4228-873f-82e30f1358eb">
-                    <propertyInstance Id="fd27c45a-33f7-4769-999d-57cef247752e" name="IsConst" value="false">
-                      <elementDefinition Id="4cdf9b4c-fc0d-40df-8e7f-e18b76a30ca1" />
-                    </propertyInstance>
-                    <elementDefinition Id="1523f571-2cbe-4ba7-84c3-f6ba382ef2d5" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="bdff37b3-f88d-44bd-b62d-1652feb15eb7">
-                    <propertyInstance Id="620d8549-60d8-442b-8c0d-c5cec1f3f418" name="IsNullable" value="false">
-                      <elementDefinition Id="9d5d112d-6831-4a2e-b6f5-358252764bbd" />
-                    </propertyInstance>
-                    <elementDefinition Id="74076e49-a5cd-4180-a752-b12bfd1ecb70" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="5aa99bd0-891e-4c1e-9731-65fc24e0c1b6">
-                    <propertyInstance Id="3f107cf2-ec81-4bda-84b4-61ff6deec124" name="IsVolatile" value="false">
-                      <elementDefinition Id="a382dfea-ecf1-4bef-bf5d-b8fd2f4db354" />
-                    </propertyInstance>
-                    <elementDefinition Id="84723fb0-5626-40b9-ac4d-f6fe960d9fd6" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="91121dc8-4773-4f8e-9f95-6864e233e3a2">
-                    <propertyInstance Id="ef3619e6-d4d6-47ce-9602-091209f1c1a3" name="PackageVisibility" value="internal">
-                      <elementDefinition Id="00f54582-f00e-4d69-bb3e-a2a3e5c1004b" />
-                    </propertyInstance>
-                    <elementDefinition Id="6dc49556-3fa6-4108-9327-541b2d63c739" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <elementDefinition Id="1edabbb6-0aaa-49dc-881b-ef12186c6859" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="d7484319-f170-4b2b-80c8-84a441ddf859" LastKnownName="KinectSensor" />
-            </type_NamedElement>
-          </property>
-        </ownedAttributesInternal>
-        <ownedOperationsInternal>
-          <operation Id="010a82d5-aec1-4977-8845-161b0a4c4957" name="KinectShutdown" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <referencesInternal>
-              <reference Id="0967e581-9fa8-4ebe-a4f2-a245ac51eda5" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao.Kinect Type%3DKinectShutdown Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FMicrosoft SDKs%2FKinect%2Fv1.8%2FAssemblies%2FMicrosoft.Kinect.dll&quot; Namespace%3DMicrosoft.Kinect Type%3DKinectSensor)])" tag="ViewCode">
-                <elementDefinition Id="5fbc738d-4b07-4fa8-985f-d1056c6d7d5f" />
-              </reference>
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance Id="22af3c61-d2f0-41cd-8e6c-94e452e95b92" name="method" profile="CSharpProfile">
-                <elementDefinition Id="88768aa1-d0a2-4cc1-9577-668b84ddf47a" />
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="a3c30ca9-9b07-4604-8705-a943cafe16e1">
-                    <propertyInstance Id="e7edbd43-124e-4994-a62a-cbf3c6c9ffdb" name="ClrAttributes">
-                      <elementDefinition Id="fc849c3b-a68f-4eac-8fe0-078689e45155" />
-                    </propertyInstance>
-                    <elementDefinition Id="005961f8-1a1e-4d63-84de-51cd41485a04" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="aac384f4-1bf5-4935-b1de-306c75b778bd">
-                    <propertyInstance Id="95cd5883-84ec-4b61-beab-a183517c54b6" name="IsPartial" value="false">
-                      <elementDefinition Id="1014d502-013d-41ef-8227-3ea716230a3e" />
-                    </propertyInstance>
-                    <elementDefinition Id="ceeb7a41-0ab1-4779-9a7d-6a000b5beb4f" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="6ba7a810-d5a9-4395-ae17-d928ca2cd146">
-                    <propertyInstance Id="41469824-a58e-40cb-bf99-254920152374" name="IsUnsafe" value="false">
-                      <elementDefinition Id="ca32ba08-d2e0-45e5-8cbc-ef780343b759" />
-                    </propertyInstance>
-                    <elementDefinition Id="b7c3102b-1366-4af0-8954-63a5f10c2a53" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="3ce29d47-b1e8-43d3-8ee3-f0bea3b783fd">
-                    <propertyInstance Id="b8f52835-2942-44b9-8c1f-85c7db00c311" name="Inheritance" value="none">
-                      <elementDefinition Id="f83df8f8-6a4e-449e-bf92-a78a93600c9c" />
-                    </propertyInstance>
-                    <elementDefinition Id="e5299e2f-1f99-4c49-9526-0db3475ef73d" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="64aa3fe1-3429-4304-9f0c-ed04ccd91dbf">
-                    <propertyInstance Id="6496bf6c-72de-4354-9da4-d3932b6a9534" name="PackageVisibility" value="internal">
-                      <elementDefinition Id="1f924407-dfc7-4b35-964d-2b0d19efbc34" />
-                    </propertyInstance>
-                    <elementDefinition Id="33521aa9-9b11-4ac6-9a8e-aca16b615f84" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="0449b6ef-6444-415c-a809-4dde18fcce60">
-                    <propertyInstance Id="046f10eb-9ee2-4ec0-85b9-f53844b4fb56" name="params" value="false">
-                      <elementDefinition Id="52568f93-5751-40cc-ab0e-8313d634ecc3" />
-                    </propertyInstance>
-                    <elementDefinition Id="09050040-b376-4dcf-bd4b-154f4493a20c" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <elementDefinition Id="5d5074f3-5c42-48ee-8099-8cec18da753f" />
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="8a4eacd1-fcf8-46bb-af31-b2105420386b" name="mySensor" direction="In">
-                  <referencesInternal>
-                    <reference Id="7049c898-0929-45c9-8309-5818a7ed5dd0" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao.Kinect Type%3DKinectShutdown Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FMicrosoft SDKs%2FKinect%2Fv1.8%2FAssemblies%2FMicrosoft.Kinect.dll&quot; Namespace%3DMicrosoft.Kinect Type%3DKinectSensor)]) ParameterIdentifier%3DmySensor" tag="ViewCode">
-                      <elementDefinition Id="2bb43b7a-ea76-457e-b106-2cd43be8242a" />
-                    </reference>
-                  </referencesInternal>
-                  <elementDefinition Id="11515ee9-ff2d-4d0a-b9b0-324bb4c36ac7" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="d7484319-f170-4b2b-80c8-84a441ddf859" LastKnownName="KinectSensor" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation Id="c5f71cd8-f3dd-41a8-881f-bdd264c35656" name="DoWork" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <referencesInternal>
-              <reference Id="cc3f5d99-ecf9-427f-b7c3-3e733f63d4ab" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao.Kinect Type%3DKinectShutdown Member%3DDoWork" tag="ViewCode">
-                <elementDefinition Id="e6ce2532-61a6-4a05-a061-41ff2791697a" />
-              </reference>
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance Id="42613f56-d708-422f-9cbc-76f2569d6021" name="method" profile="CSharpProfile">
-                <elementDefinition Id="01c546c8-af6c-4406-bf78-7f886c3cafc8" />
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="cb0bdaed-53c1-49f5-b3dc-2cb4c206de04">
-                    <propertyInstance Id="7f779cc6-1e8a-4d61-b3db-02bbe486763d" name="ClrAttributes">
-                      <elementDefinition Id="a9a2b9bb-f8ae-4fcd-bb91-0df1ef16a617" />
-                    </propertyInstance>
-                    <elementDefinition Id="9b33959f-edb7-42f7-b9ff-c99477ce73a9" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="22cc268c-e45b-4a27-8f59-1f35e5042f4c">
-                    <propertyInstance Id="053db273-f168-441a-856c-8b696af11355" name="IsPartial" value="false">
-                      <elementDefinition Id="97a25ccc-7b19-4884-8842-56bc34c0a978" />
-                    </propertyInstance>
-                    <elementDefinition Id="445e088b-a13c-469e-aa88-28387ddbd1e0" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="318f8ec5-a5b2-42b3-997c-4251f023fcee">
-                    <propertyInstance Id="63d7a367-e106-47ff-9237-4c485c5d113e" name="IsUnsafe" value="false">
-                      <elementDefinition Id="0fe76001-5d02-491e-8d1c-102fe5efdd3f" />
-                    </propertyInstance>
-                    <elementDefinition Id="b950da5d-2614-442b-a4f5-b14666d9e6b2" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="0e7bd8fb-8804-4ce9-b070-b7714c6f9415">
-                    <propertyInstance Id="30909d3c-7808-40de-835e-ea654cf79b28" name="Inheritance" value="none">
-                      <elementDefinition Id="707228a5-3c96-4dd3-b0eb-dcfdf10aae7c" />
-                    </propertyInstance>
-                    <elementDefinition Id="bcb082cc-de77-42c5-965f-3e5d16c58a6c" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="8e2f77c1-7610-4ad2-a759-93916e75ec71">
-                    <propertyInstance Id="a6918eaa-4ad0-4cd7-b96d-ddda353c622e" name="PackageVisibility" value="internal">
-                      <elementDefinition Id="6da70250-4b73-40a6-b692-bf88655b31f5" />
-                    </propertyInstance>
-                    <elementDefinition Id="9ae77209-771f-44fe-9a10-6ef09bdf8625" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances Id="cc7aa2ad-a0c3-49d4-82fc-e16f5d17471d">
-                    <propertyInstance Id="1fd86c59-43a7-4924-b30c-a671c5508832" name="params" value="false">
-                      <elementDefinition Id="a9162ce9-9bd8-4665-a06f-b71693095539" />
-                    </propertyInstance>
-                    <elementDefinition Id="7e50f4d9-49b1-4c6d-8b8d-77e4ada912ea" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <elementDefinition Id="fd687390-eef2-49ca-8ece-12ad14b982c2" />
-          </operation>
-        </ownedOperationsInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <packageHasNamedElement>
-      <referencedType Id="d7484319-f170-4b2b-80c8-84a441ddf859" name="KinectSensor" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Microsoft::Kinect::KinectSensor">
-        <elementDefinition Id="4e4ed5c2-c5f8-4cc9-b091-80030dc4be26" />
-      </referencedType>
-    </packageHasNamedElement>
-    <logicalClassDesignerModelHasTypes>
       <class Id="e13761d9-ad17-4546-aee6-0eea2d8af330" name="SkeletonAngleCalculator" visibility="Package" isAbstract="false" isLeaf="false" isActiveClass="false">
         <referencesInternal>
           <reference Id="31422526-6cfb-4120-932d-c7109ad4cad0" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao.Kinect Type%3DSkeletonAngleCalculator" tag="ViewCode">
@@ -4727,6 +4504,40 @@
           </stereotypeInstance>
         </appliedStereotypesInternal>
         <elementDefinition Id="e9d96a32-8ed4-4b09-a335-abcce9df0743" />
+        <targetEnds>
+          <association Id="5440f526-9091-4180-9202-6c5e99ce172b" isDerived="false" sourceEndRoleName="SkeletonAngleCalculator" targetEndRoleName="Filter" isLeaf="false" isAbstract="false">
+            <classMoniker Id="e95eb42b-66f9-4e54-beb1-595f3b5d3cc4" LastKnownName="Filter" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b2f68674-4b66-49b4-a3a9-d7d5729d74da" name="SkeletonAngleCalculator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5d44e2ba-fbf3-47aa-9987-712de0396a84" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8eb70b42-22e9-431b-9097-1709b0268749" name="Filter" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="58598f38-8840-432a-871a-b17bf855a56a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c9d77199-dcf6-448e-a7fb-70000aa75861" />
+          </association>
+          <association Id="7ab9eeaa-1a19-4ba4-8e4f-190b5b8ef0d7" isDerived="false" sourceEndRoleName="SkeletonAngleCalculator" targetEndRoleName="AngleCalculation" isLeaf="false" isAbstract="false">
+            <classMoniker Id="bfebd621-ce21-4a03-8a94-579d15dbe41a" LastKnownName="AngleCalculation" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="edfee583-fa50-415b-8862-c58c0734dd40" name="SkeletonAngleCalculator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b47f857e-afc7-4320-a931-8551320d8675" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="27754abb-965a-40cf-b7de-d634047707fe" name="AngleCalculation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ac862b85-16db-429b-a78b-26ef3bfc2bda" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fc0f9edf-b400-4e9c-9726-ec70dd1c4999" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="e664816a-bed3-416e-9041-478b7e311dbb" name="_shouldStop" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <referencesInternal>
@@ -5225,6 +5036,66 @@
             <elementDefinition Id="11879dce-48c7-4a82-b287-0fa181dc6393" />
           </interfaceRealization>
         </suppliersInternal>
+        <targetEnds>
+          <association Id="0cb4f781-2990-40f4-b2dd-c59082383c45" isDerived="false" sourceEndRoleName="SkeletonAngleHandler" targetEndRoleName="SkeletonAngleCalculator" isLeaf="false" isAbstract="false">
+            <classMoniker Id="e13761d9-ad17-4546-aee6-0eea2d8af330" LastKnownName="SkeletonAngleCalculator" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4ce58712-7e0d-4460-9b03-662f448337a2" name="SkeletonAngleHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="46671ba6-8912-4da4-960b-70a91107cdd2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bf45409a-f804-426f-99a9-1790a6cb053c" name="SkeletonAngleCalculator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="efc1b6df-0eb3-4ddc-9144-7983944ead26" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="629c0e86-b629-499c-8b05-3eda2c83deb8" />
+          </association>
+          <association Id="13db08e9-c078-445e-b58c-046665f21451" isDerived="false" sourceEndRoleName="SkeletonAngleHandler" targetEndRoleName="NaoHandler" isLeaf="false" isAbstract="false">
+            <classMoniker Id="3ba67f10-2c63-412e-8112-d1e69f352d53" LastKnownName="NaoHandler" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cb144d02-4e57-4df8-84a3-c4c3197b75e0" name="SkeletonAngleHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3cf2d029-3f87-4652-a9a4-d1280c36a8f3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="55f903c4-b79f-48ac-971c-737140ab30aa" name="NaoHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5e8643dc-165b-43b7-ab60-a49dab92b741" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7ebd1274-2c17-4245-9d04-7c8c4e963871" />
+          </association>
+          <association Id="affc4b7e-bd53-445d-bf31-6e1b3b01c818" isDerived="false" sourceEndRoleName="SkeletonAngleHandler" targetEndRoleName="AngleView" isLeaf="false" isAbstract="false">
+            <classMoniker Id="f678a3ef-10f3-4096-a618-8f53b92391ae" LastKnownName="AngleView" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4b40abc1-b50d-4013-9cb6-3625736a3c2b" name="SkeletonAngleHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a9d6d06d-fcd8-4b73-ac5e-ca97a106596a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ad6cd775-8e5d-4bd9-b224-f41e0d3f53e0" name="AngleView" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="730ec5a3-5a88-4d05-ba60-7d967e321bb2" name="Lower" value="2">
+                      <elementDefinition Id="32508b53-7c8c-49db-9419-b7ae9990c670" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="a8da0840-bf7e-4654-8eb9-ed1780d243f8" name="Upper" value="2">
+                      <elementDefinition Id="256cb815-3179-4a50-a740-04f0e613efd3" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="0c184d69-c0e7-4dfa-af86-300ad72b45bf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e5260f64-e780-4f76-a833-bc72f3fbbb3e" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="0d60193b-db10-4892-8218-a8f87478ad1f" name="angleCalculator" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <referencesInternal>
@@ -8605,8 +8476,1245 @@
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="df1aae15-1859-4747-b02b-211a509dcdf0" name="MainWindow" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <referencesInternal>
+          <reference Id="c3ac9ecf-b8cf-4437-9a69-3f515066cc89" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow" tag="ViewCode">
+            <elementDefinition Id="b54982c1-38c8-48de-8274-cc8c39aa56ec" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="b1978f2c-ca56-45d2-84e5-0bb18eebcba9" name="class" profile="CSharpProfile">
+            <elementDefinition Id="fbca7503-39c6-41bf-97db-f9854242c81e" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="27ca4275-d24d-4f3d-8235-3adbc68b28d8">
+                <propertyInstance Id="de771fd9-f2d9-4359-a7b1-37036e466956" name="ClrAttributes">
+                  <elementDefinition Id="04b3f095-0d9e-4b7f-8c2f-2ff8325c4315" />
+                </propertyInstance>
+                <elementDefinition Id="4247925a-3d41-4f33-9081-8c27aa074c03" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="3866df8a-36c3-4f04-824c-755cec79e58c">
+                <propertyInstance Id="11578f06-de9f-4fbe-913a-775403086a3f" name="IsPartial" value="false">
+                  <elementDefinition Id="3b14557f-2ad5-4d44-b422-64799d21b484" />
+                </propertyInstance>
+                <elementDefinition Id="94d99fe7-a148-42ca-9f82-45baa7d2ecf5" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="789cafe4-3e0d-4bb3-9557-839148555e65">
+                <propertyInstance Id="831ab86b-17a9-4d89-939a-c561bff2f0c3" name="IsStatic" value="False">
+                  <elementDefinition Id="933756c2-6e5d-434f-9c51-a904171c61ff" />
+                </propertyInstance>
+                <elementDefinition Id="f845b8a0-3949-4259-bd73-c3b137beab1f" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="1786bada-567a-4166-9103-c9c87aae893b">
+                <propertyInstance Id="6dc99eb5-cdbd-480d-94f0-89a78a345e57" name="IsUnsafe" value="false">
+                  <elementDefinition Id="53f6ee70-0967-46a5-b06b-6465916d8374" />
+                </propertyInstance>
+                <elementDefinition Id="787323e4-495d-469c-b105-919d9279e026" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="a51b96ff-f254-46cc-bdb8-842fd50eda3b">
+                <propertyInstance Id="28dbfc1d-f9dc-4871-97b1-d6016ead14db" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="02a03f3a-0aff-482d-9414-11202a7dc7b0" />
+                </propertyInstance>
+                <elementDefinition Id="01670bc8-b4a8-4ee8-9aca-9defb4c6ee15" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="84cfd1df-1229-451c-af0e-d8ffd1eca9a6" />
+        <targetEnds>
+          <association Id="918f4677-b2f3-4379-b490-e6334a59759b" isDerived="false" sourceEndRoleName="MainWindow" targetEndRoleName="SkeletonAngleHandler" isLeaf="false" isAbstract="false">
+            <classMoniker Id="5ba4ab77-7d83-4f87-96a0-a3553ff7e0c4" LastKnownName="SkeletonAngleHandler" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="45a4df5b-1993-4104-ac7b-549b477b274a" name="MainWindow" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4eb5b0aa-5ba2-4606-806d-9cffbc7b6097" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="02e5c244-044d-4de1-b63f-760b68567704" name="SkeletonAngleHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d34be294-1dcb-4478-b195-97012e2d9a55" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b6fc7792-dfd6-43aa-b168-be24be5f8f3d" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="40d473c0-c46b-4b2e-86b9-18892898409b" name="_contentLoaded" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="2e0f4ab6-60d5-49c2-b125-e4bf6d7e2c0d" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3D_contentLoaded" tag="ViewCode">
+                <elementDefinition Id="d21abf5f-1c15-412f-97c3-acbc32d956d8" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="5222db89-d872-4623-a9c1-cc397a372028" name="field" profile="CSharpProfile">
+                <elementDefinition Id="19f7ee32-feb1-432f-82fc-76603d578d75" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2e3ea914-6e41-47c0-9408-12ec9563fa8c">
+                    <propertyInstance Id="1c5f425c-2b6b-4ffc-a5ab-c81c80ffe3a3" name="ClrAttributes">
+                      <elementDefinition Id="9a902d03-acab-451c-ac79-8ce8889a0a0c" />
+                    </propertyInstance>
+                    <elementDefinition Id="43d72ee9-f589-4799-a6e0-bf59391af0ae" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4695f657-721f-4b41-8377-b1fc8cdbf3f3">
+                    <propertyInstance Id="42bbe663-8794-437a-9af6-9166c6ef687a" name="IsConst" value="false">
+                      <elementDefinition Id="58a6baf6-9ca1-4738-a07d-81e8d87dba51" />
+                    </propertyInstance>
+                    <elementDefinition Id="3cbfd570-fd68-4d2c-9a52-f2caeea6efc6" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1e71ba46-9526-4223-9d16-f63fc212e642">
+                    <propertyInstance Id="039084a0-e10e-4909-b3e1-7e61a69e33fb" name="IsNullable" value="false">
+                      <elementDefinition Id="bb2145a2-2604-4679-b34b-732946b72b9b" />
+                    </propertyInstance>
+                    <elementDefinition Id="2079c58d-73e0-42ab-9e62-71300455b619" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="54c19f4b-5f73-4e92-bde4-ba4df7b74702">
+                    <propertyInstance Id="6dab791e-d9ec-4dc9-8381-6b1566be5c8a" name="IsVolatile" value="false">
+                      <elementDefinition Id="e4a9762b-bfea-433e-906d-cedd396c064e" />
+                    </propertyInstance>
+                    <elementDefinition Id="006a1779-3ebe-4e4d-9c0a-a01e5765c594" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="59d2c5d4-3aba-47f4-8521-3933db780c77">
+                    <propertyInstance Id="dc33dc25-da5d-4af2-8afc-554545a540c8" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="3722e7e6-0378-4e8c-af68-df2f206ae063" />
+                    </propertyInstance>
+                    <elementDefinition Id="566e2129-98cd-459b-a738-fe73ef62e528" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="20586f19-1904-4358-85c8-10c2284e49c8" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="96e24fa8-fb50-4107-8ef8-e2337b313a9e" LastKnownName="Boolean" />
+            </type_NamedElement>
+          </property>
+          <property Id="0d3f0c50-2131-470d-8344-45ce39ce681d" name="anglehandler" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="83c2fb3b-adb5-45fc-9715-85be1918d9cd" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3Danglehandler" tag="ViewCode">
+                <elementDefinition Id="5bd8847d-03d6-4031-b8a6-711981d18675" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="3edb8115-3445-4413-8bf9-ab7f49983e80" name="field" profile="CSharpProfile">
+                <elementDefinition Id="afb0f2dc-8ac4-402a-9376-80d4afb363b1" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c8475864-2a4a-4936-b7f1-9d14870672c4">
+                    <propertyInstance Id="ff3460b3-403c-4ff8-82fc-eb6151baa02e" name="ClrAttributes">
+                      <elementDefinition Id="f95dd52d-faa3-4f37-b7e4-79b0bc3587d3" />
+                    </propertyInstance>
+                    <elementDefinition Id="5e3a8b9a-8b99-4427-8b04-e9fea2c4511e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a9b1740b-edd4-47c7-b131-b014c5b73c63">
+                    <propertyInstance Id="94228a7f-6be8-460d-a38d-50d383e85e34" name="IsConst" value="false">
+                      <elementDefinition Id="e7df0305-e636-4a44-ab2b-d207d4889dfb" />
+                    </propertyInstance>
+                    <elementDefinition Id="d0dac1d3-285b-4185-985b-336590be0028" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="99905e96-0401-4ceb-aba1-2d07b758d68e">
+                    <propertyInstance Id="61477728-170a-4c34-9d4f-0684c68fc27b" name="IsNullable" value="false">
+                      <elementDefinition Id="12c39141-2d01-4c67-b37d-b3bc40fe49d0" />
+                    </propertyInstance>
+                    <elementDefinition Id="954f627d-186a-42c7-820b-3677823c34a8" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="9716aa27-e3ab-438d-95cd-bb5721863f45">
+                    <propertyInstance Id="0760afa0-341d-4ded-9789-3e16e7384ae1" name="IsVolatile" value="false">
+                      <elementDefinition Id="d9bf5ac1-2b8f-44af-ad9b-dd041a04e7c3" />
+                    </propertyInstance>
+                    <elementDefinition Id="4bef7979-ea7f-41be-97bc-4d10033ca7a1" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="33a708f6-0371-412b-a7dd-15ddfe235bda">
+                    <propertyInstance Id="9d5ded79-135b-49d7-bc82-6051439c7f89" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="b6a39fe0-1f1e-4042-a83b-6e1937aac31c" />
+                    </propertyInstance>
+                    <elementDefinition Id="85b120a0-8062-4100-a009-14fedc945c7c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="2676ae5a-dbff-4fff-acfe-f4d0740fa70b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="81f0b6f2-2a82-4da9-94e1-8b9fad14f665" LastKnownName="SkeletonAngleHandler" />
+            </type_NamedElement>
+          </property>
+          <property Id="51aa18f8-c25a-4317-a4e0-d631ccb09614" name="myBitmap" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="bbeec4be-e044-41bd-8ac0-20128396133c" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3DmyBitmap" tag="ViewCode">
+                <elementDefinition Id="28ed1629-f054-4386-bcfb-fa56afd1dd81" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="ab295065-ff62-416c-8d08-ae1fc7ce1670" name="field" profile="CSharpProfile">
+                <elementDefinition Id="4e08696d-7e28-4413-8da9-680726dd4970" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2ea8359d-7179-408c-91cd-dc1cef3d6909">
+                    <propertyInstance Id="8367862d-eb3c-4e8d-9844-056e22280348" name="ClrAttributes">
+                      <elementDefinition Id="73835f28-53c0-4fcd-be18-87023ba7b6ab" />
+                    </propertyInstance>
+                    <elementDefinition Id="cb94a050-2048-43a2-b05a-e1ff46a4336c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4a934cdd-6dc8-4e69-b232-f43d5661506e">
+                    <propertyInstance Id="c587d987-fdb0-410f-a5c3-1529cb8f4f8c" name="IsConst" value="false">
+                      <elementDefinition Id="a7c28b5e-7f8a-4fe5-9215-aa5b173bec13" />
+                    </propertyInstance>
+                    <elementDefinition Id="da95b318-5a10-4e3f-a1c2-843cc224ba13" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4028b7c7-626e-433b-aef7-8d392b14ec8e">
+                    <propertyInstance Id="2be69376-3063-448d-9324-5c176ea2ba2b" name="IsNullable" value="false">
+                      <elementDefinition Id="d8ede809-8fc0-4172-b556-3abbfdc745ef" />
+                    </propertyInstance>
+                    <elementDefinition Id="285d5b0b-0cd9-4e37-af3f-732de9ad64c4" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b8ab049c-ed29-447a-80cf-32580114a2c4">
+                    <propertyInstance Id="3e63b76b-4f37-4803-abfe-5018d7b9814f" name="IsVolatile" value="false">
+                      <elementDefinition Id="9f44d6ab-5149-4a20-9e4a-34bce2a952e4" />
+                    </propertyInstance>
+                    <elementDefinition Id="e717fd7e-0450-41a5-817e-070439d99d0e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="bef4c376-ccad-4693-8bc2-7a4502974ed2">
+                    <propertyInstance Id="8578d706-0f56-4281-8b69-bed37c80a684" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="6eb50806-9ef9-4ca6-9e90-caea11ba88c7" />
+                    </propertyInstance>
+                    <elementDefinition Id="fef621fd-d160-4061-94f8-cbe3ddb646f2" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="a143449e-b2d1-41c3-8b62-5027b4f3b157" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="193d5031-feb6-4008-9258-01abd8eac2d8" LastKnownName="WriteableBitmap" />
+            </type_NamedElement>
+          </property>
+          <property Id="fb01f5af-a9b1-4b47-a73f-4bc110b9260a" name="myPixelData" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isOrdered="true" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="18ed6373-666d-4655-a22c-afad57f3f921" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3DmyPixelData" tag="ViewCode">
+                <elementDefinition Id="395809ab-61d2-4072-8642-45fd4714f4fb" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="25f0f2c6-e069-409e-aa2f-52c752c90e00" name="field" profile="CSharpProfile">
+                <elementDefinition Id="f6c1912d-ffb5-4d1a-9bdf-fcec8738db1b" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ff96dc87-a3f1-4760-b5d9-9399238ec0d2">
+                    <propertyInstance Id="df9ab60a-a058-4850-abc3-0ff4f99b0527" name="ClrAttributes">
+                      <elementDefinition Id="bcfdd736-4313-4aad-9d2c-302084606bc4" />
+                    </propertyInstance>
+                    <elementDefinition Id="20442647-2004-468d-8fc2-792a99fa7652" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a08f35fc-d8d5-46c2-9ecf-0a91b4570649">
+                    <propertyInstance Id="7e8e0905-d771-40c6-bf90-cab24cf8f540" name="IsConst" value="false">
+                      <elementDefinition Id="9de65181-4819-4eb2-88e0-42b08c14eb2f" />
+                    </propertyInstance>
+                    <elementDefinition Id="adb3368c-1e05-47c0-8403-c165b043c334" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="3ca386ef-e5fd-4fb3-951b-2640c82800b9">
+                    <propertyInstance Id="4769ce0f-d8ec-440e-852d-bea01da93bbb" name="IsNullable" value="false">
+                      <elementDefinition Id="edb2e69f-1a8e-4a36-8259-869c4b8da63c" />
+                    </propertyInstance>
+                    <elementDefinition Id="1cbb3ad5-2c03-4319-bac6-43f2c1da7d52" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a9fcf552-c624-49ea-a388-2911a73ad605">
+                    <propertyInstance Id="21e44c21-4731-4a43-a1d1-401ac85fdd3d" name="IsVolatile" value="false">
+                      <elementDefinition Id="4f313aea-9b2c-40ac-a08c-fe2d3c83d197" />
+                    </propertyInstance>
+                    <elementDefinition Id="45868806-ae5c-4f87-9471-9278a4ee0656" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7d1be027-1a51-4f66-906e-3f58b210a628">
+                    <propertyInstance Id="a3611432-b321-4baf-8e15-fccb3efe2e80" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="bb927271-ca08-40f6-8a3a-dabd5b5e5dd8" />
+                    </propertyInstance>
+                    <elementDefinition Id="9ceb596b-736b-4f8f-ae45-378d998f103f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <lowerValueInternal>
+              <literalString Id="f7398c22-96d9-4173-b5be-b44956bdc104" name="Lower" value="*">
+                <elementDefinition Id="ba982d58-ba95-46c1-b498-d5ec94a53eee" />
+              </literalString>
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString Id="0f92b112-db7e-4193-943a-229c2c813c04" name="Upper" value="*">
+                <elementDefinition Id="cc6533e0-e1b3-4953-9d55-ee61330e82a7" />
+              </literalString>
+            </upperValueInternal>
+            <elementDefinition Id="4a31a20d-5da3-43eb-8bc9-202bc2a46c1e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="7da444b4-105d-4217-afa2-bdd08aed5d7f" LastKnownName="Byte" />
+            </type_NamedElement>
+          </property>
+          <property Id="8519ed2e-3420-48aa-8109-7f10b2dbc287" name="mySensor" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="28c551ef-87a2-4aba-8ad3-d24611ae4d4a" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3DmySensor" tag="ViewCode">
+                <elementDefinition Id="d89afef2-2b93-4656-b0db-fd051d2c7fa8" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="d533b961-2ea6-42a7-807f-cd9a24041548" name="field" profile="CSharpProfile">
+                <elementDefinition Id="a5a30327-6416-4deb-8539-6510f20e82dc" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="284df6db-3ef4-495a-b893-2a00358b5d2f">
+                    <propertyInstance Id="8d09e395-0c24-44de-b33a-01461ad414f5" name="ClrAttributes">
+                      <elementDefinition Id="18f8f0cd-2dd7-44a9-b3fd-05c451624c4a" />
+                    </propertyInstance>
+                    <elementDefinition Id="fd9d1ede-dd53-49f8-9646-d998b4c5e8f7" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="bf038969-9c47-4a3f-9ddb-361dbe089aee">
+                    <propertyInstance Id="088bb7b7-b273-4c6c-b222-39fe2b3d6f41" name="IsConst" value="false">
+                      <elementDefinition Id="ffb26ec1-c399-4426-9f83-ea344f91e51e" />
+                    </propertyInstance>
+                    <elementDefinition Id="40676075-d20c-4095-ac35-9752bd3f9f44" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a1b046c8-9870-45c3-ac8f-8414c7ba1e84">
+                    <propertyInstance Id="7f8ecec7-73d0-49f9-a73f-c3c010b807ff" name="IsNullable" value="false">
+                      <elementDefinition Id="0941d85e-8043-4e47-8024-fe5a0e29d97c" />
+                    </propertyInstance>
+                    <elementDefinition Id="080db915-e429-48d2-b37a-ccbcc264750f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7b1a6b0e-167b-44bc-a5f9-37717e816715">
+                    <propertyInstance Id="e20e1c10-398a-40c8-b99d-6d67777ddc97" name="IsVolatile" value="false">
+                      <elementDefinition Id="d4f42567-8608-445f-9728-3c26e3384b25" />
+                    </propertyInstance>
+                    <elementDefinition Id="ccca656d-552f-4ce0-9c37-92bf2dafb5d8" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f33fd695-5e28-4533-870c-a752ea42404e">
+                    <propertyInstance Id="abb98a83-e4ad-4616-aa4c-1d70715269ac" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="a045629a-0dd2-40f3-940a-086de473ed01" />
+                    </propertyInstance>
+                    <elementDefinition Id="bf3976ed-f10a-403d-b9a5-476705c53ba9" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="afaf88c0-60c9-496c-8194-c7534d59cad8" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="a3e29da2-20f6-4182-80fa-5f686f278e41" LastKnownName="KinectSensor" />
+            </type_NamedElement>
+          </property>
+          <property Id="1866c18c-eb85-4730-aee5-cbdd98bf7dfb" name="skeletons" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isOrdered="true" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="f0012707-a39e-4ffb-a863-23cd741ed711" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3Dskeletons" tag="ViewCode">
+                <elementDefinition Id="4de1af5b-46e3-415f-a947-cda05c585be3" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="7ab6f6b0-c176-4720-afa3-606c45cbf7a0" name="field" profile="CSharpProfile">
+                <elementDefinition Id="2c16b0bc-ca3a-4039-8cda-0607e54dc254" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1b1a4f83-4feb-48e8-a7fa-1239cdad5d50">
+                    <propertyInstance Id="2e777f59-e466-46c8-a2fe-ab54b24d8be2" name="ClrAttributes">
+                      <elementDefinition Id="e044fa47-9a35-4fdd-9560-2d3d841a4c5a" />
+                    </propertyInstance>
+                    <elementDefinition Id="3b31f924-9708-45f0-bc95-e80e5015f6be" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a51e03b4-a9d5-4f4f-bee4-c93f3bf29f8d">
+                    <propertyInstance Id="3ab15259-2db4-4bbb-b694-3945af7a1422" name="IsConst" value="false">
+                      <elementDefinition Id="fe3d80bf-bf37-4918-8689-59c5604a149d" />
+                    </propertyInstance>
+                    <elementDefinition Id="587b0d65-75aa-4a8e-9efc-6b2f3f3ac1c1" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="03440c9f-a4f2-4b72-9260-bb037cd8a256">
+                    <propertyInstance Id="b9dc022e-5c4f-4f6b-9507-8a2740b3ae70" name="IsNullable" value="false">
+                      <elementDefinition Id="9a854afc-2a3e-459b-9fb5-14e4a9b9adee" />
+                    </propertyInstance>
+                    <elementDefinition Id="79b6f644-1c4f-4c32-b7be-22b13aff6592" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e7b3045f-0c70-43d8-8bbc-41be08733fd1">
+                    <propertyInstance Id="b611129f-abe5-4acd-a9e4-6c7436bf7eee" name="IsVolatile" value="false">
+                      <elementDefinition Id="d3903980-2429-423f-a0bf-0ac54260e4e2" />
+                    </propertyInstance>
+                    <elementDefinition Id="fd5eed14-44e8-43e2-9a9a-222fb223da2c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="15b52a32-85d3-4227-bd4d-f5ef1875dd8a">
+                    <propertyInstance Id="fc348a1e-b873-47dd-a915-b6e75b2aa921" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="7b523405-c142-4fb3-b4bf-2f065797b43c" />
+                    </propertyInstance>
+                    <elementDefinition Id="63762e77-29c5-4d32-a42c-df631f9402ae" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <lowerValueInternal>
+              <literalString Id="adbd113a-bed6-4f73-9036-1526523825ec" name="Lower" value="*">
+                <elementDefinition Id="837b3914-a6f8-40e6-b099-d69691cfa4eb" />
+              </literalString>
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString Id="e2eae070-ceee-4296-a42d-636ab95315fa" name="Upper" value="*">
+                <elementDefinition Id="30214467-9386-4a97-a293-572965c2d97c" />
+              </literalString>
+            </upperValueInternal>
+            <elementDefinition Id="a8cb48a4-4160-40f4-9f99-89b6ca06a87b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="c04cf4cd-6c35-47cf-9df9-8e7219d1e8ee" LastKnownName="Skeleton" />
+            </type_NamedElement>
+          </property>
+          <property Id="976d844b-1e92-476b-8df6-01767565f5a8" name="videoImage" visibility="Package" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="d65c8024-aba7-4999-8183-ed4f19dc3eaa" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3DvideoImage" tag="ViewCode">
+                <elementDefinition Id="5dd5c48a-26b0-482d-8b2b-c4e8dc6fa293" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="0524ff59-9ddd-406d-9ca1-0dc49b816386" name="field" profile="CSharpProfile">
+                <elementDefinition Id="4b533e05-5e1a-4d63-8a28-b4d2ba2ab3ea" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="bbf525bd-bc01-4f38-b714-8e86c5289639">
+                    <propertyInstance Id="ea151cec-aa4b-4a74-b279-baa4ea9cbcda" name="ClrAttributes">
+                      <elementDefinition Id="f0405f45-962c-4bb4-87c7-439dafce371c" />
+                    </propertyInstance>
+                    <elementDefinition Id="251c7742-07af-4e50-8bc5-1ea1b2b89c8b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="bc639b9b-25e2-4701-be9a-75fabf2d7ea6">
+                    <propertyInstance Id="35fcf3ef-ae6a-4979-aa55-d005457a6fdf" name="IsConst" value="false">
+                      <elementDefinition Id="01462a6a-b7ab-4dd0-8d59-7513bb645375" />
+                    </propertyInstance>
+                    <elementDefinition Id="84334d53-2b5c-48c5-a416-2ca62e19f0b4" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1b4768d8-fc45-4bff-ad64-72fc3d474964">
+                    <propertyInstance Id="6d211275-bb8d-4cc8-ad9f-c0b7d352ce08" name="IsNullable" value="false">
+                      <elementDefinition Id="d28a8d31-2638-4158-975c-8e2abfbbe037" />
+                    </propertyInstance>
+                    <elementDefinition Id="a60d124d-5e6d-4685-b911-cbe8cc364213" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="31d93ec6-9c68-424e-81d6-9cee9c6de305">
+                    <propertyInstance Id="6853de90-8a98-4b07-a822-71b97a14f560" name="IsVolatile" value="false">
+                      <elementDefinition Id="757873b1-23ad-40e2-b18f-c4fa0ad1f276" />
+                    </propertyInstance>
+                    <elementDefinition Id="daa8d48d-e8f9-444f-b6e4-830c27a6cbfb" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2d558653-9627-439c-bcd0-e55a43536ecf">
+                    <propertyInstance Id="81761ca8-6be3-4c63-94cf-623e88fe0d0a" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="b7539626-aa60-4cfb-b998-8bcdad9e481d" />
+                    </propertyInstance>
+                    <elementDefinition Id="4582dfad-8670-49be-9fd6-e9e80f0fc6bb" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="5efc93fb-4367-448c-8215-63c95c05cf56" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="128369ff-d7af-467c-af30-39b68e5a05ba" LastKnownName="Image" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="451ad666-f8ff-4146-8639-9e7761a39757" name="DrawBone" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="53a5dd3a-57ec-409e-bfc4-e18e6187c238" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3D(Name%3DDrawBone OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FMicrosoft SDKs%2FKinect%2Fv1.8%2FAssemblies%2FMicrosoft.Kinect.dll&quot; Namespace%3DMicrosoft.Kinect Type%3DJoint)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FMicrosoft SDKs%2FKinect%2Fv1.8%2FAssemblies%2FMicrosoft.Kinect.dll&quot; Namespace%3DMicrosoft.Kinect Type%3DJoint)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FPresentationCore.dll&quot; Namespace%3DSystem.Windows.Media Type%3DPen)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FPresentationCore.dll&quot; Namespace%3DSystem.Windows.Media Type%3DDrawingContext)])" tag="ViewCode">
+                <elementDefinition Id="a10166b0-a318-41fa-95e1-d321942a5ca2" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="b0710649-b890-4d51-8f95-48a10b9cd7a8" name="method" profile="CSharpProfile">
+                <elementDefinition Id="12495ab2-760c-477d-a278-c2cdc0708136" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="3b6cb70b-c307-45c8-9ba5-6a7f183e9c05">
+                    <propertyInstance Id="5d1e13d5-223d-46e6-9866-e87be0e97be1" name="ClrAttributes">
+                      <elementDefinition Id="b0050c81-71bd-4f42-917e-fb5d585e2f89" />
+                    </propertyInstance>
+                    <elementDefinition Id="c9d8879f-7fb4-490f-94e9-6e187fd8c296" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b1ecc144-6b0a-42aa-b852-4a31cd4898fc">
+                    <propertyInstance Id="2ee092a9-0a5a-4b77-833c-9ff51cbcd647" name="IsPartial" value="false">
+                      <elementDefinition Id="482b7056-4641-4230-9cc2-4415883cba77" />
+                    </propertyInstance>
+                    <elementDefinition Id="7ed8231e-58c1-497e-89db-26f04af5a689" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6f7a49f1-dff4-46b0-907a-3eac59706658">
+                    <propertyInstance Id="affe903c-bfa5-4288-bb66-2dedaec4105c" name="IsUnsafe" value="false">
+                      <elementDefinition Id="de028dd9-02a3-4210-9269-aca6c5641583" />
+                    </propertyInstance>
+                    <elementDefinition Id="b62811be-399d-45a1-9312-546488edb8d5" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d6ada311-59f9-4e4e-9991-4cdf6e24fd43">
+                    <propertyInstance Id="dea31111-3c3a-44d2-a11a-c24f1aacfafa" name="Inheritance" value="none">
+                      <elementDefinition Id="ed0bdaaa-7186-41b3-af3e-db13b19c7117" />
+                    </propertyInstance>
+                    <elementDefinition Id="f0bd1610-d362-43c8-83b9-031a7aff44ae" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="fcb064e3-e050-477c-b0c8-4b33477e928a">
+                    <propertyInstance Id="36d88fcd-abd3-43b8-b3a3-571dd2380db3" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="ab62aeea-6669-445b-9a16-6b98a3047950" />
+                    </propertyInstance>
+                    <elementDefinition Id="c2006d41-a748-4647-8132-56e5d2146ffd" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c591e107-238e-438d-bb77-032e69c460c1">
+                    <propertyInstance Id="8c7654e2-20e0-4c1f-8ae0-ea6cbfa4e56d" name="params" value="false">
+                      <elementDefinition Id="bcce8885-e8c5-4aa5-9729-f1c8eb1837a0" />
+                    </propertyInstance>
+                    <elementDefinition Id="856c18ea-a419-4882-86f0-31978e59531b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="bc38c21d-1867-495e-956e-2739af92e7b0" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ca1ce58d-286f-4948-859c-0ce99e8ded55" name="jointFrom" direction="In">
+                  <referencesInternal>
+                    <reference Id="d12b8eb1-bb5f-498d-b67e-2fe57e4bca04" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3D(Name%3DDrawBone OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FMicrosoft SDKs%2FKinect%2Fv1.8%2FAssemblies%2FMicrosoft.Kinect.dll&quot; Namespace%3DMicrosoft.Kinect Type%3DJoint)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FMicrosoft SDKs%2FKinect%2Fv1.8%2FAssemblies%2FMicrosoft.Kinect.dll&quot; Namespace%3DMicrosoft.Kinect Type%3DJoint)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FPresentationCore.dll&quot; Namespace%3DSystem.Windows.Media Type%3DPen)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FPresentationCore.dll&quot; Namespace%3DSystem.Windows.Media Type%3DDrawingContext)]) ParameterIdentifier%3DjointFrom" tag="ViewCode">
+                      <elementDefinition Id="d72dc332-4f5a-4e06-b7c8-1936b499a5ae" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="ac2496a7-70dd-42fd-8b98-e6829c6d1542" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0bf03d7f-5b30-47ef-83ce-cf255b7101cd" LastKnownName="Joint" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a70f6396-2efb-46dd-b6be-53f132aa94df" name="jointTo" direction="In">
+                  <referencesInternal>
+                    <reference Id="837ba8fe-37f7-4909-bcac-aae5d09fb062" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3D(Name%3DDrawBone OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FMicrosoft SDKs%2FKinect%2Fv1.8%2FAssemblies%2FMicrosoft.Kinect.dll&quot; Namespace%3DMicrosoft.Kinect Type%3DJoint)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FMicrosoft SDKs%2FKinect%2Fv1.8%2FAssemblies%2FMicrosoft.Kinect.dll&quot; Namespace%3DMicrosoft.Kinect Type%3DJoint)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FPresentationCore.dll&quot; Namespace%3DSystem.Windows.Media Type%3DPen)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FPresentationCore.dll&quot; Namespace%3DSystem.Windows.Media Type%3DDrawingContext)]) ParameterIdentifier%3DjointTo" tag="ViewCode">
+                      <elementDefinition Id="26dc552a-bee9-4f00-9677-255a5dd477d7" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="50abfde5-f86b-4536-8980-e51d2cd687ba" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0bf03d7f-5b30-47ef-83ce-cf255b7101cd" LastKnownName="Joint" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1f79d678-daf0-4a32-abde-3e67a82abb7e" name="aPen" direction="In">
+                  <referencesInternal>
+                    <reference Id="9d7ef06a-55c0-4268-876b-5a8047d94b3b" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3D(Name%3DDrawBone OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FMicrosoft SDKs%2FKinect%2Fv1.8%2FAssemblies%2FMicrosoft.Kinect.dll&quot; Namespace%3DMicrosoft.Kinect Type%3DJoint)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FMicrosoft SDKs%2FKinect%2Fv1.8%2FAssemblies%2FMicrosoft.Kinect.dll&quot; Namespace%3DMicrosoft.Kinect Type%3DJoint)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FPresentationCore.dll&quot; Namespace%3DSystem.Windows.Media Type%3DPen)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FPresentationCore.dll&quot; Namespace%3DSystem.Windows.Media Type%3DDrawingContext)]) ParameterIdentifier%3DaPen" tag="ViewCode">
+                      <elementDefinition Id="b041c5e2-d357-41a0-af91-9dec8f7fdfc9" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="5105fbce-aba5-4c5b-a10c-1f4c1e44a7e5" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9f79fdd9-ea9c-4f1d-86b0-58d98f61b4ac" LastKnownName="Pen" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="81ff6982-2e51-464a-b5c7-cf20bfef2f49" name="aContext" direction="In">
+                  <referencesInternal>
+                    <reference Id="f7a088aa-6fde-4e58-9121-04ce1dc3562a" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3D(Name%3DDrawBone OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FMicrosoft SDKs%2FKinect%2Fv1.8%2FAssemblies%2FMicrosoft.Kinect.dll&quot; Namespace%3DMicrosoft.Kinect Type%3DJoint)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FMicrosoft SDKs%2FKinect%2Fv1.8%2FAssemblies%2FMicrosoft.Kinect.dll&quot; Namespace%3DMicrosoft.Kinect Type%3DJoint)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FPresentationCore.dll&quot; Namespace%3DSystem.Windows.Media Type%3DPen)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FPresentationCore.dll&quot; Namespace%3DSystem.Windows.Media Type%3DDrawingContext)]) ParameterIdentifier%3DaContext" tag="ViewCode">
+                      <elementDefinition Id="1fafac77-9551-436b-b0ed-38b290530027" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="0392eafa-1bcc-49a5-9c19-c95b3de262c2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="949a30e1-f8be-4a74-b1c4-03ae787d8d67" LastKnownName="DrawingContext" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="eadaac0e-b8b4-4e98-b7ad-bac8bedb5141" name="MainWindow_Closing" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="27d084c8-1b49-45d8-883f-4cfb00987da4" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3D(Name%3DMainWindow_Closing OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FSystem.dll&quot; Namespace%3DSystem.ComponentModel Type%3DCancelEventArgs)])" tag="ViewCode">
+                <elementDefinition Id="36424b3f-0c07-40e5-be1e-30d27f13b844" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="d2778f60-63b5-4750-a59b-9f4289741ff1" name="method" profile="CSharpProfile">
+                <elementDefinition Id="18aa8047-9f29-4fbf-90a2-0536df9c5fd4" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="37a8978e-bff8-46c3-a214-6ab47641a0f3">
+                    <propertyInstance Id="dae3a14a-896a-4729-9155-a86ea1833586" name="ClrAttributes">
+                      <elementDefinition Id="b570b86e-33ec-41dd-b4d6-e0692fe7e18e" />
+                    </propertyInstance>
+                    <elementDefinition Id="b2198655-7c80-4c7c-8ffc-505dc43e3f3e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="5d6ca29e-0d38-484e-a77f-a51c5b8794e6">
+                    <propertyInstance Id="4d557967-2881-4c3f-a2f0-ecb0af405959" name="IsPartial" value="false">
+                      <elementDefinition Id="e9d133f2-683f-44f3-928b-bdcc0b5c89f3" />
+                    </propertyInstance>
+                    <elementDefinition Id="1f0d8cae-7539-4b00-818e-5a596f1e43c2" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="8ea917de-d678-4bef-8d01-cdbb4a5f5988">
+                    <propertyInstance Id="35075aa2-b260-45cd-b382-74912b9fa18b" name="IsUnsafe" value="false">
+                      <elementDefinition Id="5991215f-3a95-4d19-8191-bee4c19d84a6" />
+                    </propertyInstance>
+                    <elementDefinition Id="106cf29b-0f59-4993-8bce-a4d07f517ab5" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ff67d40f-5eb0-4ea3-8e8e-676da09fd153">
+                    <propertyInstance Id="4d8eac11-2c50-4930-a221-c905eb426b7b" name="Inheritance" value="none">
+                      <elementDefinition Id="66d4b217-33ea-4615-b42e-2d32b0e2a698" />
+                    </propertyInstance>
+                    <elementDefinition Id="59460d32-2f0c-4592-9682-a025dce1346a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="475b55b4-f456-4641-bd3d-95ec46a03729">
+                    <propertyInstance Id="0fc62e3e-ed33-49b5-a0f0-57e4e246a9d6" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="b78d90e9-2781-4699-8b0b-0b178a24e09e" />
+                    </propertyInstance>
+                    <elementDefinition Id="6cf716df-1193-4551-b5d6-c779079d22cd" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="8095fb1d-4de2-47e5-83f7-fd6fd1a0cdc5">
+                    <propertyInstance Id="48b995e7-8a0f-4b10-8241-02267f7a67a6" name="params" value="false">
+                      <elementDefinition Id="c27d6e88-967a-4609-8060-9c0a2a72483d" />
+                    </propertyInstance>
+                    <elementDefinition Id="1ecf2c87-b297-4368-8459-1d5a083754b4" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="68c4c9c3-8024-458a-8c7d-2300e90a972d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="12c0918d-10d8-4527-8862-80a681b675d6" name="sender" direction="In">
+                  <referencesInternal>
+                    <reference Id="b797ff87-031b-4d82-a77b-58bcf0b89ef6" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3D(Name%3DMainWindow_Closing OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FSystem.dll&quot; Namespace%3DSystem.ComponentModel Type%3DCancelEventArgs)]) ParameterIdentifier%3Dsender" tag="ViewCode">
+                      <elementDefinition Id="931414e9-beb5-4fcb-a240-7f15cdab95e5" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="10063ca7-b9cb-4f58-b263-b2cdb135dc69" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="94dea425-a304-4733-8377-a6338d737037" LastKnownName="Object" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="bae839c4-2ee9-41be-a771-a11d12012b26" name="e" direction="In">
+                  <referencesInternal>
+                    <reference Id="4a306dab-7c5e-4ab3-823c-03dea5b00aea" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3D(Name%3DMainWindow_Closing OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FSystem.dll&quot; Namespace%3DSystem.ComponentModel Type%3DCancelEventArgs)]) ParameterIdentifier%3De" tag="ViewCode">
+                      <elementDefinition Id="e8d1168f-8f6f-4afb-9e2c-a00a66058d3e" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="a585ca22-a943-49c8-9ce0-8554115a36c7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="35686d34-2763-4719-b08d-4ecfc70e1f1b" LastKnownName="CancelEventArgs" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="e2e654ab-3450-4c35-b37d-ac373dda51ca" name="System‎.Windows‎.Markup‎.IComponentConnector‎.Connect" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="ca5ac57b-e6d7-4a47-b5c6-c798f3550f44" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3D(Name%3DSystem.Windows.Markup.IComponentConnector.Connect OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)])" tag="ViewCode">
+                <elementDefinition Id="6707163e-26ac-4b6a-ac6f-0b8f8e145b75" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="78d463da-a259-451d-9455-f229de3a8495" name="method" profile="CSharpProfile">
+                <elementDefinition Id="cc62c383-f986-4079-8514-54bc47087ceb" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2161dc54-f90b-4e46-b707-26558cfc0c01">
+                    <propertyInstance Id="25226dbd-e570-4bfb-ac60-bce8f141a218" name="ClrAttributes">
+                      <elementDefinition Id="3d4b28b5-a379-4c8e-837f-05fbd3c40ac2" />
+                    </propertyInstance>
+                    <elementDefinition Id="e7d78af0-5f3b-4ae0-b856-2286b1569db3" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a78bd7f6-8777-4118-bc22-063660d60562">
+                    <propertyInstance Id="056fce31-f19f-46b7-831a-7dfc57cc1c4a" name="IsPartial" value="false">
+                      <elementDefinition Id="4561f469-6345-411a-b551-8db3b400b5f3" />
+                    </propertyInstance>
+                    <elementDefinition Id="6efb7cc4-9173-4d37-9af5-bc79acbaf08e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4df710fd-45ab-45b4-ba40-16d168741cad">
+                    <propertyInstance Id="d20f39f8-e984-4db2-9261-1a3306f539dc" name="IsUnsafe" value="false">
+                      <elementDefinition Id="46c7b44d-089d-475b-9bc2-b51d08c3d0ed" />
+                    </propertyInstance>
+                    <elementDefinition Id="02e16bb1-6be3-4d5a-aacf-1075c5335ada" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="75476e53-9a7a-4eb7-a281-42a0b875d51c">
+                    <propertyInstance Id="ea254727-9ab8-48ed-97d9-d81e16cd7daa" name="Inheritance" value="none">
+                      <elementDefinition Id="1410561d-2bf8-4d8c-93ec-41888a6c7f9f" />
+                    </propertyInstance>
+                    <elementDefinition Id="fd98f9b8-e676-4d93-9d77-d6cf1fb034a3" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="fc679898-57e7-4023-b2c9-98b8150ec239">
+                    <propertyInstance Id="1d1dbe97-e846-4665-93ae-fc30bb33bf3f" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="6f62ed0c-ae0b-487d-b9bd-28dc1c22a5a6" />
+                    </propertyInstance>
+                    <elementDefinition Id="de31a2ce-b35c-410c-8f76-8785434c984e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b295decb-2c65-4a06-b5ce-285d253f3288">
+                    <propertyInstance Id="113f304d-84f8-4702-822a-99f44606b49d" name="params" value="false">
+                      <elementDefinition Id="5329a65e-fdd5-4171-ac04-91d7b1ac7144" />
+                    </propertyInstance>
+                    <elementDefinition Id="0442a20d-bdd6-4e35-80b9-714da82db3cd" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="3de69b8d-49b3-4c9d-9f22-910915ac2b11" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7d01a230-daf8-4574-ac58-408df8efaf15" name="connectionId" direction="In">
+                  <referencesInternal>
+                    <reference Id="01c151a8-04b8-4af9-91fd-bf6c9b45cf29" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3D(Name%3DSystem.Windows.Markup.IComponentConnector.Connect OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]) ParameterIdentifier%3DconnectionId" tag="ViewCode">
+                      <elementDefinition Id="fb8648e1-3603-4fce-b3a9-e43699603977" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="ae5d54e5-ba60-41b3-a4b5-be2ee21c4318" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9098d45a-6af9-4f32-b7c4-406a36ba1fa7" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c165db86-dde2-4763-adec-d1815c6226bf" name="target" direction="In">
+                  <referencesInternal>
+                    <reference Id="9eed0851-6d03-4044-a43d-369457d4ca22" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3D(Name%3DSystem.Windows.Markup.IComponentConnector.Connect OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]) ParameterIdentifier%3Dtarget" tag="ViewCode">
+                      <elementDefinition Id="9c49dbca-925a-4c1b-a1d2-7d63a04a1ebf" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="ec43c0d2-11c5-40a4-8a55-1654dda84a4a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="94dea425-a304-4733-8377-a6338d737037" LastKnownName="Object" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="a1f59e80-4733-4481-b431-96649bdfb44d" name="Window_Closing" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="2c280629-e189-4470-9c06-5056e9f1dde6" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3D(Name%3DWindow_Closing OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FSystem.dll&quot; Namespace%3DSystem.ComponentModel Type%3DCancelEventArgs)])" tag="ViewCode">
+                <elementDefinition Id="bb970553-bd12-4d29-b5a0-706ff1c771cf" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="99ce6f99-9644-400b-9c01-e3240fde47ee" name="method" profile="CSharpProfile">
+                <elementDefinition Id="dd403100-519c-4d09-905b-b0f4b73d8c13" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="eac6d14b-f1ee-464b-b746-11974e86c156">
+                    <propertyInstance Id="c49230d6-4b40-4e1e-93f6-d3777414b244" name="ClrAttributes">
+                      <elementDefinition Id="925d1158-e287-4b4d-9991-e434da390e43" />
+                    </propertyInstance>
+                    <elementDefinition Id="d4c3b379-6f11-426b-9b28-e7537ae3e607" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="3f92108f-7d52-41ce-b7ea-46e9884d1666">
+                    <propertyInstance Id="d50637aa-f760-44ee-a124-32d75559c496" name="IsPartial" value="false">
+                      <elementDefinition Id="ef02552a-8d1b-48ab-98c5-2b628bfe0e13" />
+                    </propertyInstance>
+                    <elementDefinition Id="fdca0873-5683-4062-9e84-08c5af117cd8" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="73149f4c-e377-43cf-8bf5-71db39ccdbe1">
+                    <propertyInstance Id="47584453-e9a2-4182-9b2a-fae4efae09bc" name="IsUnsafe" value="false">
+                      <elementDefinition Id="3aca8412-25d4-4cf2-9ee4-6f5fd4037bb4" />
+                    </propertyInstance>
+                    <elementDefinition Id="d00af7c4-7456-4371-ad0f-724a7dc5b337" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="62f9ac72-ef94-41c7-ac0d-6c5c6b2882d0">
+                    <propertyInstance Id="10a67cd3-daf2-4941-8ebe-9361fbc2f63a" name="Inheritance" value="none">
+                      <elementDefinition Id="290618a9-6fa1-459a-9c20-e3db2459addc" />
+                    </propertyInstance>
+                    <elementDefinition Id="99cbc889-bfb5-4ab1-93fc-0448aa792c3f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="80810af1-2523-439e-8d16-8497a986e6c5">
+                    <propertyInstance Id="668ac1b4-48ad-4717-bf47-42a645b230b8" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="66d9c5eb-8e41-45da-a721-d5512c590ec0" />
+                    </propertyInstance>
+                    <elementDefinition Id="98532313-14df-4bb3-b191-d3e2cbd3e329" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="fbe4985a-bdf3-4482-b9bf-a61bed7306e0">
+                    <propertyInstance Id="b0a044c3-3077-42e3-bda6-3b547001aaa3" name="params" value="false">
+                      <elementDefinition Id="dc18beb9-3357-462e-a60a-12b844b07f95" />
+                    </propertyInstance>
+                    <elementDefinition Id="394badbd-30e5-4932-9cd7-5ffb08325622" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="7a437501-d6ed-48d7-91d9-ca057952d372" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="59788050-2bbe-46b9-b8e8-195d3e4854d6" name="sender" direction="In">
+                  <referencesInternal>
+                    <reference Id="bbec1fc9-f75c-406d-add5-ee52231cd70d" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3D(Name%3DWindow_Closing OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FSystem.dll&quot; Namespace%3DSystem.ComponentModel Type%3DCancelEventArgs)]) ParameterIdentifier%3Dsender" tag="ViewCode">
+                      <elementDefinition Id="8d5aba61-a449-4ae7-8781-e7c84eeb9246" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="99283a56-27da-49f9-a733-ffae94f49536" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="94dea425-a304-4733-8377-a6338d737037" LastKnownName="Object" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="34c65cbf-b8a9-4dd3-b608-1934089ca9c7" name="e" direction="In">
+                  <referencesInternal>
+                    <reference Id="a009b695-8cfc-47a4-9cb1-27fa9d418604" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3D(Name%3DWindow_Closing OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FSystem.dll&quot; Namespace%3DSystem.ComponentModel Type%3DCancelEventArgs)]) ParameterIdentifier%3De" tag="ViewCode">
+                      <elementDefinition Id="0b2dba3d-a116-472f-aca9-e454e259d7ff" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="0887a059-5d57-4b1c-b798-0c4623a70bd6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="35686d34-2763-4719-b08d-4ecfc70e1f1b" LastKnownName="CancelEventArgs" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="e301bbe6-f23b-4f6c-9ae0-6a2edd01ebff" name="runtime_AllFramesReady" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="ff8db259-b209-4919-bfda-892eb8986363" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3D(Name%3Druntime_AllFramesReady OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FMicrosoft SDKs%2FKinect%2Fv1.8%2FAssemblies%2FMicrosoft.Kinect.dll&quot; Namespace%3DMicrosoft.Kinect Type%3DAllFramesReadyEventArgs)])" tag="ViewCode">
+                <elementDefinition Id="8e68466b-4290-4ece-8806-76e0d76defa5" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="82e50fda-1218-45b4-9e59-f4d6bcca9bec" name="method" profile="CSharpProfile">
+                <elementDefinition Id="812d71df-29c0-401e-95b3-a6e20076b309" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ddd5e75b-6087-4627-ae04-da7b23121854">
+                    <propertyInstance Id="ab8fa624-570d-4f44-9854-811e4fe2748b" name="ClrAttributes">
+                      <elementDefinition Id="71d7289e-4bb5-4d02-bdbb-a1d8d486548c" />
+                    </propertyInstance>
+                    <elementDefinition Id="b4b2c44b-2165-4ea0-93c0-104ce90f5ed3" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="8e8372e5-821a-45c4-822a-b6d42f57dd9b">
+                    <propertyInstance Id="29278fee-7319-4445-9660-7de7589a3478" name="IsPartial" value="false">
+                      <elementDefinition Id="a65e4c2a-f9a1-4c5d-80cc-3f3e4f179635" />
+                    </propertyInstance>
+                    <elementDefinition Id="72787e23-b327-40cb-9141-b3f8a0a95046" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d9fb2fca-b0cb-4ab5-9333-8ff77e7debf2">
+                    <propertyInstance Id="4fa1a325-ad75-4946-9122-b40e99bb6fa7" name="IsUnsafe" value="false">
+                      <elementDefinition Id="e90f5aef-00fe-4e84-9463-e71b7ecd2283" />
+                    </propertyInstance>
+                    <elementDefinition Id="f0c603e6-1e1f-4cbd-ba3a-f0eec7a10288" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f19873b7-7c85-4165-8d49-23c231dab98c">
+                    <propertyInstance Id="a90cbdd5-1b2b-4e1a-9c78-2ba2ab8ec267" name="Inheritance" value="none">
+                      <elementDefinition Id="6d24500d-f44b-415c-a48d-104e1698bbe4" />
+                    </propertyInstance>
+                    <elementDefinition Id="cbf3b438-82e9-4ac5-9f52-ebf268b65f96" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e8ac5083-dafe-4985-ba26-4aab40a098ce">
+                    <propertyInstance Id="d6eea1ba-0dee-4713-a5d1-6be3462f6821" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="0a563a8b-f541-4256-8e96-fb755b3a17cf" />
+                    </propertyInstance>
+                    <elementDefinition Id="7cc927fd-dbaf-435d-882c-fb6c2e8a2dbf" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="97f622c2-257a-4cee-b28e-3dc138c7fcaf">
+                    <propertyInstance Id="c56afcb1-2a9b-41d7-8182-8c8f2f15c179" name="params" value="false">
+                      <elementDefinition Id="abcad7d2-a9fa-4041-9f62-eac5624b4e62" />
+                    </propertyInstance>
+                    <elementDefinition Id="0bd7b8cf-0552-41c1-81e6-1c0f0809954f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="bc85275f-b8d8-4ecd-a092-f5101203de16" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7779d192-6d78-4471-88c2-7865fd7d4539" name="sender" direction="In">
+                  <referencesInternal>
+                    <reference Id="7c3ef7a9-0147-4062-a627-a33cdb259183" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3D(Name%3Druntime_AllFramesReady OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FMicrosoft SDKs%2FKinect%2Fv1.8%2FAssemblies%2FMicrosoft.Kinect.dll&quot; Namespace%3DMicrosoft.Kinect Type%3DAllFramesReadyEventArgs)]) ParameterIdentifier%3Dsender" tag="ViewCode">
+                      <elementDefinition Id="e78308cf-bed0-472a-9de7-7dedc536194c" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="471f1c5a-48a0-4d0e-a86a-0a69ba900a33" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="94dea425-a304-4733-8377-a6338d737037" LastKnownName="Object" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="25d5f50a-5f96-4d7f-aba8-5f3dcb19b88e" name="e" direction="In">
+                  <referencesInternal>
+                    <reference Id="77634c9e-0a24-4dd8-ab55-58b392d7a140" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3D(Name%3Druntime_AllFramesReady OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FMicrosoft SDKs%2FKinect%2Fv1.8%2FAssemblies%2FMicrosoft.Kinect.dll&quot; Namespace%3DMicrosoft.Kinect Type%3DAllFramesReadyEventArgs)]) ParameterIdentifier%3De" tag="ViewCode">
+                      <elementDefinition Id="363a1532-6308-4ae7-bf98-3b620b52dfb4" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="1973ebdb-15a7-4b84-b838-0efe6935eafa" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0d506a92-84d3-4b4c-8955-abe0a2707208" LastKnownName="AllFramesReadyEventArgs" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="c1313041-5c9c-44be-8922-733ce8a91776" name="runtime_SkeletonFrameReady" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="75712c87-aa6e-4649-aeef-0247ec3d7277" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3D(Name%3Druntime_SkeletonFrameReady OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FMicrosoft SDKs%2FKinect%2Fv1.8%2FAssemblies%2FMicrosoft.Kinect.dll&quot; Namespace%3DMicrosoft.Kinect Type%3DSkeletonFrameReadyEventArgs)])" tag="ViewCode">
+                <elementDefinition Id="0f7ac382-21ec-472a-802e-7df05df4f050" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="2a78eecd-8b7d-41c1-a88c-40d3b7694a40" name="method" profile="CSharpProfile">
+                <elementDefinition Id="9d0520b8-d62d-4458-892a-99280b539804" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f7246013-213d-4ed1-8f7b-84e4262131b9">
+                    <propertyInstance Id="0e2ab985-01db-445f-a098-dbac20b538cc" name="ClrAttributes">
+                      <elementDefinition Id="8a854979-e548-46de-8e62-9b26675e0fd7" />
+                    </propertyInstance>
+                    <elementDefinition Id="e7ddadbd-9e1f-4d75-bd90-dfbd7bce94b1" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="9c1ae193-ee1b-4e20-92fc-5967b5f1d53b">
+                    <propertyInstance Id="ac34f7ee-f54f-46c6-8e03-98f48b8e291b" name="IsPartial" value="false">
+                      <elementDefinition Id="003d14c4-d8b9-4c15-9645-ead7945e8ab8" />
+                    </propertyInstance>
+                    <elementDefinition Id="c64e01c4-34bd-4572-a310-f8dd4747c1b4" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="20f8c3f1-757c-4731-ac25-c2bf0d2d89a9">
+                    <propertyInstance Id="dbe81da4-64fc-46d7-a924-7cc888583116" name="IsUnsafe" value="false">
+                      <elementDefinition Id="e2e71c4a-562c-4731-bae3-02980f118a2a" />
+                    </propertyInstance>
+                    <elementDefinition Id="1bd1270c-a822-4eda-8e57-fc24dcafb7f5" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="201da257-92e5-4b81-87aa-25aed97bf7e7">
+                    <propertyInstance Id="9e2027d0-20df-4f95-b634-b61aba629265" name="Inheritance" value="none">
+                      <elementDefinition Id="fdd7936e-62f9-4f9a-8140-fb916305ea62" />
+                    </propertyInstance>
+                    <elementDefinition Id="d14e72bf-381c-45dc-b66d-0e7b71b5ed71" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b41722dd-324c-4eb1-bf03-73581239d1c5">
+                    <propertyInstance Id="a7ce5777-3575-46c3-a61d-a0890a5f6c6f" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="482b9999-6f2b-4832-bfa8-df1e9852f395" />
+                    </propertyInstance>
+                    <elementDefinition Id="e1e1e2d1-dbf6-45b0-a715-786a5c2e2cfa" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d121ea1a-aa80-46d4-866a-0d0f0f8376d3">
+                    <propertyInstance Id="b24f3cf9-36e4-416b-aa0c-f195360b45fc" name="params" value="false">
+                      <elementDefinition Id="4124ada2-0720-4d5d-81c7-09e0b80af2fe" />
+                    </propertyInstance>
+                    <elementDefinition Id="ba129624-6da6-4138-972e-184469520cb5" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="a9e397c3-27b9-442a-99df-f3a718160ac5" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2bfa2453-992e-4475-87c0-071669d53a4f" name="sender" direction="In">
+                  <referencesInternal>
+                    <reference Id="15fc0686-0d98-49dc-9bb2-5c9b25d79240" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3D(Name%3Druntime_SkeletonFrameReady OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FMicrosoft SDKs%2FKinect%2Fv1.8%2FAssemblies%2FMicrosoft.Kinect.dll&quot; Namespace%3DMicrosoft.Kinect Type%3DSkeletonFrameReadyEventArgs)]) ParameterIdentifier%3Dsender" tag="ViewCode">
+                      <elementDefinition Id="3b4f0d03-ac4a-42a8-882c-ac9f25577c13" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="6fbf9f81-6be8-4489-9407-729631b8f08c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="94dea425-a304-4733-8377-a6338d737037" LastKnownName="Object" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="aa7d5098-058b-4258-a5bd-86d29b36d97f" name="e" direction="In">
+                  <referencesInternal>
+                    <reference Id="8fb005d7-973e-4b33-9798-f6c7a1891898" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3D(Name%3Druntime_SkeletonFrameReady OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FMicrosoft SDKs%2FKinect%2Fv1.8%2FAssemblies%2FMicrosoft.Kinect.dll&quot; Namespace%3DMicrosoft.Kinect Type%3DSkeletonFrameReadyEventArgs)]) ParameterIdentifier%3De" tag="ViewCode">
+                      <elementDefinition Id="3a9c0f0f-3090-40b0-a91b-c64b1e7e90bb" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="2ef4971b-906d-4974-85d5-f477cb8eab22" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="19f6ce93-5ccd-4d8f-84ae-d9f30cfdc0cf" LastKnownName="SkeletonFrameReadyEventArgs" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="5960757d-5181-47db-b8c0-734b4ec2e5d2" name="runtime_VideoFrameReady" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="6bae4c35-02f6-4bb5-81ed-86982a97bee6" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3D(Name%3Druntime_VideoFrameReady OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FMicrosoft SDKs%2FKinect%2Fv1.8%2FAssemblies%2FMicrosoft.Kinect.dll&quot; Namespace%3DMicrosoft.Kinect Type%3DColorImageFrameReadyEventArgs)])" tag="ViewCode">
+                <elementDefinition Id="8899e126-153a-4ff5-abff-300d9b7a5e7d" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="8b81ce2c-7792-4faa-a656-0d70b0628f9b" name="method" profile="CSharpProfile">
+                <elementDefinition Id="bdd51d3d-d0eb-4ff8-82cd-5b3785a7642f" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6181ba99-eb00-4aef-8e20-954f02a8a9a0">
+                    <propertyInstance Id="05d5f0b9-594c-42a2-aba3-553d64ddc079" name="ClrAttributes">
+                      <elementDefinition Id="8ba572b9-a3d0-4eb2-8250-f8079d0d895e" />
+                    </propertyInstance>
+                    <elementDefinition Id="e74f10cd-2728-4d8d-979d-8a424e711465" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="93bad3ad-f04a-4315-92c2-c37f57a57320">
+                    <propertyInstance Id="7f925b5e-7d3e-42b5-83e4-f203e2c5189e" name="IsPartial" value="false">
+                      <elementDefinition Id="c76bb6ee-7c9e-4458-988d-b5a436062fbb" />
+                    </propertyInstance>
+                    <elementDefinition Id="9d02502e-dfa0-45bd-ae7d-71f9039a5944" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="912c65ce-7b9e-4f47-920b-b7c5e211c57f">
+                    <propertyInstance Id="e47f7504-f880-40e0-a8d0-ea48bf7160c2" name="IsUnsafe" value="false">
+                      <elementDefinition Id="202a7010-ed6b-47a4-8a97-14a79003de29" />
+                    </propertyInstance>
+                    <elementDefinition Id="e1c2ab12-7efa-4ef4-82a1-57c13ff6eec7" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b14d7a1b-5409-4b3c-8cae-51835eac0a29">
+                    <propertyInstance Id="4f9935e2-82cb-4177-9f20-528f358f2e79" name="Inheritance" value="none">
+                      <elementDefinition Id="47ee3d17-32be-436e-9493-db36ef299c91" />
+                    </propertyInstance>
+                    <elementDefinition Id="fd9965a5-8906-4db7-9330-ea30c803110c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="130c1df4-0bd4-41e9-a1ab-9b2593c755fc">
+                    <propertyInstance Id="f8f3e2cc-e2cc-438d-8379-f0c99edc4b3c" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="f80b2e74-f724-45fc-828f-01aeab6ba8d3" />
+                    </propertyInstance>
+                    <elementDefinition Id="db1ee158-0535-41e8-9dd7-1edfc80e5e15" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="611635f8-bbcc-4961-b22f-b3ab287878b3">
+                    <propertyInstance Id="7c0cb292-b441-4640-a86c-23167ae7624b" name="params" value="false">
+                      <elementDefinition Id="1751a838-19cf-48f5-92de-e42268c1936d" />
+                    </propertyInstance>
+                    <elementDefinition Id="7c0f8819-d13d-4adb-b3fe-ee88a870a72a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="73e90671-ba44-4790-ab1e-a577182cc843" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="13a4de9b-a387-4f18-b396-cb7b4c5f4159" name="sender" direction="In">
+                  <referencesInternal>
+                    <reference Id="59b3f7f7-70da-4d1c-9f31-83ea762e8583" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3D(Name%3Druntime_VideoFrameReady OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FMicrosoft SDKs%2FKinect%2Fv1.8%2FAssemblies%2FMicrosoft.Kinect.dll&quot; Namespace%3DMicrosoft.Kinect Type%3DColorImageFrameReadyEventArgs)]) ParameterIdentifier%3Dsender" tag="ViewCode">
+                      <elementDefinition Id="907023d7-e8d9-4d35-b0c8-75407051f038" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="7f402f8f-5d8d-47f8-9b99-5c292198813b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="94dea425-a304-4733-8377-a6338d737037" LastKnownName="Object" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2275226b-81dc-4fd0-aee4-1fcb3e5f38d0" name="e" direction="In">
+                  <referencesInternal>
+                    <reference Id="c231d2e5-236a-4541-9c85-74c521dfa869" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3D(Name%3Druntime_VideoFrameReady OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FMicrosoft SDKs%2FKinect%2Fv1.8%2FAssemblies%2FMicrosoft.Kinect.dll&quot; Namespace%3DMicrosoft.Kinect Type%3DColorImageFrameReadyEventArgs)]) ParameterIdentifier%3De" tag="ViewCode">
+                      <elementDefinition Id="06099b36-1bfe-4022-bcc4-c8a5cf992ab2" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="dff72949-f3df-4977-bf6f-4cf567e6d3ce" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f77723e6-87d6-497e-b49e-31f4c60ff870" LastKnownName="ColorImageFrameReadyEventArgs" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="2c01abe7-c4b6-47e8-b460-39a9e1830f66" name="MainWindow" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="f759bd1a-e4b0-42bc-bc87-2c4f8f5e9935" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3D.ctor" tag="ViewCode">
+                <elementDefinition Id="9ec8c2d0-28e9-4ca0-be2c-a1161742dbda" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="f11016f3-22f8-4f4a-be61-a9316d60abce" name="method" profile="CSharpProfile">
+                <elementDefinition Id="a9ea00be-d2ab-4aad-a844-b1425f7c81c3" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="47f3045f-aa0e-4fe2-8c97-2d60c1f2c2f5">
+                    <propertyInstance Id="90b9cb1d-7d44-4512-87e0-12caeefecbb4" name="ClrAttributes">
+                      <elementDefinition Id="a38019b8-3014-405d-93e4-4f8040fe3f4f" />
+                    </propertyInstance>
+                    <elementDefinition Id="7363b20f-4545-4cd9-84d7-4d05b7e19f29" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="5fdf8cf4-32c8-47a5-befb-9ab738452b0d">
+                    <propertyInstance Id="bf8159f5-6fc1-4f4a-9afc-139b09e5d6db" name="IsPartial" value="false">
+                      <elementDefinition Id="3dc7b394-e528-44a5-ba00-dd3dfedb1763" />
+                    </propertyInstance>
+                    <elementDefinition Id="66b88eae-d576-4cee-a28e-2bd22c2536d7" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="963998b1-a669-45fd-b9ac-c549b86ec275">
+                    <propertyInstance Id="675b1cc7-8e4f-46f0-90c9-461faa48ad00" name="IsUnsafe" value="false">
+                      <elementDefinition Id="3fac6781-8c4c-4fba-897c-092d3f7da9a1" />
+                    </propertyInstance>
+                    <elementDefinition Id="0c05a7bf-538d-4e1a-85cc-da3830848bd3" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b258ccee-8195-4430-a872-1731cb3d0f65">
+                    <propertyInstance Id="de32eff2-41da-4941-9689-eab67e49b920" name="Inheritance" value="none">
+                      <elementDefinition Id="e18a5471-06ce-4357-b422-3777f9674a35" />
+                    </propertyInstance>
+                    <elementDefinition Id="39eab950-b99d-42ab-9007-7a39b8a43b6e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e41a3ec7-b648-48ee-9977-052ed552bac9">
+                    <propertyInstance Id="4a796947-2713-4bf3-b721-3eb1e47eec51" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="15f38c5d-6b9f-444c-98cf-7d71415cb0cb" />
+                    </propertyInstance>
+                    <elementDefinition Id="ed9bc105-d3af-4714-bad2-3aafa7cb14d1" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="5348c386-ce38-4b8c-9775-fe38fae99058">
+                    <propertyInstance Id="4c99bdd1-56de-481e-8c22-f805f6556ec1" name="params" value="false">
+                      <elementDefinition Id="95ea6331-b653-47b3-ad47-763760630ae2" />
+                    </propertyInstance>
+                    <elementDefinition Id="bc3f34b0-4c8c-4ef9-87bb-806105bdd424" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="f4b4debf-5a77-44c2-94b1-aa14fbbe07a8" />
+          </operation>
+          <operation Id="232cb618-7e1e-47e5-817e-c3f567947363" name="InitializeComponent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="535ec964-8657-4131-a031-5d47329bc217" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3DInitializeComponent" tag="ViewCode">
+                <elementDefinition Id="e7cd090d-7830-44e0-84ca-f6df836df784" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="003b5bf9-fdd4-42c9-b04c-a76759eaf378" name="method" profile="CSharpProfile">
+                <elementDefinition Id="c578310b-e4eb-4a3a-b412-8c73f4d90628" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="5695ed28-8c3d-4a4d-917c-68760f9b7e07">
+                    <propertyInstance Id="69edca61-270c-4d5e-aff4-9d13bcb242f7" name="ClrAttributes">
+                      <elementDefinition Id="663b6d70-0eee-4d39-bab7-ba5c17a3795a" />
+                    </propertyInstance>
+                    <elementDefinition Id="d353bbd6-f2bf-46cf-9a25-a1391023a0fe" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c8b0e4df-7113-4701-a6dd-ad8df082adda">
+                    <propertyInstance Id="a0bcb44a-8748-4013-b4a1-a88ec65374c2" name="IsPartial" value="false">
+                      <elementDefinition Id="8759e57b-9bb8-4773-a519-2ce93a57ca64" />
+                    </propertyInstance>
+                    <elementDefinition Id="e83f668b-ae49-43c3-884b-43a7b9f37cc6" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="79e5abd8-0c8a-4522-814c-d04b0efbcc5e">
+                    <propertyInstance Id="30d23d6e-16b8-4d59-a436-53de829e09ba" name="IsUnsafe" value="false">
+                      <elementDefinition Id="fdb5c38c-1a96-4e3d-bc8d-8063eb47ffa0" />
+                    </propertyInstance>
+                    <elementDefinition Id="4762fad0-4d0a-4e8a-8b52-e5967affb4d9" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4e181b5f-5f7a-4e27-bfa1-2f67d7fe1206">
+                    <propertyInstance Id="97cc2b3c-db24-4d93-aeee-e1ae6f475258" name="Inheritance" value="none">
+                      <elementDefinition Id="5331340a-a57a-4407-b348-0cca3a44539c" />
+                    </propertyInstance>
+                    <elementDefinition Id="cd8c232d-450b-4b6b-baf9-50bc279fac35" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="bfeaab80-f0ab-4667-a16b-2c9aeceec569">
+                    <propertyInstance Id="f1acb0f1-20ff-4b2f-8864-7466bc7ed490" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="04cd70af-ff19-426c-a40f-966458a88c03" />
+                    </propertyInstance>
+                    <elementDefinition Id="c6c45a7a-3869-4f58-8fb1-fac4a6f485f9" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="11b939e5-4640-492b-ab83-05b631e13df9">
+                    <propertyInstance Id="2c005022-8a49-44cf-b55a-5e9a3b6e07b3" name="params" value="false">
+                      <elementDefinition Id="6d01a0de-7168-477a-a26a-3ab2fa5a2638" />
+                    </propertyInstance>
+                    <elementDefinition Id="28978353-94ba-4812-a504-e0ca5db80ccd" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="c1948de0-5a91-42ee-a393-eb539328bc01" />
+          </operation>
+          <operation Id="5fda0ccf-b34b-410f-9ec2-3d0023ef13b6" name="Main" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="dfbae84a-0bbd-449b-b332-7500973bb5bb" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fnao%2FDesktop%2Frednao%2FGestensteuerung_Nao%2FKinectNao%2Fbin%2FDebug%2FKinectNao.exe Namespace%3DKinectNao Type%3DMainWindow Member%3DMain" tag="ViewCode">
+                <elementDefinition Id="69b2cde1-cae2-4338-a112-14591af95cce" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="5e357729-4ad7-4098-9a50-9216a9a5894d" name="method" profile="CSharpProfile">
+                <elementDefinition Id="8b5368c3-5bf3-4fa3-91a4-e9f8f227194d" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="9fff28d5-5041-460b-9add-6076d9d8b933">
+                    <propertyInstance Id="9f150606-5615-4eb7-9881-80096bffbce8" name="ClrAttributes">
+                      <elementDefinition Id="1fe77bb2-89bd-4d71-800f-ee70ec9f9e9f" />
+                    </propertyInstance>
+                    <elementDefinition Id="dd3f3191-70ef-4c4b-acc6-611c3dd20278" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d9adaba7-668d-4946-8b91-632385d0cfeb">
+                    <propertyInstance Id="b472b31e-6104-471e-9c6d-489e5baa20c7" name="IsPartial" value="false">
+                      <elementDefinition Id="79f83c97-f4dc-4f7b-9a8c-a5910eb8c119" />
+                    </propertyInstance>
+                    <elementDefinition Id="9373c664-b3da-462a-9e76-cbe4e9e599cf" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2df7dd11-cda5-4c7d-bbe6-1287a673e973">
+                    <propertyInstance Id="7cb638ad-b34b-459e-b4a8-3f7d028454f5" name="IsUnsafe" value="false">
+                      <elementDefinition Id="f0c1621b-3178-4638-bcac-f4d8086d2d71" />
+                    </propertyInstance>
+                    <elementDefinition Id="39935638-c400-458b-a4dc-5cd4fb700248" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d6eb3a8d-c85b-44c4-8d7a-1cc047e32d8e">
+                    <propertyInstance Id="8d26cf05-f556-4fb5-9933-7bfb8d52a7c2" name="Inheritance" value="none">
+                      <elementDefinition Id="5baa104e-f583-4deb-a200-9d6d63d734a3" />
+                    </propertyInstance>
+                    <elementDefinition Id="a883eded-54a3-4774-92a1-8876aacc7e0d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="0bc89e3c-580d-4ad1-83d3-d17c8f1de9f9">
+                    <propertyInstance Id="e7240940-b099-485c-973c-c25d8223eac0" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="5c72cd63-8d0d-486e-9761-3d66c045e8bb" />
+                    </propertyInstance>
+                    <elementDefinition Id="57b810d1-39ea-47cf-90f0-c5670aae7bdb" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="5ba27502-f348-4d92-ab62-83851be4af8c">
+                    <propertyInstance Id="62640dfb-2b00-4d54-b7d2-5c6a51ca4534" name="params" value="false">
+                      <elementDefinition Id="963f18f7-3207-48ed-a35d-559bdfd24ab7" />
+                    </propertyInstance>
+                    <elementDefinition Id="8f49b24c-0465-4399-8543-c99f282c9e0a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="7524fc2e-57b7-40e9-83b8-e1da13680e9e" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="193d5031-feb6-4008-9258-01abd8eac2d8" name="WriteableBitmap" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::System::Windows::Media::Imaging::WriteableBitmap">
+        <elementDefinition Id="2b5fb1e7-d6a3-4194-b618-6cb87d91943f" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="7da444b4-105d-4217-afa2-bdd08aed5d7f" name="Byte" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::System::Byte">
+        <elementDefinition Id="b649ffdf-7a07-4a0f-8964-1b547145a7d6" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a3e29da2-20f6-4182-80fa-5f686f278e41" name="KinectSensor" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Microsoft::Kinect::KinectSensor">
+        <elementDefinition Id="4e4ed5c2-c5f8-4cc9-b091-80030dc4be26" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="128369ff-d7af-467c-af30-39b68e5a05ba" name="Image" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::System::Windows::Controls::Image">
+        <elementDefinition Id="81e00ef9-0408-4f3c-9ca4-96ba5f43c200" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0bf03d7f-5b30-47ef-83ce-cf255b7101cd" name="Joint" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Microsoft::Kinect::Joint">
+        <elementDefinition Id="a926de68-13b4-4476-8501-3d2c7ba23142" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="9f79fdd9-ea9c-4f1d-86b0-58d98f61b4ac" name="Pen" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::System::Windows::Media::Pen">
+        <elementDefinition Id="f32fc5c4-a118-4174-b669-f9be876281aa" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="949a30e1-f8be-4a74-b1c4-03ae787d8d67" name="DrawingContext" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::System::Windows::Media::DrawingContext">
+        <elementDefinition Id="cf667a5e-4579-4edc-ab78-9f61a0cbf72c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="94dea425-a304-4733-8377-a6338d737037" name="Object" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::System::Object">
+        <elementDefinition Id="cf775586-3e5a-4cbe-8b8c-8a241f81c13e" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="35686d34-2763-4719-b08d-4ecfc70e1f1b" name="CancelEventArgs" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::System::ComponentModel::CancelEventArgs">
+        <elementDefinition Id="3095cd36-83a2-4a4c-a2d8-f3320509ad4b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0d506a92-84d3-4b4c-8955-abe0a2707208" name="AllFramesReadyEventArgs" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Microsoft::Kinect::AllFramesReadyEventArgs">
+        <elementDefinition Id="64142462-d388-4e8e-9935-fd57095a6b24" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="19f6ce93-5ccd-4d8f-84ae-d9f30cfdc0cf" name="SkeletonFrameReadyEventArgs" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Microsoft::Kinect::SkeletonFrameReadyEventArgs">
+        <elementDefinition Id="581e7c98-a547-49cb-8f4b-232216e513fb" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f77723e6-87d6-497e-b49e-31f4c60ff870" name="ColorImageFrameReadyEventArgs" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Microsoft::Kinect::ColorImageFrameReadyEventArgs">
+        <elementDefinition Id="ce3c9ade-aca1-4e01-92be-e0d7c9c03d07" />
+      </referencedType>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="5357fe1d-9b5a-4b17-851c-e4327d6f83a4" name="ModelingProject1">
     <elementDefinition Id="e14108ca-fe49-444f-91f4-b8d3a1f23c05" />
+    <profileInstances>
+      <packageHasProfileInstances Id="02b7f02e-9435-4322-80cc-5a2a7a403f22">
+        <profileInstance Id="dc298ed7-f6a7-4406-ae8e-8d21f485d76a" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="fb28834b-21d0-468f-9ce2-6236b5ba261b">
+        <profileInstance Id="28afb4a8-8d76-4a1e-b920-4e5d8086cfcf" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="017c1923-56e1-41d5-9f15-f5d93a506be6">
+        <profileInstance Id="7045b38b-ede9-474e-8b31-ea84c9fc6801" name="CSharpProfile">
+          <elementDefinition Id="bdd0bfb2-83f6-4042-9f96-10f6b8d09e05" />
+        </profileInstance>
+        <elementDefinition Id="adf64043-4679-4d5c-be39-315959422932" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>
