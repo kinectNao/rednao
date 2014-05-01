@@ -40,8 +40,8 @@ Die C\# Applikation wird als WPF-Anwendung gestartet. Dies geschieht in der Klas
 
 
 \subsection{SkeletonAngleHandler}
-Der AngleHandler hat verschiedene Aufgaben. Zunächst erzeugt er in der Initialisierungsphase zwei Fenster, die in den späteren Phasen die errechneten Winkel ausgeben. Für jede Seite (rechts, links) wird ein Fenster erzeugt, dass alle 4 relevanten Winkel enthält. Des weiteren wird ein Thread erzeugt, der für die Errechnung der Winkelwerte aus dem ausgelesenen Skelett zuständig ist. Da diese Aktion relativ rechenintensiv ist, wurde sie in einen eigenen Thread ausgelagert. Zudem wird während der Initialisierungsphase noch der NaoHandler erzeugt, der für die spätere Übertragung und Transformation der errechneten Werte an den Roboter zuständig ist.
-Der Handler selbst verfügt über eine Liste mit Beobachtern, die informiert werden, falls eine neue Berechnung erfolgt ist. Beobachter sind konkret die beiden Fenster für die Debugging-Ausgabe und der Nao-Handler. Hierbei könnte somit dynamisch noch nach Bedarf ein neuer Beobachter hinzugefügt werden, der die Winkelwerte der menschlichen Pose verwenden könnte.
+Der AngleHandler löst verschiedene Aufgaben. Zunächst erzeugt er in der Initialisierungsphase zwei Fenster, die in den späteren Phasen die errechneten Winkel ausgeben. Für jede Seite (rechts, links) wird ein Fenster erzeugt, das alle 4 relevanten Winkel enthält. Des Weiteren wird ein Thread erzeugt, der für die Errechnung der Winkelwerte aus dem ausgelesenen Skelett zuständig ist. Da diese Aktion relativ rechenintensiv ist, wurde sie in einen eigenen Thread ausgelagert. Zudem wird während der Initialisierungsphase der NaoHandler erzeugt, der für die spätere Übertragung und Transformation der errechneten Werte an den Roboter zuständig ist.
+Der Handler selbst verfügt über eine Liste mit Beobachtern, die informiert werden, falls eine neue Berechnung erfolgt ist. Beobachter sind konkret die beiden Fenster für die Debugging-Ausgabe und der Nao-Handler. Hierbei könnte somit dynamisch nach Bedarf noch ein neuer Beobachter hinzugefügt werden, der die Winkelwerte der menschlichen Pose verwenden könnte.
 Der Handler selbst wird durch das Event \textbf{AllFramesReady} in der Klasse MainWindow über seine Methode \textbf{updateSkeleton} benachrichtigt und erhält ein neu erkanntes Skelett. Dieses gibt er an den Berechnungsthread weiter, der eine neue Berechnung startet. Nach erfolgreicher Berechnung werden alle Beobachter über die neuen Werte informiert. 
 
 %
@@ -52,9 +52,7 @@ Der Handler selbst wird durch das Event \textbf{AllFramesReady} in der Klasse Ma
 %
 
 \subsection{SkeletonAngleCalculator}
-
-
-
+Diese Klasse erhält als Input ein Skelett, lässt die vier benötigten Armwinkel berechnen und gibt diese zurück an den Handler. Die Berechnung erfolgt durch den statischen Aufruf der Factory-Klasse \textbf{AngleCalculation}. Diese enthält den Algorithmus, der mittels Skalarprodukt die Armstellungen errechnet. (Siehe Kapitel XYZ). Nach der Errechnung werden die Gelenkstellungen noch durch einen Medianfilter geschickt. Dieser soll extreme Schwankungen der Kinect-Erkennung ausschließen.
 
 
 \subsection{Interfaces}
@@ -84,3 +82,5 @@ Als Schnittstelle zwischen der Erkennung und der Ausführung der Armpositionen w
 
 
 \todo{Architekturidee: Input, Verarbeitung(evtl. Filter->Probleme Ruckeln?), Output, }
+
+
