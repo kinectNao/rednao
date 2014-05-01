@@ -59,26 +59,10 @@ Diese Klasse erhält als Input ein Skelett, lässt die vier benötigten Armwinke
 Als Schnittstelle zwischen der Erkennung und der Ausführung der Armpositionen wird essenziell die Methode \textit{updateAngles} vom Interface \textit{ISkeletonAngles} verwendet. Diese stellt alle benötigten Winkel wie Shoulder Pitch, Shoulder Roll, Ellbow Roll, Elbow Yaw bereit. Somit kann dieses Interface von allen Klassen implementiert werden, die immer die aktuellen Werte benötigen, wie der NaoHandler und die GUI.
 
 
-%
-% Dynamische Erklaerung des Programmes -> Workflow
-%
-%	Workflow darstellen (evtl. Flussdiagram + Erläuterung)
-%		Programm starten über MainWindow
-%		Erzeugt Frame und startet/initialisiere alle Submodule
-%			Init KinectHandler
-%			Init NaoHandler
-%			Init Berechnungen
-%		Warte auf Skelett...
-%		Skelett erkannt -> starte Berechnungen
-%		Zeige Skelett im Hauptframe an
-%		Für jedes aktualisierte Skelett
-%			Errechne Winkel
-%			Winkel filtern
-%			Aktuellen Status aktualisieren -> Observer Pattern
-%				GUI
-%				NaoHandler
 \subsection{Flussdiagramm: Winkelerkennung}
 
+	% Flussdiagramm in eigener Datei
+	\input{Kapitel/Realisierung/FlowChart.tex}
 
 
 \todo{Architekturidee: Input, Verarbeitung(evtl. Filter->Probleme Ruckeln?), Output, }
