@@ -1,6 +1,6 @@
 \section{Kinect - Armerkennungsalgorithmus}\label{algo_angle}
 Ein wesentlicher Teil des Programmes besteht darin, die Gesten einer Person, die sich vor dem Kinect-Sensor befindet, zu erkennen und in die passenden Winkelwerte für den Roboter umzurechnen.
-Hierfür wird mathematisch gesehen das Kreuzprodukt der passenden Knochen errechnet, um die passenden Winkel zur Steuerung des Nao-bots zu erhalten.
+Hierfür wird mathematisch gesehen das Skalarprodukt der passenden Knochen errechnet, um die passenden Winkel zur Steuerung des Nao-bots zu erhalten.
 
 \begin{description}
 	\item[Um einen Arm des Roboters zu steuern, bedarf es folgender Winkel:]~\par
@@ -26,7 +26,7 @@ Dieser Winkel entspricht der Beugung des Ellenbogens. Dafür notwendig sind die 
 Dieser Winkel wird über die Gelenke Shoulder, Hip, Elbow und Hand berechnet. Der erste Vektor wird von Schulter zur Hüfte aufgespannt und der zweite Vektor entspricht dem Unterarm. 
 
 
-Nach der Erstellung dieser Vektoren wird eine Methode aufgerufen, die das Kreuzprodukt der Vektoren errechnet und somit den jeweiligen Winkel zurück liefert. \\
+Nach der Erstellung dieser Vektoren wird eine Methode aufgerufen, die das Skalarprodukt der Vektoren errechnet und somit den jeweiligen Winkel zurück liefert. \\
 
 \lstinputlisting
     [caption={Ermittlung des Winkels mithilfe von drei Punkten}
