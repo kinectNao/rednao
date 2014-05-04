@@ -1,16 +1,24 @@
 \chapter{Ausblick}      % Kapitelname
-Schluss
+Dieser Abschnitt dient als knappe Zusammenfassung und Fazit über die Arbeit \Titel. Dabei wird aufgezählt, welche Probleme bei der Bearbeitung entstanden sind, welche weiteren Funktionen hinzugefügt werden könnten und in welchem Anwendungsgebiet solche Gestiksteuerungen durch Roboter brauchbar wären.
 
+Nachdem in den Kapiteln \myref{c:robotik}, \myref{c:kinect} und \myref{c:nao} die Grundlagen für das Verständnis dieser Arbeit gelegt wurden, ist in Abschnitt \myref{c:realisierung} die konkrete Implementierung beschrieben. In den Grundlagenkapiteln wurde unter anderem der Begriff mobile Roboter definiert, ein kurzer Rückblick auf die Geschichte dieser gegeben und eingeteilt aus welchen Komponenten diese bestehen. In den Kapiteln zum Roboter Nao und der Kinect Kamera wurde bei beiden ein Überblick über die Hard- und Software gegeben und die Programmierschnittstellen vorgestellt.
+
+Die Architektur inklusive der Schnittstellen für leichtes Austauschen von konkreten Implementierungen ist im Kapitel \ref{k:Architektur} vorgestellt. Dabei wurden zentrale Algorithmen und Prototypen der Anwendung genannt und erläutert. Zudem wurden Erweiterungen vorgestellt, welche die Anwendung verbesserten.
+
+\noindent
+Das Ergebnis dieser Arbeit ist eine Anwendung, die Bewegungen des Menschen erkennt, annimmt, diese passend für den Roboter umrechnet und sie dem Roboter zur Ausführung übergibt. Der primäre Meilenstein \textit{Steuerung der Arme} wurde zu 100\% erreicht. Als weitere Meilensteine würden sich unserer Meinung nach folgende anbieten: 
+\begin{itemize}
+\item Steuerung der Beine: Durch einen Bewegungskreis könnte die Kinect erkennen, ob sich der Mensch  nach rechts/links oder vorne/hinten bewegt hat und dies entsprechend dem Roboter weitergeben
+\item Sonderbefehle mit Gesten: Bestimmte Gesten ermöglichen erweiterte Funktionalitäten anstatt simpler Imitation. Beispielsweise das Zusammenführen der Hände löst eine Kameraaufnahme aus. 
+\item Steuerung durch Sprache: Die integrierte Sprachbibliothek der Kinect könnte für weitere Funktionen genutzt werden, wie zum Beispiel das verändern der Pose.
+\end{itemize}
+Die Performanz der Anwendung könnte durch Einsetzen von Rotationsmatrizen in den Algorithmen eventuell gesteigert werden.
+\\
+\\
+\noindent
+Ebenso könnte die Genauigkeit der Imitationen durch Einsatz der neuen Kinect (Xbox ONE) deutlich gesteigert werden. Diese identifiziert das Skelett noch genauer und ist auch in der Berechnung der Winkel hochauflösender. Zu weiteren Funktionalitäten gehört, dass sogar eine Rotation der Unterarme sowie das Öffnen bzw. Schließen der Hände erkannt wird.
 
 \input{Kapitel/Schluss/Probleme.tex}
 \input{Kapitel/Schluss/Anwendungsgebiete.tex}
 
-%
-% 	Ausblick
-%		Was koennte man noch machen?
-%			Steuerung der Beine (Bewegung) durch Bewegungskreis mit Kinect
-%		Was koennte man verbessern?
-%			Algorithmus mittels Rotationsmatrizen realisieren -> spart evtl. Zeit
-%		Kinect 2.0
-%			Drehung der Arme und Öffnen/Schließen Hände
-%		
+	
