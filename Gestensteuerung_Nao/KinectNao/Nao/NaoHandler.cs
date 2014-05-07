@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Aldebaran.Proxies;
 using KinectNao.Kinect;
+using System.Configuration;
+using System.Windows.Forms;
+
 
 namespace KinectNao.Nao
 {
@@ -13,7 +16,10 @@ namespace KinectNao.Nao
 
         //Local or Remote
         //const String ip = "127.0.0.1";
-        const String ip = "192.168.100.3";
+        //const String ip = "192.168.100.3";
+        String ip = "127.0.0.1";
+
+
         const int port = 9559;
 
         private MotionProxy mpL;
@@ -24,8 +30,9 @@ namespace KinectNao.Nao
         private LArm LArm;
         private SkeletonAngleHandler handler;
 
-        public NaoHandler(SkeletonAngleHandler _handler)
+        public NaoHandler(SkeletonAngleHandler _handler, String ip)
         {
+            this.ip = ip;
             handler = _handler;
             handler.addMeToAngleSubscriber(this);
             init();
@@ -45,8 +52,9 @@ namespace KinectNao.Nao
             }
             catch (Exception)
             {
-
-                throw new Exception("Cannot connect to Proxy");
+                MessageBox.Show("IP Adresse von Nao nicht erreichbar, prüfen Sie die Konfiguration!", "Fehler");
+                Application.Exit();
+                throw new Exception("Cannot connect to Proxy. Check IP-Configuration!");
             }
 
             try

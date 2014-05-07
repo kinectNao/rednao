@@ -20,7 +20,6 @@ using System.ComponentModel;
 using System.Threading;
 
 
-
 namespace KinectNao
 {
     /// <summary>
@@ -39,8 +38,11 @@ namespace KinectNao
 
 
 
+
+
+
         //Control-Aufgaben
-        SkeletonAngleHandler anglehandler = new SkeletonAngleHandler();
+        SkeletonAngleHandler anglehandler = new SkeletonAngleHandler(getIP());
 
 
 
@@ -92,6 +94,20 @@ namespace KinectNao
                 }
             }
         }
+
+
+        public static string getIP()
+        {
+            string value = "127.0.0.1";
+
+            if (InputBox.show("Geben Sie die IP Adresse zum Nao ein:", "IP:", ref value) == System.Windows.Forms.DialogResult.OK)
+            {
+                return value;
+            }
+            return value;
+        }
+
+
 
         private void runtime_AllFramesReady(object sender, AllFramesReadyEventArgs e)
         {

@@ -8,6 +8,7 @@ using System.Windows;
 using Microsoft.Kinect;
 using KinectNao.Nao;
 
+
 namespace KinectNao.Kinect
 {
  
@@ -22,7 +23,7 @@ namespace KinectNao.Kinect
         private AngleView view_right;
         private ArrayList angleSubscribers = new ArrayList();
 
-        public SkeletonAngleHandler()
+        public SkeletonAngleHandler(String naoIP)
         {
            
             view_left = new AngleView(this, 'l');
@@ -37,7 +38,7 @@ namespace KinectNao.Kinect
             view_right.Show();
 
 
-            naoHandler = new NaoHandler(this);
+            naoHandler = new NaoHandler(this, naoIP);
 
             angleCalculator = new SkeletonAngleCalculator(this);
             angleCalculatorThread = new Thread(angleCalculator.DoWork);
@@ -53,6 +54,10 @@ namespace KinectNao.Kinect
             //Thread.Sleep(1);      
         }
 
+
+
+
+
         public void stopCalculation()
         {
             // Request that the worker thread stop itself:
@@ -63,7 +68,7 @@ namespace KinectNao.Kinect
             angleCalculatorThread.Join();
             Console.WriteLine("Angle Calculation shutdown complete...");
 
-            //naoHandler.endNao();
+            naoHandler.endNao();
         }
 
         public void addMeToAngleSubscriber(ISkeletonAngles subscriber)
