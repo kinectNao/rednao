@@ -1,1 +1,31 @@
 \section{Komponenten}\label{Komponenten}
+Ein Robotersystem definiert sich aus mechanischen und elektronischen Komponenten. Diese werden als Teilsysteme folgender Problemstellungen unterschieden \cite{Haun2007}:
+\begin{itemize}
+\item Mechanik
+\item Kinematik
+\item Antrieb
+\item Sensoren
+\end{itemize}
+Dabei beschäftigt sich die \textbf{Mechanik} mit der Fähigkeit des Roboters, die Endeffektoren in eine vorgegebene Position und Orientierung zu bringen oder einer Bahn im dreidimensionalen Raum nachzufahren.
+
+Die \textbf{Kinematik} hingegen macht Aussage über die Geometrie und die zeitlich abhängigen Komponenten von Bewegungen. Jedoch werden die Kräfte, die auf das System wirken nicht in die Kinematik miteinbezogen. Typische Parameter die einen Effektor in der Bewegung beeinflussen, sind die Position (Verschiebung, Drehung), die Geschwindigkeit, die Beschleunigung und die Zeit. Dabei wird zwischen direkter und inverser Kinematik unterschieden. Die direkte Kinematik ist immer eindeutig, da von einer oder mehreren Winkelstellungen oder Translationen immer genau auf den Punkt des Endeffektor im Raum geschlossen werden kann. Die inverse Kinematik hingegen ist selten eindeutig, ein Punkt des Endeffektors kann über unterschiedliche Winkelstellungen oder Translationen erreicht werden. 
+
+Die Fortbewegung und die Bewegung der Roboterglieder wird durch den Einbau von \textbf{Antrieben} erreicht. Durch diese wird die erforderliche Energie auf die Achsen übertragen und somit die entsprechenden Komponenten bewegt. Wichtig ist, dass auch immer Energie benötigt wird, wenn sich der Roboter nicht bewegt. Zum Beispiel muss ein humanoider Roboter meistens Stehen und die dadurch entstehenden Kräfte müssen durch die Antriebe ausgeglichen werden. Es gibt drei unterschiedliche Antriebsarten: pneumatisch, hydraulisch und elektrisch. Pneumatische Antriebe werden durch komprimierte Luft, hydraulische durch Öldruck bewegt und elektrische sind meist Elektromotoren. 
+
+Wie schon in Kapitel \myref{s:definition} erläutert, steht ein Robotersystem in enger Wechselbeziehung mit seiner Umwelt. \textbf{Sensoren} sind Komponenten, die die Umgebung mit physikalischen Messgrößen analysieren. Das können beispielsweise die Temperatur, die Helligkeit oder auch Größen von Objekten sein. Es wird dabei zwischen drei Kategorien von Sensoren unterschieden:
+\begin{itemize}
+\item \textbf{interne Sensoren} messen Zustandsgrößen des Roboters selbst. Das sind beispielsweise Position und Orientierung, Akkustatus, Temperatur im Inneren, Stellung der Gelenke oder Kräfte/Momente, die auf Gelenke wirken.
+\item \textbf{externe Sensoren.} Mit Ihnen werden Eigenschaften der Umwelt des Roboters erfasst. Beispiele hierfür sind Licht, Wärme, Kollision mit Hindernissen, Kontur/Farbe von Objekten oder Abstandsmesser. 
+\item \textbf{Oberflächensensoren} oder auch taktile Sensoren genannt. Sie registrieren eine konkrete Berührung beispielsweise am Kopf oder an den Fußzehen eines humanoiden Roboters.
+\end{itemize}
+Beispielhaft soll hier aus jeder Kategorie ein konkreter Sensor vorgestellt werden. Weitere Realisierungen sind in \cite{Haun2007} zu finden.
+
+Ein interner Sensor zur Messung von Umdrehungen ist ein Drehwinkelgeber oder auch Potentiometer genannt. Dies sind mechanisch variable Widerstände, die an der rotierenden Welle angebracht sind und Auskunft über die Winkelstellung geben. Es existieren absolute und inkrementelle Drehwinkelgeber. Bei absoluten Winkelgebern wird eine mit Gray Code\footnote{Ein binärer Code, bei dem sich bei Inkrementierung immer nur ein Bit ändert.} codierte Scheibe von einem optischen Sensor ausgelesen und so der Winkel bestimmt. Die inkrementelle Variante hat den Vorteil, dass sie die Bewegung über die Zeit integrieren kann. Dabei wird die Scheibe von zwei Photorezeptoren ausgelesen. Je nach dem in welche Richtung sich die Scheibe dreht, ist die eine Spur der jeweils anderen immer voraus und dadurch kann die Richtung der Rotation bestimmt werden.
+
+Der Radar - Sensor ist ein externer Sensor zur Abstandsmessung. Dabei wird ein Radar - Impuls durch den Sensor emittiert und die Laufzeit gemessen, bis er wieder detektiert wird. Da die Geschwindigkeit der ausgesendeten Wellen bekannt ist, kann die Distanz zum Objekt gemessen werden. Je nach Aufbau, kann ein Sensor sowohl Senden als auch Empfangen. Bei zwei Sensoren hat jeder jeweils nur eine Aufgabe.
+
+Ein einfacher Oberflächensensor ist ein Mikroschalter. Wenn eine Stoßleiste mit einem Objekt in Berührung kommt, wird dadurch der Mikroschalter geschlossen und dies wiederum schließt einen Stromkreis. Die Information dieses Sensor ist allerdings nur binär, weshalb öfter zu widerstandsempfindlichen Sensoren gegriffen wird. Zum Beispiel haben Dehnungsmeßstreifen je nach Biegung einen unterschiedlich starken Widerstand. Diese können zu Sensorflächen zusammengefasst werden und geben dann sogar Auskunft über die Größe und Form eines berührenden Objekts.
+\\
+\\
+\noindent
+Diese kurzen Beispiele sollen zeigen, wie komplex ein Robotersystem aufgebaut werden kann. Da die Informationen aus den Sensoren auch oft verrauscht, d.h. unpräzise oder mehrdeutig sein können, sind teilweise große Rechner erforderlich, um die Sensordaten auszuwerten. Gerade in Bereichen der Bildverarbeitung mit Kameras fallen komplexe Analysemethoden an.
