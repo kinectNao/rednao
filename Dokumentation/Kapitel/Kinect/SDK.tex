@@ -59,15 +59,20 @@ In diesem Fall aktiviert man den Skeletonstream mit \textit{sensor.SkeletonStrea
 
 \noindent
 Erkennt die Kinect einen Spieler im Sichtfeld, wird ein SkeletonFrameReady-Event erzeugt und die registrierte Methode aufgerufen. Da in diesem Projekt der RGB-Stream und der Skeleton-Stream gleichzeitig benötigt werden, gibt es auch die Möglichkeit ein \textit{AllFramesReady}-Event zu registrieren, dass Informationen aller Streams beinhaltet. Im obigen Listing ist ein Auszug aus der Methode \textit{runtime\_AllFramesReady}. Diese erhält über die Methode \textit{OpenSkeletonFrame} das Skelettobjekt. Danach kann das Objekt entsprechend verwendet werden. Falls ein neues Skelett vorhanden ist, wird dieses in einem Array vom Typ \textbf{Skeleton} gespeichert (Zeile 10). Da innerhalb dieses Projektes jedoch nur ein Benutzer relevant ist, wird zur Weiterverarbeitung nur das aktive Skelett des ersten Spielers verwendet. Existiert ein neues Skelett, wird dieses an den Handler übergeben, der die Schnittstelle zur weiteren Verarbeitung des Skeletts darstellt (Zeile 24). Auf die genaue Funktion dieses Handlers wird im Kapitel \myref{k:Architektur} näher eingegangen.
-\todo{Screenshot Skelett}
+
+%\todo{Screenshot Skelett}
 %
 % Screenshot eines Skeletts 
 %
 
-
 \subsection{Kinect Studio}
 Das Kinect-SDK stellt einem Entwickler nach der Installation nützliche Dinge bereit, wie eine Bibliothek mit verschiedenen Templates, die beschreiben, wie die Funktionen der Kinect aus Microsoft Sicht verwendet werden. Zusätzlich zu den Templates wird mit dem SDK auch das Kinect Studio mitgeliefert. Diese Anwendung ist für die Entwicklung von Kinect Applikationen sehr nützlich, da man hier wie bei einem Videoschnittprogramm Sequenzen aufnehmen kann, die RGB und Tiefendaten enthalten. Zudem erkennt Kienct Studio aktive Kinect-Applikationen und kann sich zu diesen verbinden. Somit können Bewegungen aufgenommen werden und in der entwickelten Anwendung \textit{abgespielt} werden, ohne diese immer vor der Kinect ausführen zu müssen.
-\todo{Screenshot Kinect-Studio}
-\\ \\
+%\todo{Screenshot Kinect-Studio}
+\begin{figure}[H]						
+	\centering							
+	\includegraphics[scale=0.4]{Bilder/Kinect_Studio.png}			
+	\caption{Kinect Studio}						
+	\label{f:kinect_studio}						
+\end{figure}
 \textbf{Anmerkung}\\
 Das Verbinden funktioniert jedoch nur, wenn Kinect per USB aktuell angeschlossen ist. Deshalb benötigt man zwingend ein Kinect-Modul, um seine Anwendung testen zu können.

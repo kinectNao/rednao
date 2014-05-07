@@ -57,9 +57,12 @@ Damit ist das am nächsten befindliche Objekt gemeint, da verdeckte Objekte nich
 Aus diesem Stream kann man beispielsweise ein Tiefenbild mit verschiedenen Grauwerten generieren, die repräsentativ für die Entfernung zur Kinect stehen. Die Depth-Stream Daten werden in einem 16 Bit Array transportiert. Dabei sind 3 untersten Bits jedoch für die Erkennung von mehreren Spielern reserviert
 (Siehe Kapitel \myref{skeleton}). Die oberen 13 Bit enthalten die eigentlichen Tiefendaten. Ein solcher Tiefenstream kann wie folgt aussehen:
 
-\todo{TiefenstreamBild}
-%Einfuegen: Bild mit Tiefenstream
-
+\begin{figure}[H]						
+	\centering							
+	\includegraphics[scale=0.5]{Bilder/kinect_tiefenstream.png}			
+	\caption{Kinect Tiefenstream}						
+	\label{f:kinect_depth_stream}						
+\end{figure}
 
 Zur Erfassung eines Objektes, muss sich dieses im Sichtfeld der Kinect befinden. 
 \begin{figure}[H]						
@@ -157,6 +160,6 @@ Der Koordinatenraum der Kinect ist wie folgt definiert:
 Das Kinect-Koordinatensystem ist ein rechtshändiges Koordinatensystem. Die positive Z-Richtung entspricht der Blickrichtung der Kinect. Die positive X-Richtung zeigt nach links und entsprechend die positive Y-Richtung nach oben. \cite{ws:microsoft_coordinateSpaces}
 
 % (Bild mehrere User im Kinectraum)
-\todo{Screenshot von Deep Stream (Kinect Studio)}
+%\todo{Screenshot von Deep Stream (Kinect Studio)}
 %\todo{Unterschied Microsoft SDK und Freie Implementierung OpenNI}
 %\todo{Bild von Kinect-Koordinatensystem -> Bezug auf Nao}
