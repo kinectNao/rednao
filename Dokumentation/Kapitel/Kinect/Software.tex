@@ -20,7 +20,7 @@
 
 Die im vorherigen Kapitel aufgezeigte Hardware liefert die entsprechenden Sensorinformationen, die nun
 softwaretechnisch zu einer abstrakteren Ebene zusammengefasst werden müssen. Die Funktion dieser
-Verarbeitungen speziell für das Microsoft Kinect SDK soll in diesem Kapitel erläutert werden.
+Verarbeitungen -speziell für das Microsoft Kinect SDK- soll in diesem Kapitel erläutert werden.
 
 \begin{description}
 	\item[Die Hardware liefert folgende Werte:]~\par
@@ -54,7 +54,7 @@ damit, wie diese Funktionen im Inneren funktionieren.
 \subsection{Der Tiefenstream}
 Der Tiefenstream (Depth-Stream) liefert zu jedem Pixel im Sichtfeld (43 Grad vertikal, 57 Grad horizontal) einen Tiefenwert. Dieser Wert enthält die Entfernung in Millimetern zu dem jeweiligen Objekt.
 Damit ist das am nächsten befindliche Objekt gemeint, da verdeckte Objekte nicht vom Sensor erkannt werden.
-Aus diesem Stream kann man beispielsweise ein Tiefenbild mit verschiedenen Grauwerten generieren, die repräsentativ für die Entfernung zur Kinect stehen. Die Depth-Stream Daten werden in einem 16 Bit Array transportiert. Dabei sind 3 untersten Bits jedoch für die Erkennung von mehreren Spielern reserviert
+Aus diesem Stream kann man beispielsweise ein Tiefenbild mit verschiedenen Farbwerten generieren, die repräsentativ für die Entfernung zur Kinect stehen (siehe Abb. \ref{f:kinect_depth_stream}). Die Depth-Stream Daten werden in einem 16 Bit Array transportiert. Dabei sind die drei untersten Bits jedoch für die Erkennung von mehreren Spielern reserviert
 (Siehe Kapitel \myref{skeleton}). Die oberen 13 Bit enthalten die eigentlichen Tiefendaten. Ein solcher Tiefenstream kann wie folgt aussehen:
 
 \begin{figure}[H]						

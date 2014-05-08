@@ -1,6 +1,5 @@
 \section{Kinect Hardware}
-Microsoft brachte im November 2010 mit dem Produkt Xbox Kinect eine neues Produkt auf den Markt. Mit diesem war es möglich, ihr eigene Spielkonsole Xbox 360 über eine 3D-Kamera zu steuern und Spiele zu spielen. 
-Mit dieser Kamera konnte erstmals ein preiswerter Sensor verwendet werden, um 3D-Bilddaten auszuwerten.
+Microsoft brachte im November 2010 mit dem Produkt Xbox Kinect eine neues Produkt auf den Markt. Mit diesem war es möglich, die Spielkonsole Xbox 360 über eine 3D-Kamera zu steuern und Spiele zu spielen. Das neuartige Kamera-Modul war nun erstmals ein preiswerter Sensor, um 3D-Bilddaten auszuwerten.
 Im Folgenden wird auf die Hardware des Sensors näher eingegangen:\\[0.2cm]
 
 \begin{figure}[H]						
@@ -21,8 +20,7 @@ zu realisieren. \cite{webb2012beginning}
 	oder auch in Kombinationen weiterer Funktionen verwendet werden kann.
 	Das Sichtfeld der Kamera beträgt 43 Grad in der Vertikalen, sowie 57 Grad in der Horizontalen.
 	Bei einer Auflösung von 640 x 480 Pixel werden 30 \ac{FPS} und bei 1280 x 960 Pixel noch 12 \ac{FPS} unterstützt.
-	Wobei standardmäßig die geringere Auflösung genügt und deshalb auch verwendet wird.
-	\cite{jana2012kinect}	
+	Wobei für viele Zwecke die geringere Auflösung genügt und deshalb auch standardmäßig verwendet wird \cite{jana2012kinect}.
 
 \subsection{Tiefenerkennung}
 	
@@ -31,7 +29,7 @@ zu realisieren. \cite{webb2012beginning}
 	\ref{f:kinect_hardware}).\\
 	\noindent
 	Zur Abtastung der Tiefenwerte wendet die Kinect das \textit{Light-Coding} Prinzip an. Hierbei wird
-	eine Szene mit einem Muster überlagert und daraus die Tiefeninformation berechnet.
+	eine Szene mit einem Muster überlagert und daraus die Tiefeninformationen berechnet.
 	Der \acs{IR-Emitter} sendet dabei ein spezielles Punktmuster aus (Siehe Abb. \ref{f:kinect_dots}),
 	das vom Tiefensensor abgetastet werden kann.	
 	
@@ -50,9 +48,8 @@ zu realisieren. \cite{webb2012beginning}
 	der PrimeSense-Chip. Dieser wertet das Light-Coding mittels \textit{Depth from Focus} und 
 	\textit{Depth from Stereo} aus.\cite{pdf:maccormick}
 	\\
-	Befindet sich nun ein Objekt im Sichtbereich der Kinect, wird das Muster auf das Objekt projiziert und
-	die Form des Objektes verzerrt das Muster (Siehe Abb. \ref{f:kinect_dots_with_Object}). Daraus kann der 
-	Chip die Tiefeninformationen errechnen.	
+	Befindet sich nun ein Objekt im Sichtbereich der Kinect, wird das Muster auf das Objekt projiziert. Die räumliche Ausprägung des Objektes verzerrt dieses Muster (Siehe Abb. \ref{f:kinect_dots_with_Object}). Daraus kann der Chip die Tiefeninformationen errechnen.		
+	
 	
 	\begin{figure}[H]						
 		\centering							
@@ -63,19 +60,17 @@ zu realisieren. \cite{webb2012beginning}
 	
 	\noindent
 Die \textit{Depth from Focus} Methode beruht darauf, dass ein Gegenstand immer verschwommener wird, je weiter weg er sich von der Kinect befindet. Um diesen Effekt optimal zu nutzen, befindet sich vor dem Tiefensensor eine spezielle astigmatische Linse, die diesen Effekt zusätzlich verstärkt und einen Punkt zu einer Ellipse werden lässt, je weiter er von der Linse entfernt ist.\cite{pdf:maccormick}	\\
-Die \textit{Depth from Stereo} Methode beruht auf der Parallaxe. Verändert ein Beobachter seine eigene Position, so beobachtet dieser eine scheinbare Änderung der Position des beobachteten Objektes \cite{ws:wikiparallaxe}. Hierbei erscheinen nahe liegende Objekte größer verschoben als weiter entfernte Objekte. Das \glqq Verschieben\grqq entsteht durch die Position der zwei Kameras. Anhand dieser Methoden kann der PrimeSense-Chip also die Tiefeninformationen aus der Szene extrahieren.	
+Die \textit{Depth from Stereo} Methode beruht auf der Parallaxe. Verändert ein Beobachter seine eigene Position, so beobachtet dieser eine scheinbare Änderung der Position des beobachteten Objektes \cite{pdf:parallaxe}. Hierbei erscheinen nahe liegende Objekte größer verschoben als weiter entfernte Objekte. Das "`Verschieben"' entsteht durch die Position der zwei Kameras. Anhand dieser Methoden kann der PrimeSense-Chip also die Tiefeninformationen aus der Szene extrahieren.	
 	
-Der Vorteil dieser Auswertung ist, dass zu einem Zeitpunkt nicht nur ein Punkt, sondern gleich eine komplette Punktewolke ausgerechnet und somit auch mehrere Bewegungen gleichzeitig erfasst werden können. Zum Beispiel eine Arm und eine Beinbewegung gleichzeitig.
-	
+Der Vorteil dieser Auswertung ist, dass zu einem Zeitpunkt nicht nur ein einzelner Punkt, sondern gleich eine komplette Punktewolke ausgerechnet und somit auch mehrere Bewegungen gleichzeitig erfasst werden können. Zum Beispiel eine Arm und eine Beinbewegung gleichzeitig. Zudem werden die Berechnung vom PrimeSense-Chip verarbeitet. Dies entlastet den angeschlossenen Computer.
 	
 	
 \subsection{Tilt-Motor}
 	Die Kinect besitzt einen Motor, um das Gehäuse in eine passende vertikale Position zu bringen.
-	Der Kopf ist in vertikaler Richtung positiv, sowie negativ um 27 Grad verstellbar. Somit kann
-	man den Sensor optimal an die aktuelle Position anpassen, sodass das Skelett einer Person im
+	Der Kopf ist in vertikaler Richtung positiv, sowie negativ um 27 Grad verstellbar. Der Sensor kann
+	dadurch optimal an die aktuelle Position angepasst werden, sodass eine Person im
 	Kinectraum noch korrekt erkannt werden kann und sich innerhalb des Sichtfeldes befindet.
 	\cite{jana2012kinect}
-	\todo{Programm um Tilt erweitern}
 	
 	
 \subsection{Microphon Array}
@@ -83,8 +78,7 @@ Der Vorteil dieser Auswertung ist, dass zu einem Zeitpunkt nicht nur ein Punkt, 
 	Diese sind an der Vorderseite linear angeordnet. Drei befinden sich auf der rechten Seite und eines
 	auf der linken Seite. Somit lässt sich die Richtung eines Geräusches identifizieren. Zusätzlich bietet
 	diese Anordnung eine Möglichkeit Störgeräusche (Rauschen) aus einer Aufnahme zu entfernen und entstehende
-	Echos zu Unterdrücken. \\
-	Damit kann eine Kinect die Richtung eines Geräusches ermitteln und besser auswerten. Es gibt auch eine
-	Möglichkeit Sprachbefehle mit einer Grammatik aus der Kinect-Library zu erkennen. Diese sind jedoch für 
+	Echos zu unterdrücken. \\
+	Es gibt auch eine Möglichkeit Sprachbefehle mit einer Grammatik aus der Kinect-Library zu extrahieren \cite{jana2012kinect}. Diese sind jedoch für 
 	dieses Projekt irrelevant und so wird das Mikrofonarray nicht verwendet.
-	\cite{jana2012kinect}
+	
