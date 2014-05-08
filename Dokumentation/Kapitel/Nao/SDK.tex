@@ -6,7 +6,7 @@ Dieses Framework erlaubt homogene Kommunikation zwischen verschiedenen Modulen (
 \\
 \\
 \noindent
-\myref{f:naoqi_ov} zeigt die einzelnen Komponenten des NAOqi Frameworks:
+Bild \myref{f:naoqi_ov} zeigt die einzelnen Komponenten des NAOqi Frameworks:
 \begin{itemize}
 \item Cross - Plattform
 \item Cross - Language
@@ -26,17 +26,17 @@ Dieses Framework erlaubt homogene Kommunikation zwischen verschiedenen Modulen (
 
 \textbf{Cross - Plattform}
 \\
-Cross - Plattform bedeutet Plattformunabhängigkeit gegenüber dem Betriebssystem auf dem Programmiert werden soll. Sowohl auf Linux, Windows und auf Mac kann Code für Nao programmiert werden. Allerdings kann auf Windows und Mac nur Code auf dem Computer selbst kompiliert werden, während auf Linux der Code auch auf dem Roboter selbst programmiert werden kann.
+Cross - Plattform bedeutet Plattformunabhängigkeit gegenüber dem Betriebssystem auf dem programmiert werden soll. Sowohl auf Linux, Windows und auf Mac kann Code für Nao entwickelt werden. Allerdings kann auf Windows und Mac nur Code auf dem Computer kompiliert werden, während auf Linux der Code auch auf dem Roboter selbst übersetzt werden kann.
 \\
 \\
 \textbf{Cross - Language}
 \\	
-Cross - Language ist nach \cite{ws:naodocu} die Eigenschaft, dass Software in C++ und in Python entwickelt werden kann. In allen Fällen, in denen die Methoden exakt gleich sind kann die \ac{API} (dt: Programmierschnittstelle), gleichgültig von welcher der unterstützten Programmiersprachen, aufgerufen werden. Die \ac{API} ist in acht Programmiersprachen verfügbar: C++, Python, .NET (C\#, Visual Basic, F\#), Java, Matlab und Urbi.
+Cross - Language ist nach \cite{ws:naodocu} die Eigenschaft, dass Software in C++ und in Python entwickelt werden kann. In allen Fällen, in denen die Methoden exakt gleich sind, kann die \ac{API} (dt: Programmierschnittstelle), gleichgültig von welcher der unterstützten Programmiersprachen, aufgerufen werden. Die \ac{API} ist in acht Programmiersprachen verfügbar: C++, Python, .NET (C\#, Visual Basic, F\#), Java, Matlab und Urbi.
 
-Neue NAOqi Module können nur in C++ oder Python entwickelt werden, jedoch kann die Client - API mit allen Programmiersprachen angesprochen werden. Ebenso sind nur C++ und Python auf dem Roboter unterstützt, die anderen Sprachen werden nur über \textit{Remote - Access} unterstützt. (siehe unten \textit{Proxy})
+Neue NAOqi Module können nur in C++ oder Python entwickelt werden, jedoch kann die Client - API mit allen Programmiersprachen angesprochen werden. Ebenso sind nur C++ und Python auf dem Roboter unterstützt, die anderen Sprachen werden nur über \textit{Remote - Access} supported. (siehe unten \textit{Proxy})
 \\
 \subsection{NAOqi - Prozess}
-Der NAOqi - Prozess der auf dem Roboter läuft ist ein \textit{Broker} (siehe unten). Beim Start des Prozesses wird eine Konfigurationsdatei \textsf{autoload.ini} geladen, die definiert, welche Bibliotheken geladen werden sollen. Jede Bibliothek beinhaltet ein oder mehrere Module, die der Broker nutzt um deren Methoden öffentlich anzuzeigen. (siehe \ref{f:naoqi_broker1})
+Der NAOqi - Prozess der auf dem Roboter läuft ist ein \textit{Broker} (siehe unten). Beim Start des Prozesses wird eine Konfigurationsdatei \textsf{autoload.ini} geladen, die definiert, welche Bibliotheken geladen werden sollen. Jede Bibliothek beinhaltet ein oder mehrere Module, die der Broker nutzt um deren Methoden öffentlich anzuzeigen (siehe \ref{f:naoqi_broker1}).
 
 \begin{figure}[H]						
 	\centering							
@@ -47,7 +47,7 @@ Der NAOqi - Prozess der auf dem Roboter läuft ist ein \textit{Broker} (siehe un
 
 Der Broker 	stellt einen Lookup - Service zu Verfügung, so dass jedes Modul im Baum oder verteilt im Netzwerk jede Methode finden kann, die öffentlich angezeigt wurde.
 
-Das Laden der Module zum Start erzeugt einen Baum von Methoden, die an Module geknüpft und diese wiederum an einen Broker geknüpft sind. (siehe \ref{f:naoqi_broker2})
+Das Laden der Module zum Start erzeugt einen Baum von Methoden, die an Module und diese wiederum an einen Broker geknüpft sind (siehe \ref{f:naoqi_broker2}).
 
 \begin{figure}[H]						
 	\centering							
@@ -58,14 +58,14 @@ Das Laden der Module zum Start erzeugt einen Baum von Methoden, die an Module ge
 \noindent
 \textbf{Broker}
 \\
-Der Broker ist ein Objekt, der zwei generelle Rollen einnimmt. Erstens ist das ein Verzeichnis - Dienst, mit dessen Hilfe Module und Methoden gefunden werden können und zweitens ein Netzwerk - Anschluss, der es möglich macht Methoden verknüpfter Module auch außerhalb des Prozesses aufzurufen.
+Der Broker ist ein Objekt, der zwei generelle Rollen einnimmt. Erstens ist es ein Verzeichnisdienst, mit dessen Hilfe Module und Methoden gefunden werden können und zweitens ein Netzwerk - Anschluss, der es möglich macht Methoden verknüpfter Module auch außerhalb des Prozesses aufzurufen.
 
-Die Meiste Zeit muss sich keine Gedanken um die Broker gemacht werden, da diese ihre Arbeit selbstständig und transparent machen. Geschriebener Code kann gleich sein, ob für Aufrufe an "`remote Module"' (dt.: entfernt; anderer Prozess oder anderes System) oder "`lokale Module"' (gleicher Prozess).
+Die Meiste Zeit muss sich keine Gedanken um die Broker gemacht werden, da diese ihre Arbeit selbstständig und transparent erledigen. Geschriebener Code kann gleich sein, ob für Aufrufe an "`remote Modulen"' (dt.: entfernt; anderer Prozess oder anderes System) oder an "`lokalen Module"n' (gleicher Prozess).
 \\
 \\
 \textbf{Proxy}
 \\
-Ein Proxy ist ein Stellvertreter - Objekt das sich genau so verhält, wie das Modul das es repräsentiert. Wenn ein Proxy - Objekt des ALMotion Moduls instanziiert wird, erhält das Proxy - Objekt auch alle Methoden des ALMotion Moduls.
+Ein Proxy ist ein Stellvertreterobjekt das sich genau so verhält, wie das Modul das es repräsentiert. Wenn ein Proxyobjekt des ALMotion Moduls instanziiert wird, erhält das Proxyobjekt auch alle Methoden des \textsf{ALMotion} Moduls.
 
 Um ein Proxy eines Moduls zu instanziieren gibt es zwei Möglichkeiten: 
 \begin{itemize}
@@ -95,17 +95,17 @@ Der Unterschied liegt darin, dass Broker to Broker eine wechselseitige, Proxy to
 \noindent	
 \textbf{Blocking und non - Blocking Aufrufe}
 \\
-Das NAOqi - Framework bietet zwei Möglichkeiten an, Methoden aufzurufen. 
+Das NAOqi - Framework bietet zwei Möglichkeiten an Methoden aufzurufen. 
 \\
 \\
-Abbildung \ref{f:naoqi_blockingcall} zeigt das Schema eines \textbf{Blocking calls}. Diese sind wie normale Methoden - Aufrufen. Die nächste Anweisung wird erst nach dem Ende der vorherigen ausgeführt und währenddessen ist keine Ausführung von anderem Code möglich. Alle Aufrufe können eine Exception auslösen und sollten in einen try-catch - Block gepackt werden. Ebenso können die Aufrufe Rückgabewerte besitzen.
+Abbildung \ref{f:naoqi_blockingcall} zeigt das Schema eines \textbf{Blocking calls}. Diese sind wie normale Methodenaufrufe. Die nächste Anweisung wird erst nach dem Ende der vorherigen ausgeführt und währenddessen ist keine Ausführung von anderem Code möglich. Alle Aufrufe können eine Exception auslösen und sollten in einen try-catch - Block gepackt werden. Ebenso können die Aufrufe Rückgabewerte besitzen.
 \begin{figure}[H]						
 	\centering							
 	\includegraphics[scale=0.8]{Bilder/blockingcall.PNG}
 	\caption{Blocking Call}						
 	\label{f:naoqi_blockingcall}						
 \end{figure}
-\textbf{Non - blocking calls} benutzen das \textit{post-}Objekt einer Proxy. Der Vergleich zu Bild \ref{f:naoqi_nonblockingcall} zeigt, dass die Ausführung der Methode in einen parallelen Thread gepackt wird. Dadurch ist es möglich andere Anweisungen zur gleichen Zeit auszuführen, z.B. Sprechen während des Laufens. Jedes post - Objekt erzeugt eine \textit{taskID}. Mit dieser ID kann entweder geprüft werden ob der Thread noch läuft, ob auf ihn gewartet oder ob er gestoppt werden soll. 
+\textbf{Non - blocking calls} benutzen das \textit{post - }Objekt einer Proxy. Der Vergleich zu Bild \ref{f:naoqi_nonblockingcall} zeigt, dass die Ausführung der Methode in einen parallelen Thread gepackt wird. Dadurch ist es möglich andere Anweisungen zur gleichen Zeit auszuführen, z.B. Sprechen während des Laufens. Jedes post - Objekt erzeugt eine \textit{taskID}. Mit dieser ID kann entweder geprüft werden ob der Thread noch läuft, ob auf ihn gewartet oder ob er gestoppt werden soll. 
 \begin{figure}[H]						
 	\centering							
 	\includegraphics[scale=0.8]{Bilder/nonblockingcall.PNG}
@@ -119,7 +119,7 @@ Wie bereits in Kapitel \myref{Einleitung} erwähnt, wurde als Programmiersprache
 \\
 Das Benutzen des .NET SDK ist sehr einfach gestaltet. Dazu muss dieses je nach .NET - Version (2/4) installiert werden. In unserem Fall ist das .NET Version 4, da mit \textit{Microsoft Visual Studio 2013} entwickelt wurde. Das SDK beinhaltet Auto - Vervollständigung und nahezu jede NAOqi - Methode kann damit aufgerufen werden.
 \\
- Listing \ref{lst:net_helloWorld} zeigt ein einfaches Beispiel zur Benutzung von NAOqi innerhalb C\#. In Zeile eins wird angegeben, dass der Namespace von NAOqi benutzt wird. Damit dies möglich ist, muss davor die \textsf{naoqi.dll} als Verweis dem Projekt hinzugefügt werden. Zeile sieben zeigt die Erzeugung eines Proxy - Objekts vom Typ \textit{TextToSpeech}. Da im Konstruktor eine IP - Adresse und ein Port angegeben wird, handelt es sich hier um eine Proxy to Broker Kommunikation. Auf dem Proxy - Objekt wird in Zeile acht eine Methode mit dem Parameter \textsf{"Hello World"} als blocking call aufgerufen. Das Ergebnis der Methode ist die sprachliche Ausgabe des Strings \textsf{Hello World} durch den Roboter.
+ Listing \ref{lst:net_helloWorld} zeigt ein einfaches Beispiel zur Benutzung von NAOqi innerhalb C\#. In Zeile eins wird angegeben, dass der Namespace von NAOqi benutzt wird. Damit dies möglich ist, muss davor die \textsf{naoqi.dll} als Verweis dem Projekt hinzugefügt werden. Zeile sieben zeigt die Erzeugung eines Proxyobjekts vom Typ \textit{TextToSpeech}. Da im Konstruktor eine IP - Adresse und ein Port angegeben wird, handelt es sich hier um eine Proxy to Broker Kommunikation. Auf dem Proxyobjekt wird in Zeile acht eine Methode mit dem Parameter \textsf{"Hello World"} als blocking call aufgerufen. Das Ergebnis der Methode ist die sprachliche Ausgabe des Strings \textsf{Hello World} durch den Roboter.
 
 \lstinputlisting
     [caption={Beispiel .NET SDK},captionpos=b,

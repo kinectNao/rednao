@@ -1,0 +1,55 @@
+\BOOKMARK [0][]{chapter.6}{1 Einleitung}{}% 1
+\BOOKMARK [1][]{section.7}{1.1 Ziel der Arbeit}{chapter.6}% 2
+\BOOKMARK [1][]{section.8}{1.2 Inhalt}{chapter.6}% 3
+\BOOKMARK [1][]{section.9}{1.3 Umfeld \046 Strukturelles}{chapter.6}% 4
+\BOOKMARK [0][]{chapter.11}{2 Grundlagen Robotik}{}% 5
+\BOOKMARK [1][]{section.12}{2.1 Geschichte}{chapter.11}% 6
+\BOOKMARK [1][]{section.17}{2.2 Definition}{chapter.11}% 7
+\BOOKMARK [2][]{subsection.18}{2.2.1 Roboterarten}{section.17}% 8
+\BOOKMARK [1][]{section.21}{2.3 Komponenten}{chapter.11}% 9
+\BOOKMARK [1][]{section.23}{2.4 Freiheitsgrad}{chapter.11}% 10
+\BOOKMARK [0][]{chapter.24}{3 Kinect}{}% 11
+\BOOKMARK [1][]{section.25}{3.1 Kinect Hardware}{chapter.24}% 12
+\BOOKMARK [2][]{subsection.27}{3.1.1 RGB-Kamera}{section.25}% 13
+\BOOKMARK [2][]{subsection.28}{3.1.2 Tiefenerkennung}{section.25}% 14
+\BOOKMARK [2][]{subsection.31}{3.1.3 Tilt-Motor}{section.25}% 15
+\BOOKMARK [2][]{subsection.32}{3.1.4 Microphon Array}{section.25}% 16
+\BOOKMARK [1][]{section.33}{3.2 Kinect Software}{chapter.24}% 17
+\BOOKMARK [2][]{subsection.34}{3.2.1 Der Tiefenstream}{section.33}% 18
+\BOOKMARK [2][]{subsection.37}{3.2.2 Der Skeletonstream}{section.33}% 19
+\BOOKMARK [1][]{section.41}{3.3 Kinect SDK}{chapter.24}% 20
+\BOOKMARK [2][]{subsection.42}{3.3.1 Timeline}{section.41}% 21
+\BOOKMARK [2][]{subsection.43}{3.3.2 Grundfunktionen}{section.41}% 22
+\BOOKMARK [2][]{subsection.78}{3.3.3 Skelettfunktionen}{section.41}% 23
+\BOOKMARK [2][]{subsection.107}{3.3.4 Kinect Studio}{section.41}% 24
+\BOOKMARK [0][]{chapter.109}{4 Nao}{}% 25
+\BOOKMARK [1][]{section.110}{4.1 Nao Hardware}{chapter.109}% 26
+\BOOKMARK [1][]{section.114}{4.2 Nao Software}{chapter.109}% 27
+\BOOKMARK [1][]{section.118}{4.3 NAOqi Framework}{chapter.109}% 28
+\BOOKMARK [2][]{subsection.120}{4.3.1 Cross - Plattform/Language}{section.118}% 29
+\BOOKMARK [2][]{subsection.121}{4.3.2 NAOqi - Prozess}{section.118}% 30
+\BOOKMARK [2][]{subsection.124}{4.3.3 Module}{section.118}% 31
+\BOOKMARK [2][]{subsection.133}{4.3.4 .NET SDK}{section.118}% 32
+\BOOKMARK [0][]{chapter.145}{5 Realisierung}{}% 33
+\BOOKMARK [1][]{section.146}{5.1 Architektur}{chapter.145}% 34
+\BOOKMARK [2][]{subsection.148}{5.1.1 MainWindow}{section.146}% 35
+\BOOKMARK [2][]{subsection.149}{5.1.2 SkeletonAngleHandler}{section.146}% 36
+\BOOKMARK [2][]{subsection.150}{5.1.3 SkeletonAngleCalculator}{section.146}% 37
+\BOOKMARK [2][]{subsection.151}{5.1.4 NaoHandler}{section.146}% 38
+\BOOKMARK [2][]{subsection.152}{5.1.5 Interfaces}{section.146}% 39
+\BOOKMARK [2][]{subsection.153}{5.1.6 Flussdiagramm: Winkelerkennung}{section.146}% 40
+\BOOKMARK [1][]{section.155}{5.2 Kinect - Armerkennungsalgorithmus}{chapter.145}% 41
+\BOOKMARK [2][]{subsection.156}{5.2.1 Shoulder Pitch}{section.155}% 42
+\BOOKMARK [2][]{subsection.157}{5.2.2 Shoulder Roll}{section.155}% 43
+\BOOKMARK [2][]{subsection.158}{5.2.3 Elbow Roll}{section.155}% 44
+\BOOKMARK [2][]{subsection.159}{5.2.4 Elbow Yaw}{section.155}% 45
+\BOOKMARK [1][]{section.186}{5.3 Nao - Armbewegungsalgorithmus}{chapter.145}% 46
+\BOOKMARK [1][]{section.210}{5.4 Prototypen}{chapter.145}% 47
+\BOOKMARK [2][]{subsection.211}{5.4.1 Erster Kinect-Prototyp}{section.210}% 48
+\BOOKMARK [2][]{subsection.212}{5.4.2 Erster Nao-Prototyp}{section.210}% 49
+\BOOKMARK [2][]{subsection.214}{5.4.3 Zweiter Prototyp}{section.210}% 50
+\BOOKMARK [2][]{subsection.215}{5.4.4 Endprogramm}{section.210}% 51
+\BOOKMARK [0][]{chapter.217}{6 Schlussbemerkung}{}% 52
+\BOOKMARK [1][]{section.218}{6.1 Ausblick}{chapter.217}% 53
+\BOOKMARK [1][]{section.219}{6.2 Weiterf\374hrende Anwendungsgebiete}{chapter.217}% 54
+\BOOKMARK [0][]{figure.caption.222}{Literaturverzeichnis}{}% 55
