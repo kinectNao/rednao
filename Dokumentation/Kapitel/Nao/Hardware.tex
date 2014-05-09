@@ -11,19 +11,21 @@ Der in dieser Arbeit verwendete Nao ist vom Typ \textit{NAO V3+, V3.2}. Dieser T
 \noindent
 \textbf{Gelenke}
 \\
-Nao besitzt  im Kopf, den beiden Armen, dem Becken und den beiden Beinen jeweils mehrere Gelenke (\textit{Joint}, siehe Bild \ref{f:nao_ov}). Damit ist eine umfangreiche Bewegung in alle Richtungen der drei Achsen möglich. Der Kopf lässt sich in Z-Richtung drehen und in Y-Richtung neigen, damit Nao auch räumlich sehen bzw. Objekte verfolgen kann.
-Die Arme besitzen die gleichen Gelenke wie in einem menschlichen Körper. Dazu gehören Schulter-, Ellenbogen- und Handgelenk. Das Schultergelenk dient dazu, den Arm zu heben/senken und ihn zu öffnen bzw. zu schließen. Das Drehen und Öffnen/Schließen des Unterarms geschieht durch das Ellenbogengelenk in Kombination mit dem Hangelenk. Die Finger der Hand können nur als Ganzes geöffnet bzw. geschlossen werden.
+Nao besitzt  im Kopf, den beiden Armen, dem Becken und den beiden Beinen jeweils mehrere Gelenke (\textit{Joints}, siehe Abb. \ref{f:nao_ov}). Damit ist eine umfangreiche Bewegung in alle Richtungen der drei Achsen möglich. Der Kopf lässt sich in Z-Richtung drehen und in Y-Richtung neigen, damit Nao auch räumlich sehen, bzw. Objekte verfolgen kann.
+Die Arme weisen die gleichen Gelenke auf, wie ein menschlicher Körper. Dazu gehören Schulter-, Ellenbogen- und Handgelenk. Das Schultergelenk dient dazu, den Arm zu heben/senken und ihn zu öffnen bzw. zu schließen. Das Drehen und Öffnen/Schließen des Unterarms geschieht durch das Ellenbogengelenk in Kombination mit dem Hangelenk. Die Finger der Hand können nur als Ganzes geöffnet bzw. geschlossen werden.
 Das Beckengelenk wird dazu benutzt, den Torso von Nao nach vorne oder hinten zu neigen.
 Die Beine bestehen aus drei Gelenken: Einem Hüft-, einem Knie- und einem Fußgelenk. Die Bewegungsfreiheit der Beine ähnelt dem des menschlichen Beins, wobei keines der Gelenke in Z-Richtung gedreht werden kann.
 
-Die Bestimmung der Gelenkpositionen erfolgt über einen magnetischen Drehwinkelgeber	mit einer Auflösung von 12 Bit. Das macht beispielsweise bei einem Wert von 4096 pro Umdrehung eine Präzision von 0.1 Grad.
+Die Bestimmung der Gelenkpositionen erfolgt über einen magnetischen Drehwinkelgeber	mit einer Auflösung von 12 Bit. Das macht beispielsweise bei einem Wert von 4096 pro Umdrehung eine Präzision von 0.1 Grad aus.
 \\
 \\
 \textbf{Gelenkraum Nao}
 \\
-Da primär die Arme durch Nao nachgeahmt werden sollen, wird hier kurz auf den Gelenkraum dieser eingegangen. Jedes einzelne Gelenk der beiden Arme besitzt einen Winkelbereich in dem diese bewegt werden können. Tabellen \ref{tab:Lgelenkraum} und \ref{tab:Rgelenkraum} zeigen den Gelenkraum für den linken bzw. den rechten Arm.
+Da primär die Armbewegungen von Nao nachgeahmt werden sollen, wird hier kurz auf den Arm-Gelenkraum eingegangen. Jedes einzelne Gelenk der beiden Arme besitzt einen Winkelbereich, in dem diese bewegt werden können. Tabellen \ref{tab:Lgelenkraum} und \ref{tab:Rgelenkraum} zeigen den Gelenkraum für den linken bzw. den rechten Arm.
+\\
 
 \begin{table}[H]
+ \centering 
     \begin{tabular}{|l|l|l|}
     \hline
     \textbf{Gelenk}         & \textbf{Bereich (Grad) } & \textbf{Bereich (Radian)}   \\
@@ -38,6 +40,7 @@ Da primär die Arme durch Nao nachgeahmt werden sollen, wird hier kurz auf den G
     \label{tab:Lgelenkraum}
 \end{table}
 \begin{table}[H]
+ \centering 
     \begin{tabular}{|l|l|l|}
     \hline
     \textbf{Gelenk}         & \textbf{Bereich (Grad) } & \textbf{Bereich (Radian)}   \\
@@ -51,8 +54,9 @@ Da primär die Arme durch Nao nachgeahmt werden sollen, wird hier kurz auf den G
     \caption {Gelenkraum rechter Arm}
     \label{tab:Rgelenkraum}
 \end{table}
+\noindent
 Bilder der einzelnen Gelenke und Winkelbereiche sind im Anhang zu finden.
-\\
+\newline \newline
 \noindent
 \textbf{Aktoren}
 \\
