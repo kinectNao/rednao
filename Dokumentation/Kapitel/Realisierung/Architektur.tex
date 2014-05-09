@@ -30,12 +30,12 @@ Der Aktorteil der Anwendung transformiert die Posen der Armgelenke in den Nao-Ge
 \begin{figure}[H]						
 	\centering							
 	\includegraphics[scale=0.8]{Bilder/classdiagramm.png}
-	\caption{UML - Klassendiagramm}						
+	\caption{UML-Klassendiagramm}						
 	\label{f:classdiagramm}						
 \end{figure}
 
 \subsection{MainWindow}
-Die C\# Applikation wird als WPF-Anwendung gestartet. Dies geschieht in der Klasse \textsf{MainWindow}. Hierbei werden alle Parameter initialisiert und alle nötigen Objekte erzeugt, wie der KinectSensor und der KinectHandler. Es wird wie in Kapitel \myref{sdk} beschrieben, der Tiefenstream und der Skeletonstream der Kinect aktiviert und anschließend ein AllFramesReady-Event registriert, das benutzt wird sobald ein Skelett vor der Kamera vollständig erkannt wurde. Im Eventhandler wird der Berechnungs - Handler mit der aktuellen Position des gefilterten Skelettes versorgt. Zudem wird die GUI mit dem aktuellen RGB - Bild aktualisiert und erhält noch ein Skelett - Overlay, sodass man auch im Fenster sehen kann, dass ein Skelett erkannt wurde und kann dieses betrachten. Eine weitere Funktion dieser Klasse ist das kontrollierte Beenden der Applikation. Nach Schließen des Programmes werden alle Berechnungen gestoppt, die Handler heruntergefahren und die Kinect ausgeschaltet.
+Die C\# Applikation wird als WPF-Anwendung gestartet. Dies geschieht in der Klasse \textsf{MainWindow}. Hierbei werden alle Parameter initialisiert und alle nötigen Objekte erzeugt, wie der KinectSensor und der KinectHandler. Es wird, wie in Kapitel \myref{SDK} beschrieben, der Tiefenstream und der Skeletonstream der Kinect aktiviert und anschließend ein AllFramesReady-Event registriert, das benutzt wird, sobald ein Skelett vor der Kamera vollständig erkannt wurde. Im Eventhandler wird der Berechnungs-Handler mit der aktuellen Position des gefilterten Skelettes versorgt. Zudem wird die GUI mit dem aktuellen RGB-Bild aktualisiert und erhält noch ein Skelett-Overlay, so dass auch im Fenster ausgegeben werden kann, dass ein Skelett erkannt wurde. Eine weitere Funktion dieser Klasse ist das kontrollierte Beenden der Applikation. Nach Schließen des Programmes werden alle Berechnungen gestoppt, die Handler heruntergefahren und die Kinect ausgeschaltet.
 
 
 
@@ -55,16 +55,16 @@ Der Handler selbst wird durch das Event \textsf{AllFramesReady} in der Klasse Ma
 Diese Klasse erhält als Input ein Skelett, lässt die vier benötigten Armwinkel berechnen und gibt diese zurück an den Handler. Die Berechnung erfolgt durch den statischen Aufruf der Factory-Klasse \textbf{AngleCalculation}. Diese enthält den Algorithmus, der mittels Skalarprodukt die Armstellungen errechnet. (siehe Kapitel \myref{algo_angle}). Nach der Berechnung werden die Gelenkstellungen noch durch einen Medianfilter geschickt. Dieser soll extreme Schwankungen seitens der Kinect-Erkennung glätten.
 
 \subsection{NaoHandler}
-Die Klasse \textsf{NaoHandler} ist sozusagen der Output der Anwendung. In diesem Abschnitt wird die Kommunikation zu Nao erzeugt und aufrecht erhalten. Ferner wird das Interface \textsf{ISkeletonAngles} implementiert und somit die Aktualisierung der Armwinkel durchgeführt. Es wird jeweils ein Arm für Rechts und Links erzeugt. Die Winkel nimmt die Klasse entgegen und delegiert die Umrechnung an den jeweiligen Arm. Die tatsächliche Umwandlung der Winkel in den Nao - Gelenkraum und die Überprüfungen werden im jeweiligen Arm spezifiziert (siehe \myref{s:naoAlgo}). Zusätzlich sorgt sie dafür, dass sich der Roboter bei Beendigung der Anwendung in die sichere Pose \textit{Sitzen} begibt.
+Die Klasse \textsf{NaoHandler} ist sozusagen der Output der Anwendung. In diesem Abschnitt wird die Kommunikation zu Nao erzeugt und aufrecht erhalten. Ferner wird das Interface \textsf{ISkeletonAngles} implementiert und somit die Aktualisierung der Armwinkel durchgeführt. Es wird jeweils ein Arm für Rechts und Links erzeugt. Die Winkel nimmt die Klasse entgegen und delegiert die Umrechnung an den jeweiligen Arm. Die tatsächliche Umwandlung der Winkel in den Nao-Gelenkraum und die Überprüfungen werden im jeweiligen Arm spezifiziert (siehe \myref{s:naoAlgo}). Zusätzlich sorgt sie dafür, dass sich der Roboter bei Beendigung der Anwendung in die sichere Pose \textit{Sitzen} begibt.
 
 
 
 \subsection{Interfaces}
-Als Schnittstelle zwischen der Erkennung und der Ausführung der Armpositionen wird essenziell die Methode \textsf{updateAngles} vom Interface \textsf{ISkeletonAngles} verwendet. Diese stellt alle benötigten Winkel wie Shoulder Pitch, Shoulder Roll, Elbow Roll, Elbow Yaw bereit. Somit kann dieses Interface von allen Klassen implementiert werden, die immer die aktuellen Werte benötigen, wie der NaoHandler und die GUI.
+Als Schnittstelle zwischen der Erkennung und der Ausführung der Armpositionen wird essenziell die Methode \textsf{updateAngles} vom Interface \textsf{ISkeletonAngles} verwendet. Diese stellt alle benötigten Winkel wie Shoulder Pitch, Shoulder Roll, Elbow Roll und Elbow Yaw bereit. Somit kann dieses Interface von allen Klassen implementiert werden, die immer die aktuellen Werte benötigen, wie der NaoHandler und die einzelnen Fenster.
 
 
 \subsection{Flussdiagramm: Winkelerkennung}
-Das Diagramm \ref{f:pap} zeigt den Programmablauf der Winkelerkennung. Nach Programmstart und erfolgreicher Initialisierung der Komponenten (Kinect und Nao) wird in einer Schleife so lange geprüft, ob die Kinect ein Skelett erkannt hat, d.h. ob sich ein Mensch in den Sichtbereich dieser gestellt hat. Anschließend werden verschiedene Methoden auf den errechneten Winkeln durchgeführt, diese an den Roboter zur Ausführung gesendet und die GUI - Elemente aktualisiert.  
+Das Diagramm \ref{f:pap} zeigt den Programmablauf der Winkelerkennung. Nach Programmstart und erfolgreicher Initialisierung der Komponenten (Kinect und Nao) wird in einer Schleife so lange geprüft, bis die Kinect ein Skelett erkannt hat, d.h. ob sich ein Mensch in den Sichtbereich dieser gestellt hat. Anschließend werden verschiedene Methoden auf den errechneten Winkeln durchgeführt, diese an den Roboter zur Ausführung gesendet und die GUI-Elemente aktualisiert.  
 	\begin{figure}[H]						
 		\centering							
 		\includegraphics[scale=0.8]{Bilder/Flussdiagramm.png}			
