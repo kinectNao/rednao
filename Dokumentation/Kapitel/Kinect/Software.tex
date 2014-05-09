@@ -54,7 +54,7 @@ damit, wie diese Funktionen im Inneren funktionieren.
 \subsection{Der Tiefenstream}
 Der Tiefenstream (Depth-Stream) liefert zu jedem Pixel im Sichtfeld (43 Grad vertikal, 57 Grad horizontal) einen Tiefenwert. Dieser Wert enthält die Entfernung in Millimetern zu dem jeweiligen Objekt.
 Damit ist das am nächsten befindliche Objekt gemeint, da verdeckte Objekte nicht vom Sensor erkannt werden.
-Aus diesem Stream kann man beispielsweise ein Tiefenbild mit verschiedenen Farbwerten generieren, die repräsentativ für die Entfernung zur Kinect stehen (siehe Abb. \ref{f:kinect_depth_stream}). Die Depth-Stream Daten werden in einem 16 Bit Array transportiert. Dabei sind die drei untersten Bits jedoch für die Erkennung von mehreren Spielern reserviert
+Aus diesem Stream kann beispielsweise ein Tiefenbild mit verschiedenen Farbwerten generiert werden, die repräsentativ für die Entfernung zur Kinect stehen (siehe Abb. \ref{f:kinect_depth_stream}). Die Depth-Stream Daten werden in einem 16 Bit Array transportiert. Dabei sind die drei untersten Bits jedoch für die Erkennung von mehreren Spielern reserviert
 (Siehe Kapitel \myref{skeleton}). Die oberen 13 Bit enthalten die eigentlichen Tiefendaten. Ein solcher Tiefenstream kann wie folgt aussehen:
 
 \begin{figure}[H]						
@@ -112,7 +112,7 @@ Wie genau dies funktioniert wird im folgenden Kapitel erläutert.
 %			Irrelevant für Projekt
 %
 \subsection{Der Skeletonstream}\label{skeleton}
-Damit ein Benutzer und dessen Bewegungen mittels Kinect erkannt und im Programm verarbeitet werden können, wird der Tiefenstream entsprechend ausgewertet. Als Ergebnis erhält man ein menschliches Skelett, das aus
+Damit ein Benutzer und dessen Bewegungen mittels Kinect erkannt und im Programm verarbeitet werden können, wird der Tiefenstream entsprechend ausgewertet. Das Ergebnis ist ein menschliches Skelett, das aus
 20 Gelenken (\textbf{Joints}) besteht. Diese Joints sind im Skeleton hierarchisch von der Hüfte aus miteinander verbunden und bilden somit das Skelett eines Spielers. Die folgende Grafik illustriert alle erkannten Gelenke und deren Positionen. Für dieses Projekt sind insbesondere die Joints \textit{\textbf{Shoulder}}, \textit{\textbf{Elbow}}, \textit{\textbf{Wrist}} und \textit{\textbf{Hip}} von hoher Bedeutung, da anhand dieser Winkel der Gliedmaßen errechnet werden können (Siehe Kapitel \myref{algo_angle}).
 
 \begin{figure}[H]						
@@ -142,7 +142,7 @@ vorhandenen Beispielen, die mit verschiedenen Menschen aufgenommen wurden. Anhan
 \noindent
 Nach der Segmentierung werden die Gelenke innerhalb der entsprechenden Bereiche platziert. Dies wird anhand einer Häufigkeitsanalyse von Beispieldaten errechnet.
 Im Anschluss daran wird ein 3D-Modell des Skeletts erstellt, das aus der \textit{Frontansicht}, der \textit{Seitenansicht} und der \textit{Draufsicht} besteht (Siehe Abb. \ref{f:kinect_skeleton} rechts: 3D joint proposals).
-Dieser komplexe Prozess ermöglicht es, eine Skelett-Erkennung in Echtzeit durchzuführen. Als Entwickler einer Kinect-Applikation muss man sich nicht mehr um diese Erkennung kümmern, denn sie ist bereits implementiert. Dadurch kann ein Entwickler auf einer höheren Abstraktionsebene arbeiten. Die Koordinaten der Skeleton-Joints befinden sich im Skeletonobjekt und können mit der erkannten Genauigkeit ausgelesen und verwendet werden.
+Dieser komplexe Prozess ermöglicht es, eine Skelett-Erkennung in Echtzeit durchzuführen. Als Entwickler einer Kinect-Applikation muss sich nicht mehr um diese Erkennung gekümmert werden, denn sie ist bereits implementiert. Dadurch kann ein Entwickler auf einer höheren Abstraktionsebene arbeiten. Die Koordinaten der Skeleton-Joints befinden sich im Skeletonobjekt und können mit der erkannten Genauigkeit ausgelesen und verwendet werden.
 \\ \\
 \textbf{Skelett-Koordinatenraum}\\
 Der Koordinatenraum der Kinect ist wie folgt definiert:

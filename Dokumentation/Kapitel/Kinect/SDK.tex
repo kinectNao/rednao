@@ -42,14 +42,14 @@ Anhand des folgenden Listings sollen die grundlegenden Funktion der vorhandenen 
        captionpos=b]
  {Listings/Kinect_Sample.cs}
 \noindent
-Zuerst muss die Kinect-Bibliothek in C\# eingebunden werden (Zeile 1). Danach kann ein Sensorobjekt instanziiert werden. Dieses erreicht man über ein Array, da gleichzeitig mehrere Kinect-Systeme per USB angeschlossen und verwendet werden könnten (Zeile 7). Für dieses Projekt wird jedoch nur eine Hardware benötigt und somit handelt es sich immer um das Element mit dem Index 0. Im Anschluss daran wird der Tiefenstream des Sensors aktiviert (Zeile 10), ein \textsf{DepthFrameReady} Event registriert und mit der Methode \textsf{sensor\_DepthFrameReady} (Ab Zeile 21) verknüpft. Diese Methode wird somit bei jeder Aktualisierung der Tiefenwerte aufgerufen und liefert die aktuellen Werte, die in einem Short-Array gespeichert werden. \\ \\
+Zuerst muss die Kinect-Bibliothek in C\# eingebunden werden (Zeile 1). Danach kann ein Sensorobjekt instanziiert werden. Dieses wird über ein Array erreicht, da gleichzeitig mehrere Kinect-Systeme per USB angeschlossen und verwendet werden könnten (Zeile 7). Für dieses Projekt wird jedoch nur eine Hardware benötigt und somit handelt es sich immer um das Element mit dem Index 0. Im Anschluss daran wird der Tiefenstream des Sensors aktiviert (Zeile 10), ein \textsf{DepthFrameReady} Event registriert und mit der Methode \textsf{sensor\_DepthFrameReady} (Ab Zeile 21) verknüpft. Diese Methode wird somit bei jeder Aktualisierung der Tiefenwerte aufgerufen und liefert die aktuellen Werte, die in einem Short-Array gespeichert werden. \\ \\
 \textbf{Anmerkung}\\
-In diesem Listing fehlt die Freigabe von Kinect nach Terminierung der Applikation. Aus diesem Grund
-registiert man einen WindowClosing-Listener, der die jeweiligen aktivierten Funktionen richtig deaktiviert. Dies ist nicht zwingend nötig, aber wird das Programm beendet, bleibt der IR-Emitter aktiviert und es kann zu Komplikationen führen, wenn das Programm erneut auf die Funktionen zugreifen möchte.
+In diesem Listing fehlt die Freigabe von Kinect nach Terminierung der Applikation. Aus diesem Grund wird
+ein WindowClosing-Listener registriert, der die jeweiligen aktivierten Funktionen richtig deaktiviert. Dies ist nicht zwingend nötig, aber wird das Programm beendet, bleibt der IR-Emitter aktiviert und es kann zu Komplikationen führen, wenn das Programm erneut auf die Funktionen zugreifen möchte.
 
 \subsection{Skelettfunktionen}
 Zur Nutzung des Skelett-Trackings muss eine Anwendung ähnlich dem obigen Listing initialisiert werden.
-In diesem Fall aktiviert man den Skeletonstream mit \textsf{sensor.SkeletonStream.Enable()} und registriert wie oben auch ein Event. In diesem Fall ein \textsf{SkeletonFrameReady}-Event und verknüpft dieses mit einer Methode. Folgender Codeausschnitt zeigt die Verwendung des Skeletonstreams innerhalb dieses Projektes in C\#.\\
+In diesem Fall aktiviert wird der Skeletonstream mit \textsf{sensor.SkeletonStream.Enable()} und registriert wie oben auch ein Event. In diesem Fall ein \textsf{SkeletonFrameReady}-Event und verknüpft dieses mit einer Methode. Folgender Codeausschnitt zeigt die Verwendung des Skeletonstreams innerhalb dieses Projektes in C\#.\\
 
 \lstinputlisting
     [caption={Verwendung des Skeleton-Streams}
@@ -66,7 +66,7 @@ Erkennt die Kinect einen Spieler im Sichtfeld, wird ein SkeletonFrameReady-Event
 %
 
 \subsection{Kinect Studio}
-Das Kinect-SDK stellt einem Entwickler nach der Installation nützliche Dinge bereit. Beispielsweise eine Bibliothek mit verschiedenen Templates, die beschreiben, wie die Funktionen der Kinect aus Microsoft-Sicht verwendet werden. Zusätzlich zu den Templates wird mit dem SDK auch das Kinect Studio mitgeliefert. Diese Anwendung ist für die Entwicklung von Kinect Applikationen sehr nützlich, da man hier wie bei einem Videoschnittprogramm Sequenzen aufnehmen kann, die RGB und Tiefendaten enthalten. Zudem erkennt Kienct Studio aktive Kinect-Applikationen und kann sich zu diesen verbinden. Somit können Bewegungen aufgenommen werden und in der entwickelten Anwendung \textit{abgespielt} werden, ohne diese immer vor der Kinect ausführen zu müssen.
+Das Kinect-SDK stellt einem Entwickler nach der Installation nützliche Dinge bereit. Beispielsweise eine Bibliothek mit verschiedenen Templates, die beschreiben, wie die Funktionen der Kinect aus Microsoft-Sicht verwendet werden. Zusätzlich zu den Templates wird mit dem SDK auch das Kinect Studio mitgeliefert. Diese Anwendung ist für die Entwicklung von Kinect Applikationen sehr nützlich, da hier wie bei einem Videoschnittprogramm Sequenzen aufgenommen werden können, die RGB und Tiefendaten enthalten. Zudem erkennt Kienct Studio aktive Kinect-Applikationen und kann sich zu diesen verbinden. Somit können Bewegungen aufgenommen werden und in der entwickelten Anwendung \textit{abgespielt} werden, ohne diese immer vor der Kinect ausführen zu müssen.
 %\todo{Screenshot Kinect-Studio}
 \begin{figure}[H]						
 	\centering							
@@ -76,4 +76,4 @@ Das Kinect-SDK stellt einem Entwickler nach der Installation nützliche Dinge be
 \end{figure}
 \noindent
 \textbf{Anmerkung}\\
-Das Verbinden funktioniert jedoch nur, wenn Kinect per USB aktuell angeschlossen ist. Deshalb benötigt man zwingend ein Kinect-Modul, um seine Anwendung testen zu können.
+Das Verbinden funktioniert jedoch nur, wenn Kinect per USB aktuell angeschlossen ist. Deshalb wird zwingend ein Kinect-Modul benötigt, um seine Anwendung testen zu können.
