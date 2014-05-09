@@ -1,5 +1,5 @@
 \section{Nao -  Armbewegungsalgorithmus}\label{s:naoAlgo}
-Der zweite wesentliche Teil des Programms beinhaltet die Übertragung der erhaltenen Winkel der Kinect auf den Roboter. Dies beinhaltet nicht einfach nur die Weiterleitung der Werte sondern auch verschiedene Funktionen wie \textit{Umrechnen} oder \textit{Validieren}. Die Basisalgorithmen hierzu werden im folgenden vorgestellt.
+Der zweite wesentliche Teil des Programms beinhaltet die Übertragung der erhaltenen Winkel der Kinect auf den Roboter. Dies ist nicht einfach nur die Weiterleitung der Werte sondern auch verschiedene Funktionen, wie \textit{Umrechnen} oder \textit{Validieren}. Die Basisalgorithmen hierzu werden im folgenden vorgestellt.
 \\
 \\
 \textbf{Basis}
@@ -33,8 +33,8 @@ Da das ständige Neuausrichten der Winkel für die Motoren der Gelenke sehr anfo
 
 In Listing \ref{lst:nao_controlArm2} ist zu sehen, dass der Algorithmus um eine Funktion erweitert und eine andere geändert wurde.
 
-Der Pseudo - Code der Methode \textsf{checkDifference} (Zeile 6) ist in \ref{lst:nao_controlArm2} zu sehen. Darin wird überprüft ob die Differenz zwischen dem neuen Winkel und dem aktuellen Winkel kleiner als eine Schranke ist. Ist das nicht der Fall, wird der neue Winkel übernommen, ansonsten bleibt der aktuelle Winkel stehen. 
-Als Schranke wurde für EllbowRoll $5^\circ$ und die anderen Winkel $10^\circ$ gewählt. EllbowRoll hat eine niedrigere Schranke, da der Gelenkraum dieses Gelenks deutlich kleiner ist, wie die der restlichen Winkel (siehe \ref{nao:hardware} - Gelenkraum). 
+Der Pseudo - Code der Methode \textsf{checkDifference} (Zeile 6) ist in \ref{lst:nao_controlArm2} zu sehen. Darin wird überprüft ob die Differenz zwischen dem neuen Winkel und dem aktuellen Winkel kleiner als eine Schranke ist. Ist jenes nicht der Fall, wird der neue Winkel übernommen, ansonsten bleibt der aktuelle Winkel stehen. 
+Als Schranke wurde für ElbowRoll $5^\circ$ und die anderen Winkel $10^\circ$ gewählt. ElbowRoll hat eine niedrigere Schranke, da der Gelenkraum dieses Gelenks deutlich kleiner ist, wie die der restlichen Winkel (siehe \ref{nao:hardware} - Gelenkraum). 
 \lstinputlisting
     [caption={Pseudocode \textsf{checkDifference}},captionpos=b,
        label=lst:nao_controlArm2,
@@ -43,6 +43,6 @@ Als Schranke wurde für EllbowRoll $5^\circ$ und die anderen Winkel $10^\circ$ g
 Diese Überprüfung soll verhindern, dass sich kleine Änderungen der Kinect - Winkel, also des Menschen, direkt auf die Armstellungen Naos übertragen. Die Werte der Schranken wurden so gewählt, dass die Armstellung Naos subjektiv zu der des Menschen passt.
 
 
-In \ref{lst:nao_controlArm2} wurde die Methode \textsf{setAngles} durch \textsf{post.angleInterpolationWithSpeed} ersetzt. Prinzipiell machen beide Methoden das gleiche und zwar bewegen sie die übergebenen Gelenke an die übergebenen Winkel mit der übergebenen Geschwindigkeit. Der große Unterschied liegt allerdings darin, dass \textsf{setAngles} eine Non - Blocking- und \textsf{post.angleInterpolationWithSpeed} eine Blocking - Funktion ist. In diesem Fall ist eine Non - Blocking - Funktion schlecht, da sie es erlaubt, dass die ausführende Methode zu jedem Zeitpunkt unterbrochen  und mit neuen Parametern erneut gestartet werden kann. Unter anderem führt das dazu, dass die Arme "`ruckeln"' wenn sie bewegt werden. Die Blocking - Funktion wird erst dann wieder erneut aufgerufen, wenn die zuvor Ausgeführte beendet wurde. Dies entspricht auch eher dem Ziel, dass die Bewegungen des Menschen \textbf{nachgeahmt} werden und es keine eins zu eins Spiegelung des Menschen auf den Roboter ist.
+In \ref{lst:nao_controlArm2} wurde die Methode \textsf{setAngles} durch \textsf{post.angleInterpolationWithSpeed} ersetzt. Prinzipiell machen beide Methoden das Gleiche und zwar bewegen sie die übergebenen Gelenke an die übergebenen Winkel mit der übergebenen Geschwindigkeit. Der große Unterschied liegt allerdings darin, dass \textsf{setAngles} eine Non - Blocking- und \textsf{post.angleInterpolationWithSpeed} eine Blocking - Funktion ist. In diesem Fall ist eine Non - Blocking - Funktion schlecht, da sie es erlaubt, dass die ausführende Methode zu jedem Zeitpunkt unterbrochen  und mit neuen Parametern erneut gestartet werden kann. Unter anderem führt das dazu, dass die Arme "`ruckeln"' wenn sie bewegt werden. Die Blocking - Funktion wird als Folge erst erneut aufgerufen, wenn die zuvor ausgeführte Methode beendet wurde. Dies entspricht auch eher dem Ziel, dass die Bewegungen des Menschen \textbf{nachgeahmt} werden und es keine eins zu eins Spiegelung des Menschen auf den Roboter ist.
 
  
