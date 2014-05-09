@@ -77,7 +77,6 @@ Der genaue Unterschied zwischen "`remote"' und "`lokalen"' Modulen wird im Folge
 \\
 \subsection{Module}
 Typischerweise ist ein Modul eine Klasse innerhalb einer Bibliothek und wird automatisch instanziiert, wenn diese  durch \textsf{autoload.ini} geladen wird. Neue Methoden können an Klassen gebunden werden, die von \textsf{ALModule} erben. Dadurch werden die Methoden mit ihrem Namen und ihrer Signatur dem Broker öffentlich gemacht, so dass diese anderen verfügbar wird.
-
 Ein Modul kann, wie oben bereits erwähnt, entweder "`remote"' oder "`lokal"' sein. 
 
 \textbf{Lokale Module } sind zwei (oder mehr) Module, die im selben Prozess gestartet wurden. Sie kommunizieren miteinander lediglich über \textbf{einen} Broker. Durch den gemeinsamen Prozess können sie sich  Variablen teilen und einander Methoden ohne Serialisierung oder Netzwerkverbindung aufrufen. Dies erlaubt die schnellste Kommunikation untereinander. Lokale Module werden als Bibliothek kompiliert und können ausschließlich auf dem Roboter ausgeführt werden. Sie sind sehr schnell und effizient im Umgang mit dem Arbeitsspeicher.

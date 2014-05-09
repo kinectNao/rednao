@@ -16,7 +16,7 @@ Das Listing \ref{lst:nao_controlArm} zeigt die Definition der Funktion \textsf{c
 
 In Zeile vier werden die Winkelwerte an die Funktion \textsf{convertAngles} übergeben. Diese sorgt dafür, dass die Kinect-Winkel in die passenden Nao-Winkel umgerechnet werden. So ist beispielsweise ein Winkel von $90^\circ$ des ShoulderPitch-Gelenk im Nao-Gelenkraum $0^\circ$. Die Funktion gibt am Ende ein Array der umgerechneten Werte zurück.
 
-Dieses wird in Zeile fünf an die Funktion \textsf{verifyAngles} übergeben. Diese überprüft für jeden Winkel, ob dieser im Nao-Gelenkraum liegt (siehe Kapitel \ref{nao:hardware}-Gelenkraum). Liegt ein Wert nicht im gültigen Bereich, wird der ungültige Wert mit dem Wert der aktuellen Winkelstellung überschrieben.
+Dieses wird in Zeile fünf an die Funktion \textsf{verifyAngles} übergeben. Diese überprüft für jeden Winkel, ob dieser im Nao-Gelenkraum liegt (Siehe Kapitel \ref{nao:hardware}-Gelenkraum). Liegt ein Wert nicht im gültigen Bereich, wird der ungültige Wert mit dem Wert der aktuellen Winkelstellung überschrieben.
 
 Nach den Funktionen für die Umrechnung und die Validierung der Winkel wird in Zeile sieben der Befehl zum Bewegen des Arms an Nao geschickt. Dafür ist die Funktion \textsf{setAngles} verantwortlich. Neben den Winkeln (\textsf{newangles}) und den Namen der betroffenen Gelenke (\textsf{joints}) wird zusätzlich noch der Wert \textsf{Arm.fractionMaxSpeed} übergeben. Dieser gibt an, mit welcher Geschwindigkeit in Prozent die Gelenke an die Winkelstellungen gefahren werden sollen. Nach subjektiven Tests wurde hier der Wert 0.3f (30\%) gewählt. 
 \\
@@ -34,7 +34,7 @@ Da das ständige Neuausrichten der Winkel für die Motoren der Gelenke sehr anfo
 In Listing \ref{lst:nao_controlArm2} ist zu sehen, dass der Algorithmus um eine Funktion erweitert und eine andere geändert wurde.
 
 Der Pseudo-Code der Methode \textsf{checkDifference} (Zeile 6) ist in Listing \ref{lst:nao_controlArm2} zu sehen. Darin wird überprüft, ob die Differenz zwischen dem neuen Winkel und dem aktuellen Winkel kleiner als eine Schranke ist. Ist jenes nicht der Fall, wird der neue Winkel übernommen, ansonsten bleibt der aktuelle Winkel stehen. 
-Als Schranke wurde für ElbowRoll $5^\circ$ und die anderen Winkel $10^\circ$ gewählt. ElbowRoll hat eine niedrigere Schranke, da der Gelenkraum dieses Gelenks deutlich kleiner ist, wie die der restlichen Winkel (siehe \ref{nao:hardware}-Gelenkraum). 
+Als Schranke wurde für ElbowRoll $5^\circ$ und die anderen Winkel $10^\circ$ gewählt. ElbowRoll hat eine niedrigere Schranke, da der Gelenkraum dieses Gelenks deutlich kleiner ist, wie die der restlichen Winkel (Siehe \ref{nao:hardware}-Gelenkraum). 
 \lstinputlisting
     [caption={Pseudocode \textsf{checkDifference}},captionpos=b,
        label=lst:nao_controlArm2,

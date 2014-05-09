@@ -54,7 +54,7 @@ damit, wie diese Funktionen im Inneren funktionieren.
 \subsection{Der Tiefenstream}
 Der Tiefenstream (Depth-Stream) liefert zu jedem Pixel im Sichtfeld (43 Grad vertikal, 57 Grad horizontal) einen Tiefenwert. Dieser Wert enthält die Entfernung in Millimetern zu dem jeweiligen Objekt.
 Damit ist das am nächsten befindliche Objekt gemeint, da verdeckte Objekte nicht vom Sensor erkannt werden.
-Aus diesem Stream kann beispielsweise ein Tiefenbild mit verschiedenen Farbwerten generiert werden, die repräsentativ für die Entfernung zur Kinect stehen (siehe Abb. \ref{f:kinect_depth_stream}). Die Depth-Stream Daten werden in einem 16 Bit Array transportiert. Dabei sind die drei untersten Bits jedoch für die Erkennung von mehreren Spielern reserviert
+Aus diesem Stream kann beispielsweise ein Tiefenbild mit verschiedenen Farbwerten generiert werden, die repräsentativ für die Entfernung zur Kinect stehen (Siehe Abb. \ref{f:kinect_depth_stream}). Die Depth-Stream Daten werden in einem 16 Bit Array transportiert. Dabei sind die drei untersten Bits jedoch für die Erkennung von mehreren Spielern reserviert
 (Siehe Kapitel \myref{skeleton}). Die oberen 13 Bit enthalten die eigentlichen Tiefendaten. Ein solcher Tiefenstream kann wie folgt aussehen:
 
 \begin{figure}[H]						
@@ -63,7 +63,7 @@ Aus diesem Stream kann beispielsweise ein Tiefenbild mit verschiedenen Farbwerte
 	\caption{Kinect Tiefenstream}						
 	\label{f:kinect_depth_stream}						
 \end{figure}
-
+\noindent
 Zur Erfassung eines Objektes, muss sich dieses im Sichtfeld der Kinect befinden. 
 \begin{figure}[H]						
 	\centering							
@@ -121,7 +121,7 @@ Damit ein Benutzer und dessen Bewegungen mittels Kinect erkannt und im Programm 
 	\caption{Kinect Joints \cite{ws:microsoft_jointType}}						
 	\label{f:kinect_joints}						
 \end{figure}
-
+\noindent
 Ein Kinectsystem kann bis zu sechs Spieler gleichzeitig erkennen, wobei nur von zwei Spielern die exakte Position aller Gelenkwinkel erkannt werden kann. Von den anderen vier Spielern wird nur die Position im Raum ermittelt, nicht jedoch die exakten Koordinaten aller 20 Joints. Wie schon im vorigen Kapitel erwähnt, wird einem Spieler nach dessen Erkennung ein Index zugeordnet. Dieser befindet sich im Tiefenarray, falls die Skeletonfunktion aktiviert wurde. Innerhalb dieses Projektes ist dieser jedoch irrelevant, da angenommen wird, dass immer nur ein Spieler
 den Roboter steuern wird.\\ \\
 \noindent
@@ -149,7 +149,7 @@ Der Koordinatenraum der Kinect ist wie folgt definiert:
 
 \begin{figure}[H]						
 	\centering							
-	\includegraphics[scale=0.8]{Bilder/kinect_skeleton_space.png}			
+	\includegraphics[scale=0.7]{Bilder/kinect_skeleton_space.png}			
 	\caption{Skelett-Koordinatenraum\cite{ws:microsoft_coordinateSpaces}}						
 	\label{f:kinect_skeleton_space}						
 \end{figure}

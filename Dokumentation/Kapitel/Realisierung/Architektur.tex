@@ -52,10 +52,10 @@ Der Handler selbst wird durch das Event \textsf{AllFramesReady} in der Klasse Ma
 %
 
 \subsection{SkeletonAngleCalculator}
-Diese Klasse erhält als Input ein Skelett, lässt die vier benötigten Armwinkel berechnen und gibt diese zurück an den Handler. Die Berechnung erfolgt durch den statischen Aufruf der Factory-Klasse \textbf{AngleCalculation}. Diese enthält den Algorithmus, der mittels Skalarprodukt die Armstellungen errechnet. (siehe Kapitel \myref{algo_angle}). Nach der Berechnung werden die Gelenkstellungen noch durch einen Medianfilter geschickt. Dieser soll extreme Schwankungen seitens der Kinect-Erkennung glätten.
+Diese Klasse erhält als Input ein Skelett, lässt die vier benötigten Armwinkel berechnen und gibt diese zurück an den Handler. Die Berechnung erfolgt durch den statischen Aufruf der Factory-Klasse \textbf{AngleCalculation}. Diese enthält den Algorithmus, der mittels Skalarprodukt die Armstellungen errechnet. (Siehe Kapitel \myref{algo_angle}). Nach der Berechnung werden die Gelenkstellungen noch durch einen Medianfilter geschickt. Dieser soll extreme Schwankungen seitens der Kinect-Erkennung glätten.
 
 \subsection{NaoHandler}
-Die Klasse \textsf{NaoHandler} ist sozusagen der Output der Anwendung. In diesem Abschnitt wird die Kommunikation zu Nao erzeugt und aufrecht erhalten. Ferner wird das Interface \textsf{ISkeletonAngles} implementiert und somit die Aktualisierung der Armwinkel durchgeführt. Es wird jeweils ein Arm für Rechts und Links erzeugt. Die Winkel nimmt die Klasse entgegen und delegiert die Umrechnung an den jeweiligen Arm. Die tatsächliche Umwandlung der Winkel in den Nao-Gelenkraum und die Überprüfungen werden im jeweiligen Arm spezifiziert (siehe \myref{s:naoAlgo}). Zusätzlich sorgt sie dafür, dass sich der Roboter bei Beendigung der Anwendung in die sichere Pose \textit{Sitzen} begibt.
+Die Klasse \textsf{NaoHandler} ist sozusagen der Output der Anwendung. In diesem Abschnitt wird die Kommunikation zu Nao erzeugt und aufrecht erhalten. Ferner wird das Interface \textsf{ISkeletonAngles} implementiert und somit die Aktualisierung der Armwinkel durchgeführt. Es wird jeweils ein Arm für Rechts und Links erzeugt. Die Winkel nimmt die Klasse entgegen und delegiert die Umrechnung an den jeweiligen Arm. Die tatsächliche Umwandlung der Winkel in den Nao-Gelenkraum und die Überprüfungen werden im jeweiligen Arm spezifiziert (Siehe \myref{s:naoAlgo}). Zusätzlich sorgt sie dafür, dass sich der Roboter bei Beendigung der Anwendung in die sichere Pose \textit{Sitzen} begibt.
 
 
 
